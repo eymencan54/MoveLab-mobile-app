@@ -737,6 +737,11 @@ class GlobalLibrary {
     final matchesStr = prefs.getStringList('saved_matches') ?? [];
     matches = matchesStr.map((e) => SavedMatch.fromJson(jsonDecode(e))).toList();
     searchHistory = prefs.getStringList('search_history') ?? [];
+
+    final username = prefs.getString('puzzle_username');
+    if (username != null && username.isNotEmpty) {
+      syncWithCloud(username);
+    }
   }
 
   static Future<void> saveMatches() async {
@@ -2764,8 +2769,52 @@ class LibraryPage extends StatefulWidget {
 }
 
 class _LibraryPageState extends State<LibraryPage> {
-  @override
+  StreamSubscription? _cloudSubscription;
 
+  @override
+  void initState() {
+    super.initState();
+    _initCloudSync();
+  }
+
+  void _initCloudSync() async {
+    final prefs = await SharedPreferences.getInstance();
+    final username = prefs.getString('puzzle_username');
+    if (username != null && username.isNotEmpty) {
+      _cloudSubscription = FirebaseFirestore.instance
+          .collection('users')
+          .doc(username.toLowerCase())
+          .snapshots()
+          .listen((doc) {
+        if (doc.exists && doc.data()!.containsKey('saved_matches')) {
+          List<dynamic> cloudMatchesRaw = doc.data()!['saved_matches'];
+          List<SavedMatch> cloudMatches = cloudMatchesRaw
+              .map((e) => SavedMatch.fromJson(jsonDecode(e.toString())))
+              .toList();
+
+          bool changed = false;
+          for (var cm in cloudMatches) {
+            if (!GlobalLibrary.isSaved(cm.pgn, cm.moves)) {
+              GlobalLibrary.matches.add(cm);
+              changed = true;
+            }
+          }
+          if (changed && mounted) {
+            setState(() {});
+            GlobalLibrary.saveMatches();
+          }
+        }
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _cloudSubscription?.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(LanguageService.get('library_title'), style: const TextStyle(fontWeight: FontWeight.bold)), backgroundColor: const Color(0xFF151B2B)),
