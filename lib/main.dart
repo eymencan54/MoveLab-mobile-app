@@ -765,11 +765,9 @@ class GlobalLibrary {
         List<SavedMatch> cloudMatches = cloudMatchesRaw.map((e) => SavedMatch.fromJson(jsonDecode(e.toString()))).toList();
         
         // Merge with local matches
-        bool needsUpdate = false;
         for (var cm in cloudMatches) {
           if (!isSaved(cm.pgn, cm.moves)) {
             matches.add(cm);
-            needsUpdate = true;
           }
         }
         
