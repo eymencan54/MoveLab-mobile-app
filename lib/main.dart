@@ -191,6 +191,8 @@ class LanguageService {
     'login_failed': {'tr': 'Giriş başarısız oldu!', 'en': 'Login failed!'},
     'login_guest_taken': {'tr': 'Bu isim Lichess, Chess.com veya MoveLab\'da kullanılıyor. Lütfen başka isim girin.', 'en': 'This name is taken on Lichess, Chess.com, or MoveLab. Please enter another name.'},
     'login_guest_conn_err': {'tr': 'Bağlantı hatası!', 'en': 'Connection error!'},
+    'settings_login': {'tr': 'Giriş Yap', 'en': 'Log In'},
+    'settings_logout': {'tr': 'Çıkış Yap', 'en': 'Log Out'},
     // İhtiyacın oldukça buraya yeni kelimeler ekleyebilirsin...
   };
 
@@ -281,7 +283,7 @@ Future<void> showSettingsSheet(BuildContext context, {VoidCallback? onChanged}) 
                 const SizedBox(height: 20),
                 ListTile(
                   leading: Icon(currentUsername != null ? Icons.logout : Icons.login, color: Colors.blueAccent),
-                  title: Text(currentUsername != null ? 'Çıkış Yap ($currentUsername)' : 'Giriş Yap', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500)),
+                  title: Text(currentUsername != null ? '${LanguageService.get('settings_logout')} ($currentUsername)' : LanguageService.get('settings_login'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500)),
                   onTap: () async {
                     if (currentUsername != null) {
                       await prefs.remove('puzzle_username');
