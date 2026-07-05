@@ -3288,9 +3288,7 @@ class _HomePageState extends State<HomePage> {
 
       if (byteData == null) throw Exception("Resim verisi alınamadı.");
 
-      final tempDir = await getTemporaryDirectory();
-      final file = await File('${tempDir.path}/movelab_style.png').create();
-      await file.writeAsBytes(byteData.buffer.asUint8List());
+      final bytes = byteData.buffer.asUint8List();
 
       String u = _playerProfile!['username']?.toString() ?? 'Oyuncu';
       String style = LanguageService.styleLabel(_playerStyleProfile!.mainStyle);
@@ -3300,8 +3298,10 @@ class _HomePageState extends State<HomePage> {
       int maxR = [r, b, bl].reduce(max);
       String ratingStr = maxR > 0 ? maxR.toString() : '-';
 
-      await Share.shareXFiles([XFile(file.path)], text: '♟️ MoveLab - ${LanguageService.get('share_style')}\n👤 ${LanguageService.get('player')}: $u (${LanguageService.get('rating')}: $ratingStr)\n🔥 ${LanguageService.get('style_tactical')}: $style\n');
+      final xFile = XFile.fromData(bytes, name: 'movelab_style.png', mimeType: 'image/png');
+      await Share.shareXFiles([xFile], text: '♟️ MoveLab - ${LanguageService.get('share_style')}\n👤 ${LanguageService.get('player')}: $u (${LanguageService.get('rating')}: $ratingStr)\n🔥 ${LanguageService.get('style_tactical')}: $style\n');
     } catch (e) {
+      debugPrint("Share error: $e");
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(LanguageService.get('share_error'))));
     } finally {
       if (mounted) setState(() => _isLoading = false);
