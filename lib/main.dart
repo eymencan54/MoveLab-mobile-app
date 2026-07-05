@@ -1522,11 +1522,11 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                     await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({
                                       'username': lichessName,
                                       'score': 0,
-                                      'patron': 'false',
+                                      'patron': false,
                                       'title': lTitle,
                                     });
                                   } else if (userDoc.data()?['patron'] == null) {
-                                    await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({'patron': 'false', 'username': lichessName}, SetOptions(merge: true));
+                                    await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({'patron': false, 'username': lichessName}, SetOptions(merge: true));
                                   }
 
                                   if (context.mounted) {
@@ -1591,7 +1591,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                   await FirebaseFirestore.instance.collection('users').doc('termo_x').set({
                                     'username': 'Termo_x',
                                     'score': 0,
-                                    'patron': 'false',
+                                    'patron': false,
                                     'title': 'TermoGM',
                                   });
                                 }
@@ -1621,7 +1621,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                         await FirebaseFirestore.instance.collection('users').doc(chosenName.trim().toLowerCase()).set({
                                           'username': chosenName.trim(),
                                           'score': 0,
-                                          'patron': 'false',
+                                          'patron': false,
                                           'title': null,
                                         });
                                       }
@@ -3817,7 +3817,7 @@ class LeaderboardPage extends StatelessWidget {
               }
 
               // İlk 3'e özel renkler
-              Color rankColor = Colors.white54;
+              Color rankColor = Colors.white; // 4. ve sonrası için varsayılan (gri yerine beyaz)
               if (index == 0) {
                 rankColor = const Color(0xFFFFD700); // Altın
               } else if (index == 1) rankColor = const Color(0xFFC0C0C0); // Gümüş
