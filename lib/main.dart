@@ -1497,10 +1497,10 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                 }
                               }
                             }
-                            if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Giriş başarısız oldu!')));
+                            if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Giriş başarısız oldu! (Bilinmeyen Hata)')));
                           } catch (e) {
-                            debugPrint(e.toString());
-                            if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Giriş iptal edildi veya bağlantı hatası!')));
+                            debugPrint("Lichess Auth Error: $e");
+                            if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Hata: ${e.toString()}'), duration: const Duration(seconds: 4)));
                           }
                           if (context.mounted) setStateDialog(() => isLichessLoading = false);
                         },
