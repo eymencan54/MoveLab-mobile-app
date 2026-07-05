@@ -3297,7 +3297,7 @@ class _HomePageState extends State<HomePage> {
       String ratingStr = maxR > 0 ? maxR.toString() : '-';
 
       final xFile = XFile.fromData(bytes, name: 'movelab_style.png', mimeType: 'image/png');
-      await Share.shareXFiles([xFile], text: '♟️ MoveLab - ${LanguageService.get('share_style')}\n👤 ${LanguageService.get('player')}: $u (${LanguageService.get('rating')}: $ratingStr)\n🔥 ${LanguageService.get('style_tactical')}: $style\n');
+      await Share.shareXFiles([xFile], text: '♟️ MoveLab - ${LanguageService.get('share_style')}\n👤 ${LanguageService.get('player')}: $u (${LanguageService.get('rating')}: $ratingStr)\n🔥 ${LanguageService.get('style_tactical')}: $style\n\n📲 App: https://play.google.com/store/apps/details?id=com.movelab.app');
     } catch (e) {
       debugPrint("Share error: $e");
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(LanguageService.get('share_error'))));
@@ -3906,7 +3906,7 @@ class _AnalysisPageState extends State<AnalysisPage> {
     }
     if (pgn.isNotEmpty) {
       final box = context.findRenderObject() as RenderBox?;
-      await Share.share(pgn, subject: 'MoveLab - ${LanguageService.get('share_pgn')}', sharePositionOrigin: box != null ? box.localToGlobal(Offset.zero) & box.size : null);
+      await Share.share('$pgn\n\n📲 App: https://play.google.com/store/apps/details?id=com.movelab.app', subject: 'MoveLab - ${LanguageService.get('share_pgn')}', sharePositionOrigin: box != null ? box.localToGlobal(Offset.zero) & box.size : null);
     }
   }
 
