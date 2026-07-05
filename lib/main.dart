@@ -3808,7 +3808,13 @@ class LeaderboardPage extends StatelessWidget {
               var data = users[index].data() as Map<String, dynamic>;
               String name = data['username'] ?? users[index].id;
               String? title = data['title']; // Lichess title
-              bool isPatron = data['patron'] ?? false;
+              
+              // Patron verisi eskiden string, yeni olarak bool kaydedildiği için güvenli kontrol:
+              var pData = data['patron'];
+              bool isPatron = false;
+              if (pData is bool) isPatron = pData;
+              else if (pData is String) isPatron = pData == 'true';
+              
               int score = data['score'] ?? 0;
               
               // Termo_x için garanti easter egg
@@ -3817,7 +3823,7 @@ class LeaderboardPage extends StatelessWidget {
               }
 
               // İlk 3'e özel renkler
-              Color rankColor = Colors.white; // 4. ve sonrası için varsayılan (gri yerine beyaz)
+              Color rankColor = Colors.white54;
               if (index == 0) {
                 rankColor = const Color(0xFFFFD700); // Altın
               } else if (index == 1) rankColor = const Color(0xFFC0C0C0); // Gümüş
