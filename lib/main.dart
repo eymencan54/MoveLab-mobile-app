@@ -1516,8 +1516,8 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                   String? lTitle = profileData['title'];
                                   String lichessName = profileData['username'].toString();
                                   
-                                  // Veritabanına kaydet
                                   var userDoc = await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).get();
+                                  String patronStr = 'false';
                                   if (!userDoc.exists) {
                                     await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({
                                       'username': lichessName,
@@ -1525,12 +1525,19 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                       'patron': false,
                                       'title': lTitle,
                                     });
-                                  } else if (userDoc.data()?['patron'] == null) {
-                                    await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({'patron': false, 'username': lichessName}, SetOptions(merge: true));
+                                  } else {
+                                    var pData = userDoc.data()?['patron'];
+                                    if (pData is bool) patronStr = pData ? 'true' : 'false';
+                                    else if (pData is String) patronStr = pData;
+
+                                    if (userDoc.data()?['patron'] == null) {
+                                      await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({'patron': false, 'username': lichessName}, SetOptions(merge: true));
+                                      patronStr = 'false';
+                                    }
                                   }
 
                                   if (context.mounted) {
-                                    Navigator.pop(context, <String, String?>{'username': lichessName, 'title': lTitle, 'patron': 'false'});
+                                    Navigator.pop(context, <String, String?>{'username': lichessName, 'title': lTitle, 'patron': patronStr});
                                   }
                                   return;
                                 }
@@ -1601,13 +1608,25 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                 return;
                               }
 
-                              var uidDoc = await FirebaseFirestore.instance.collection('users_by_uid').doc(user.uid).get();
-                              if (uidDoc.exists) {
-                                String savedUsername = uidDoc.data()!['username'];
-                                if (context.mounted) {
-                                  String? title = savedUsername.toLowerCase() == 'termo_x' ? 'TermoGM' : null;
-                                  Navigator.pop(context, <String, String?>{'username': savedUsername, 'title': title, 'patron': 'false'});
-                                }
+                                var uidDoc = await FirebaseFirestore.instance.collection('users_by_uid').doc(user.uid).get();
+                                if (uidDoc.exists) {
+                                  String savedUsername = uidDoc.data()!['username'];
+                                  String? title;
+                                  String patronStr = 'false';
+                                  
+                                  var userDoc = await FirebaseFirestore.instance.collection('users').doc(savedUsername.toLowerCase()).get();
+                                  if (userDoc.exists) {
+                                    title = userDoc.data()?['title'];
+                                    var pData = userDoc.data()?['patron'];
+                                    if (pData is bool) patronStr = pData ? 'true' : 'false';
+                                    else if (pData is String) patronStr = pData;
+                                  }
+                                  
+                                  if (savedUsername.toLowerCase() == 'termo_x') title = 'TermoGM';
+
+                                  if (context.mounted) {
+                                    Navigator.pop(context, <String, String?>{'username': savedUsername, 'title': title, 'patron': patronStr});
+                                  }
                                 return;
                               } else {
                                 if (context.mounted) {
