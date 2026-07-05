@@ -1491,7 +1491,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                   final profileData = jsonDecode(profileRes.body);
                                   String? lTitle = profileData['title'];
                                   if (context.mounted) {
-                                    Navigator.pop(context, {'username': profileData['username'], 'title': lTitle, 'patron': 'false'});
+                                    Navigator.pop(context, <String, String?>{'username': profileData['username'].toString(), 'title': lTitle, 'patron': 'false'});
                                   }
                                   return;
                                 }
@@ -1557,7 +1557,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                   });
                                 }
                                 if (context.mounted) {
-                                  Navigator.pop(context, {'username': 'Termo_x', 'title': 'TermoGM', 'patron': 'false'});
+                                  Navigator.pop(context, <String, String?>{'username': 'Termo_x', 'title': 'TermoGM', 'patron': 'false'});
                                 }
                                 return;
                               }
@@ -1567,7 +1567,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                 String savedUsername = uidDoc.data()!['username'];
                                 if (context.mounted) {
                                   String? title = savedUsername.toLowerCase() == 'termo_x' ? 'TermoGM' : null;
-                                  Navigator.pop(context, {'username': savedUsername, 'title': title, 'patron': 'false'});
+                                  Navigator.pop(context, <String, String?>{'username': savedUsername, 'title': title, 'patron': 'false'});
                                 }
                                 return;
                               } else {
@@ -1588,7 +1588,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                       }
 
                                       if (context.mounted) {
-                                        Navigator.pop(context, {'username': chosenName.trim(), 'title': null, 'patron': 'false'});
+                                        Navigator.pop(context, <String, String?>{'username': chosenName.trim(), 'title': null, 'patron': 'false'});
                                       }
                                       return;
                                   } else {
