@@ -1514,8 +1514,23 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                 if (profileRes.statusCode == 200) {
                                   final profileData = jsonDecode(profileRes.body);
                                   String? lTitle = profileData['title'];
+                                  String lichessName = profileData['username'].toString();
+                                  
+                                  // Veritabanına kaydet
+                                  var userDoc = await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).get();
+                                  if (!userDoc.exists) {
+                                    await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({
+                                      'username': lichessName,
+                                      'score': 0,
+                                      'patron': 'false',
+                                      'title': lTitle,
+                                    });
+                                  } else if (userDoc.data()?['patron'] == null) {
+                                    await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({'patron': 'false', 'username': lichessName}, SetOptions(merge: true));
+                                  }
+
                                   if (context.mounted) {
-                                    Navigator.pop(context, <String, String?>{'username': profileData['username'].toString(), 'title': lTitle, 'patron': 'false'});
+                                    Navigator.pop(context, <String, String?>{'username': lichessName, 'title': lTitle, 'patron': 'false'});
                                   }
                                   return;
                                 }
@@ -1706,6 +1721,18 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                             if (guestName.toLowerCase() == 'termo_x') {
                               if (context.mounted) Navigator.pop(context, <String, String?>{'username': guestName, 'title': 'TermoGM', 'patron': 'false'});
                             } else {
+                              // Veritabanına kaydet (Eğer yoksa)
+                              var userDoc = await FirebaseFirestore.instance.collection('users').doc(guestName.toLowerCase()).get();
+                              if (!userDoc.exists) {
+                                await FirebaseFirestore.instance.collection('users').doc(guestName.toLowerCase()).set({
+                                  'username': guestName,
+                                  'score': 0,
+                                  'patron': 'false',
+                                  'title': null,
+                                });
+                              } else if (userDoc.data()?['patron'] == null) {
+                                await FirebaseFirestore.instance.collection('users').doc(guestName.toLowerCase()).set({'patron': 'false', 'username': guestName}, SetOptions(merge: true));
+                              }
                               if (context.mounted) Navigator.pop(context, <String, String?>{'username': guestName, 'title': null, 'patron': 'false'});
                             }
                             if (context.mounted) setStateDialog(() => isGuestLoading = false);
