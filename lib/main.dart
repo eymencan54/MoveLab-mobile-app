@@ -1727,7 +1727,6 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                 await FirebaseFirestore.instance.collection('users').doc(guestName.toLowerCase()).set({
                                   'username': guestName,
                                   'score': 0,
-                                  'title': null,
                                 });
                               }
                               if (context.mounted) Navigator.pop(context, <String, String?>{'username': guestName, 'title': null, 'patron': 'false'});
