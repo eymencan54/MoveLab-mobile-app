@@ -180,6 +180,17 @@ class LanguageService {
     'puzzle_solved': {'tr': 'Bulmaca Çözüldü!', 'en': 'Puzzle Solved!'},
     'puzzle_no_solvers': {'tr': 'Henüz kimse bulmaca çözmedi.', 'en': 'No one has solved a puzzle yet.'},
     'puzzle_score_points': {'tr': 'Puan', 'en': 'Points'},
+    'login_title': {'tr': 'Bulmacalara Giriş', 'en': 'Puzzle Login'},
+    'login_lichess_desc': {'tr': 'Lichess hesabınıza güvenli bir şekilde şifrenizle giriş yapın:', 'en': 'Securely log in with your Lichess account:'},
+    'login_lichess_btn': {'tr': 'Lichess İle Giriş Yap', 'en': 'Log In with Lichess'},
+    'login_google_desc': {'tr': 'Google hesabınızla güvenli giriş yapın:', 'en': 'Securely log in with your Google account:'},
+    'login_google_btn': {'tr': 'Google İle Giriş Yap', 'en': 'Log In with Google'},
+    'login_guest_desc': {'tr': 'Veya misafir olarak bir isim girin:', 'en': 'Or enter a name to continue as a guest:'},
+    'login_guest_hint': {'tr': 'Misafir Kullanıcı Adı', 'en': 'Guest Username'},
+    'login_guest_btn': {'tr': 'Misafir Girişi', 'en': 'Guest Login'},
+    'login_failed': {'tr': 'Giriş başarısız oldu!', 'en': 'Login failed!'},
+    'login_guest_taken': {'tr': 'Bu isim Lichess, Chess.com veya MoveLab\'da kullanılıyor. Lütfen başka isim girin.', 'en': 'This name is taken on Lichess, Chess.com, or MoveLab. Please enter another name.'},
+    'login_guest_conn_err': {'tr': 'Bağlantı hatası!', 'en': 'Connection error!'},
     // İhtiyacın oldukça buraya yeni kelimeler ekleyebilirsin...
   };
 
@@ -1417,12 +1428,23 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
           builder: (context, setStateDialog) {
             return AlertDialog(
               backgroundColor: const Color(0xFF151B2B),
-              title: const Text('Bulmacalara Giriş', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(LanguageService.get('login_title'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
+                  IconButton(
+                    icon: const Icon(Icons.close, color: Colors.white70),
+                    padding: EdgeInsets.zero,
+                    constraints: const BoxConstraints(),
+                    onPressed: () => Navigator.pop(context),
+                  ),
+                ],
+              ),
               content: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text('Lichess hesabınıza güvenli bir şekilde şifrenizle giriş yapın:', style: TextStyle(color: Colors.white70, fontSize: 13)),
+                    Text(LanguageService.get('login_lichess_desc'), style: const TextStyle(color: Colors.white70, fontSize: 13)),
                     const SizedBox(height: 16),
                     SizedBox(
                       width: double.infinity,
@@ -1435,7 +1457,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                         icon: isLichessLoading 
                           ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.black)) 
                           : const Text('♞', style: TextStyle(fontSize: 24, color: Colors.black, height: 1.0)),
-                        label: const Text('Lichess İle Giriş Yap', style: TextStyle(fontWeight: FontWeight.bold)),
+                        label: Text(LanguageService.get('login_lichess_btn'), style: const TextStyle(fontWeight: FontWeight.bold)),
                         onPressed: isLichessLoading ? null : () async {
                           setStateDialog(() => isLichessLoading = true);
                           try {
@@ -1497,7 +1519,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                 }
                               }
                             }
-                            if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Giriş başarısız oldu! (Bilinmeyen Hata)')));
+                            if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('${LanguageService.get('login_failed')} (Bilinmeyen Hata)')));
                           } catch (e) {
                             debugPrint("Lichess Auth Error: $e");
                             if (context.mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Hata: ${e.toString()}'), duration: const Duration(seconds: 4)));
@@ -1511,7 +1533,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                       child: Divider(color: Colors.white24),
                     ),
                     // GOOGLE GİRİŞİ
-                    const Text('Google hesabınızla güvenli giriş yapın:', style: TextStyle(color: Colors.white70, fontSize: 13)),
+                    Text(LanguageService.get('login_google_desc'), style: const TextStyle(color: Colors.white70, fontSize: 13)),
                     const SizedBox(height: 12),
                     SizedBox(
                       width: double.infinity,
@@ -1524,7 +1546,7 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                         icon: isGoogleLoading 
                           ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.blueAccent)) 
                           : Image.network('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png', width: 24, height: 24),
-                        label: const Text('Google İle Giriş Yap', style: TextStyle(fontWeight: FontWeight.bold)),
+                        label: Text(LanguageService.get('login_google_btn'), style: const TextStyle(fontWeight: FontWeight.bold)),
                         onPressed: isGoogleLoading ? null : () async {
                           setStateDialog(() => isGoogleLoading = true);
                           try {
@@ -1609,13 +1631,13 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                       padding: EdgeInsets.symmetric(vertical: 20.0),
                       child: Divider(color: Colors.white24),
                     ),
-                    const Text('Veya misafir olarak bir isim girin:', style: TextStyle(color: Colors.white70, fontSize: 13)),
+                    Text(LanguageService.get('login_guest_desc'), style: const TextStyle(color: Colors.white70, fontSize: 13)),
                     const SizedBox(height: 12),
                     TextField(
                       controller: guestController,
                       style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                        hintText: 'Misafir Kullanıcı Adı',
+                        hintText: LanguageService.get('login_guest_hint'),
                         hintStyle: const TextStyle(color: Colors.white38),
                         prefixIcon: const Icon(Icons.person, color: Colors.grey),
                         errorText: guestErrorText,
@@ -1664,14 +1686,14 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
 
                                 if (isTaken) {
                                   setStateDialog(() {
-                                    guestErrorText = 'Bu isim Lichess, Chess.com veya MoveLab\'da kullanılıyor. Lütfen başka isim girin.';
+                                    guestErrorText = LanguageService.get('login_guest_taken');
                                     isGuestLoading = false;
                                   });
                                   return;
                                 }
                               } catch (e) {
                                 setStateDialog(() {
-                                  guestErrorText = 'Bağlantı hatası!';
+                                  guestErrorText = LanguageService.get('login_guest_conn_err');
                                   isGuestLoading = false;
                                 });
                                 return;
@@ -1680,16 +1702,16 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
 
                             // Misafir olarak Termo_x girilirse yine Easter Egg çalışsın
                             if (guestName.toLowerCase() == 'termo_x') {
-                              if (context.mounted) Navigator.pop(context, {'username': guestName, 'title': 'TermoGM', 'patron': 'false'});
+                              if (context.mounted) Navigator.pop(context, <String, String?>{'username': guestName, 'title': 'TermoGM', 'patron': 'false'});
                             } else {
-                              if (context.mounted) Navigator.pop(context, {'username': guestName, 'title': null, 'patron': 'false'});
+                              if (context.mounted) Navigator.pop(context, <String, String?>{'username': guestName, 'title': null, 'patron': 'false'});
                             }
                             if (context.mounted) setStateDialog(() => isGuestLoading = false);
                           }
                         },
                         child: isGuestLoading 
                             ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-                            : const Text('Misafir Girişi'),
+                            : Text(LanguageService.get('login_guest_btn')),
                       ),
                     )
                   ],
