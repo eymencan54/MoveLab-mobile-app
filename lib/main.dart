@@ -63,10 +63,16 @@ class SoundService {
   static Future<void> playMoveSound(bool isCapture) async {
     if (_isMuted) return;
     try {
-      String url = isCapture
-          ? 'https://images.chesscomfiles.com/chess-themes/sounds/_MP3_/default/capture.mp3'
-          : 'https://images.chesscomfiles.com/chess-themes/sounds/_MP3_/default/move-self.mp3';
-      await _player.play(UrlSource(url), volume: _volume);
+      String path = isCapture ? 'sounds/capture.mp3' : 'sounds/move-self.mp3';
+      
+      // Use a new player for each sound so they can overlap without cutting each other off
+      AudioPlayer tempPlayer = AudioPlayer();
+      await tempPlayer.play(AssetSource(path), volume: _volume);
+      
+      // Dispose the player after it finishes to free resources
+      tempPlayer.onPlayerComplete.listen((_) {
+        tempPlayer.dispose();
+      });
     } catch (e) {
       debugPrint("Ses çalma hatası: $e");
     }
@@ -160,6 +166,7 @@ class LanguageService {
     'save_to_library': {'tr': 'Kütüphaneye Ekle', 'en': 'Add to Library'},
     'remove_from_library': {'tr': 'Kütüphaneden Sil', 'en': 'Remove from Library'},
     'analyzing': {'tr': 'Analiz Ediliyor...', 'en': 'Analyzing...'},
+    'infinite': {'tr': 'Sonsuz', 'en': 'Infinite'},
     'engine_move': {'tr': 'Motor Analizi', 'en': 'Engine Analysis'},
     'best_move_nav': {'tr': 'En İyi', 'en': 'Best'},
     'excellent_nav': {'tr': 'Mükemmel', 'en': 'Excellent'},
@@ -168,6 +175,14 @@ class LanguageService {
     'mistake_nav': {'tr': 'Kötü', 'en': 'Mistake'},
     'blunder_nav': {'tr': 'Çok Kötü', 'en': 'Blunder'},
     'puzzles': {'tr': 'Bulmacalar', 'en': 'Puzzles'},
+    'free_analyze': {'tr': 'Serbest Analiz', 'en': 'Free Analysis'},
+    'white_player': {'tr': 'Beyaz Oyuncu', 'en': 'White Player'},
+    'black_player': {'tr': 'Siyah Oyuncu', 'en': 'Black Player'},
+    'result': {'tr': 'Sonuç', 'en': 'Result'},
+    'elo': {'tr': 'Elo', 'en': 'Elo'},
+    'engine_settings': {'tr': 'Motor Ayarları', 'en': 'Engine Settings'},
+    'depth': {'tr': 'Derinlik', 'en': 'Depth'},
+    'variants': {'tr': 'Varyantlar', 'en': 'Variants'},
     'puzzle_leaderboard': {'tr': 'Sıralama', 'en': 'Leaderboard'},
     'puzzle_username_title': {'tr': 'Dünya Sıralaması', 'en': 'Global Ranking'},
     'puzzle_username_hint': {'tr': 'Sıralama için bir kullanıcı adı girin...', 'en': 'Enter a username for the ranking...'},
@@ -179,6 +194,7 @@ class LanguageService {
     'puzzle_wrong_move': {'tr': 'Yanlış hamle, tekrar dene!', 'en': 'Wrong move, try again!'},
     'puzzle_solved': {'tr': 'Bulmaca Çözüldü!', 'en': 'Puzzle Solved!'},
     'puzzle_no_solvers': {'tr': 'Henüz kimse bulmaca çözmedi.', 'en': 'No one has solved a puzzle yet.'},
+    'get_hint': {'tr': 'İPUCU AL', 'en': 'GET HINT'},
     'puzzle_score_points': {'tr': 'Puan', 'en': 'Points'},
     'login_title': {'tr': 'Bulmacalara Giriş', 'en': 'Puzzle Login'},
     'login_lichess_desc': {'tr': 'Lichess hesabınıza güvenli bir şekilde şifrenizle giriş yapın:', 'en': 'Securely log in with your Lichess account:'},
@@ -193,6 +209,10 @@ class LanguageService {
     'login_guest_conn_err': {'tr': 'Bağlantı hatası!', 'en': 'Connection error!'},
     'settings_login': {'tr': 'Giriş Yap', 'en': 'Log In'},
     'settings_logout': {'tr': 'Çıkış Yap', 'en': 'Log Out'},
+        'free_analysis': {'tr': 'Serbest Analiz', 'en': 'Free Analysis'},
+    'library_added': {'tr': 'Kütüphaneye Eklendi', 'en': 'Added to Library'},
+    'match_saved': {'tr': 'Maç başarıyla kütüphaneye kaydedildi!', 'en': 'Match successfully saved to library!'},
+    'ok': {'tr': 'Tamam', 'en': 'OK'},
     // İhtiyacın oldukça buraya yeni kelimeler ekleyebilirsin...
   };
 
@@ -263,17 +283,149 @@ class LanguageService {
   }
 }
 
-Future<void> showSettingsSheet(BuildContext context, {VoidCallback? onChanged}) async {
+
+Future<void> showEngineSettingsDialog(BuildContext context, {VoidCallback? onChanged}) async {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return StatefulBuilder(
+        builder: (context, setDialogState) {
+          return AlertDialog(
+            backgroundColor: const Color(0xFF151B2B),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            title: Text(LanguageService.get('engine_settings'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Depth
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.speed, color: Colors.white70),
+                      const SizedBox(width: 12),
+                      Expanded(child: Text('${LanguageService.get('depth')}: ${ChessEngineService().stockfishDepth == 0 ? LanguageService.get('infinite') : ChessEngineService().stockfishDepth.toString()}', style: const TextStyle(color: Colors.white, fontSize: 15))),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(constraints: const BoxConstraints(), padding: const EdgeInsets.symmetric(horizontal: 8), icon: const Icon(Icons.remove, color: Colors.white70), onPressed: () {
+                            if (ChessEngineService().stockfishDepth > 0) {
+                              ChessEngineService().stockfishDepth--;
+                              ChessEngineService()._isMultiPvSet = false;
+                              setDialogState(() {});
+                              onChanged?.call();
+                            }
+                          }),
+                          IconButton(constraints: const BoxConstraints(), padding: const EdgeInsets.symmetric(horizontal: 8), icon: const Icon(Icons.add, color: Colors.white70), onPressed: () {
+                            if (ChessEngineService().stockfishDepth < 30) {
+                              ChessEngineService().stockfishDepth++;
+                              ChessEngineService()._isMultiPvSet = false;
+                              setDialogState(() {});
+                              onChanged?.call();
+                            }
+                          }),
+                          IconButton(constraints: const BoxConstraints(), padding: const EdgeInsets.symmetric(horizontal: 8), icon: Icon(Icons.all_inclusive, color: ChessEngineService().stockfishDepth == 0 ? Colors.greenAccent : Colors.white70), onPressed: () {
+                            ChessEngineService().stockfishDepth = ChessEngineService().stockfishDepth == 0 ? 15 : 0;
+                            ChessEngineService()._isMultiPvSet = false;
+                            setDialogState(() {});
+                            onChanged?.call();
+                          }),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                // Variants
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.alt_route, color: Colors.white70),
+                      const SizedBox(width: 12),
+                      Expanded(child: Text('${LanguageService.get('variants')}: ${ChessEngineService().stockfishMultiPv}', style: const TextStyle(color: Colors.white, fontSize: 15))),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(constraints: const BoxConstraints(), padding: const EdgeInsets.symmetric(horizontal: 16), icon: const Icon(Icons.remove, color: Colors.white70), onPressed: () {
+                            if (ChessEngineService().stockfishMultiPv > 1) {
+                              ChessEngineService().stockfishMultiPv--;
+                              ChessEngineService()._isMultiPvSet = false;
+                              setDialogState(() {});
+                              onChanged?.call();
+                            }
+                          }),
+                          IconButton(constraints: const BoxConstraints(), padding: const EdgeInsets.symmetric(horizontal: 16), icon: const Icon(Icons.add, color: Colors.white70), onPressed: () {
+                            if (ChessEngineService().stockfishMultiPv < 10) {
+                              ChessEngineService().stockfishMultiPv++;
+                              ChessEngineService()._isMultiPvSet = false;
+                              setDialogState(() {});
+                              onChanged?.call();
+                            }
+                          }),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                // Threads
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.memory, color: Colors.white70),
+                      const SizedBox(width: 12),
+                      Expanded(child: Text('Core (Threads): ${ChessEngineService().stockfishThreads}', style: const TextStyle(color: Colors.white, fontSize: 15))),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(constraints: const BoxConstraints(), padding: const EdgeInsets.symmetric(horizontal: 16), icon: const Icon(Icons.remove, color: Colors.white70), onPressed: () {
+                            if (ChessEngineService().stockfishThreads > 1) {
+                              ChessEngineService().stockfishThreads--;
+                              ChessEngineService()._isMultiPvSet = false; // Trigger option reset
+                              setDialogState(() {});
+                              onChanged?.call();
+                            }
+                          }),
+                          IconButton(constraints: const BoxConstraints(), padding: const EdgeInsets.symmetric(horizontal: 16), icon: const Icon(Icons.add, color: Colors.white70), onPressed: () {
+                            if (ChessEngineService().stockfishThreads < 8) {
+                              ChessEngineService().stockfishThreads++;
+                              ChessEngineService()._isMultiPvSet = false; // Trigger option reset
+                              setDialogState(() {});
+                              onChanged?.call();
+                            }
+                          }),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(LanguageService.get('ok'), style: const TextStyle(color: Colors.blueAccent)),
+              ),
+            ],
+          );
+        }
+      );
+    }
+  );
+}
+
+Future<void> showSettingsSheet(BuildContext context, {VoidCallback? onChanged, VoidCallback? onPaste, VoidCallback? onResetBoard}) async {
   final prefs = await SharedPreferences.getInstance();
   String? currentUsername = prefs.getString('puzzle_username');
 
+  if (!context.mounted) return;
   showModalBottomSheet(
     context: context,
     backgroundColor: const Color(0xFF151B2B),
     shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-    builder: (context) {
+    builder: (modalContext) {
       return StatefulBuilder(
-        builder: (context, setModalState) {
+        builder: (modalContext, setModalState) {
           return Padding(
             padding: const EdgeInsets.all(24.0),
             child: Column(
@@ -293,7 +445,7 @@ Future<void> showSettingsSheet(BuildContext context, {VoidCallback? onChanged}) 
                       setModalState(() {});
                       onChanged?.call();
                     } else {
-                      Navigator.pop(context); // Kapatıp login aç
+                      if (modalContext.mounted) Navigator.pop(modalContext); // Kapatıp login aç
                       Map<String, String?>? inputData = await showGlobalLoginDialog(context);
                       if (inputData != null && inputData['username'] != null) {
                         String newName = inputData['username']!.trim();
@@ -309,6 +461,16 @@ Future<void> showSettingsSheet(BuildContext context, {VoidCallback? onChanged}) 
                     }
                   },
                 ),
+                const Divider(color: Colors.white24),
+                ListTile(
+                  leading: const Icon(Icons.settings_applications, color: Colors.white70),
+                  title: Text(LanguageService.get('engine_settings'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500)),
+                  onTap: () {
+                    if (modalContext.mounted) Navigator.pop(modalContext);
+                    showEngineSettingsDialog(context, onChanged: onChanged);
+                  },
+                ),
+                const Divider(color: Colors.white24),
                 ListTile(
                   leading: const Icon(Icons.language, color: Colors.white70),
                   title: Text(LanguageService.get('language'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500)),
@@ -904,6 +1066,10 @@ class ChessEngineService {
   Map<String, dynamic> _currentEvalData = {};
   bool _isMultiPvSet = false;
   bool _isWhiteToMove = true; 
+  
+  int stockfishDepth = 15;
+  int stockfishMultiPv = 3;
+  int stockfishThreads = 2;
 
   ChessEngineService._internal();
 
@@ -1016,7 +1182,13 @@ class ChessEngineService {
     _isWhiteToMove = fen.split(' ')[1] == 'w'; _onContinuousUpdate = onUpdate;
     _currentEvalData = { 'alternatives': <double>[0.0, 0.0, 0.0, 0.0, 0.0], 'suggestions': <String>['', '', '', '', ''] };
     if (_stockfish?.state.value == StockfishState.ready) {
-      _stockfish!.stdin = 'position fen $fen'; _stockfish!.stdin = 'go infinite'; 
+      if (!_isMultiPvSet) {
+        _stockfish!.stdin = 'setoption name MultiPV value $stockfishMultiPv';
+          _stockfish!.stdin = 'setoption name Threads value $stockfishThreads';
+        _isMultiPvSet = true;
+      }
+      _stockfish!.stdin = 'position fen $fen'; 
+      _stockfish!.stdin = stockfishDepth == 0 ? 'go infinite' : 'go depth $stockfishDepth'; 
     }
   }
 
@@ -1037,7 +1209,13 @@ class ChessEngineService {
 
     try {
       if (_stockfish?.state.value == StockfishState.ready) {
-        _stockfish!.stdin = 'position fen $fen'; _stockfish!.stdin = 'go movetime $maxTimeMs'; 
+        if (!_isMultiPvSet) {
+          _stockfish!.stdin = 'setoption name MultiPV value $stockfishMultiPv';
+          _stockfish!.stdin = 'setoption name Threads value $stockfishThreads';
+          _isMultiPvSet = true;
+        }
+        _stockfish!.stdin = 'position fen $fen'; 
+        _stockfish!.stdin = stockfishDepth == 0 ? 'go infinite' : 'go depth $stockfishDepth'; 
         Timer(Duration(milliseconds: maxTimeMs), () {
           if (_evaluationCompleter != null && !_evaluationCompleter!.isCompleted) stopEngine();
         });
@@ -1527,8 +1705,9 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                     });
                                   } else {
                                     var pData = userDoc.data()?['patron'];
-                                    if (pData is bool) patronStr = pData ? 'true' : 'false';
-                                    else if (pData is String) patronStr = pData;
+                                    if (pData is bool) {
+                                      patronStr = pData ? 'true' : 'false';
+                                    } else if (pData is String) patronStr = pData;
 
                                     if (userDoc.data()?['patron'] == null) {
                                       await FirebaseFirestore.instance.collection('users').doc(lichessName.toLowerCase()).set({'patron': false, 'username': lichessName}, SetOptions(merge: true));
@@ -1618,8 +1797,9 @@ Future<Map<String, String?>?> showGlobalLoginDialog(BuildContext context) {
                                   if (userDoc.exists) {
                                     title = userDoc.data()?['title'];
                                     var pData = userDoc.data()?['patron'];
-                                    if (pData is bool) patronStr = pData ? 'true' : 'false';
-                                    else if (pData is String) patronStr = pData;
+                                    if (pData is bool) {
+                                      patronStr = pData ? 'true' : 'false';
+                                    } else if (pData is String) patronStr = pData;
                                   }
                                   
                                   if (savedUsername.toLowerCase() == 'termo_x') title = 'TermoGM';
@@ -1792,6 +1972,9 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
   PuzzleDifficulty currentDifficulty = PuzzleDifficulty.hard;
   String? _userTitle;
   bool _isPatron = false;
+  bool _isOpponentMoving = false;
+  List<String> _playedFens = [];
+  int _viewIndex = 0;
 
   // İleride burayı Lichess veri tabanından binlerce ID ile doldurabilirsin.
   // Bunlar gerçek Lichess bulmaca ID'leridir.
@@ -2021,7 +2204,7 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
           
           _loadRandomPuzzle();
         } else {
-          Navigator.pop(context); 
+          if (mounted) Navigator.pop(context); 
         }
       });
     } else {
@@ -2070,9 +2253,10 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
           _validationChess.reset();
           _validationChess.load(apiFen);
           
-          // Rakibin hamlesini sanal tahtada oynat
           String from = opponentFirstMove.substring(0, 2);
           String to = opponentFirstMove.substring(2, 4);
+          bool isCapture = _validationChess.get(to) != null;
+
           Map<String, dynamic> moveObj = {"from": from, "to": to};
           if (opponentFirstMove.length > 4) moveObj["promotion"] = opponentFirstMove.substring(4, 5);
           _validationChess.move(moveObj);
@@ -2085,10 +2269,27 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
           setState(() {
             isWhiteToMove = isWhiteTurn;
             _boardOrientation = isWhiteTurn ? PlayerColor.white : PlayerColor.black;
-            controller.loadFen(_validationChess.fen);
+            _isOpponentMoving = true;
+            _playedFens = [apiFen];
+            _viewIndex = 0;
+            controller.loadFen(apiFen); // Load FEN before opponent move
           });
           
           if (mounted) setState(() => isLoading = false);
+          
+          // Animate opponent move after a short delay
+          Future.delayed(const Duration(milliseconds: 600), () {
+            if (mounted) {
+              controller.makeMove(from: from, to: to);
+              _playedFens.add(controller.game.fen);
+              _viewIndex = 1;
+              SoundService.playMoveSound(isCapture);
+              setState(() {
+                _isOpponentMoving = false;
+              });
+            }
+          });
+          
           return; // API başarılıysa yerel havuza geçmeden bitir
         }
       }
@@ -2123,6 +2324,9 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
       setState(() {
         isWhiteToMove = isWhiteTurn;
         _boardOrientation = isWhiteTurn ? PlayerColor.white : PlayerColor.black;
+        _isOpponentMoving = false;
+        _playedFens = [_validationChess.fen];
+        _viewIndex = 0;
         controller.loadFen(_validationChess.fen);
       });
       
@@ -2177,6 +2381,8 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
       // DOĞRU HAMLE!
       SoundService.playMoveSound(false);
       _validationChess.load(tempValidation.fen); 
+      _playedFens.add(_validationChess.fen);
+      _viewIndex = _playedFens.length - 1;
       currentMoveIndex++;
 
       if (currentMoveIndex >= solutionMoves.length) {
@@ -2187,8 +2393,11 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
         Future.delayed(const Duration(milliseconds: 600), () {
           _makeEngineMove(solutionMoves[currentMoveIndex]);
           controller.loadFen(_validationChess.fen); 
+          _playedFens.add(_validationChess.fen);
+          _viewIndex = _playedFens.length - 1;
           currentMoveIndex++;
           SoundService.playMoveSound(false);
+          setState(() {});
         });
       }
     } else {
@@ -2197,8 +2406,13 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
       controller.loadFen(_validationChess.fen); 
       
       if (!_hasFailedCurrentPuzzle) {
-        _penalizeUser(); // _hasFailedCurrentPuzzle'ı true yapar
-        _showFloatingText(context, '-${currentDifficulty.points}', Colors.redAccent);
+        _penalizeUser().then((penalty) {
+          if (penalty > 0) {
+            _showFloatingText(context, '-$penalty', Colors.redAccent);
+          } else {
+            _showFloatingText(context, '0', Colors.orangeAccent);
+          }
+        });
       } else {
         _showFloatingText(context, LanguageService.get('puzzle_wrong_move'), Colors.orangeAccent);
       }
@@ -2329,24 +2543,33 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
     }
   }
 
-  Future<void> _penalizeUser() async {
-    if (username.isEmpty || username == 'Misafir') return;
-    if (_hasFailedCurrentPuzzle) return; // Zaten hata yaptıysa bu bulmacada 2. kez puan düşme
+  Future<int> _penalizeUser() async {
+    if (username.isEmpty || username == 'Misafir') return 0;
+    if (_hasFailedCurrentPuzzle) return 0; // Zaten hata yaptıysa bu bulmacada 2. kez puan düşme
 
     setState(() {
       _hasFailedCurrentPuzzle = true;
     });
 
+    int penalty = currentDifficulty.points;
+    if (_currentScore - penalty < 0) {
+      penalty = _currentScore;
+    }
+
     try {
       final userRef = FirebaseFirestore.instance.collection('users').doc(username.toLowerCase());
       
-      await userRef.set({
-        'username': username,
-        'score': FieldValue.increment(-currentDifficulty.points),
-      }, SetOptions(merge: true));
+      if (penalty > 0) {
+        await userRef.set({
+          'username': username,
+          'score': FieldValue.increment(-penalty),
+        }, SetOptions(merge: true));
+      }
     } catch (e) {
       debugPrint("Ceza yazma hatası: $e");
     }
+    
+    return penalty;
   }
 
 void _showSuccessDialog() {
@@ -2365,7 +2588,7 @@ void _showSuccessDialog() {
         actions: [
           TextButton(
             onPressed: () {
-              Navigator.pop(context); // Dialogu kapat
+              if (mounted) Navigator.pop(context); // Dialogu kapat
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LeaderboardPage()));
             },
             child: Text(LanguageService.get('puzzle_leaderboard'), style: const TextStyle(color: Colors.white70)),
@@ -2373,7 +2596,7 @@ void _showSuccessDialog() {
           ElevatedButton(
             style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF5C6BC0)),
             onPressed: () {
-              Navigator.pop(context); // Dialogu kapat
+              if (mounted) Navigator.pop(context); // Dialogu kapat
               _loadNextPuzzle(); // YENİ BULMACAYA GEÇİŞ BAŞLATICI
             },
             child: Text(LanguageService.currentLang == 'en' ? 'Next Puzzle' : 'Sonraki Bulmaca', style: const TextStyle(color: Colors.white)),
@@ -2421,7 +2644,7 @@ void _loadNextPuzzle() {
                   ),
                   trailing: isSelected ? const Icon(Icons.check, color: Colors.cyanAccent) : null,
                   onTap: () async {
-                    Navigator.pop(context);
+                    if (mounted) Navigator.pop(context);
                     if (currentDifficulty != diff) {
                       final prefs = await SharedPreferences.getInstance();
                       await prefs.setInt('puzzle_difficulty_index', diff.index);
@@ -2442,6 +2665,8 @@ void _loadNextPuzzle() {
 
   @override
   Widget build(BuildContext context) {
+    bool isReviewing = _playedFens.isNotEmpty && _viewIndex < _playedFens.length - 1;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(LanguageService.get('puzzles'), style: const TextStyle(fontWeight: FontWeight.bold)),
@@ -2632,7 +2857,9 @@ void _loadNextPuzzle() {
                                             final rankChar = (rank + 1).toString();
                                             final square = '$fileChar$rankChar';
                                             
-                                            _onSquareTapped(square);
+                                            if (!_isOpponentMoving && !isReviewing) {
+                                              _onSquareTapped(square);
+                                            }
                                           },
                                           child: Stack(
                                             children: [
@@ -2641,7 +2868,7 @@ void _loadNextPuzzle() {
                                                 controller: controller,
                                                 boardColor: BoardColor.green,
                                                 boardOrientation: _boardOrientation,
-                                                enableUserMoves: true, // Sürükle-bırak aktif
+                                                enableUserMoves: !_isOpponentMoving && !isReviewing, // Sürükle-bırak aktif değilse engelle
                                                 onMove: _onMove,
                                               ),
                                               // 2. GÖRSEL KATMAN (Vurgular ve Noktalar)
@@ -2727,53 +2954,94 @@ void _loadNextPuzzle() {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      if (!isSolved && _hasFailedCurrentPuzzle)
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: GestureDetector(
-                            onTap: _showHint,
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF101A2B).withValues(alpha: 0.92),
-                                borderRadius: BorderRadius.circular(10),
-                                border: Border.all(
-                                  color: Colors.yellowAccent.withValues(alpha: 0.65),
-                                  width: 1.1,
-                                ),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.yellowAccent.withValues(alpha: 0.18),
-                                    blurRadius: 10,
-                                    spreadRadius: 1,
-                                  )
-                                ],
-                              ),
-                              child: const Row(
+                      // ALT PANEL (Oklar ve İpucu Butonu)
+                      SizedBox(
+                        height: 48,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            // YÖN OKLARI (Merkezde)
+                            if (_playedFens.isNotEmpty)
+                              Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  Icon(
-                                    Icons.lightbulb_outline,
-                                    color: Colors.yellowAccent,
-                                    size: 15,
-                                    shadows: [Shadow(color: Colors.yellowAccent, blurRadius: 10)],
+                                  IconButton(
+                                    icon: const Icon(Icons.arrow_back_ios, size: 22),
+                                    color: _viewIndex > 0 ? Colors.white : Colors.white30,
+                                    onPressed: _viewIndex > 0 ? () {
+                                      SoundService.playMoveSound(false);
+                                      setState(() {
+                                        _viewIndex--;
+                                        controller.loadFen(_playedFens[_viewIndex]);
+                                      });
+                                    } : null,
                                   ),
-                                  SizedBox(width: 5),
-                                  Text(
-                                    "İPUCU AL",
-                                    style: TextStyle(
-                                      color: Colors.yellowAccent,
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 10.5,
-                                      letterSpacing: 1.0,
-                                      shadows: [Shadow(color: Colors.yellowAccent, blurRadius: 10)],
-                                    ),
+                                  const SizedBox(width: 30),
+                                  IconButton(
+                                    icon: const Icon(Icons.arrow_forward_ios, size: 22),
+                                    color: _viewIndex < _playedFens.length - 1 ? Colors.white : Colors.white30,
+                                    onPressed: _viewIndex < _playedFens.length - 1 ? () {
+                                      SoundService.playMoveSound(false);
+                                      setState(() {
+                                        _viewIndex++;
+                                        controller.loadFen(_playedFens[_viewIndex]);
+                                      });
+                                    } : null,
                                   ),
                                 ],
                               ),
-                            ),
-                          ),
+                            
+                            // İPUCU BUTONU (Sağda)
+                            if (!isSolved && _hasFailedCurrentPuzzle)
+                              Positioned(
+                                right: 0,
+                                child: GestureDetector(
+                                  onTap: _showHint,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF101A2B).withValues(alpha: 0.92),
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                        color: Colors.yellowAccent.withValues(alpha: 0.65),
+                                        width: 1.1,
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.yellowAccent.withValues(alpha: 0.18),
+                                          blurRadius: 10,
+                                          spreadRadius: 1,
+                                        )
+                                      ],
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        const Icon(
+                                          Icons.lightbulb_outline,
+                                          color: Colors.yellowAccent,
+                                          size: 15,
+                                          shadows: [Shadow(color: Colors.yellowAccent, blurRadius: 10)],
+                                        ),
+                                        const SizedBox(width: 5),
+                                        Text(
+                                          LanguageService.get('get_hint'),
+                                          style: const TextStyle(
+                                            color: Colors.yellowAccent,
+                                            fontWeight: FontWeight.w800,
+                                            fontSize: 10.5,
+                                            letterSpacing: 1.0,
+                                            shadows: [Shadow(color: Colors.yellowAccent, blurRadius: 10)],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          ],
                         ),
+                      ),
                     ],
                   ),
                 ),
@@ -2809,7 +3077,6 @@ void _loadNextPuzzle() {
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.2,
-                          shadows: [Shadow(color: Colors.blueAccent, blurRadius: 10)]
                         ),
                       ),
                     ],
@@ -3625,6 +3892,27 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(height: 8),
                   // ----------------------------------------
+                  SizedBox(
+                    width: double.infinity, 
+                    child: OutlinedButton.icon(
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: Colors.white, 
+                        backgroundColor: const Color(0xFF151B2B), 
+                        side: const BorderSide(color: Colors.cyanAccent), 
+                        padding: const EdgeInsets.symmetric(vertical: 14), 
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
+                      ), 
+                      icon: const Icon(Icons.analytics, color: Colors.cyanAccent), 
+                      label: Text(
+                        LanguageService.get('free_analyze'), 
+                        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.cyanAccent)
+                      ), 
+                      onPressed: () { 
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const FreeAnalysisPage())); 
+                      }, 
+                    )
+                  ),
+                  const SizedBox(height: 8),
                   ],
                 ) : const SizedBox(width: double.infinity, height: 0),
               ),
@@ -3831,8 +4119,9 @@ class LeaderboardPage extends StatelessWidget {
               // Patron verisi eskiden string, yeni olarak bool kaydedildiği için güvenli kontrol:
               var pData = data['patron'];
               bool isPatron = false;
-              if (pData is bool) isPatron = pData;
-              else if (pData is String) isPatron = pData == 'true';
+              if (pData is bool) {
+                isPatron = pData;
+              } else if (pData is String) isPatron = pData == 'true';
               
               int score = data['score'] ?? 0;
               
@@ -3918,7 +4207,7 @@ class _AnalysisPageState extends State<AnalysisPage> {
 
   double _evaluationValue = 0.3; 
   String _evaluationText = "+0.3";
-  List<String> _topEngineMoves = ['...', '...', '...'];
+  List<String> _topEngineMoves = ['', '', ''];
 
   bool _isAnalyzing = false;
   bool _analysisDone = false;
@@ -4596,4 +4885,728 @@ Widget _buildAnnotatedBoard() {
       ),
     );
   }
+}class FreeAnalysisPage extends StatefulWidget {
+  const FreeAnalysisPage({super.key});
+
+  @override
+  State<FreeAnalysisPage> createState() => _FreeAnalysisPageState();
 }
+
+class _FreeAnalysisPageState extends State<FreeAnalysisPage> {
+  late ChessBoardController controller;
+  final ScrollController _pageScrollController = ScrollController();
+  PlayerColor _boardOrientation = PlayerColor.white;
+  
+  List<String> _fenList = [];
+  List<String> _allMoves = [];
+  int _currentMoveIndex = 0;
+
+  double _evaluationValue = 0.3;
+  String _evaluationText = "+0.3";
+  List<String> _topEngineMoves = ['', '', ''];
+  
+  String? _selectedSquare;
+  List<String> _legalDestinations = [];
+
+  @override
+  void initState() {
+    super.initState();
+    controller = ChessBoardController();
+    ChessEngineService().initEngine();
+    controller.addListener(_onBoardChange);
+    _initBoard();
+  }
+
+  String _formatUciToSan(String uci) {
+    if (uci.isEmpty || uci == '-' || uci == '#' || uci == '=' || uci == '...') return uci;
+    if (uci.length < 4) return uci;
+    try {
+      final chessCheck = chess_engine.Chess();
+      chessCheck.load(_fenList[_currentMoveIndex]);
+      String from = uci.substring(0, 2);
+      String to = uci.substring(2, 4);
+      String? promotion = uci.length == 5 ? uci.substring(4, 5) : null;
+      if (chessCheck.move({'from': from, 'to': to, 'promotion': promotion})) {
+        var hist = chessCheck.getHistory();
+        if (hist.isNotEmpty) return hist.last.toString();
+      }
+    } catch (_) {}
+    return uci;
+  }
+
+  void _initBoard() {
+    _fenList = [controller.game.fen];
+    _allMoves = [];
+    _currentMoveIndex = 0;
+    _startEvaluation();
+  }
+
+  @override
+  void dispose() {
+    controller.removeListener(_onBoardChange);
+    ChessEngineService().stopContinuousAnalysis();
+    _pageScrollController.dispose();
+    super.dispose();
+  }
+
+  void _onBoardChange() {
+    // Determine if a new move was made by checking FEN length
+    // Actually ChessBoardController listener triggers on any change
+    // Let's use a robust way to track moves
+    if (_currentMoveIndex < _fenList.length - 1 && controller.game.fen == _fenList[_currentMoveIndex]) {
+      return; // Not a new move, just navigated
+    }
+    
+    // If user made a move while exploring history, truncate history
+    if (_currentMoveIndex < _fenList.length - 1) {
+      _fenList.removeRange(_currentMoveIndex + 1, _fenList.length);
+      _allMoves.removeRange(_currentMoveIndex, _allMoves.length);
+    }
+
+    if (_fenList.last != controller.game.fen) {
+      _fenList.add(controller.game.fen);
+      var sans = controller.getSan();
+      if (sans.isNotEmpty && sans.last != null) {
+        // san_moves() returns pairs like "1. e4 e6" - extract just the last individual move
+        String lastPair = sans.last!.trim();
+        List<String> parts = lastPair.split(RegExp(r'\s+'));
+        // The last word is the actual move (e.g., "e4", "e6", "Nc3")
+        String lastMove = parts.last;
+        _allMoves.add(lastMove);
+        bool isCapture = lastMove.contains('x');
+        SoundService.playMoveSound(isCapture);
+      } else {
+        _allMoves.add('?');
+        SoundService.playMoveSound(false);
+      }
+      _currentMoveIndex++;
+      _selectedSquare = null;
+      _legalDestinations.clear();
+      _startEvaluation();
+    }
+  }
+
+  void _startEvaluation({bool silent = false}) {
+    setState(() {
+      _topEngineMoves = ['', '', ''];
+    });
+    
+    String currentFen = _fenList[_currentMoveIndex];
+    if (currentFen == 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1') {
+      setState(() {
+        _evaluationValue = 0.3;
+        _evaluationText = "+0.3";
+        _topEngineMoves = ['e2e4', 'd2d4', 'g1f3'];
+      });
+      return;
+    }
+
+    ChessEngineService().startContinuousAnalysis(currentFen, (updateData) {
+      if (!mounted) return;
+      double rawEval = updateData['best_eval'] ?? 0.0;
+      bool isMate = updateData['is_mate'] ?? false;
+      List<String> suggs = List<String>.from(updateData['suggestions'] ?? ['', '', '', '', '']);
+
+      String evalTxt = isMate || rawEval.abs() > 14.0 
+          ? (rawEval > 0 ? '+M' : '-M') 
+          : (rawEval > 0 ? '+${rawEval.toStringAsFixed(1)}' : rawEval.toStringAsFixed(1));
+
+      setState(() {
+        _evaluationValue = rawEval;
+        _evaluationText = evalTxt;
+        _topEngineMoves = suggs.take(3).toList();
+      });
+    });
+  }
+
+  void _goToMove(int index) {
+    if (index < 0 || index >= _fenList.length) return;
+    controller.removeListener(_onBoardChange); // Disable listener temporarily
+    
+    if (index > 0 && index - 1 < _allMoves.length) {
+      bool isCapture = _allMoves[index - 1].contains('x');
+      SoundService.playMoveSound(isCapture);
+    } else if (index == 0) {
+      SoundService.playMoveSound(false);
+    }
+
+    setState(() {
+      _currentMoveIndex = index;
+      _selectedSquare = null;
+      _legalDestinations.clear();
+    });
+    controller.loadFen(_fenList[index]);
+    _startEvaluation();
+    
+    // re-attach listener after short delay to prevent firing
+    Future.delayed(const Duration(milliseconds: 50), () {
+      if (mounted) controller.addListener(_onBoardChange);
+    });
+  }
+
+  String _indexToSquare(int index, bool isWhiteBottom) {
+    int rank, file;
+    if (isWhiteBottom) {
+      rank = 7 - (index ~/ 8);
+      file = index % 8;
+    } else {
+      rank = index ~/ 8;
+      file = 7 - (index % 8);
+    }
+    final fileChar = String.fromCharCode('a'.codeUnitAt(0) + file);
+    final rankChar = (rank + 1).toString();
+    return '$fileChar$rankChar';
+  }
+
+  void _onFreeSquareTapped(String square) {
+    final piece = controller.game.get(square);
+    final isWhiteToMove = controller.game.fen.split(' ')[1] == 'w';
+    
+    if (_selectedSquare == null) {
+      if (piece != null && piece.color == (isWhiteToMove ? chess_engine.Color.WHITE : chess_engine.Color.BLACK)) {
+        setState(() {
+          _selectedSquare = square;
+          final moves = controller.game.moves({"square": square, "verbose": true});
+          _legalDestinations = moves.map((m) => m["to"] as String).toList();
+        });
+      }
+    } else {
+      if (_legalDestinations.contains(square)) {
+        controller.makeMove(from: _selectedSquare!, to: square);
+        setState(() {
+          _selectedSquare = null;
+          _legalDestinations.clear();
+        });
+      } else if (piece != null && piece.color == (isWhiteToMove ? chess_engine.Color.WHITE : chess_engine.Color.BLACK)) {
+        setState(() {
+          _selectedSquare = square;
+          final moves = controller.game.moves({"square": square, "verbose": true});
+          _legalDestinations = moves.map((m) => m["to"] as String).toList();
+        });
+      } else {
+        setState(() {
+          _selectedSquare = null;
+          _legalDestinations.clear();
+        });
+      }
+    }
+  }
+
+  void _showPasteDialog() {
+    TextEditingController textController = TextEditingController();
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: const Color(0xFF151B2B),
+          title: Text(LanguageService.get('paste_pgn_fen'), style: const TextStyle(color: Colors.white)),
+          content: TextField(
+            controller: textController,
+            style: const TextStyle(color: Colors.white),
+            maxLines: 4,
+            decoration: InputDecoration(
+              hintText: LanguageService.get('paste_pgn_fen_hint'),
+              hintStyle: const TextStyle(color: Colors.white54),
+              enabledBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white24)),
+              focusedBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.blueAccent)),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text(LanguageService.get('cancel'), style: const TextStyle(color: Colors.white54)),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
+              onPressed: () {
+                String input = textController.text.trim();
+                if (mounted) Navigator.pop(context);
+                if (input.isNotEmpty) {
+                  _loadPgnOrFen(input);
+                }
+              },
+              child: Text(LanguageService.get('paste')),
+            ),
+          ],
+        );
+      }
+    );
+  }
+
+  void _shareFreePgn() async {
+    String date = DateTime.now().toString().split(' ')[0].replaceAll('-', '.');
+    String pgn = '[Event "MoveLab Analiz"]\n[Site "MoveLab App"]\n[Date "$date"]\n[White "Beyaz"]\n[Black "Siyah"]\n[Result "*"]\n\n';
+    String formattedMoves = '';
+    for (int i = 0; i < _allMoves.length; i++) {
+      if (i % 2 == 0) formattedMoves += '${(i ~/ 2) + 1}. ';
+      formattedMoves += '${_allMoves[i]} ';
+    }
+    pgn += formattedMoves.trim();
+    final box = context.findRenderObject() as RenderBox?;
+    await Share.share('$pgn\n\n📲 App: https://play.google.com/store/apps/details?id=com.movelab.app', subject: 'MoveLab - ${LanguageService.get('share_pgn')}', sharePositionOrigin: box != null ? box.localToGlobal(Offset.zero) & box.size : null);
+  }
+
+  void _showSaveToLibraryDialog() {
+    final whiteCtrl = TextEditingController(text: 'Beyaz');
+    final whiteEloCtrl = TextEditingController(text: '?');
+    final blackCtrl = TextEditingController(text: 'Siyah');
+    final blackEloCtrl = TextEditingController(text: '?');
+    String result = '*';
+    showDialog(
+      context: context,
+      builder: (ctx) {
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              backgroundColor: const Color(0xFF1A2136),
+              title: Text(LanguageService.get('save_to_library'), style: const TextStyle(color: Colors.white)),
+              content: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(child: TextField(controller: whiteCtrl, style: const TextStyle(color: Colors.white), decoration: InputDecoration(labelText: LanguageService.get('white_player'), labelStyle: const TextStyle(color: Colors.white54), enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.white24))))),
+                        const SizedBox(width: 8),
+                        SizedBox(width: 60, child: TextField(controller: whiteEloCtrl, keyboardType: TextInputType.number, style: const TextStyle(color: Colors.white), decoration: InputDecoration(labelText: LanguageService.get('elo'), labelStyle: const TextStyle(color: Colors.white54), enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.white24))))),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Expanded(child: TextField(controller: blackCtrl, style: const TextStyle(color: Colors.white), decoration: InputDecoration(labelText: LanguageService.get('black_player'), labelStyle: const TextStyle(color: Colors.white54), enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.white24))))),
+                        const SizedBox(width: 8),
+                        SizedBox(width: 60, child: TextField(controller: blackEloCtrl, keyboardType: TextInputType.number, style: const TextStyle(color: Colors.white), decoration: InputDecoration(labelText: LanguageService.get('elo'), labelStyle: const TextStyle(color: Colors.white54), enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.white24))))),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    DropdownButtonFormField<String>(
+                      initialValue: result,
+                      dropdownColor: const Color(0xFF2A3146),
+                      style: const TextStyle(color: Colors.white),
+                      decoration: InputDecoration(labelText: LanguageService.get('result'), labelStyle: const TextStyle(color: Colors.white54)),
+                      items: ['1-0', '0-1', '1/2-1/2', '*'].map((String val) {
+                        return DropdownMenuItem<String>(value: val, child: Text(val));
+                      }).toList(),
+                      onChanged: (val) {
+                        if (val != null) setState(() { result = val; });
+                      },
+                    )
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(ctx),
+                  child: Text(LanguageService.get('cancel'), style: const TextStyle(color: Colors.white54)),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
+                  onPressed: () {
+                    String formattedMoves = '';
+                    for (int i = 0; i < _allMoves.length; i++) {
+                      if (i % 2 == 0) formattedMoves += '${(i ~/ 2) + 1}. ';
+                      formattedMoves += '${_allMoves[i]} ';
+                    }
+                    String pgnStr = '[Event "MoveLab Analiz"]\n[White "${whiteCtrl.text}"]\n[WhiteElo "${whiteEloCtrl.text}"]\n[Black "${blackCtrl.text}"]\n[BlackElo "${blackEloCtrl.text}"]\n[Result "$result"]\n\n${formattedMoves.trim()}';
+                    SavedMatch match = SavedMatch(title: 'Custom Match', whiteName: whiteCtrl.text, blackName: blackCtrl.text, winner: result == '1-0' ? 'white' : result == '0-1' ? 'black' : result == '1/2-1/2' ? 'draw' : 'unknown', moves: formattedMoves.trim(), pgn: pgnStr, speed: 'Free Analysis', whiteRating: int.tryParse(whiteEloCtrl.text) ?? 0, blackRating: int.tryParse(blackEloCtrl.text) ?? 0);
+                    GlobalLibrary.matches.add(match);
+                    GlobalLibrary.saveMatches();
+                    Navigator.pop(ctx);
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(LanguageService.get('saved_to_library')), backgroundColor: Colors.greenAccent));
+                  },
+                  child: Text(LanguageService.get('save')),
+                )
+              ],
+            );
+          }
+        );
+      }
+    );
+  }
+
+  void _loadPgnOrFen(String input) {
+    try {
+      controller.removeListener(_onBoardChange);
+      if (input.contains('[Event') || input.contains('1.')) {
+        // PGN
+        chess_engine.Chess chess = chess_engine.Chess();
+        chess.load_pgn(input);
+        
+        _fenList = [];
+        _allMoves = [];
+        
+        // Unfortunately chess_engine doesn't expose FENs for all past moves directly from load_pgn 
+        // We will just load the final FEN and reset history for simplicity, OR we can parse it manually.
+        // For robust PGN parsing, the user can just use Analyze with PGN from home. 
+        // Here we just load the final FEN:
+        controller.loadFen(chess.fen);
+      } else {
+        // Try FEN
+        controller.loadFen(input);
+      }
+      
+      _fenList = [controller.game.fen];
+      _allMoves = [];
+      _currentMoveIndex = 0;
+      
+      // If we could extract history, we'd do it here. For now, just starting from loaded fen.
+      _startEvaluation();
+      
+      Future.delayed(const Duration(milliseconds: 50), () {
+        if (mounted) controller.addListener(_onBoardChange);
+      });
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(LanguageService.get('invalid_pgn_fen')), backgroundColor: Colors.redAccent));
+      if (mounted) controller.addListener(_onBoardChange);
+    }
+  }
+
+  List<String> _boardFiles() {
+    const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+    return _boardOrientation == PlayerColor.white ? files : files.reversed.toList();
+  }
+
+  List<String> _boardRanks() {
+    return _boardOrientation == PlayerColor.white
+        ? List<String>.generate(8, (index) => '${8 - index}')
+        : List<String>.generate(8, (index) => '${index + 1}');
+  }
+
+  Widget _buildCoordinateLabel(String text) {
+    return SizedBox(
+      width: 16, height: 16,
+      child: Center(
+        child: Text(
+          text, 
+          style: TextStyle(color: Colors.white.withValues(alpha: 0.72), fontSize: 9, fontWeight: FontWeight.w600, height: 1)
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    double evalPercentage = 0.5;
+    double capVal = _evaluationValue.clamp(-10.0, 10.0);
+    if (capVal > 0) { evalPercentage = 0.5 + (capVal / 10.0) * 0.5; }
+    else { evalPercentage = 0.5 - (capVal.abs() / 10.0) * 0.5; }
+    bool isMateLocal = _evaluationText.contains('M');
+    if (isMateLocal) { evalPercentage = _evaluationText.contains('+') ? 1.0 : 0.0; }
+
+    bool shouldShowArrow = SoundService.showArrows && _topEngineMoves[0].length >= 4 && _topEngineMoves[0] != '...';
+    String fromSquare = shouldShowArrow ? _topEngineMoves[0].substring(0, 2) : '';
+    String toSquare = shouldShowArrow ? _topEngineMoves[0].substring(2, 4) : '';
+
+    return Scaffold(
+      backgroundColor: const Color(0xFF0B101E),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF101A2B),
+        elevation: 0,
+        title: const FittedBox(fit: BoxFit.scaleDown, child: Text('Stockfish Analysis', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white))),
+        leading: IconButton(icon: const Icon(Icons.arrow_back, color: Colors.white), onPressed: () => Navigator.pop(context)),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings, color: Colors.white70),
+            tooltip: LanguageService.get('settings'),
+            onPressed: () => showSettingsSheet(
+              context,
+              onChanged: () { setState(() {}); _startEvaluation(silent: true); },
+              onPaste: _showPasteDialog,
+              onResetBoard: () {
+                controller.removeListener(_onBoardChange);
+                controller.resetBoard();
+                _initBoard();
+                Future.delayed(const Duration(milliseconds: 50), () {
+                  if (mounted) controller.addListener(_onBoardChange);
+                });
+              },
+            ),
+          ),
+          IconButton(icon: const Icon(Icons.swap_vert, color: Colors.white70), tooltip: LanguageService.get('rotate_board'), onPressed: () { setState(() { _boardOrientation = _boardOrientation == PlayerColor.white ? PlayerColor.black : PlayerColor.white; }); }),
+          IconButton(icon: const Icon(Icons.share, color: Colors.white70), tooltip: LanguageService.get('share_pgn'), onPressed: _shareFreePgn),
+          IconButton(icon: const Icon(Icons.library_add, color: Colors.white70), tooltip: LanguageService.get('save_to_library'), onPressed: _showSaveToLibraryDialog),
+        ],
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              controller: _pageScrollController,
+              child: Column(
+                children: [
+                  const SizedBox(height: 10),
+                  // Evaluation Bar
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Column(
+                      children: [
+                        LayoutBuilder(
+                          builder: (context, constraints) {
+                            return Container(
+                              height: 14, width: double.infinity, decoration: BoxDecoration(color: const Color(0xFF151B2B), borderRadius: BorderRadius.circular(8)),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Stack(children: [AnimatedContainer(duration: const Duration(milliseconds: 350), curve: Curves.easeOutCubic, height: 14, width: constraints.maxWidth * evalPercentage, color: Colors.white)]),
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 8),
+                        AnimatedDefaultTextStyle(
+                          duration: const Duration(milliseconds: 150), 
+                          curve: Curves.easeOutQuint, 
+                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Colors.white), 
+                          child: Text("${LanguageService.get('analysis_engine')}: $_evaluationText")
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  
+                  // Top Engine Moves
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: _topEngineMoves.map((m) {
+                        return Expanded(
+                          child: Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 4),
+                            padding: const EdgeInsets.symmetric(vertical: 4),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF151B2B),
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(color: Colors.white12),
+                            ),
+                            child: Text(
+                              _formatUciToSan(m), textAlign: TextAlign.center,
+                              style: const TextStyle(color: Colors.greenAccent, fontWeight: FontWeight.w600, fontSize: 13),
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+
+                  // Chess Board
+                  ClipRect(
+                    child: AspectRatio(
+                      aspectRatio: 1.0,
+                      child: Stack(
+                        clipBehavior: Clip.hardEdge,
+                        children: [
+                          Positioned.fill(
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: LayoutBuilder(
+                                builder: (context, constraints) {
+                                  return Listener(
+                                    behavior: HitTestBehavior.translucent,
+                                    onPointerUp: (event) {
+                                      final squareSize = constraints.maxWidth / 8;
+                                      final col = (event.localPosition.dx / squareSize).floor().clamp(0, 7);
+                                      final row = (event.localPosition.dy / squareSize).floor().clamp(0, 7);
+                                      
+                                      int rank, file;
+                                      if (_boardOrientation == PlayerColor.white) {
+                                        rank = 7 - row;
+                                        file = col;
+                                      } else {
+                                        rank = row;
+                                        file = 7 - col;
+                                      }
+                                      
+                                      final fileChar = String.fromCharCode('a'.codeUnitAt(0) + file);
+                                      final rankChar = (rank + 1).toString();
+                                      final square = '$fileChar$rankChar';
+                                      
+                                      _onFreeSquareTapped(square);
+                                    },
+                                    child: Stack(
+                                      children: [
+                                        ChessBoard(
+                                          controller: controller,
+                                          boardColor: BoardColor.green,
+                                          boardOrientation: _boardOrientation,
+                                          enableUserMoves: true,
+                                        ),
+                                        // Legal move hints overlay
+                                        IgnorePointer(
+                                          child: Column(
+                                            children: List.generate(8, (row) {
+                                              return Expanded(
+                                                child: Row(
+                                                  children: List.generate(8, (col) {
+                                                    final index = row * 8 + col;
+                                                    final square = _indexToSquare(index, _boardOrientation == PlayerColor.white);
+                                                    final isSelected = square == _selectedSquare;
+                                                    final isLegalMove = _legalDestinations.contains(square);
+                                                    
+                                                    final piece = controller.game.get(square);
+                                                    final isCapture = isLegalMove && piece != null;
+                                                    
+                                                    Widget? highlightWidget;
+                                                    if (isCapture) {
+                                                      highlightWidget = Center(
+                                                        child: Container(
+                                                          width: 32,
+                                                          height: 32,
+                                                          decoration: BoxDecoration(
+                                                            border: Border.all(color: Colors.black.withValues(alpha: 0.3), width: 5),
+                                                            shape: BoxShape.circle,
+                                                          ),
+                                                        ),
+                                                      );
+                                                    } else if (isLegalMove) {
+                                                      highlightWidget = Center(
+                                                        child: Container(
+                                                          width: 14,
+                                                          height: 14,
+                                                          decoration: BoxDecoration(
+                                                            color: Colors.black.withValues(alpha: 0.3),
+                                                            shape: BoxShape.circle,
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }
+                                                    
+                                                    return Expanded(
+                                                      child: Container(
+                                                        decoration: BoxDecoration(
+                                                          color: isSelected ? Colors.yellow.withValues(alpha: 0.4) : null,
+                                                        ),
+                                                        child: highlightWidget,
+                                                      ),
+                                                    );
+                                                  }),
+                                                ),
+                                              );
+                                            }),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ),
+                          if (shouldShowArrow)
+                            Positioned.fill(
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0), 
+                                child: IgnorePointer(
+                                  child: CustomPaint(
+                                    painter: CustomArrowPainter(
+                                      from: fromSquare,
+                                      to: toSquare,
+                                      orientation: _boardOrientation,
+                                      color: const Color(0xFF3F6CFF).withValues(alpha: 0.8), 
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          Positioned(
+                            left: 12, right: 12, bottom: 0,
+                            child: SizedBox(
+                              height: 14,
+                              child: Row(children: _boardFiles().map((e) => Expanded(child: Center(child: _buildCoordinateLabel(e)))).toList()),
+                            ),
+                          ),
+                          Positioned(
+                            top: 12, bottom: 12, left: 0,
+                            child: SizedBox(
+                              width: 14,
+                              child: Column(children: _boardRanks().map((e) => Expanded(child: Center(child: _buildCoordinateLabel(e)))).toList()),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  
+                  const SizedBox(height: 20),
+                  
+                  // Navigation Controls
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.fast_rewind),
+                        color: _currentMoveIndex > 0 ? Colors.white : Colors.white30,
+                        onPressed: _currentMoveIndex > 0 ? () => _goToMove(0) : null,
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back_ios_new),
+                        color: _currentMoveIndex > 0 ? Colors.white : Colors.white30,
+                        onPressed: _currentMoveIndex > 0 ? () => _goToMove(_currentMoveIndex - 1) : null,
+                      ),
+                      const SizedBox(width: 20),
+                      IconButton(
+                        icon: const Icon(Icons.arrow_forward_ios),
+                        color: _currentMoveIndex < _fenList.length - 1 ? Colors.white : Colors.white30,
+                        onPressed: _currentMoveIndex < _fenList.length - 1 ? () => _goToMove(_currentMoveIndex + 1) : null,
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.fast_forward),
+                        color: _currentMoveIndex < _fenList.length - 1 ? Colors.white : Colors.white30,
+                        onPressed: _currentMoveIndex < _fenList.length - 1 ? () => _goToMove(_fenList.length - 1) : null,
+                      ),
+                    ],
+                  ),
+                  
+                  const SizedBox(height: 10),
+                  
+                  // Move List
+                  if (_allMoves.isNotEmpty)
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF151B2B),
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white12),
+                    ),
+                    child: Wrap(
+                      spacing: 4,
+                      runSpacing: 6,
+                      children: List.generate(_allMoves.length, (index) {
+                        bool isWhite = index % 2 == 0;
+                        String moveNumber = isWhite ? '${(index ~/ 2) + 1}. ' : '';
+                        bool isCurrent = index == _currentMoveIndex - 1;
+                        
+                        return GestureDetector(
+                          onTap: () => _goToMove(index + 1),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            decoration: BoxDecoration(
+                              color: isCurrent ? Colors.blueAccent.withValues(alpha: 0.3) : Colors.transparent,
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Text(
+                              '$moveNumber${_allMoves[index].replaceAll(RegExp(r'^\d+\.+\s*'), '')}',
+                              style: TextStyle(
+                                color: isCurrent ? Colors.blueAccent : Colors.white70,
+                                fontWeight: isCurrent ? FontWeight.bold : FontWeight.normal,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                  const SizedBox(height: 40),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+

@@ -1,0 +1,42 @@
+name: "MoveLab"
+description: Kapsamlı bir satranç analiz ve istatistik uygulaması.
+publish_to: 'none'
+
+version: 1.0.6+12
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  http:
+  flutter_chess_board:
+  chess:
+  shared_preferences:
+  share_plus:
+  stockfish:
+  audioplayers:
+  path_provider:
+  firebase_core: ^4.11.0
+  cloud_firestore: ^6.6.0
+  flutter_web_auth_2: ^5.0.3
+  crypto: ^3.0.7
+  url_launcher: ^6.3.2
+  firebase_auth: ^6.5.4
+  google_sign_in: ^6.2.1
+  change_app_package_name: ^1.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logoyazili.png
+    - assets/logo.png
+    - assets/sounds/

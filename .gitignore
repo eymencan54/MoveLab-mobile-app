@@ -29,3 +29,15 @@ build/
 
 # Senin projene özel geçici klasörler
 .junie/
+
+# Kişisel ve gizli dosyalar / Test scriptleri
+test_lichess.json
+*.py
+scratch.dart
+test.dart
+test_sf.dart
+firebase.json
+lib/firebase_options.dart
+debug-info/
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
