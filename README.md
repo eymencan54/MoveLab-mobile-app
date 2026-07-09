@@ -277,4 +277,4 @@ this software under the terms of the Apache 2.0 license.
 
 Developed by **Eymen Can Orman**
 
-[GitHub: @eymencan](https://github.com/eymencan)
+[GitHub: @eymencanorman](https://github.com/eymencanorman)
