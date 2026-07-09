@@ -22,11 +22,13 @@ MoveLab is a next-generation chess analysis application designed for players who
 The application integrates online chess platforms such as **Lichess** and **Chess.com**, while also providing powerful offline analysis capabilities using the **Stockfish** chess engine.
 
 ---
-A comprehensive mobile application for chess players to analyze their games, track progress, and improve their skills with detailed insights and local engine evaluations.
+
 ## 🚀 Features
 
 * **Platform Integration:** Seamlessly fetch recent matches and player stats from both **Lichess** and **Chess.com** using their official APIs.
 * **Local Engine Analysis:** Powered by a built-in **Stockfish** engine for real-time, deep move analysis (MultiPV support) directly on your device without needing an internet connection.
+* **Free Analysis Board:** Set up and explore any position freely with interactive board controls and immediate engine feedback.
+* **Interactive Puzzles:** Train your tactical vision and improve your game with built-in chess puzzles.
 * **Advanced Move Classification:** Categorizes moves (Brilliant, Great, Best, Excellent, Good, Inaccuracy, Mistake, Blunder) using a custom accuracy algorithm and tactical detectors.
 * **Player Style Profiling:** Analyzes recent games to generate a unique "Player Style Profile" (e.g., Aggressive, Positional, Tactical) based on opening choices, game length, and tactical frequency.
 * **PGN Analyzer & Custom Library:** Paste custom PGNs for analysis or save your favorite matches directly to the local device storage for future review.
@@ -157,7 +159,8 @@ MoveLab is built with a focus on performance and seamless user experience.
 
 * **Framework:** Flutter (Dart)
 * **State Management:** Ephemeral state management via `StatefulWidget` for localized UI updates.
-* **Chess Logic & Board:** * `flutter_chess_board`: Renders the interactive UI chess board with custom arrow painters.
+* **Chess Logic & Board:**
+  * `flutter_chess_board`: Renders the interactive UI chess board with custom arrow painters.
   * `chess`: Handles FEN/PGN parsing, legal move generation, and game state validation.
 * **Engine:** `stockfish` plugin running as a background isolate, communicating via standard UCI protocols.
 * **Local Storage:** `shared_preferences` for saving user settings (sound, arrows) and storing the custom match library.
@@ -175,7 +178,7 @@ Follow these steps to build and run the project locally.
 ### Setup
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/ZeroHighx/MoveLab-mobile-app.git
+   git clone https://github.com/eymencanorman/MoveLab-mobile-app.git
    ```
 2. **Navigate to the project directory:**
    ```bash
@@ -230,7 +233,7 @@ flutter build apk --split-per-abi --release
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/ZeroHighx/MoveLab-mobile-app/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/eymencanorman/MoveLab-mobile-app/issues).
 
 Contributions are welcome.
 
@@ -274,4 +277,4 @@ this software under the terms of the Apache 2.0 license.
 
 Developed by **Eymen Can Orman**
 
-GitHub: (@eymencan)](https://github.com/eymencan)
+[GitHub: @eymencan](https://github.com/eymencan)
