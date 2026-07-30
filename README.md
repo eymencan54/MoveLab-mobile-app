@@ -215,7 +215,6 @@ flutter build apk --split-per-abi --release
   <img src="assets/screenshots/Screenshot_1785420668.png" width="250" />
   <img src="assets/screenshots/Screenshot_1785420690.png" width="250" />
   <img src="assets/screenshots/Screenshot_1785420701.png" width="250" />
-  <img src="assets/screenshots/Screenshot_1785420729.png" width="250" />
   <img src="assets/screenshots/Screenshot_1785420736.png" width="250" />
 </p>
 
