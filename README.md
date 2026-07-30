@@ -209,9 +209,15 @@ flutter build apk --split-per-abi --release
 
 # 📸 Screenshots
 
-| Home Screen          | Analysis Screen      |
-| -------------------- | -------------------- |
-| <img width="1080" height="2400" alt="Screenshot_1782647830" src="https://github.com/user-attachments/assets/22a3dab1-517e-4415-84e2-b3b92d477d26" /> |  <img width="1080" height="2400" alt="Screenshot_1782647923" src="https://github.com/user-attachments/assets/1e649282-eec6-4499-87d2-b71f1b51ba55" /> |
+<p align="center">
+  <img src="assets/screenshots/Screenshot_1785420654.png" width="250" />
+  <img src="assets/screenshots/Screenshot_1785420660.png" width="250" />
+  <img src="assets/screenshots/Screenshot_1785420668.png" width="250" />
+  <img src="assets/screenshots/Screenshot_1785420690.png" width="250" />
+  <img src="assets/screenshots/Screenshot_1785420701.png" width="250" />
+  <img src="assets/screenshots/Screenshot_1785420729.png" width="250" />
+  <img src="assets/screenshots/Screenshot_1785420736.png" width="250" />
+</p>
 
 ---
 
