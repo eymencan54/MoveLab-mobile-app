@@ -210,7 +210,7 @@ flutter build apk --split-per-abi --release
 
 | Home Screen          | Analysis Screen      |
 | -------------------- | -------------------- |
-| <img width="1080" height="2400" alt="Screenshot_1782647830" src="https://github.com/user-attachments/assets/22a3dab1-517e-4415-84e2-b3b92d477d26" /> | Add <img width="1080" height="2400" alt="Screenshot_1782647923" src="https://github.com/user-attachments/assets/1e649282-eec6-4499-87d2-b71f1b51ba55" /> |
+| <img width="1080" height="2400" alt="Screenshot_1782647830" src="https://github.com/user-attachments/assets/22a3dab1-517e-4415-84e2-b3b92d477d26" /> |  <img width="1080" height="2400" alt="Screenshot_1782647923" src="https://github.com/user-attachments/assets/1e649282-eec6-4499-87d2-b71f1b51ba55" /> |
 
 ---
 
