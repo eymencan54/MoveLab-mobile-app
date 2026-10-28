@@ -1,0 +1,4284 @@
+[Event "EU-chT"]
+[Site "Moscow"]
+[Date "1977.??.??"]
+[Round "5"]
+[White "Hartston, William R"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2475"]
+[BlackElo "2645"]
+[ECO "C24"]
+
+1.e4 e5 2.Bc4 Nf6 3.d3 c6 4.Bb3 Bc5 5.Nf3 d6 6.Nc3 O-O 7.O-O Nbd7 8.Ne2 Bb6
+9.c3 Nc5 10.Bc2 Bg4 11.Ng3 Nh5 12.d4 exd4 13.cxd4 Ne6 14.Nf5 d5 15.h3 Bxf5
+16.exf5 Nc7 17.Bg5 Qd6 18.Qd2 Rfe8 19.g4 Nf6 20.Bf4 Qf8 21.Be5 Ne4 22.Qf4 Rac8
+23.f6 gxf6 24.Bxf6 Ne6 25.Qf5 Qh6 26.g5 Qg6 27.Nh4 Qh5 28.Nf3 Nxf6 29.Qxf6 Bd8
+30.Qf5 Nxg5 31.Qxc8 Qxf3 32.Rae1 Nxh3+ 33.Kh2 Rxe1 34.Qxd8+ Kg7 35.Rxe1 Qxf2+
+36.Kxh3 Qf3+ 37.Kh2 Qf2+ 38.Kh3 Qf3+  1/2-1/2
+
+[Event "Bucharest"]
+[Site "Bucharest"]
+[Date "1953.??.??"]
+[Round "1"]
+[White "Barda, Olaf"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E67"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.Nf3 O-O 5.g3 d6 6.Bg2 Nbd7 7.h3 e5 8.Be3 exd4
+9.Nxd4 Re8 10.O-O c6 11.Qd2 Nc5 12.Rad1 Nce4 13.Nxe4 Nxe4 14.Qc1 Qa5 15.Rd3 Nc5
+16.Ra3 Qb6 17.Rd1 Be6 18.Nb3 Red8 19.Bd4 Qb4 20.Bxg7 Kxg7 21.Na5  1/2-1/2
+
+[Event "Milan"]
+[Site "Milan"]
+[Date "1975.??.??"]
+[Round "10"]
+[White "Petrosian, Tigran V"]
+[Black "Andersson, Ulf"]
+[Result "1/2-1/2"]
+[WhiteElo "2645"]
+[BlackElo "2565"]
+[ECO "A30"]
+
+1.c4 Nf6 2.Nc3 e6 3.Nf3 c5 4.g3 b6 5.Bg2 Bb7 6.O-O a6 7.d4 cxd4 8.Qxd4 d6
+9.Rd1 Be7 10.b3 Nbd7 11.e4 Qc7 12.Bb2 O-O 13.Qe3 Rac8 14.Nd4 Qb8 15.Re1 Rfe8
+16.h3 Bf8 17.Rad1 Ba8 18.Re2 Rc7 19.Red2 Rec8 20.Ba1 Rc5  1/2-1/2
+
+[Event "Tbilisi"]
+[Site "Tbilisi"]
+[Date "1945.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Kasparian, Genrikh"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D90"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 d5 4.Nf3 Bg7 5.Qa4+ Bd7 6.Qb3 dxc4 7.Qxc4 O-O 8.Bf4 c6
+9.e4 Be6 10.Qd3 Na6 11.Be2 Qb6 12.O-O Rad8 13.h3 Nh5 14.Be3 c5 15.e5 f6 16.dxc5 Qxb2
+17.Na4 Qxa1 18.Rxa1 Rxd3 19.Bxd3 Nb4 20.Be4 Bd5 21.Nc3 Bxe4 22.Nxe4 f5 23.Neg5 Nc6
+24.Rb1 Rb8 25.g4 Nd8 26.gxh5 h6 27.hxg6 hxg5 28.Bxg5 Nc6 29.e6 f4 30.Kg2 Bd4
+31.Nxd4 Nxd4 32.Bxf4 Rf8 33.Be5 Nc6 34.f4 Nxe5 35.fxe5 b6 36.cxb6 axb6 37.Rf1 Ra8
+38.Rf7 Rxa2+ 39.Kg3 Ra1 40.Kg4 Re1 41.Rxe7 Rxe5 42.h4 Re1 43.h5 Rg1+ 44.Kf5 Rf1+
+45.Kg5 Rf8 46.h6  1-0
+
+[Event "URS-ch sf"]
+[Site "Tbilisi"]
+[Date "1949.??.??"]
+[Round "3"]
+[White "Petrosian, Tigran V"]
+[Black "Novotelnov, Nikolay Alexandrovi"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C49"]
+
+1.e4 e5 2.Nf3 Nc6 3.Nc3 Nf6 4.Bb5 Bb4 5.O-O Bxc3 6.bxc3 O-O 7.Re1 d6 8.d4 Qe7
+9.h3 a6 10.Bf1 Nd7 11.a4 Re8 12.g3 Nf8 13.Bg2 Ng6 14.Nh2 Qf6 15.Be3 Na5 16.Qh5 Nf8
+17.f4 Nc4 18.f5 Nxe3 19.Rxe3 h6 20.h4 Nh7 21.Qe2 exd4 22.Ng4 Qe7 23.cxd4 h5
+24.Nf2 Bxf5 25.Qxh5 Bd7 26.a5 c5 27.dxc5 dxc5 28.e5 Bc6 29.Bxc6 bxc6 30.Rae1 Nf8
+31.Ne4 Rab8 32.Ng5 Qc7 33.e6 Rxe6 34.Nxe6 Nxe6 35.Rf1 Rb2 36.c3 Qd7 37.Rf2 Rb1+
+38.Kh2 g6 39.Qf3 Ra1 40.Rd3 Qc7 41.Qf6 Re1 42.Rfd2 Nf8 43.Rd8 Qe7 44.Qxe7 Rxe7
+45.Ra8 Kg7 46.Rxa6 Re1 47.Rxc6 Ne6 48.Ra2  1-0
+
+[Event "Varna olm"]
+[Site "Varna"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Gligoric, Svetozar"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E94"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Be2 O-O 6.Nf3 e5 7.d5 Nbd7 8.O-O Nc5
+9.Qc2 a5 10.Bg5 h6 11.Be3 Nfd7 12.Nd2 f5 13.exf5 gxf5 14.f4 exf4 15.Bxf4 Ne5
+16.Nf3 Ng6 17.Be3 Qe7 18.Qd2 f4 19.Bf2 Ne5 20.Nxe5 Bxe5 21.Bd4 Bf5 22.Rf2 Bg6
+23.Raf1 Qg5 24.Bxe5 dxe5 25.Kh1 Ra6 26.Bf3 Raf6 27.Re1 Nd3 28.Rfe2 Nxe1 29.Qxe1 Re8
+30.c5 Rff8 31.Ne4  1/2-1/2
+
+[Event "Yerevan"]
+[Site "Yerevan"]
+[Date "1965.??.??"]
+[Round "3"]
+[White "Filip, Miroslav"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A40"]
+
+1.d4 g6 2.g3 Bg7 3.Bg2 c5 4.c3 Qc7 5.Nf3 Nf6 6.O-O O-O 7.b3 d6 8.Bb2 Nc6
+9.c4 e5 10.d5 Na5 11.Ne1 Rb8 12.Nc2 Bd7 13.Nd2 Nh5 14.e4 Bh6 15.Re1 Rbe8
+16.Ne3 b6 17.Bc3 Ng7 18.Qe2 f5 19.exf5 gxf5 20.Ndf1 Nb7 21.g4 Bxe3 22.Nxe3 fxg4
+23.Nxg4 Qd8 24.f3 Nh5 25.Bd2 Nf4 26.Bxf4 Rxf4 27.Nf2 Qh4 28.Ne4 Kh8 29.Ng3 Nd8
+30.Qf2 Qh6 31.Re4 Nf7 32.Kh1 Rf6 33.Rg1 Ng5 34.Re3 Qxh2+ 35.Kxh2 Rh6+ 36.Bh3 Nxh3
+37.Nf5 Bxf5 38.Qf1 Nf4+ 39.Kg3 Rg8+ 40.Kf2 Nh3+  0-1
+
+[Event "URS-ch43"]
+[Site "Yerevan"]
+[Date "1975.??.??"]
+[Round "?"]
+[White "Bronstein, David I"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2590"]
+[BlackElo "2645"]
+[ECO "C08"]
+
+1.e4 e6 2.d4 d5 3.Nd2 c5 4.Ngf3 Nf6 5.exd5 exd5 6.Bb5+ Bd7 7.Bxd7+ Nbxd7
+8.O-O Be7 9.dxc5 Nxc5 10.Nd4 O-O 11.Nf5 Re8 12.Nb3 Bf8 13.Be3 Ncd7 14.Bd4 Qc7
+15.c3 Qf4 16.Ne3 Rad8 17.g3 Qe4 18.Ng2 b6 19.Re1 Qf5 20.Rxe8 Rxe8 21.Ne3 Qe4
+22.Nd2 Qd3 23.Nf3 Qe4 24.Nd2 Qd3 25.Nb3 Qe4 26.Bxf6 Nxf6 27.Qd4 Qf3 28.Qd1 Qe4
+29.Qd4 Qf3 30.Qd1 Qe4  1/2-1/2
+
+[Event "URS Spartakiad"]
+[Site "Moscow"]
+[Date "1964.??.??"]
+[Round "?"]
+[White "Liberzon, Vladimir M"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C18"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 Ne7 5.a3 Bxc3+ 6.bxc3 c5 7.Qg4 Ng6 8.h4 h5
+9.Qg3 Qa5 10.Bd2 Nc6 11.Bd3 Nce7 12.dxc5 Qxc5 13.Nf3 Bd7 14.O-O Bb5 15.Be3  1-0
+
+[Event "SWE-URS"]
+[Site "Stockholm"]
+[Date "1954.??.??"]
+[Round "2"]
+[White "Goode, R."]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E72"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 O-O 5.g3 c5 6.d5 d6 7.Bg2 e6 8.Nge2 exd5
+9.exd5 Na6 10.O-O Nc7 11.h3 Rb8 12.a4 b6 13.Be3 a6 14.Ra2 Re8 15.Qd2 h5 16.Bg5 Qe7
+17.Raa1 Qf8 18.Nf4 Nh7 19.Nfe2 Nxg5 20.Qxg5 Bf5 21.Qd2 Bh6 22.f4 Re7 23.Rfe1 Rbe8
+24.Kh2 Qg7 25.h4 Re3 26.Rad1 Qf6 27.Rf1 Bg4 28.Rde1 Qe7 29.Rf2 Bg7 30.Bf1 Bxc3
+31.bxc3 b5 32.cxb5 axb5 33.a5 Na6 34.Qa2 c4 35.Qb2 Nc5 36.Qxb5 Nd3 37.Ra1 Bxe2
+38.a6 Nxf2 39.a7 Ng4+ 40.Kh1 Rxg3 41.Qxe8+ Qxe8 42.a8=Q Bf3+  0-1
+
+[Event "Bugojno"]
+[Site "Bugojno"]
+[Date "1982.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Ivkov, Borislav"]
+[Result "1-0"]
+[WhiteElo "2605"]
+[BlackElo "2475"]
+[ECO "A42"]
+
+1.c4 g6 2.e4 Bg7 3.d4 d6 4.Nc3 Nc6 5.Be3 e5 6.d5 Nce7 7.c5 f5 8.cxd6 cxd6
+9.Bb5+ Bd7 10.Bxd7+ Qxd7 11.f3 Nf6 12.Nh3 h6 13.Nf2 O-O 14.Qa4 Qxa4 15.Nxa4 Rac8
+16.Nc3 a6 17.Ke2 Kh7 18.Rac1 Nd7 19.Nb1 Rxc1 20.Rxc1 Rc8 21.Na3 Rxc1 22.Bxc1 h5
+23.Nc4 Nc8 24.Bd2 Bf6 25.Na5 b6 26.Nc6 Kg7 27.Be3 Kf7 28.Nd3 Ke8 29.a4 Bd8
+30.Ndb4 a5 31.Na2 f4 32.Bf2 g5 33.Kd3 Nf8 34.h3 Ng6 35.Nc3 Bf6 36.Kc4 Kd7
+37.Kb5 Kc7 38.Ka6 g4 39.hxg4 hxg4 40.fxg4 Bh4 41.Nd1 Bxf2 42.Nxf2 Nce7 43.Nxe7 Nxe7
+44.g5 Ng6 45.Ng4 Nh4 46.Ka7 Ng6 47.Nh2 Nh4 48.Nf3 Ng6 49.b3 Nf8  1-0
+
+[Event "Buenos Aires"]
+[Site "Buenos Aires"]
+[Date "1964.??.??"]
+[Round "13"]
+[White "Petrosian, Tigran V"]
+[Black "Byrne, Robert E"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E80"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.f3 a6 6.Be3 c6 7.a4 Qa5 8.Bd3 c5 9.d5 O-O
+10.Ne2 e6 11.Bd2 Qd8 12.dxe6 fxe6 13.O-O Nc6 14.Bg5 Ne5 15.f4 Nf7 16.Bh4 Bd7
+17.h3 Bc6 18.Qc2 Qc7 19.Rad1 Rae8 20.Qb1 Nd7 21.Kh1 Kh8 22.Qc1 Bf6 23.Bxf6+ Nxf6
+24.b3 Qe7 25.Qe3 Rg8 26.Ng3 Nd7 27.Be2 Qh4 28.Kh2 Rg7 29.Nb5 Bxb5 30.cxb5 a5
+31.Qf2 b6 32.Kh1 Nf6 33.e5 dxe5 34.fxe5 Nd5 35.Bc4 Nxe5 36.Bxd5 exd5 37.Rxd5 Rge7
+38.Qf6+ Qxf6 39.Rxf6 c4 40.bxc4 Nxc4 41.Rc6 Nb2 42.Rd4 Re6 43.Rc2 Re3 44.Kh2 Rb3
+45.Ne4 Re7 46.Nd6 Rd3 47.Rxd3 Nxd3 48.Rc6 Nb2 49.Rxb6 Nxa4 50.Rc6  1-0
+
+[Event "Moscow"]
+[Site "Moscow"]
+[Date "1967.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Pachman, Ludek"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B20"]
+
+1.g3 g6 2.f4 Bg7 3.Bg2 c5 4.e4 Nc6 5.d3 e6 6.Nd2 Nge7 7.Nh3 d5 8.O-O O-O
+9.e5 f6 10.exf6 Bxf6 11.Nf3 Qd6 12.c3 Bd7 13.Nf2 e5 14.Re1 Rfe8 15.c4 Bg7
+16.cxd5 Nxd5 17.Ne4 Qe7 18.Neg5 Nb6 19.Nxe5 Nxe5 20.fxe5 Bxe5 21.Kh1 Ba4
+22.b3 Bc6 23.Bxc6 bxc6 24.Nf3 Qd6 25.Nxe5 Rxe5 26.Bb2 Rxe1+ 27.Qxe1 Rf8 28.Kg1 Nd5
+29.Rd1 h5 30.Qd2 Qe6 31.Re1 Qf5 32.Ba1 h4 33.Qb2 Rf6 34.Qe2 hxg3 35.Bxf6 gxh2+
+36.Qxh2 Qxf6 37.Qe5 Qf3 38.Qe6+ Kg7 39.Qe5+ Kg8 40.Re4 Qd1+ 41.Kf2 Qd2+ 42.Re2 Qd1
+43.Qb8+ Kg7 44.Qxa7+ Kh6 45.Qxc5 Qxd3 46.Qc1+ Kg7 47.Qb2+  1-0
+
+[Event "Vrsac"]
+[Site "Vrsac"]
+[Date "1981.??.??"]
+[Round "15"]
+[White "Campora, Daniel H"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo "2490"]
+[BlackElo "2585"]
+[ECO "C15"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.Ne2 dxe4 5.a3 Be7 6.Nxe4 Nc6 7.Be3 Nf6 8.Nxf6+ Bxf6
+9.Qd2 O-O 10.O-O-O Ne7 11.Nc3 Nf5 12.Ne4 Be7 13.Bg5 b6 14.Bxe7 Qxe7 15.Ng3 Nh4
+16.Bd3 Bb7 17.f3 Rad8 18.Be4 Bxe4 19.fxe4 Rd7 20.Rhg1 Rfd8 21.Qe3 c5 22.c3 cxd4
+23.cxd4 Rxd4 24.Rxd4 Qc5+ 25.Kb1 Qxd4 26.Qxd4 Rxd4 27.Rc1 g6 28.Rc7 Nxg2
+29.Rxa7 f5 30.exf5 exf5 31.Kc2 f4 32.Ne2 Ne1+ 33.Kc3 Rd3+ 34.Kc4 f3 35.Nf4 f2  0-1
+
+[Event "Stockholm Interzonal"]
+[Site "Stockholm"]
+[Date "1962.??.??"]
+[Round "16"]
+[White "Petrosian, Tigran V"]
+[Black "Bisguier, Arthur Bernard"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D65"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 d5 4.Bg5 Be7 5.e3 O-O 6.Nf3 Nbd7 7.Rc1 a6 8.cxd5 exd5
+9.Bd3 Re8 10.O-O c6 11.Qc2 Nf8 12.h3 Ne4 13.Bf4 f5 14.Ne5 Nd7 15.Nxc6 bxc6
+16.Nxd5 cxd5 17.Bc7 Ndf6 18.Bxd8 Rxd8 19.Qe2 a5 20.Rc2 Rb8 21.Rfc1 Bd7 22.f3 Ng5  1/2-1/2
+
+[Event "EU-chT"]
+[Site "Oberhausen"]
+[Date "1961.??.??"]
+[Round "7"]
+[White "Matanovic, Aleksandar"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B14"]
+
+1.e4 c6 2.d4 d5 3.exd5 cxd5 4.c4 Nf6 5.Nc3 e6 6.Nf3 Bb4 7.Qb3 Nc6 8.Bg5 dxc4
+9.Bxc4 Be7 10.Bb5 Bd7 11.O-O O-O 12.Bd3 Rc8 13.Rad1 h6 14.Bc1 Qb6 15.Qxb6 axb6
+16.Ne5 Rfd8 17.Nxd7 Rxd7 18.Na4 Nd5 19.Bc4 Ra8 20.Nc3 Ncb4 21.Nxd5 Nxd5 22.Bb3  1/2-1/2
+
+[Event "Palma de Mallorca"]
+[Site "Palma de Mallorca"]
+[Date "1969.??.??"]
+[Round "5"]
+[White "Petrosian, Tigran V"]
+[Black "Mecking, Henrique"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B07"]
+
+1.d4 g6 2.e4 Bg7 3.Nf3 d6 4.c3 Nf6 5.Nbd2 O-O 6.Be2 c5 7.dxc5 dxc5 8.O-O Nc6
+9.Qc2 b6 10.Nc4 Bb7 11.a4 Qc7 12.Re1 Na5 13.Bf1 Nxc4 14.Bxc4 Ng4 15.a5 Bc6
+16.Qe2 Ne5 17.Nxe5 Bxe5 18.g3 Bg7 19.Bf4 e5 20.Bc1 Kh8 21.Bd5 Bxd5 22.exd5 f5
+23.c4 Rae8 24.Rd1 f4 25.axb6 axb6 26.Qe4 Qd7 27.Re1 Qf7 28.Re2 g5 29.g4 Qd7
+30.f3 Ra8 31.Rxa8 Rxa8 32.Bd2 Re8 33.Bc3 Qd6 34.Re1 h6 35.Ra1 Rf8 36.Ra7 Re8
+37.Qf5 b5 38.Rd7 Qf8 39.Qxf8+ Rxf8 40.cxb5 Rb8 41.Rxg7  1-0
+
+[Event "Stockholm Interzonal"]
+[Site "Stockholm"]
+[Date "1962.??.??"]
+[Round "9"]
+[White "Uhlmann, Wolfgang"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E11"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 Bb4+ 4.Bd2 Qe7 5.e3 b6 6.Be2 Bxd2+ 7.Nfxd2 O-O 8.O-O c5
+9.Bf3 d5 10.Nc3 Bb7 11.dxc5 bxc5 12.Nb3 dxc4 13.Na5 Bxf3 14.Qxf3 Nbd7 15.Nc6 Qe8
+16.Nb5 Ne5 17.Nxe5 Qxb5  1/2-1/2
+
+[Event "Saltsjobaden Interzonal"]
+[Site "Saltsjobaden"]
+[Date "1952.??.??"]
+[Round "8"]
+[White "Wade, Robert Graham"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B91"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.g3 e5 7.Nde2 Be7 8.Bg2 O-O
+9.O-O Nbd7 10.b3 b5 11.Bb2 Bb7 12.a3 Nc5 13.f3 Qb6 14.Kh1 a5 15.Qd2 Rfd8
+16.Qe3 b4 17.Nd1 Qc7 18.Nf2 d5 19.axb4 axb4 20.Rxa8 Bxa8 21.Nd3 Ncd7 22.exd5 Qxc2
+23.Nec1 Nxd5 24.Qf2 Qxf2 25.Rxf2 f6 26.f4 exf4 27.Nxf4 Nxf4 28.Rxf4 Bxg2+
+29.Kxg2 Nc5 30.Rd4 Rxd4 31.Bxd4 Kf7 32.Bxc5 Bxc5 33.Nd3 Bd6 34.Kf3 Ke6 35.Ke4 f5+
+36.Kd4 g5 37.Kc4 f4 38.g4 f3 39.Kd4 Bxh2 40.Ke4 Bd6 41.Kxf3 Kd5 42.Ke3 h6
+43.Ne1 Bc5+ 44.Kd3 Ke5 45.Kc4 Bd6 46.Nd3+ Ke4 47.Nxb4 Kf3 48.Nc2 Kxg4 49.Kd3 Kh3
+50.Ke2 g4 51.Ne1 h5 52.Kf1 Kh2 53.Ng2 Be7 54.Ne1 h4 55.Ng2 Bg5 56.b4 h3 57.Ne1 g3  0-1
+
+[Event "Rio de Janeiro Interzonal"]
+[Site "Rio de Janeiro"]
+[Date "1979.??.??"]
+[Round "11"]
+[White "Hebert, Jean"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2365"]
+[BlackElo "2610"]
+[ECO "B06"]
+
+1.e4 g6 2.d4 Bg7 3.Nc3 c6 4.Bc4 d6 5.Nf3 e6 6.Bb3 Ne7 7.Bf4 h6 8.h3 d5 9.Qd2 Nd7
+10.O-O Nf6 11.Rfe1 Kf8 12.a4 a5 13.Be5 Ne8 14.Bxg7+ Kxg7 15.e5 b6 16.Nd1 Ba6
+17.Ne3 c5 18.c3 Rc8 19.Bc2  1/2-1/2
+
+[Event "Santa Monica"]
+[Site "Santa Monica"]
+[Date "1966.??.??"]
+[Round "8"]
+[White "Petrosian, Tigran V"]
+[Black "Najdorf, Miguel"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A05"]
+
+1.Nf3 Nf6 2.g3 g6 3.b4 Bg7 4.Bb2 O-O 5.Bg2 c6 6.O-O a5 7.a3 axb4 8.axb4 Rxa1
+9.Bxa1 Qb6 10.c3 d5 11.d3 Nbd7 12.Nbd2 Qc7 13.c4 e5 14.Qc2 Re8 15.cxd5 Nxd5
+16.Rb1 b5 17.e4 N5b6 18.Nb3 Qd6 19.Na5 Nb8 20.h3 Na4 21.Bf1 Bd7 22.Qd1 Qe7
+23.d4 exd4 24.Nxd4 Qxe4 25.Bg2 Qe7 26.Ndxc6 Nxc6 27.Nxc6 Bxc6 28.Bxc6 Rd8
+29.Qe1 Qxe1+ 30.Rxe1 Bxa1 31.Rxa1 Rd4 32.Bxb5 Nc3 33.Ra8+ Kg7 34.Be8 Rxb4
+35.Ra7 Kf8 36.Bxf7 Re4 37.Bb3 Re7 38.Ra1 Re8 39.Ra6 Re7 40.Kg2 Ne4 41.Bc2 Kg7
+42.Rc6 Nf6 43.Rc5 Ne8 44.Bd1 Nf6 45.h4 h6 46.Bc2 Nh7 47.g4 Nf8 48.Kg3 Ra7
+49.Be4 Re7 50.f3 Rf7 51.Bd5 Ra7 52.Kf4 Re7 53.Rc6 Rd7 54.Ke4 Re7+ 55.Kd4 Ra7
+56.Kc5 Rd7 57.Rb6 Rc7+ 58.Kd4 Re7 59.f4 Nh7 60.Be6 Nf8 61.Bb3 Nh7 62.Bd5 Rc7
+63.Ke5 Re7+ 64.Kd6 Ra7 65.Be6 Nf8 66.Bc8 Rf7 67.f5 gxf5 68.gxf5 Nh7 69.Rb1 Kf6
+70.Kd5 Nf8 71.Rb6+ Kg7 72.Ke5 Re7+ 73.Kf4 Rc7 74.Bb7 Rc5 75.Bc6 Ra5 76.h5 Ra4+
+77.Be4 Nh7 78.Ke5 Nf8 79.Rb7+ Kh8 80.Rb8 Ra5+ 81.Bd5 Kg7 82.f6+ Kh7 83.Rb7+ Kh8
+84.Rc7 Rb5 85.Rc8 Kh7 86.Kd6  1-0
+
+[Event "Sochi"]
+[Site "Sochi"]
+[Date "1977.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Suetin, Alexey S"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo "2525"]
+[ECO "A07"]
+
+1.Nf3 d5 2.g3 g6 3.Bg2 Bg7 4.O-O e5 5.d3 Ne7 6.e4 O-O 7.Nbd2 Nbc6 8.Re1 h6
+9.c3 a5 10.a4 Be6 11.Qe2 Re8 12.h4 d4 13.Nf1 Qd7 14.N1h2 Rad8 15.Bf1 f5 16.Qc2 Rf8
+17.exf5 Nxf5 18.Nd2 Bd5 19.Ne4 Nd6 20.Nc5 Qf7 21.f3 b6 22.Ne4 Nxe4 23.fxe4 Be6
+24.Qg2 Qd7 25.c4 Rf7 26.b3 Nb4 27.Ba3 Rdf8 28.Bxb4 axb4 29.Qd2 Qe7 30.Bg2 h5
+31.Rf1 Rxf1+ 32.Rxf1 Rxf1+ 33.Bxf1 Kh7 34.Nf3 Bh6 35.Ng5+ Bxg5 36.hxg5 Bg4
+37.Bg2 Kg7 38.Kf2 c5 39.Ke1 Qf7 40.Bh1 Kg8 41.Bg2 Kg7 42.Bh1 Kg8 43.Bg2 Kg7  1/2-1/2
+
+[Event "Moscow"]
+[Site "Moscow"]
+[Date "1981.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Andersson, Ulf"]
+[Result "1/2-1/2"]
+[WhiteElo "2585"]
+[BlackElo "2610"]
+[ECO "E04"]
+
+1.d4 Nf6 2.c4 e6 3.g3 d5 4.Bg2 dxc4 5.Nf3 c5 6.O-O Nc6 7.Ne5 Bd7 8.Nxc6 Bxc6
+9.Bxc6+ bxc6 10.Qa4 cxd4 11.Qxc6+ Nd7 12.Qxc4 Bc5 13.Nd2 O-O 14.Nf3 Rc8 15.Bd2 Bb6
+16.Qd3 Nc5 17.Qxd4 Qxd4 18.Nxd4  1/2-1/2
+
+[Event "Siegen olm"]
+[Site "Siegen"]
+[Date "1970.??.??"]
+[Round "11"]
+[White "Gligoric, Svetozar"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E43"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 b6 5.Bd3 Bb7 6.Nf3 O-O 7.O-O c5 8.Na4 cxd4
+9.exd4 Be7 10.Nc3 d5 11.cxd5 Nxd5 12.Qe2 Nd7 13.Rd1 N7f6 14.Bg5 Nh5 15.Qe5 Bf6
+16.Bxf6 Nhxf6 17.Qg3 Nh5 18.Qe5 Nhf4 19.Nxd5 Nxd3 20.Rxd3 Qxd5 21.Ne1 Rfd8
+22.f3 Rac8 23.Qxd5 Bxd5 24.Rd2 Rc7 25.Kf2 Rdc8 26.b3 Kf8 27.Rb1 Ke7 28.Rbb2 Kd6
+29.Rbc2 a5 30.Rxc7 Rxc7 31.Nc2 Rc3 32.Ne3 Kc6 33.Ke2 Kb5 34.Rb2 Rc6 35.Kd3 a4
+36.Nc2 axb3 37.axb3 g5 38.Na3+ Ka5 39.Nc2 Rc7 40.Ne3 Kb4 41.Nc2+ Kb5  1/2-1/2
+
+[Event "IBM"]
+[Site "Amsterdam"]
+[Date "1973.??.??"]
+[Round "1"]
+[White "Petrosian, Tigran V"]
+[Black "Szabo, Laszlo"]
+[Result "1-0"]
+[WhiteElo "2640"]
+[BlackElo "2565"]
+[ECO "A34"]
+
+1.c4 Nf6 2.Nc3 c5 3.g3 d5 4.cxd5 Nxd5 5.Bg2 Nc7 6.d3 e5 7.Nf3 Nc6 8.Nd2 Be6
+9.Bxc6+ bxc6 10.b3 Nb5 11.Na4 Qd5 12.f3 Be7 13.Bb2 h5 14.Rc1 h4 15.g4 Bxg4
+16.e4 Qxd3 17.fxg4 Bg5 18.Nxc5 Qh3 19.Qe2 Rd8 20.Rc2 Bf4 21.Nf1 Rh6 22.Qg2 Qxg2
+23.Rxg2 Rhd6 24.Rc2 Rd1+ 25.Ke2 Rb1 26.a4 Nc7 27.Ng3 Rxb2 28.Rxb2 hxg3 29.hxg3 Bxg3
+30.Rh8+ Ke7 31.Rxd8 Kxd8 32.Rd2+ Ke8 33.Rd6  1-0
+
+[Event "URS-ch44"]
+[Site "Moscow"]
+[Date "1976.??.??"]
+[Round "?"]
+[White "Gulko, Boris F"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo "2530"]
+[BlackElo "2635"]
+[ECO "B94"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.Bg5 Nbd7 7.Bc4 Qa5 8.Qd2 e6
+9.O-O-O b5 10.Bb3 Bb7 11.Rhe1 O-O-O 12.a3 Be7 13.Kb1 Qb6 14.f3 Kb8 15.Be3 Nc5
+16.Ba2 b4 17.axb4 Qxb4 18.Nb3 Nfd7 19.Bg5 f6 20.Be3 Nb6 21.Nxc5 dxc5 22.Qe2 Bc8
+23.Bd2 Rd4 24.Be3 Rhd8 25.Rc1 Qa5 26.Bxd4 cxd4 27.Nd1 Bd7 28.Nf2 Bb5 29.Nd3 Na4
+30.Red1 Bb4 31.c3 Bxc3 32.bxc3 Nxc3+ 33.Rxc3 dxc3 34.Ka1 Qa4 35.Rc1 Rxd3
+36.Qf2 Qd4 37.Qxd4 Rxd4 38.Bxe6 Ra4+ 39.Kb1 Bd3+  0-1
+
+[Event "Manila"]
+[Site "Manila"]
+[Date "1974.??.??"]
+[Round "14"]
+[White "Pfleger, Helmut"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2535"]
+[BlackElo "2640"]
+[ECO "E64"]
+
+1.c4 Nf6 2.Nc3 g6 3.Nf3 Bg7 4.d4 O-O 5.g3 d6 6.Bg2 c5 7.d5 Na6 8.O-O Nc7
+9.e4 Rb8 10.a4 b6 11.Re1 a6 12.e5 Nh5 13.exd6 exd6 14.Bg5 f6 15.Bd2 a5 16.h3 Na6
+17.Ne4 Nc7 18.Bc3 f5 19.Bxg7 Kxg7 20.Nc3 Qf6 21.Qd2 Bd7 22.Re2 Rbe8 23.Rae1 Rxe2
+24.Rxe2  1/2-1/2
+
+[Event "URS-ch sf"]
+[Site "Kiev"]
+[Date "1957.??.??"]
+[Round "15"]
+[White "Geller, Efim P"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B11"]
+
+1.e4 c6 2.Nc3 d5 3.Nf3 Bg4 4.h3 Bxf3 5.Qxf3 Nf6 6.g3 e6 7.Bg2 dxe4 8.Nxe4 Nxe4
+9.Qxe4 Qd5 10.O-O Qxe4 11.Bxe4 Nd7  1/2-1/2
+
+[Event "URS-chTJ Coop"]
+[Site "Riga"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Averbakh, Yuri L"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E69"]
+
+1.c4 Nf6 2.Nc3 e5 3.g3 g6 4.Bg2 Bg7 5.Nf3 d6 6.d4 Nbd7 7.O-O O-O 8.e4 c6
+9.h3 Re8 10.Be3 a5 11.Qc2 a4 12.dxe5 dxe5 13.b4 axb3 14.axb3 Rxa1 15.Rxa1 Bf8
+16.Na4 b6 17.Ne1 Bb7 18.Rd1 Qc7 19.Nd3 c5 20.Nc3 Bc6 21.Ra1 Ra8 22.Rxa8 Bxa8
+23.Qa2 Bc6 24.Nb2 Ne8 25.Nd5 Qb7 26.Nd1 Ng7 27.N1c3 Ne6 28.h4 Nd4 29.Bh3 h5
+30.Bxd7 Bxd7 31.Nf6+ Kg7 32.Nxd7 Qxd7 33.Kg2 Be7 34.Bxd4 exd4 35.Nd5 Bxh4  1/2-1/2
+
+[Event "Zagreb"]
+[Site "Zagreb"]
+[Date "1965.??.??"]
+[Round "17"]
+[White "Petrosian, Tigran V"]
+[Black "Golombek, Harry"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A30"]
+
+1.c4 Nf6 2.Nf3 b6 3.Nc3 Bb7 4.d3 c5 5.e4 d6 6.g3 g6 7.Bg2 Bg7 8.O-O O-O 9.Nh4 Nc6
+10.f4 Qd7 11.Nf3 Nd4 12.Kh1 Bc6 13.h3 a6 14.Nxd4 cxd4 15.Ne2 Ne8 16.f5 b5
+17.b3 e5 18.g4 f6 19.h4 Nc7 20.Ng3 a5 21.g5 b4 22.a4 Na6 23.Ra2 Qe7 24.Raf2 Bd7
+25.Bh3 Nc5 26.Kh2 Rf7 27.fxg6 hxg6 28.Bxd7 Nxd7 29.h5 Nf8 30.hxg6 Nxg6 31.Qh5 Nf4
+32.Bxf4 exf4 33.Nf5 Qe5 34.g6 Rfa7 35.Rxf4 d5 36.Kg2 dxc4 37.Qh7+ Kf8 38.Nxg7  1-0
+
+[Event "URS-ch19"]
+[Site "Moscow"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Flohr, Salo"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E67"]
+
+1.d4 Nf6 2.c4 g6 3.g3 Bg7 4.Bg2 O-O 5.Nc3 d6 6.Nf3 Nbd7 7.O-O e5 8.b3 Re8
+9.Qc2 c6 10.Rd1 Qa5 11.e4 Nf8 12.d5 c5 13.Ne1 Nh5 14.Bf3 Qd8 15.Qe2 Nf6 16.a3 h5
+17.b4 b6 18.Bg2 N8h7 19.Nf3 Rf8 20.Bd2 Ne8 21.b5 Bf6 22.a4 a5 23.bxa6 Rxa6
+24.Nb5 Bg4 25.h3 Bd7 26.Ra3 Ng5 27.Nxg5 Bxg5 28.Be1 Qc8 29.Kh2 Bd8 30.Rda1 h4
+31.g4 f6 32.f3 g5 33.Bf1 Qa8 34.Qb2 Kf7 35.Bd3 Ke7 36.Bc3 Nc7 37.Be2 Nxb5
+38.cxb5 Ra7 39.Bc4 Bc7 40.Qa2 Qb7 41.Kg2 Qa8 42.Qd2 Rb8 43.Qb2 Kf7 44.R1a2 Rbb7
+45.Kf1 Ra5 46.Ke2 Raa7 47.Qa1 Qh8 48.Kd2 Ke7 49.Kc2 Kd8 50.Kb3 Kc8 51.Qb2 Bd8
+52.Qa1  1/2-1/2
+
+[Event "Buenos Aires ol (Men)"]
+[Site "Buenos Aires"]
+[Date "1978.??.??"]
+[Round "?"]
+[White "Unzicker, Wolfgang"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2525"]
+[BlackElo "2620"]
+[ECO "C07"]
+
+1.e4 e6 2.d4 d5 3.Nd2 c5 4.exd5 Qxd5 5.Ngf3 cxd4 6.Bc4 Qd6 7.O-O Nf6 8.Nb3 Nc6
+9.Nbxd4 Nxd4 10.Nxd4 a6 11.a4 Be7 12.b3 O-O 13.Bb2 Qc7 14.Qf3 Bd7  1/2-1/2
+
+[Event "Barcelona"]
+[Site "Barcelona"]
+[Date "1980.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Minic, Dragoljub"]
+[Result "1/2-1/2"]
+[WhiteElo "2615"]
+[BlackElo "2405"]
+[ECO "A55"]
+
+1.d4 Nf6 2.c4 d6 3.Nc3 Nbd7 4.e4 e5 5.Nf3 c6 6.Be2 Be7 7.O-O O-O 8.Re1 a6
+9.Bf1 Re8 10.b3 b5 11.Bb2 Bf8 12.d5 cxd5 13.cxd5 g6 14.Nd2 Nb6 15.a3 Nfd7
+16.b4 f5 17.a4 bxa4 18.Nxa4 Bh6 19.exf5 gxf5 20.Nxb6 Nxb6 21.Nc4 Nxc4 22.Bxc4 Qh4
+23.Qe2 Bb7 24.g3 Qh3 25.Qd1 f4 26.Bf1 Qf5 27.Bg2 fxg3 28.hxg3 Rf8 29.Qe2 Rac8
+30.Be4 Qf7 31.Rad1 Rc7 32.Rd3 Bc8 33.Rf3 Qe8 34.Rxf8+ Qxf8 35.Qd3 Rf7 36.Bc1 Bxc1
+37.Rxc1 Bd7 38.Qe3 Bb5 39.Kg2 Qd8 40.Rh1 Qf6 41.Rh6 Qd8 42.Kg1 Kh8 43.Qc1 Be8
+44.Qc2 Rc7 45.Rxh7+ Rxh7 46.Bxh7 a5 47.bxa5 Qxa5 48.Be4 Bf7 49.Qd1 Kg7 50.Kg2 Qb4
+51.Qg4+ Kf8 52.Kh3 Qd2 53.Qf5 Ke7 54.Qf3 Qh6+ 55.Kg2 Qd2 56.g4 Qg5 57.Kg3 Qc1
+58.Qe3 Qg1+ 59.Kh4 Qa1 60.Kg5 Qa8 61.Qb6 Qg8+ 62.Kh4 Qh8+ 63.Kg3 Qc8 64.Qa7+ Kf8
+65.Qa3 Ke7 66.g5 Bh5 67.f3 Qd8 68.Qa7+ Kf8 69.Kh4 Bf7 70.Qb7 Qa5 71.Qb8+ Ke7
+72.Qb7+ Kf8 73.Qc8+ Kg7 74.Qc1 Bxd5 75.Bxd5 Qxd5 76.Qc7+ Kg6 77.Qc2+ Kg7
+78.Qf5 Qf7  1/2-1/2
+
+[Event "URS-ch sf"]
+[Site "Moscow"]
+[Date "1947.??.??"]
+[Round "7"]
+[White "Petrosian, Tigran V"]
+[Black "Kamishov, Mikhail Pavlovich"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D31"]
+
+1.d4 d5 2.c4 e6 3.Nc3 c6 4.cxd5 exd5 5.Qc2 Ne7 6.Bg5 f6 7.Bf4 Bf5 8.Qd2 Nd7
+9.Nf3 g5 10.Bg3 b5 11.e3 Nb6 12.b3 a5 13.Bd3 h5 14.h4 g4 15.Ng1 a4 16.Rc1 axb3
+17.axb3 Ra3 18.Bxb5 cxb5 19.Nxb5 Nec8 20.Nxa3 Bxa3 21.Ra1 Qe7 22.Ne2 Bb4
+23.Nc3 Na7 24.O-O Nb5 25.Nxb5 Bxd2 26.Nd6+ Kf8 27.Ra6 Qd8 28.Nb7 Qd7 29.Rxb6 Kg7
+30.Ra1 Kg6 31.Nc5 Qe8 32.b4 Qd8 33.Raa6 Rf8 34.b5 Bc8 35.Rb8 Bxa6 36.Rxd8 Rxd8
+37.Nxa6 Ba5 38.Bc7 Bxc7 39.Nxc7 Rd6 40.b6 Rxb6 41.Nxd5 Rb1+ 42.Kh2 Rf1 43.Kg3 f5
+44.Nf4+ Kh6 45.Nd5 Rg1 46.f3 gxf3 47.Kxf3 Rh1 48.Ne7 f4 49.Kxf4 Rxh4+ 50.Ke5 Rg4
+51.g3 Kg7 52.e4 Kf7 53.Nf5 Rg6 54.Kf4 Rg4+ 55.Kf3 Ke6 56.Ne3 Rg7 57.Kf4 Rf7+
+58.Nf5 Kf6 59.d5 Rf8 60.Nd4 Ke7+ 61.Ke5 Rf1 62.Nf5+ Kf7 63.Nd4 Rd1 64.Nc6 Rc1
+65.Nd8+ Ke7 66.Ne6 Rg1 67.Ng7 Kf7 68.Nxh5 Kg6 69.Nf6 Rxg3 70.Ke6 Rd3 71.d6 Kg5
+72.d7 Kf4 73.Nd5+  1-0
+
+[Event "URS-ch26"]
+[Site "Tbilisi"]
+[Date "1959.??.??"]
+[Round "15"]
+[White "Gurgenidze, Bukhuti"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E31"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.Bg5 h6 5.Bh4 c5 6.d5 d6 7.dxe6 Bxe6 8.e3 Nc6
+9.Nf3 g5 10.Bg3 d5 11.Qc2 Qa5 12.O-O-O Bxc3 13.Qxc3 Qxc3+ 14.bxc3 dxc4 15.Nd2 b5
+16.Bd6 O-O-O 17.Bxc5 Rd5 18.Ba3 Ng4 19.Ne4 Rxd1+ 20.Kxd1 f5 21.Nd6+ Kd7 22.Ke1 b4
+23.cxb4 Kxd6 24.h3 Nge5 25.b5+ Kc7 26.bxc6 Rb8 27.Kd2 Rb1 28.Kc2 Ra1 29.Bb2 Rxa2
+30.Be2 Nxc6 31.Ra1 Nb4+ 32.Kc3 Rxa1 33.Bxa1 Na2+ 34.Kd4 c3 35.Bd1  1/2-1/2
+
+[Event "ARM-ch m"]
+[Site "Yerevan"]
+[Date "1946.??.??"]
+[Round "2"]
+[White "Kasparian, Genrikh"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B13"]
+
+1.e4 c6 2.d4 d5 3.exd5 cxd5 4.Bd3 Nf6 5.c3 Nc6 6.Bf4 Qb6 7.Qb3 g6 8.Qxb6 axb6
+9.Bc7 Nd7 10.Nf3 e6 11.O-O Be7 12.Re1 Bd8 13.Bxd8 Kxd8 14.Na3 Nf6 15.Ne5 Ke7
+16.f4 Bd7 17.Nc2 Rhc8 18.Ne3 Be8 19.g4 Kf8 20.g5 Nh5 21.Rf1 f6 22.gxf6 Nxf6
+23.a3 Ne7 24.Rae1 Nf5 25.Rf2 Nd6 26.N3g4 Nfe4 27.Rfe2 Rc7 28.Nf2 Nxf2 29.Kxf2 Re7
+30.h4 Kg7 31.Re3 Bb5 32.Bb1 Rf8 33.Kg3 Be8 34.Nf3 Rf6 35.Ng5 Bd7 36.Bd3 Re8
+37.h5 h6 38.Nh3 gxh5 39.Re5 Ref8 40.Rxh5 Be8 41.Rh4 Bg6 42.Rg4 Re8 43.Kf3 Kf7
+44.Rxg6 Rxg6 45.Bxg6+ Kxg6 46.Nf2 Kf7 47.Ng4 Nf5 48.Rg1 b5 49.Ne5+ Ke7 50.Rg4 Ra8
+51.Nd3 Rh8 52.Rg1 Ra8 53.Kf2 Rh8 54.Nc5 b6 55.Nd3 Rf8 56.Ne5 Rc8 57.Rg4 Ra8
+58.Kg1 Kd6 59.Kh2 b4 60.axb4 Ra2 61.Rg2 Ra1 62.Rg8 Rb1 63.Rc8 Rxb2+ 64.Kh3 h5
+65.Rc6+ Ke7 66.Rxb6 Rb3 67.Nc6+  1-0
+
+[Event "URS-ch27"]
+[Site "Leningrad"]
+[Date "1960.??.??"]
+[Round "3"]
+[White "Lutikov, Anatoly S"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B10"]
+
+1.e4 c6 2.Nc3 d5 3.Qf3 dxe4 4.Nxe4 Nd7 5.d4 Ndf6 6.c3 Nxe4 7.Qxe4 Nf6 8.Qc2 Bg4
+9.Ne2 e6 10.Ng3 Qd5 11.f3 Bh5 12.Nxh5 Qxh5 13.Bf4 Nd5 14.Bg3 Qg5 15.Qd2 Be7  1/2-1/2
+
+[Event "URS-ch25"]
+[Site "Riga"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Borisenko, Georgy K"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A00"]
+
+1.d4  0-1
+
+[Event "Saltsjobaden Interzonal"]
+[Site "Saltsjobaden"]
+[Date "1952.??.??"]
+[Round "15"]
+[White "Szabo, Laszlo"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B93"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.f4 Qc7 7.Be2 e5 8.Nf3 Be6
+9.f5 Bc4 10.Bg5 Nbd7 11.Nd2 Bxe2 12.Qxe2 Rc8 13.a3 Qb6 14.O-O-O Rxc3 15.bxc3 d5
+16.Nb1 Nxe4 17.Rxd5 Nxg5 18.h4 Bc5 19.hxg5 Be3+ 20.Nd2 Bxg5 21.Qd3 Qc7 22.Kd1 Bxd2
+23.Kxd2 f6 24.Kc1 Nb6 25.Rd6 O-O 26.Rd1 Qc5 27.Rd8 Qxa3+ 28.Kb1 h5 29.Rxf8+ Qxf8
+30.Qe4 Qe7 31.Qb4 Qc7 32.Qd6 Qxd6 33.Rxd6 Nc4 34.Rd7 b5 35.Ra7 Ne3 36.Rxa6 Nxg2
+37.Kc1 h4 38.Kd2 h3 39.Ra1 Nh4 40.c4 bxc4 41.Rh1 Nxf5 42.Kc3 Nd6 43.Rxh3 Kf7
+44.Rh7 f5 45.Kb4 f4 46.Kc5 f3 47.Rh1 e4  0-1
+
+[Event "URS-ch19"]
+[Site "Moscow"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Averbakh, Yuri L"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B11"]
+
+1.e4 c6 2.Nc3 d5 3.Nf3 Bg4 4.h3 Bxf3 5.Qxf3 Nf6 6.d3 e6 7.g3 Be7 8.Bg2 O-O
+9.O-O Na6 10.Qe2 Ne8 11.e5 Nac7 12.h4 b5 13.Nd1 Qd7 14.c4 f5 15.Bf4 Rb8 16.Rc1 Na6
+17.cxd5 cxd5 18.d4 Nb4 19.Nc3 Nc7 20.Qd2 Rfc8 21.Bg5 Bf8 22.Bh3 Qf7 23.Rfd1 Qe8
+24.Bf1 a5 25.Be3 a4 26.Qe1 Nc6 27.Ne2 Nb4 28.Nc3 Nc6 29.Ne2 Nb4  1/2-1/2
+
+[Event "URS-ch28"]
+[Site "Moscow"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Lutikov, Anatoly S"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E92"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Be2 O-O 6.Nf3 e5 7.d5 a5 8.Bg5 h6 9.Bh4 Na6
+10.Nd2 Qd7 11.a3 Nh7 12.f3 f5 13.b4 axb4 14.axb4 Rb8 15.Rb1 Nf6 16.Bf2 Qe7
+17.c5 Kh7 18.cxd6 cxd6 19.O-O f4 20.Nc4 Nc7 21.Nb6 g5 22.Ra1 Rg8 23.Kh1 Bd7
+24.Nxd7 Qxd7 25.Na4 Bf8 26.Nb6 Qg7 27.g4 h5 28.h3 Rh8 29.Kg2 Kg8 30.Rh1 hxg4
+31.hxg4 Rxh1 32.Qxh1 Nd7 33.Qc1 Nxb6 34.Bxb6 Na8 35.Ba7 Rd8 36.Bb5 Be7 37.Bf2 Kf7
+38.Qc2 Rh8 39.Rh1 Rxh1 40.Kxh1 Qh8+ 41.Kg2 Qb8 42.Bd7 Nc7 43.Qc1 Na6 44.Qh1 Kg7
+45.Bf5 Qh8 46.Qb1 Qe8 47.Qh1 Qh8 48.Qa1 Qb8 49.Qa4 Kf8 50.Qd7 Nxb4 51.Qe6 Qc7
+52.Bh7 Ke8 53.Bg6+  1-0
+
+[Event "Gothenburg Interzonal"]
+[Site "Gothenburg"]
+[Date "1955.??.??"]
+[Round "2"]
+[White "Petrosian, Tigran V"]
+[Black "Keres, Paul"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E43"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 b6 5.Nf3 Bb7 6.Bd3 c5 7.O-O O-O 8.Na4 cxd4
+9.exd4 Be7 10.Bf4 Ne4 11.Nc3 d5 12.cxd5 Nxc3 13.bxc3 Qxd5 14.Re1 Nc6 15.Rb1 Rfd8
+16.Rb5 Qxa2 17.Re2 Qa3 18.Qb1 Qxc3 19.Rb3 Qa5 20.Rb5 Qc3 21.Rb3 Qa5 22.Rb5  1/2-1/2
+
+[Event "Bugojno"]
+[Site "Bugojno"]
+[Date "1982.??.??"]
+[Round "?"]
+[White "Kasparov, Gary"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo "2630"]
+[BlackElo "2585"]
+[ECO "E11"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 Bb4+ 4.Bd2 Qe7 5.g3 Bxd2+ 6.Qxd2 O-O 7.Bg2 d5 8.O-O dxc4
+9.Na3 c5 10.dxc5 Qxc5 11.Rac1 Nc6 12.Nxc4 Qe7 13.Nfe5 Nxe5 14.Nxe5 Nd5 15.Rfd1 Nb6
+16.Qa5 g6 17.Rd3 Nd5 18.e4 Nb6 19.Bf1 Re8 20.Rdd1 Rf8 21.a3 Kg7 22.b3 Kg8
+23.a4 Rd8 24.Qc5  1-0
+
+[Event "URS-chTJ Coop"]
+[Site "Riga"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Kan, Ilia Abramovich"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E46"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 O-O 5.Ne2 d5 6.a3 Be7 7.cxd5 exd5 8.g3 c6
+9.Bg2 Na6 10.O-O Nc7 11.f3 c5 12.g4 b6 13.Nf4 h6 14.Rf2 Re8 15.Nce2 Bd6 16.Ng3 a5
+17.Bf1 Bd7 18.a4 Ra7 19.b3 Bf8 20.Nd3 Bd6 21.Qd2 Na6 22.Bb2 cxd4 23.Bxd4 Nc5
+24.Qb2 Be7 25.Rc1 Ne6 26.Be5 Nc5 27.Nf4 Be6 28.Bb5 Bd7 29.Nf5 Bxb5 30.axb5 Ncd7
+31.Bd4 Bc5 32.Rg2 Bxd4 33.exd4 Nf8 34.Nd3 Ng6 35.Ne5 Rc7 36.Nc6 Qd7 37.Qd2 h5
+38.h3 Qe6 39.Kf1 Rd7 40.Rc3 hxg4 41.hxg4 Rc7 42.Re3 Rxc6 43.bxc6 Qxc6 44.Rge2 Rc8
+45.Kf2 Qc7 46.Kg1 Kf8 47.Qe1 Nf4 48.Rh2 Ng6 49.Nh4 Nf4 50.Nf5 Ng6 51.Ra2 Nf4
+52.Re7 Qc1 53.Ra1 Qxe1+ 54.Raxe1 Ne6 55.Rb7 Ng5 56.Kg2 g6 57.Rxb6 Rc2+ 58.Kg3 gxf5
+59.Rxf6 fxg4 60.Kxg4 Rg2+ 61.Kf4 Kg7 62.Rb6 f6 63.Kf5 Nxf3 64.Re7+  1-0
+
+[Event "URS-chT"]
+[Site "Riga"]
+[Date "1975.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Bagirov, Vladimir"]
+[Result "1/2-1/2"]
+[WhiteElo "2645"]
+[BlackElo "2490"]
+[ECO "D47"]
+
+1.d4 d5 2.c4 e6 3.Nc3 c6 4.Nf3 Nf6 5.e3 Nbd7 6.Bd3 dxc4 7.Bxc4 b5 8.Bb3 b4
+9.Ne2 Bb7 10.O-O Bd6 11.Nf4 O-O 12.Ng5 Qe7 13.Nfxe6 fxe6 14.e4 h6 15.Nxe6 Nxe4
+16.Qe2 c5 17.Nxc5+ Kh8 18.Nxb7 Rxf2 19.Qxf2 Nxf2 20.Nxd6 Qxd6 21.Rxf2 Qxd4
+22.Bf4 Nf6 23.Rd1 Qc5 24.Rc1 Qb6 25.Bc7 Qe3 26.Bf4 Qb6 27.Bc7 Qb5 28.h3 Re8
+29.Kh2 Qh5 30.Bd1 Qd5 31.Bb3 Qd4 32.Rfc2 Nd5 33.Bg3 Ne3 34.Rf2  1/2-1/2
+
+[Event "URS-ch19"]
+[Site "Moscow"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Terpugov, Evgeny"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A43"]
+
+1.d4 Nf6 2.Nf3 c5 3.d5 b5 4.Bg5 Qb6 5.Nc3 h6 6.Bxf6 exf6 7.e4 a6 8.a4 bxa4
+9.Nxa4 Qc7 10.Be2 d6 11.O-O Be7 12.Nd2 Nd7 13.Bg4 O-O 14.Ra3 Rb8 15.Rg3 Kh8
+16.Bf5 Qd8 17.Qg4 Rg8 18.Qh5 Qe8 19.b3 Bf8 20.Qe2 g6 21.Bh3 f5 22.f4 Nf6
+23.Re1 fxe4 24.Bxc8 Qxc8 25.Nxe4 Nxe4 26.Qxe4 Bg7 27.Rd3 Rb4 28.Qf3 c4 29.Rd2 cxb3
+30.cxb3 Qf5 31.g3 g5 32.Qd3 Qxd3 33.Rxd3 gxf4 34.Re7 fxg3 35.hxg3 Rgb8 36.Rxf7 Rxb3
+37.Rxb3 Rxb3 38.Kg2 Rb4 39.Rf4 Bd4  0-1
+
+[Event "Palma de Mallorca"]
+[Site "Palma de Mallorca"]
+[Date "1969.??.??"]
+[Round "7"]
+[White "Petrosian, Tigran V"]
+[Black "Penrose, Jonathan"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E89"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.f3 O-O 6.Be3 e5 7.Nge2 c6 8.d5 cxd5
+9.cxd5 Nbd7 10.Ng3 Ne8 11.Bd3 Nc5 12.Bc2 f5 13.Bf2 f4 14.Nf1 a5 15.a3 Bd7
+16.Nd2 b5 17.Qe2 Rb8 18.O-O g5 19.a4 b4 20.Nb5 Qb6 21.Bd3 Rc8 22.Rfc1 Bf6
+23.Nc4 Qa6 24.Ncxd6 Nxd3 25.Rxc8 Nxf2 26.Rxe8 Bxe8 27.Nxe8 Rxe8 28.Qxf2 Bd8
+29.Qe2 Bb6+ 30.Kh1 Rc8 31.Rd1 Be3 32.d6 Qc6 33.b3 Kf7 34.g3 Qd7 35.g4 Kg6
+36.Nc7 Bd4 37.Nd5 Qxd6 38.Ne7+  1-0
+
+[Event "Tilburg"]
+[Site "Tilburg"]
+[Date "1982.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Huebner, Robert"]
+[Result "1/2-1/2"]
+[WhiteElo "2605"]
+[BlackElo "2630"]
+[ECO "A28"]
+
+1.c4 e5 2.Nc3 Nf6 3.Nf3 Nc6 4.e3 Bb4 5.Nd5 e4 6.Ng1 O-O 7.a3 Bd6 8.d3 exd3
+9.Bxd3 b6 10.Nf3 Re8 11.Qc2 h6 12.O-O Bb7 13.Rd1 Ne5 14.Be2 Nxd5 15.cxd5 Qf6
+16.Rb1 c6 17.Bd2 cxd5 18.Nd4 Rac8 19.Bc3 Bb8 20.Qf5 Qxf5 21.Nxf5 f6 22.h4 Nc4
+23.Rbc1 Be5 24.Bxe5 Rxe5 25.Bxc4 Rxc4 26.Rxc4 dxc4  1/2-1/2
+
+[Event "Budapest"]
+[Site "Budapest"]
+[Date "1952.??.??"]
+[Round "7"]
+[White "Stahlberg, Gideon"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A43"]
+
+1.d4 Nf6 2.Nf3 c5 3.d5 b5 4.Bg5 Qa5+ 5.c3 Ne4 6.Nbd2 Nxg5 7.Nxg5 h6 8.Ngf3 d6
+9.e4 Nd7 10.a4 bxa4 11.Rxa4 Qc7 12.Qa1 Nb6 13.Bb5+ Bd7 14.Bxd7+ Qxd7 15.Ra6 Nc8
+16.O-O e5 17.dxe6 fxe6 18.Nh4 Kf7 19.f4 Qd8 20.Nhf3 Qe8 21.f5 exf5 22.Qa2+ Qe6
+23.Ne5+ Ke7 24.Nc6+ Kd7 25.Qa4 Ke8 26.exf5 Qe3+ 27.Kh1  1-0
+
+[Event "Bled"]
+[Site "Bled"]
+[Date "1961.??.??"]
+[Round "17"]
+[White "Keres, Paul"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B18"]
+
+1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Bf5 5.Ng3 Bg6 6.N1e2 e6 7.h4 h6 8.Nf4 Bh7
+9.c3 Nf6 10.Bd3 Bxd3 11.Nxd3 Bd6 12.Qf3 Nbd7 13.Bf4 Bxf4 14.Qxf4 Qb8 15.Qf3 Qd6
+16.O-O-O Qd5 17.Qxd5 cxd5  1/2-1/2
+
+[Event "Rovinj/Zagreb"]
+[Site "Zagreb"]
+[Date "1970.??.??"]
+[Round "12"]
+[White "Ghitescu, Theodor"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A56"]
+
+1.d4 Nf6 2.c4 c5 3.d5 e5 4.Nc3 d6 5.e4 Nbd7 6.Nf3 Be7 7.Bd3 Nf8 8.h3 Bd7
+9.Qe2 a6 10.Be3 Ng6 11.Nd2 h5 12.a3 h4 13.Nf3 Nh5 14.Qc2 Ngf4 15.Bf1 b5 16.Rg1 Qb8
+17.Nd2 O-O 18.Be2 Nxe2 19.Nxe2 f5 20.f3 bxc4 21.Nxc4 a5 22.a4 Ra7 23.Bd2 Bd8
+24.Bc3 fxe4 25.fxe4 Be8 26.Rf1 Rxf1+ 27.Kxf1 Bg6 28.Bd2 Rb7 29.Kg1 Kh7 30.Rf1 Nf6
+31.Nc3 Rb4 32.Qd3  1/2-1/2
+
+[Event "Candidats sf2"]
+[Site "Moscow"]
+[Date "1971.??.??"]
+[Round "9"]
+[White "Petrosian, Tigran V"]
+[Black "Kortschnoj, Viktor"]
+[Result "1-0"]
+[WhiteElo "2640"]
+[BlackElo "2670"]
+[ECO "A20"]
+
+1.c4 e5 2.g3 c6 3.b3 d5 4.Bb2 d4 5.Nf3 Bd6 6.d3 c5 7.Bg2 Ne7 8.O-O Nec6 9.e3 O-O
+10.Nbd2 Be6 11.e4 Nd7 12.Nh4 g6 13.Bf3 Bc7 14.a3 Ba5 15.Bc1 Qe7 16.Bg4 f5
+17.exf5 gxf5 18.Bf3 Nf6 19.Bg2 Rad8 20.Ra2 Bc8 21.Re1 Kh8 22.b4 cxb4 23.Nb3 Bb6
+24.Bxc6 bxc6 25.axb4 a6 26.Nf3 e4 27.c5 Bc7 28.Nfxd4 Qf7 29.Rd2 Bd7 30.Bb2 Kg8
+31.Na5 Bxa5 32.bxa5 Rb8 33.Ba1 Rfe8 34.Rde2 Qh5 35.Qd2 Kf7 36.h4 exd3 37.Qxd3 f4
+38.Nf3 Rxe2 39.Qxe2 Qxc5 40.Ne5+ Kf8 41.Nxd7+ Nxd7  1-0
+
+[Event "Las Palmas Interzonal"]
+[Site "Las Palmas"]
+[Date "1982.??.??"]
+[Round "11"]
+[White "Petrosian, Tigran V"]
+[Black "Bouaziz, Slim"]
+[Result "1-0"]
+[WhiteElo "2605"]
+[BlackElo "2360"]
+[ECO "B06"]
+
+1.d4 g6 2.e4 Bg7 3.c3 d6 4.Bg5 c5 5.dxc5 dxc5 6.Qxd8+ Kxd8 7.Na3 Bh6 8.Bh4 Be6
+9.f3 Nf6 10.Bf2 Nbd7 11.h4 a6 12.g4 Ne8 13.Nh3 Nc7 14.Nc4 Kc8 15.Ng5 Rb8
+16.Ne3 b5 17.f4 Bxg5 18.hxg5 Nb6 19.b3 Bd7 20.f5 Bc6 21.Bg2 Kb7 22.Bg3 f6
+23.Nd5 Nbxd5 24.exd5 Nxd5 25.Bxb8  1-0
+
+[Event "Santa Monica"]
+[Site "Santa Monica"]
+[Date "1966.??.??"]
+[Round "15"]
+[White "Unzicker, Wolfgang"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B92"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 a6 5.Nc3 Nf6 6.Be2 e5 7.Nb3 Be7 8.O-O O-O
+9.Be3 Qc7 10.a4 Be6 11.a5 Qc6 12.Bf3 Rc8 13.Re1 Nbd7 14.Re2 Qc7 15.Rd2 h6
+16.Be2 Nc5 17.f3 Rd8 18.Kh1 Ne8 19.Nxc5 dxc5 20.Nd5 Bxd5 21.Rxd5 Nf6 22.Rxd8+ Rxd8
+23.Qe1  1/2-1/2
+
+[Event "Las Palmas"]
+[Site "Las Palmas"]
+[Date "1975.??.??"]
+[Round "2"]
+[White "Petrosian, Tigran V"]
+[Black "Olafsson, Fridrik"]
+[Result "1/2-1/2"]
+[WhiteElo "2645"]
+[BlackElo "2535"]
+[ECO "A13"]
+
+1.Nf3 Nf6 2.c4 e6 3.g3 d5 4.Bg2 dxc4 5.Qa4+ Nbd7 6.Qxc4 c5 7.Qc2 b6 8.b3 Bb7
+9.Bb2 Be7 10.O-O O-O 11.Nc3 Rc8 12.Rfd1 a6 13.d3 Qc7 14.Rac1  1/2-1/2
+
+[Event "URS-ch sf"]
+[Site "Moscow"]
+[Date "1947.??.??"]
+[Round "1"]
+[White "Petrosian, Tigran V"]
+[Black "Konstantinopolsky, Alexander"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D36"]
+
+1.d4 d5 2.Nf3 e6 3.Bg5 Be7 4.Bxe7 Qxe7 5.Nbd2 Nf6 6.e3 Nbd7 7.c4 O-O 8.cxd5 exd5
+9.Bd3 Re8 10.O-O c6 11.Nb1 Nf8 12.Qc2 Bg4 13.Ne5 Bh5 14.Nc3 Ng4 15.Nxg4 Bxg4
+16.Rae1 Rad8 17.Ne2 Bxe2 18.Rxe2 g6 19.Rb1 Ne6 20.b4 a6 21.a4 Rc8 22.Qb3 Qg5
+23.Rc2 f5 24.f4 Qd8 25.Be2 Qd6 26.Rd2 Ra8 27.Rd3 Nxf4 28.exf4 Rxe2 29.Re3 Re8
+30.Re5 Qc7 31.b5 axb5 32.axb5 Qb6 33.Qd3 R2xe5 34.fxe5 c5 35.Qf3 cxd4 36.Qxd5+ Qe6
+37.Qxb7 Qxe5 38.Qf3 Qe4 39.Qxe4 fxe4 40.b6 e3 41.b7 Rb8  1/2-1/2
+
+[Event "EU-chT"]
+[Site "Hamburg"]
+[Date "1965.??.??"]
+[Round "1"]
+[White "Petrosian, Tigran V"]
+[Black "Unzicker, Wolfgang"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B20"]
+
+1.g3 g6 2.e4 Bg7 3.Bg2 c5 4.f4 Nc6 5.Nf3 d6 6.d3 Nf6 7.O-O O-O 8.h3 Ne8 9.a4 Nc7
+10.Na3 b6 11.Nc4 Bb7 12.c3 d5 13.exd5 Nxd5 14.Nfe5 Nxe5 15.fxe5 Qc8 16.Qe2 Nc7
+17.Bxb7 Qxb7 18.Bg5 Ne6 19.Bd2 Rad8 20.Rf3 Rd5 21.Raf1 Qd7 22.b3 Nd8 23.g4 Qe6
+24.Bf4 Nc6 25.Bg3 Bxe5 26.Nxe5 Nxe5 27.Re3 f6 28.c4 Rd4 29.Bxe5 fxe5 30.Rxf8+ Kxf8
+31.Rxe5 Qd6 32.Re3  1/2-1/2
+
+[Event "IBM"]
+[Site "Amsterdam"]
+[Date "1973.??.??"]
+[Round "6"]
+[White "Donner, Jan Hein"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2480"]
+[BlackElo "2640"]
+[ECO "E41"]
+
+1.d4 e6 2.c4 Bb4+ 3.Nc3 Nf6 4.e3 c5 5.Bd3 b6 6.Ne2 cxd4 7.exd4 O-O 8.d5 Re8
+9.O-O Na6 10.a3 Be7 11.Nd4 Bb7 12.Bf4 Bf8 13.Ndb5 exd5 14.cxd5 d6 15.Rc1 Nc5
+16.Bc4 a6 17.Nd4 b5 18.Ba2 Qd7 19.Qf3 Qg4 20.Qxg4 Nxg4 21.Rfd1 Ne5  1/2-1/2
+
+[Event "URS-chTJ Coop"]
+[Site "Riga"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Vasiukov, Evgeni"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B11"]
+
+1.e4 c6 2.Nc3 d5 3.Nf3 Bg4 4.h3 Bxf3 5.Qxf3 Nf6 6.e5 Nfd7 7.e6 fxe6 8.d4 e5
+9.dxe5 Nxe5 10.Qg3 Nf7 11.Bd3 e5 12.O-O Nd7 13.Re1 Qf6 14.h4 Be7 15.Rb1 Qxh4
+16.Qxg7 Bf6 17.Qg3 Qxg3 18.fxg3 e4 19.Be2 Ke7 20.Bf4 Rhg8 21.Bh5 Nd6 22.Rbd1 Be5
+23.Rf1 Bxf4 24.Rxf4 Rxg3 25.Ne2 Rg5 26.Bg4 Rf8 27.Rdf1 Rxf4 28.Rxf4 Nf6 29.Bh3 c5
+30.c3 Nc4  0-1
+
+[Event "Moscow"]
+[Site "Moscow"]
+[Date "1971.??.??"]
+[Round "?"]
+[White "Olafsson, Fridrik"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2570"]
+[BlackElo "2640"]
+[ECO "E73"]
+
+1.c4 Nf6 2.Nc3 g6 3.e4 d6 4.d4 Bg7 5.Be2 O-O 6.Bg5 Nbd7 7.Qd2 e5 8.d5 Nc5
+9.Bf3 a5 10.Nge2 c6 11.Ng3 cxd5 12.Nxd5 Ne6 13.Nxf6+ Bxf6 14.Bxf6 Qxf6 15.O-O Nd4
+16.Bd1  1/2-1/2
+
+[Event "Las Palmas Interzonal"]
+[Site "Las Palmas"]
+[Date "1982.??.??"]
+[Round "4"]
+[White "Smyslov, Vassily"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2565"]
+[BlackElo "2605"]
+[ECO "D27"]
+
+1.d4 d5 2.Nf3 Nf6 3.c4 dxc4 4.e3 e6 5.Bxc4 c5 6.O-O a6 7.dxc5 Qxd1 8.Rxd1 Bxc5
+9.b3 Nbd7 10.Bb2 b6 11.Ne5 Bb7 12.Bf1 Nxe5 13.Bxe5 Ke7  1/2-1/2
+
+[Event "EU-chT"]
+[Site "Hamburg"]
+[Date "1965.??.??"]
+[Round "7"]
+[White "Gheorghiu, Florin"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C96"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 O-O 8.c3 d6
+9.h3 Na5 10.Bc2 c5 11.d4 Nc6 12.d5 Na7 13.Nbd2 Bd7 14.Nf1 Nc8 15.Kh1 Nb6
+16.Nxe5 dxe5 17.d6 Be6 18.dxe7 Qxe7 19.Qf3 Rfd8  1/2-1/2
+
+[Event "URU-URS"]
+[Site "Montevideo"]
+[Date "1954.??.??"]
+[Round "1.5"]
+[White "Petrosian, Tigran V"]
+[Black "Corral, H."]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D36"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 d5 4.cxd5 exd5 5.Bg5 Nbd7 6.e3 Be7 7.Bd3 O-O 8.Nge2 Re8
+9.Qc2 c6 10.h3 Ne4 11.Bf4 Ndf6 12.f3 Nxc3 13.bxc3 Bd6 14.Bxd6 Qxd6 15.e4 Nh5
+16.e5 Qh6 17.Qd2 Qxd2+ 18.Kxd2 g6 19.g4 Ng7 20.h4 h6 21.Raf1 Bd7 22.Rhg1 b5
+23.f4 a5 24.f5 gxf5 25.gxf5 Kh8 26.e6 fxe6 27.f6 Nf5 28.Bxf5 exf5 29.Rg7  1-0
+
+[Event "URS-ch sf"]
+[Site "Tbilisi"]
+[Date "1949.??.??"]
+[Round "15"]
+[White "Petrosian, Tigran V"]
+[Black "Kasparian, Genrikh"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C09"]
+
+1.e4 e6 2.d4 d5 3.Nd2 c5 4.exd5 exd5 5.Bb5+ Nc6 6.Ngf3 Bd6 7.dxc5 Bxc5 8.Nb3 Bb6
+9.O-O Ne7 10.Be3 O-O 11.Qd2 Bg4 12.Be2 Bc7 13.Bf4 Ng6 14.Bxc7 Qxc7 15.h3 Be6
+16.Nfd4 Nf4 17.Rfe1 Qe5 18.Bf1 Qg5 19.Nxc6 bxc6 20.Kh2 Qf6 21.c3 Rab8 22.Nc5 Bc8
+23.b4 Qd6 24.Kg1 Ne6 25.Nxe6 Bxe6 26.Qd4 Rb7 27.a3 Rc7 28.Rad1 c5 29.Qd2 Qc6
+30.b5 Qb6 31.Qb2 Rb8 32.a4 Qa5 33.Qa1 g6 34.h4 h5 35.Re5 Rd7 36.c4 Rbd8 37.Rde1 dxc4
+38.Bxc4 Rd6 39.Bxe6 fxe6 40.Rxe6 Qc7 41.Re7 Qxe7  1-0
+
+[Event "Bled"]
+[Site "Bled"]
+[Date "1961.??.??"]
+[Round "3"]
+[White "Darga, Klaus"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B84"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.Be2 e6 7.O-O Qc7 8.f4 Nbd7
+9.Bf3 Be7 10.Kh1 Nf8 11.Qe1 Ng6 12.Be3 O-O 13.Rd1 e5 14.fxe5 dxe5 15.Nf5 Bb4
+16.Rd3 Bxf5 17.exf5 e4 18.Bxe4 Nxe4 19.Nd5 Bxe1 20.Nxc7 Rac8 21.Rxe1 Rxc7
+22.fxg6 fxg6 23.c3  1/2-1/2
+
+[Event "Moscow-ch"]
+[Site "Moscow"]
+[Date "1956.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Uusi, Gunnar"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D38"]
+
+1.d4 Nf6 2.Nf3 d5 3.c4 e6 4.Bg5 Bb4+ 5.Nc3 h6 6.Bxf6 Qxf6 7.Qa4+ Nc6 8.cxd5 exd5
+9.e3 O-O 10.Be2 Be6 11.O-O a6 12.Rfc1 Rfd8 13.Qd1 Bd6 14.Na4 Ne7 15.Nc5 Bc8
+16.Qf1 a5 17.a3 Ng6 18.Rc3 c6 19.Rac1 Qe7 20.g3 Nf8 21.b4 axb4 22.axb4 Nd7
+23.Nxd7 Bxd7 24.b5 Ra2 25.bxc6 bxc6 26.R3c2 Rda8 27.Rxa2 Rxa2 28.Ra1 Bh3
+29.Qd1 Qa7 30.Rxa2 Qxa2 31.Nh4 Be7 32.Bg4 Bxg4 33.Qxg4 Bxh4 34.Qxh4 Qb1+
+35.Kg2 Kh7 36.Qf4 f5 37.h3 Qe4+ 38.Qxe4 fxe4 39.f4 exf3+ 40.Kxf3 Kg6  1/2-1/2
+
+[Event "URS-USA telex"]
+[Site "Moscow"]
+[Date "1955.??.??"]
+[Round "3"]
+[White "Petrosian, Tigran V"]
+[Black "Pavey, Max"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A08"]
+
+1.e4 c5 2.Nf3 d6 3.d3 Nc6 4.Nbd2 Nf6 5.g3 e6 6.Bg2 Be7 7.O-O O-O 8.c3 d5
+9.Re1 Qc7 10.Nf1 Bd7 11.e5 Ne8 12.Bf4 Qb6 13.Qe2 Bd8 14.h4 Qa6 15.h5 Ne7
+16.h6 g6 17.Bg5 Rc8 18.N1h2 Bb5 19.Bf1 Nf5 20.Ng4 Qb6 21.Qd2 Bc6 22.Bxd8 Qxd8
+23.d4 Qe7 24.Bd3 Kh8 25.Kg2 Rc7 26.b4 c4 27.Bc2 Qd8 28.Qg5 Qxg5 29.Nxg5 Ne7
+30.Re3 Ng8 31.Rf3 Re7 32.Bxg6 hxg6 33.h7 f5 34.Rh1 Ngf6 35.Nxf6 Nxf6 36.exf6 Rxf6
+37.Re3 Re8 38.Rh4 Bd7 39.Kf3 Kg7 40.Kf4 Bc8 41.Re1 Rff8 42.Ke5 Rh8 43.Reh1 Re7
+44.a4 Ree8 45.a5 Rd8 46.Rh6 Rde8 47.Nf3 Re7 48.Nh4  1-0
+
+[Event "Buenos Aires"]
+[Site "Buenos Aires"]
+[Date "1964.??.??"]
+[Round "4"]
+[White "Bolbochan, Julio"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E57"]
+
+1.d4 Nf6 2.c4 c5 3.Nf3 e6 4.e3 cxd4 5.exd4 d5 6.Nc3 Be7 7.cxd5 Nxd5 8.Bc4 O-O
+9.O-O Nc6 10.Re1 Nf6 11.a3 b6 12.d5 Na5 13.Ba2 exd5 14.Nxd5 Nxd5 15.Bxd5 Bb7
+16.Bxb7 Nxb7 17.Bf4  1/2-1/2
+
+[Event "Candidats sf2"]
+[Site "Odessa"]
+[Date "1974.??.??"]
+[Round "5"]
+[White "Kortschnoj, Viktor"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo "2670"]
+[BlackElo "2640"]
+[ECO "B39"]
+
+1.c4 c5 2.Nf3 g6 3.d4 cxd4 4.Nxd4 Bg7 5.e4 Nf6 6.Nc3 Nc6 7.Be3 Ng4 8.Qxg4 Nxd4
+9.Qd1 Ne6 10.Qd2 d6 11.Be2 Qa5 12.Rc1 Bd7 13.O-O Nc5 14.Bh6 O-O 15.Bxg7 Kxg7
+16.b3 Bc6 17.Rfe1 Ne6 18.Bg4 Rad8 19.Re3 Nf4 20.g3 h5 21.Qb2 hxg4 22.Nd5+ e5
+23.gxf4 Rde8 24.Rg3 Bd7 25.Rd1 f6 26.fxe5 Rxe5 27.Nc3 Qc5 28.Qd2 f5 29.Qxd6 Qxd6
+30.Rxd6 Bc6 31.f3 Kh6 32.f4 Ree8 33.exf5 Bf3 34.Rxg6+ Kh7 35.Rg5 Re1+ 36.Kf2 Rh1
+37.Rh5+ Kg7 38.Nd5 Ra1 39.f6+ Kg6 40.Rg5+ Kf7 41.Rg7+ Ke6 42.Re7+ Kf5 43.Re5+  1-0
+
+[Event "URS-ch37"]
+[Site "URS"]
+[Date "1969.??.??"]
+[Round "?"]
+[White "Balashov, Yuri S"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C96"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 d6 8.c3 O-O
+9.h3 Na5 10.Bc2 c5 11.d4 Nc6 12.a3 Bb7 13.Be3 Re8 14.Nbd2 cxd4 15.cxd4 exd4
+16.Nxd4 Bf8 17.Nxc6 Bxc6 18.Bd4 Nd7 19.Nf1 Nc5 20.Qg4 Qc8  1/2-1/2
+
+[Event "Moscow"]
+[Site "Moscow"]
+[Date "1975.??.??"]
+[Round "?"]
+[White "Forintos, Gyozo V"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2490"]
+[BlackElo "2645"]
+[ECO "D13"]
+
+1.d4 Nf6 2.c4 c6 3.Nc3 d5 4.cxd5 cxd5 5.Bf4 Nc6 6.e3 e6 7.Bd3 Be7 8.h3 O-O
+9.Nf3 Bd7 10.O-O Qb6 11.a3  1/2-1/2
+
+[Event "URS-chT"]
+[Site "Riga"]
+[Date "1975.??.??"]
+[Round "?"]
+[White "Tal, Mihail"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2645"]
+[BlackElo "2645"]
+[ECO "A14"]
+
+1.Nf3 Nf6 2.c4 b6 3.g3 Bb7 4.Bg2 e6 5.O-O Be7 6.b3 O-O 7.Bb2 c5 8.e3 d5 9.Qe2 Nc6
+10.Rd1 dxc4 11.bxc4 Qc7 12.Nc3 a6 13.Rab1 Rab8 14.Ba1 Na5 15.d3 Nd7 16.Qc2 Rfe8
+17.Rd2 Bf6 18.Bb2 Ba8 19.Ba1 Bb7  1/2-1/2
+
+[Event "World Championship 27th"]
+[Site "Moscow"]
+[Date "1969.??.??"]
+[Round "16"]
+[White "Petrosian, Tigran V"]
+[Black "Spassky, Boris V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D34"]
+
+1.c4 e6 2.d4 d5 3.Nf3 c5 4.cxd5 exd5 5.g3 Nc6 6.Bg2 Nf6 7.O-O Be7 8.Nc3 O-O
+9.Bg5 Be6 10.dxc5 Bxc5 11.Bxf6 Qxf6 12.Nxd5 Qxb2 13.Nc7 Rad8 14.Qc1 Qxc1
+15.Raxc1 b6 16.Nxe6 fxe6 17.Rc4 Nd4 18.Nxd4 Rxd4 19.Rxd4 Bxd4 20.e3 Bc5 21.Rd1 Rf7
+22.Be4 g6 23.h4 Rc7 24.Kg2 Be7 25.Kf3 Kg7 26.Rd2 Bb4 27.Rc2 Rxc2 28.Bxc2 Kf6
+29.Bd3 h6 30.Be4 g5 31.h5 Be1  1/2-1/2
+
+[Event "URS-ch25"]
+[Site "Riga"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Taimanov, Mark E"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A10"]
+
+1.c4 g6 2.g3 Bg7 3.Bg2 Nc6 4.Nc3 d6 5.d3 Nf6 6.Rb1 a5 7.Nf3 O-O 8.O-O Bd7
+9.a3 Qc8 10.b4 axb4 11.axb4 Nh5 12.Qd2 Bh3 13.b5 Bxg2 14.Kxg2 Nd8 15.Bb2 e5
+16.Ra1 Rxa1 17.Rxa1 f5 18.Qc2 Ne6 19.Nd5 Qd8 20.Ra7 g5 21.e4 f4 22.Qd1 Nf6
+23.h3 Kh8  1/2-1/2
+
+[Event "EU-chT"]
+[Site "Bath"]
+[Date "1973.??.??"]
+[Round "5"]
+[White "Petrosian, Tigran V"]
+[Black "Lombard, Andre"]
+[Result "1-0"]
+[WhiteElo "2640"]
+[BlackElo "2400"]
+[ECO "E12"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 b6 4.a3 Bb7 5.Nc3 d5 6.cxd5 Nxd5 7.e3 Nd7 8.Nxd5 exd5
+9.Bd3 Bd6 10.Qe2 h6 11.b4 a6 12.O-O O-O 13.Rb1 Qe7 14.a4 Nf6 15.b5 axb5 16.axb5 Ne4
+17.Bb2 Ng5 18.Ne5 Bxe5 19.dxe5 d4 20.f4 Ne6 21.f5 Qg5 22.fxe6 Qxe3+ 23.Qf2  1-0
+
+[Event "Candidats Tournament"]
+[Site "Bled/Zagreb/Belgrade"]
+[Date "1959.??.??"]
+[Round "26"]
+[White "Tal, Mihail"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B94"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 Nbd7 6.Bc4 a6 7.Bg5 Qa5 8.Qd2 e6
+9.O-O h6 10.Bh4 g5 11.Bg3 Nh5 12.Bxe6 fxe6 13.Nxe6 Nxg3 14.fxg3 Ne5 15.Rxf8+ Rxf8
+16.Qxd6 Rf6 17.Nc7+ Kf7 18.Rf1 Rxf1+ 19.Kxf1 Nc4 20.Qxh6 Qc5 21.Nxa8 Nd2+
+22.Ke2 Bg4+ 23.Kd3 Qc4+ 24.Ke3 Qc5+  1/2-1/2
+
+[Event "Hoogovens"]
+[Site "Beverwijk"]
+[Date "1960.??.??"]
+[Round "?"]
+[White "Tan Hiong Liong"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B99"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.Bg5 e6 7.f4 Be7 8.Qf3 Qc7
+9.O-O-O Nbd7 10.Be2 O-O 11.Qg3 Re8 12.Bf3 Nb6 13.Rhe1 e5 14.fxe5 dxe5 15.Nf5 Bxf5
+16.exf5 Nbd7 17.Bd5 Rac8 18.Bb3 Nh5 19.Qh4 Bxg5+ 20.Qxg5 Nhf6 21.Re3 h6 22.Qg3 Nc5
+23.Rde1 b5 24.Kb1 Nxb3 25.axb3 b4 26.Ne4 Nxe4 27.Rxe4 Qxc2+ 28.Ka1 Rc5 29.Rxb4 Qxf5  0-1
+
+[Event "URS-ch24"]
+[Site "Moscow"]
+[Date "1957.??.??"]
+[Round "13"]
+[White "Tal, Mihail"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C18"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 Ne7 5.a3 Bxc3+ 6.bxc3 c5 7.Qg4 Nf5 8.Bd3 h5
+9.Qh3 cxd4 10.Nf3 Nc6 11.g4 Nfe7 12.gxh5 Qc7 13.Bf4 Ng6 14.Qg4 Nxf4 15.Qxf4 dxc3
+16.Qg5 Qe7 17.Qxg7 Qf8 18.Qg5 Qh6 19.Rg1 Qxg5 20.Rxg5 Bd7 21.Ke2 Ke7 22.Ke3 Raf8
+23.Rag1 Be8 24.Nd4 f5 25.Nxc6+ Bxc6 26.Kd4 f4 27.Rg7+ Rf7 28.Rg8 Rxg8 29.Rxg8 Rf8
+30.Rxf8 Kxf8 31.h6 b6 32.Kxc3 Kg8 33.Bg6 a5 34.Kd4 Kf8 35.c3 Kg8 36.h7+ Kg7
+37.Bf7 Bd7 38.Bg8 Bc8 39.Kd3 Bd7 40.Ke2 Kh8 41.Kf3 b5 42.Kxf4 d4 43.cxd4 b4
+44.axb4 a4 45.d5 a3 46.dxe6 a2 47.exd7 a1=Q 48.d8=Q Qc1+ 49.Kf5 Qb1+ 50.Ke6 Qg6+
+51.Kd7  1-0
+
+[Event "Budapest"]
+[Site "Budapest"]
+[Date "1952.??.??"]
+[Round "13"]
+[White "O'Kelly de Galway, Alberic"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E67"]
+
+1.d4 Nf6 2.c4 g6 3.g3 Bg7 4.Bg2 O-O 5.Nc3 d6 6.Nf3 Nbd7 7.O-O e5 8.Qc2 Re8
+9.b3 c6 10.e3 Nf8 11.dxe5 dxe5 12.Nd2 Bf5 13.e4 Bg4 14.h3 Bd7 15.Bb2 Nh5
+16.Ne2 Ne6 17.Nf3 f6 18.Ne1 Ng5 19.Kh2 f5 20.exf5 Bxf5 21.Qd1 Nf6 22.Ng1 Qe7
+23.Qe2 Rad8 24.Rd1 Rxd1 25.Qxd1 e4 26.Nc2 Nf7 27.Ne3 Ne5 28.Bxe5 Qxe5 29.Qd2 Nd7
+30.Nxf5 Qxf5 31.Re1 Nf6 32.f3  1/2-1/2
+
+[Event "URS-ch sf"]
+[Site "Tbilisi"]
+[Date "1949.??.??"]
+[Round "7"]
+[White "Petrosian, Tigran V"]
+[Black "Pogrebissky, Iosif"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D74"]
+
+1.d4 Nf6 2.c4 g6 3.Nf3 Bg7 4.g3 O-O 5.Bg2 d5 6.cxd5 Nxd5 7.O-O c5 8.e4 Nf6
+9.e5 Nfd7 10.Ng5 cxd4 11.f4 Nc5 12.b4 f6 13.exf6 exf6 14.Nxh7 Kxh7 15.bxc5 Nc6
+16.Bb2 Qc7 17.Nd2 Be6 18.Ne4 Rad8 19.h4 Qd7 20.h5 Bg4 21.hxg6+ Kxg6 22.f5+ Bxf5
+23.Nd6 Bg4 24.Be4+ Kh5 25.Rf4 f5 26.Rxg4 fxg4 27.Qd2 Rh8 28.Kg2  1-0
+
+[Event "Piatigorsky Cup"]
+[Site "Los Angeles"]
+[Date "1963.??.??"]
+[Round "10"]
+[White "Benko, Pal C"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D55"]
+
+1.c4 Nf6 2.Nc3 e6 3.Nf3 d5 4.d4 Be7 5.Bg5 O-O 6.e3 b6 7.Rc1 Bb7 8.cxd5 exd5
+9.Bxf6 Bxf6 10.Be2 Qe7 11.O-O Rd8 12.Qc2 Nd7 13.Rfd1 g6 14.Qb1 c6 15.b4 a5
+16.a3 b5 17.Qb3 Nb6 18.Ra1 Ra7 19.Ra2 Rda8 20.Rda1 Bc8 21.Bd3 Bg4 22.Nd2 Bg7
+23.h3 Be6 24.Qc2 axb4 25.axb4 Rxa2 26.Nxa2 Nc4 27.Nb3 Qg5 28.Kf1 Bf8 29.Qc1 Bf5
+30.Bxf5 Qxf5 31.Qc3 Ra4 32.Kg1 Qc8 33.Nac1 Bxb4 34.Qd3 Bd6 35.Rb1 h5 36.Qe2 Qf5
+37.Nd3 Ra3 38.Nbc1 Kg7 39.Nb3 h4 40.Nbc1 Qe4 41.Qc2 Bc7 42.Nb3 Bd6 43.Ra1 Nxe3
+44.fxe3 Qxe3+ 45.Kh1 Rxa1+ 46.Nxa1 Qxd4 47.Nb3 Qc4 48.Qb1 Qc3 49.Nbc1 c5
+50.Ne2 Qf6 51.Qxb5 c4 52.Ng1 cxd3 53.Qxd3 Qe5 54.g3 Qxg3 55.Qd4+ Qe5  0-1
+
+[Event "Herceg Novi blitz"]
+[Site "Herceg Novi"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Fischer, Robert James"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C19"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+ 6.bxc3 Qc7 7.Nf3 Ne7 8.a4 Bd7
+9.Bd3 Bc6 10.O-O Nd7 11.Ba3 h6 12.Re1 b6 13.Nd2 Bxa4 14.dxc5 bxc5 15.Qg4 Bc6
+16.Qxg7 Rg8 17.Qxh6 Nxe5 18.Bxc5 d4 19.Be4 dxc3 20.Bxc6+ N7xc6 21.Ne4 O-O-O
+22.Red1 Ng4 23.Qh4 Rxd1+ 24.Rxd1 f5 25.Nd6+ Kb8 26.Nb5 Qg7 27.Bd6+ Kb7 28.Rb1 Kc8
+29.Qg3 Qb7 30.Nxc3 Qa6 31.h3 Nf6 32.Qh4 Nd7 33.Qh7 Rd8 34.Qf7 Qc4 35.Rb3 Qd4
+36.Qxe6 Qf6 37.Qd5 Nde5 38.Nb5 Qf7 39.Qc5 Nf3+ 40.Rxf3 Kd7 41.Rd3  1-0
+
+[Event "Palma de Mallorca"]
+[Site "Palma de Mallorca"]
+[Date "1969.??.??"]
+[Round "12"]
+[White "Unzicker, Wolfgang"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B42"]
+
+1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 a6 5.Bd3 Bc5 6.Nb3 Ba7 7.O-O Nc6 8.Qe2 d6
+9.Be3 Bxe3 10.Qxe3 Nge7 11.c4 e5 12.Nc3 O-O 13.Rfd1 Be6 14.Bf1 Nc8 15.Nd5 a5
+16.Rac1 b6 17.Na1 f6 18.Nc2 Rf7 19.Na3 Rd7 20.Nb5 Rb8 21.Bd3 N8a7 22.Na3 Nd4
+23.Nc3 Nac6 24.Ne2 Bf7 25.Nxd4 Nxd4 26.Be2  1/2-1/2
+
+[Event "Tallinn"]
+[Site "Tallinn"]
+[Date "1979.??.??"]
+[Round "16"]
+[White "Lechtynsky, Jiri"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2415"]
+[BlackElo "2610"]
+[ECO "B85"]
+
+1.e4 c5 2.Nf3 e6 3.Nc3 a6 4.d4 cxd4 5.Nxd4 d6 6.Be2 Nf6 7.O-O Nc6 8.Be3 Bd7
+9.Nb3 b5 10.a3 Be7 11.f4 O-O 12.Qe1 Rb8 13.Rd1 Qc7 14.Qg3 b4 15.axb4 Nxb4
+16.e5 Ne8 17.Rd2 d5 18.Ra1  1/2-1/2
+
+[Event "Moscow"]
+[Site "Moscow"]
+[Date "1967.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Uhlmann, Wolfgang"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E93"]
+
+1.c4 Nf6 2.Nc3 g6 3.d4 Bg7 4.e4 d6 5.Be2 O-O 6.Nf3 e5 7.d5 Nbd7 8.Qc2 a5
+9.O-O Ne8 10.g3 Nc5 11.Nh4 Bh3 12.Re1 Bf6 13.Nf3 Be7 14.Be3 b6 15.a3 f5 16.exf5 Bxf5
+17.Qd1 Bf6 18.b4 axb4 19.axb4 Rxa1 20.Qxa1 Nd3 21.Rb1 Ng7 22.Nb5 Bg4 23.Qa2 Nf5  1/2-1/2
+
+[Event "URS-ch21"]
+[Site "Kiev"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Geller, Efim P"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D43"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 d5 4.Bg5 h6 5.Bxf6 Qxf6 6.Nc3 c6 7.e3 Nd7 8.Bd3 Bb4
+9.a3 Ba5 10.O-O dxc4 11.Bxc4 O-O 12.Rc1 Bc7 13.Ba2 Rd8 14.Qc2 Nf8 15.Ne4 Qf5
+16.Qb1 Nd7 17.Nfd2 e5 18.d5 Nb8 19.Rfd1 Qg6 20.d6 Bb6 21.Nf3 Nd7 22.Rc4 Re8
+23.Qc1 Bd8 24.Ng3 e4 25.Nd2 Nf6 26.Ndxe4 Nxe4 27.d7 Bxd7 28.Rxd7 Nd6 29.Rd4 Be7
+30.R4xd6 Bxd6 31.Bxf7+ Qxf7 32.Rxf7 Kxf7 33.Qc4+ Kf8 34.Ne4 Rad8 35.g3 Re7
+36.Kg2 Be5 37.b3 g6 38.h4 Kg7 39.Qc5 Rdd7 40.Qxa7 Bd4 41.Nc5 Bxc5 42.Qxc5 Re6
+43.h5 g5 44.Qc3+ Kh7 45.Qc2+ Kg7 46.Qf5 Rde7 47.f4 gxf4 48.exf4 Rd6 49.Kf3 Re1
+50.Qg4+ Kf7 51.Qc8 Re7 52.Qf5+ Kg7 53.a4 Re1 54.Qg4+ Kf7 55.Qc8 Re7 56.b4 Rd3+
+57.Kg4 Kg7 58.Qf5 Rd6 59.Qc5 Rdd7 60.Kh4 Re6 61.Qc3+ Kh7 62.Qc2+ Kg7 63.Qb2+ Kh7
+64.Qb1+ Kg7 65.Qf5 Rdd6 66.Kh3 Re7 67.Kg4 Ree6 68.Kf3 Re7 69.Qc2 Ree6 70.Qf5 Re8
+71.b5 cxb5 72.Qxb5 Re7 73.g4 Rf6 74.a5 Rfe6 75.Qb2+ Kg8 76.Qb3 Kh7 77.Qd3+ Kg8
+78.g5 hxg5 79.fxg5 Re5 80.Kf4 R5e6 81.g6 b6 82.a6  1-0
+
+[Event "URS-ch sf"]
+[Site "Tbilisi"]
+[Date "1949.??.??"]
+[Round "17"]
+[White "Petrosian, Tigran V"]
+[Black "Geller, Efim P"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C01"]
+
+1.e4 e6 2.d4 d5 3.exd5 exd5 4.Bd3 Bd6 5.Qe2+ Qe7 6.c3 c6 7.Qxe7+ Nxe7 8.Ne2 Bf5
+9.Bxf5 Nxf5 10.Bf4 Bxf4 11.Nxf4 O-O 12.O-O Re8 13.Nd2 Nd7 14.Rfe1 f6 15.Kf1 Kf7
+16.Rxe8 Rxe8 17.Re1 Rxe1+ 18.Kxe1 Nd6 19.Nd3 Nc4 20.b3 Nxd2 21.Kxd2 Ke6 22.f3 g5
+23.Ke3 b6 24.h3 c5 25.dxc5 bxc5 26.b4 Kd6 27.f4 h6 28.fxg5 fxg5 29.bxc5+ Nxc5
+30.Nxc5 Kxc5  1/2-1/2
+
+[Event "Candidats Tournament"]
+[Site "Curacao"]
+[Date "1962.??.??"]
+[Round "5"]
+[White "Benko, Pal C"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A21"]
+
+1.g3 g6 2.Bg2 Bg7 3.c4 e5 4.Nc3 f5 5.d4 exd4 6.Nb5 Nc6 7.Nf3 Nf6 8.O-O Ne4
+9.Nbxd4 Nxd4 10.Nxd4 O-O 11.Nb3 d6 12.Qc2 a5 13.Rb1 a4 14.Nd2 Nc5 15.b4 axb3
+16.axb3 f4 17.Bb2 Qe7 18.Bxg7 Qxg7 19.Qb2 Qxb2 20.Rxb2 Ra3 21.Rc1 Bg4 22.Kf1 fxg3
+23.hxg3 Re8 24.f3 Bf5 25.g4 Bd7 26.b4 Ne6 27.Ne4 Rf8 28.Nc3 Kg7 29.Kf2 Nd4
+30.Ke1 Rf7 31.Nd5 Be6 32.Rd1 Nc6 33.c5 dxc5 34.bxc5 Na5 35.Rb4 c6 36.Nf4 Bc4
+37.Rd4 Ra1+ 38.Kf2 Bb3 39.g5 Re7 40.Re4 Rxe4 41.Rxe4 Ra4 42.Rxa4 Bxa4 43.Bh3 Nb3
+44.Ne6+ Kf7 45.Nd8+ Ke7 46.Nxb7 Bb5 47.Bc8 Ba6 48.Na5 Nxa5 49.Bxa6 Nb3 50.Ke3 Nxc5
+51.Bc4 Nb7 52.Kd4 Nd6 53.e4 Nb7 54.Bg8 Kf8 55.Bb3 Kg7 56.Ba4 Nd8 57.Bb3 h6
+58.gxh6+ Kxh6 59.Ke5 Kg5 60.Bd1 Nf7+ 61.Ke6 Nh6 62.e5 Kf4 63.Kf6 Ng8+ 64.Kf7 Kxe5
+65.Kxg8 c5 66.Be2 g5 67.Kf7 Kf4  1/2-1/2
+
+[Event "Tbilisi"]
+[Site "Tbilisi"]
+[Date "1945.??.??"]
+[Round "?"]
+[White "Gabuniya"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B70"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 d6 6.g3 g6 7.Bg2 Bd7 8.O-O Bg7
+9.Nde2 O-O 10.a4 Rc8 11.Be3 Ng4 12.Bf4 Nb4 13.Rc1 a6 14.Qd2 Qc7 15.h3 Ne5
+16.b3 Bxh3 17.Bxe5 Bxe5 18.Nd5 Nxd5 19.Bxh3 Nc3 20.Bxc8 Rxc8 21.Nxc3 Bxc3
+22.Qd3 Bb2 23.Rcd1 Qxc2 24.Qxc2 Rxc2 25.Rd3 b5 26.Rfd1 bxa4 27.bxa4 Rc4 28.Rb3 Be5
+29.a5 Ra4 30.Rb7 Kf8 31.f4 Bc3 32.Rd5 Bxa5 33.Rb8+ Kg7 34.Ra8 Be1 35.Rd3 Rxe4
+36.Rxa6 h5 37.Ra1 h4 38.gxh4 Bxh4 39.Rf1 Bf6 40.Kg2 Ra4 41.Kf3 g5 42.fxg5 Bxg5
+43.Rg1 f6 44.Rb3 Kg6 45.Rb7 e5 46.Rd1 e4+ 47.Ke2 Ra2+ 48.Ke1 Bh4+ 49.Kf1 Bg3
+50.Re7 f5 51.Re8 Be5 52.Re1 Kg5 53.Re6 f4 54.Rxe4 Kf5 55.R6xe5+ dxe5  0-1
+
+[Event "Tel Aviv olm prel"]
+[Site "Tel Aviv"]
+[Date "1964.??.??"]
+[Round "4"]
+[White "Naranja, Renato"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A26"]
+
+1.c4 g6 2.g3 Bg7 3.Bg2 e5 4.Nc3 d6 5.Nf3 Nc6 6.d3 f5 7.Bd2 Nf6 8.O-O O-O
+9.Rb1 h6 10.e3 Be6 11.b3 Kh7 12.d4 Bf7 13.d5 Ne7 14.e4 fxe4 15.Ne1 c6 16.dxc6 bxc6
+17.Nxe4 Nxe4 18.Bxe4 d5 19.Bb4 Re8 20.Qf3 Nf5 21.cxd5 cxd5 22.Bxf5 gxf5 23.Rc1 Qd7
+24.Ng2 a5 25.Bd2 Be6 26.Nh4 Qf7 27.Rc6 a4 28.Rfc1 axb3 29.axb3 Rec8 30.Rxc8 Rxc8
+31.Rxc8 Bxc8 32.b4 d4 33.b5 e4 34.Qf4 Qb3 35.Qd6 Be6 36.Qb4 Qd3 37.b6 Bc4
+38.h3 Qf1+ 39.Kh2 Qxf2+ 40.Ng2 Bf1  0-1
+
+[Event "Tashkent m"]
+[Site "Tashkent"]
+[Date "1951.??.??"]
+[Round "11"]
+[White "Mukhitdinov, Mamadzhan"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B34"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6 6.Nxc6 bxc6 7.e5 Ng8 8.Bc4 d5
+9.exd6 Qxd6 10.Qf3 Qf6 11.Qg3 Bh6 12.O-O Bxc1 13.Rfxc1 Nh6 14.Nd5 cxd5 15.Bxd5 Bb7
+16.Bxb7 Rd8 17.c4 Qxb2 18.Qb3 Qe5 19.c5 Nf5 20.c6 Qc7 21.Qa3 O-O 22.Qxa7 Nd4
+23.Qa6 Rd5 24.g3 Ra5 25.Qc4 e5 26.a4 Rd8 27.Ra2 Ne6 28.Rb2 Rd4 29.Qb3 Rdxa4
+30.Qb6 Ra1 31.Rxa1 Rxa1+ 32.Kg2 Qxb6 33.Rxb6 Rc1 34.Rb5 e4 35.Re5 Rc4  1/2-1/2
+
+[Event "Clarin"]
+[Site "Buenos Aires"]
+[Date "1979.??.??"]
+[Round "12"]
+[White "Petrosian, Tigran V"]
+[Black "Gheorghiu, Florin"]
+[Result "1/2-1/2"]
+[WhiteElo "2610"]
+[BlackElo "2540"]
+[ECO "A43"]
+
+1.d4 Nf6 2.Nf3 c5 3.d5 g6 4.d6 Ne4 5.dxe7 Qxe7 6.Nfd2 Nf6 7.Nb3 b6 8.Nc3 Bb7
+9.Bf4 a6 10.e3 Qe6 11.Qd2 d5 12.O-O-O Nbd7 13.Be2 Rd8  1/2-1/2
+
+[Event "Las Palmas"]
+[Site "Las Palmas"]
+[Date "1973.??.??"]
+[Round "1"]
+[White "Hort, Vlastimil"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2600"]
+[BlackElo "2645"]
+[ECO "E19"]
+
+1.c4 Nf6 2.Nf3 b6 3.g3 Bb7 4.Bg2 e6 5.d4 Be7 6.O-O O-O 7.Nc3 Ne4 8.Qc2 Nxc3
+9.Qxc3 Be4 10.b3 f5 11.Bb2 Bf6 12.Ne1 Bxg2 13.Nxg2 c5  1/2-1/2
+
+[Event "URS-chT Moscow"]
+[Site "Moscow"]
+[Date "1972.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Kapengut, Albert Z"]
+[Result "1/2-1/2"]
+[WhiteElo "2645"]
+[BlackElo "2485"]
+[ECO "A73"]
+
+1.d4 Nf6 2.c4 c5 3.d5 e6 4.Nc3 exd5 5.cxd5 d6 6.Nf3 g6 7.Nd2 Nbd7 8.e4 Bg7
+9.Be2 O-O 10.O-O Qe7 11.a4 b6 12.Re1 Rb8 13.f4 a6 14.Bf3 b5 15.axb5 axb5
+16.Ra5 b4 17.Na4 h5 18.Nc4 Ng4 19.e5 dxe5 20.Bxg4 hxg4 21.fxe5 b3 22.e6 fxe6
+23.dxe6 Qh4 24.Ra7 g3 25.hxg3 Qxg3 26.exd7 Qf2+  1/2-1/2
+
+[Event "Candidats final"]
+[Site "Buenos Aires"]
+[Date "1971.??.??"]
+[Round "8"]
+[White "Petrosian, Tigran V"]
+[Black "Fischer, Robert James"]
+[Result "0-1"]
+[WhiteElo "2640"]
+[BlackElo "2760"]
+[ECO "D40"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 d5 4.Nc3 c5 5.e3 Nc6 6.a3 Ne4 7.Qc2 Nxc3 8.bxc3 Be7
+9.Bb2 O-O 10.Bd3 h6 11.O-O Na5 12.Nd2 dxc4 13.Nxc4 Nxc4 14.Bxc4 b6 15.e4 Bb7
+16.Qe2 Rc8 17.Bb3 b5 18.f4 Qb6 19.Kh1 cxd4 20.cxd4 b4 21.axb4 Bxb4 22.d5 Bc3
+23.Bxc3 Rxc3 24.Bc2 exd5 25.e5 Re3 26.Qd2 d4 27.Rab1 Qa6 28.Rf2 Rd8 29.Kg1 Be4
+30.Bxe4 Rxe4 31.h3 d3 32.Rb3 Qc4 33.Rb2 Rdd4 34.g3 Rd5 35.Kh2 Rb5 36.Ra2 Rb1
+37.g4 Re2 38.Rxe2 dxe2 39.Qxe2 Qxf4+  0-1
+
+[Event "Santa Monica"]
+[Site "Santa Monica"]
+[Date "1966.??.??"]
+[Round "10"]
+[White "Spassky, Boris V"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D27"]
+
+1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e3 e6 5.Bxc4 c5 6.O-O a6 7.dxc5 Bxc5 8.Qxd8+ Kxd8
+9.Nbd2 Nc6 10.Rd1 Ke7 11.Nb3 Bb6 12.Bd2 Rd8 13.Bc3 Bd7 14.Rac1 Be8 15.h3 Rxd1+
+16.Rxd1 Rd8 17.Rxd8 Kxd8 18.Kf1 Ke7 19.Ke2 g6 20.Nfd4 Nxd4+ 21.Bxd4 Bxd4
+22.Nxd4  1/2-1/2
+
+[Event "Candidats Tournament"]
+[Site "Amsterdam"]
+[Date "1956.??.??"]
+[Round "18"]
+[White "Petrosian, Tigran V"]
+[Black "Keres, Paul"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D34"]
+
+1.d4 d5 2.c4 e6 3.Nf3 c5 4.cxd5 exd5 5.g3 Nc6 6.Bg2 Nf6 7.O-O Be7 8.Nc3 O-O
+9.Be3 Be6 10.dxc5 Ng4 11.Bd4 Nxd4 12.Nxd4 Bxc5 13.Nb3 Bb6 14.Nxd5 Rc8 15.e3 Bxd5
+16.Bxd5 Rc7 17.Qf3 Ne5 18.Qg2 Qe7 19.Nd4 Rd8 20.Rad1 g6 21.b3 Rcd7 22.e4 Rc8
+23.Kh1  1/2-1/2
+
+[Event "Budapest"]
+[Site "Budapest"]
+[Date "1952.??.??"]
+[Round "15"]
+[White "Botvinnik, Mikhail"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B92"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.Be2 e5 7.Nb3 Be7 8.O-O O-O
+9.f4 Nbd7 10.a4 b6 11.Bd3 Bb7 12.Qe2 Re8 13.fxe5 Nxe5 14.Bf4 Qc7 15.Kh1 Nfd7
+16.Nd4 g6 17.Nf3 Bf6 18.Nxe5 Nxe5 19.Rae1 Bg7 20.h3 Qc5 21.Be3 Qb4 22.Bc1 Re7  1/2-1/2
+
+[Event "ARM-ch m"]
+[Site "Yerevan"]
+[Date "1946.??.??"]
+[Round "8"]
+[White "Kasparian, Genrikh"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B02"]
+
+1.e4 Nf6 2.Nc3 d5 3.exd5 Nxd5 4.Bc4 Nxc3 5.Qf3 e6 6.Qxc3 c5 7.Nf3 Nc6 8.O-O Qf6
+9.Qe3 Bd6 10.c3 Qf4 11.d4 Qxe3 12.fxe3 h6 13.e4 Bd7 14.d5 Na5 15.Be2 exd5
+16.exd5 O-O 17.c4 Rfe8 18.Bd3 b5 19.b3 b4 20.Bb2 Re3 21.Rad1 Bg4 22.Bc1 Re7
+23.Rde1 Rxe1 24.Nxe1 Nb7 25.h3 Bd7 26.Bf5 Bxf5 27.Rxf5 Re8 28.Kf1 a5 29.Nd3 a4
+30.Bf4 Bxf4 31.Rxf4 Re3 32.Rf3 Rxf3+ 33.gxf3 a3 34.Ke2 Kf8 35.Ne5 Ke7 36.Ke3 Nd6
+37.Kd2 Nc8 38.Nd3 Kd6 39.Nf2 Kc7 40.Nd3 Kd6 41.Nf2  1/2-1/2
+
+[Event "Moscow-ch"]
+[Site "Moscow"]
+[Date "1956.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Osnos, Viatcheslav"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B59"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 d6 6.Be2 e5 7.Nb3 Be7 8.Be3 O-O
+9.O-O a5 10.Bf3 Be6 11.Nd5 Bxd5 12.exd5 Nb4 13.c3 Na6 14.a4 h6 15.Be2 Nc7
+16.Bc4 Nd7 17.Bb5 Bg5 18.Bxg5 hxg5 19.Bxd7 Qxd7 20.c4 b6 21.Ra3 g6 22.Nd2 Kg7
+23.Rg3 f6 24.Qb3 Na6 25.Qb5 Qc7 26.Ne4 Nc5 27.Nc3 Rh8 28.Rb1 Rh4  1/2-1/2
+
+[Event "Gothenburg Interzonal"]
+[Site "Gothenburg"]
+[Date "1955.??.??"]
+[Round "3"]
+[White "Spassky, Boris V"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B11"]
+
+1.e4 c6 2.Nc3 d5 3.Nf3 Bg4 4.d4 e6 5.Bd3 Nf6 6.h3 Bh5 7.O-O dxe4 8.Nxe4 Nxe4
+9.Bxe4 Nd7 10.Be3 Bd6 11.c4 Nf6 12.Bd3 Qc7 13.Qe2 Rd8 14.Rad1 Bh2+ 15.Kh1 Bf4
+16.Rd2 Bxe3 17.fxe3 c5 18.Bb1 O-O 19.b3 Bg6 20.Kg1 Ne4 21.Bxe4 Bxe4 22.Rfd1 b6
+23.Ng5 Bg6 24.Qg4  1/2-1/2
+
+[Event "Sarajevo"]
+[Site "Sarajevo"]
+[Date "1972.??.??"]
+[Round "6"]
+[White "Szabo, Laszlo"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2525"]
+[BlackElo "2645"]
+[ECO "A65"]
+
+1.d4 Nf6 2.c4 c5 3.d5 d6 4.Nc3 g6 5.e4 Bg7 6.Nge2 O-O 7.Ng3 e6 8.Be2 exd5
+9.cxd5 a6 10.a4 Re8 11.Bf4 Qc7 12.Qd2 Nbd7 13.O-O b6 14.Bh6 Bh8 15.h3  1/2-1/2
+
+[Event "URS-ch26"]
+[Site "Tbilisi"]
+[Date "1959.??.??"]
+[Round "9"]
+[White "Petrosian, Tigran V"]
+[Black "Krogius, Nikolai V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D91"]
+
+1.d4 Nf6 2.Nf3 g6 3.c4 Bg7 4.Nc3 d5 5.Bg5 Ne4 6.cxd5 Nxg5 7.Nxg5 e6 8.Nf3 exd5
+9.e3 O-O 10.Bd3 Nc6 11.O-O Ne7 12.b4 Bf5 13.Bxf5 Nxf5 14.b5 Qd6 15.Qb3 Ne7
+16.Rfc1 Kh8 17.Rc2 h6 18.Rac1 c6 19.Na4 Rab8 20.g3 Kh7 21.Nc5 Rfd8 22.bxc6 bxc6
+23.Qa4 Qf6 24.Kg2 Ra8 25.Nb7 Re8 26.Na5 g5 27.h3 Qf5 28.Nxc6 Qe4 29.Rc5 f5
+30.Qc2 Nxc6 31.Rxc6 f4 32.exf4 gxf4 33.g4 Bxd4 34.Qd2 Bg7 35.Re1 Qa4 36.Qxd5 Rxe1
+37.Nxe1 Rf8 38.Nf3 Kh8 39.Rc7 a6 40.Qb7 Rg8 41.Nh4  1-0
+
+[Event "URS-ch sf"]
+[Site "Sverdlovsk"]
+[Date "1951.??.??"]
+[Round "7"]
+[White "Konstantinov, A."]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B26"]
+
+1.e4 c5 2.Nc3 Nc6 3.g3 g6 4.Bg2 Bg7 5.d3 d6 6.Be3 Nd4 7.f4 Nh6 8.h3 f5 9.Qd2 e6
+10.Nf3 O-O 11.O-O Nf7 12.Rae1 Bd7 13.Nd1 Nb5 14.c3 Rc8 15.Nf2 Bc6 16.g4 b6
+17.exf5 exf5 18.gxf5 gxf5 19.Nh1 d5 20.Bf2 d4 21.c4 Nbd6 22.Bh4 Bf6 23.Bxf6 Qxf6
+24.Ne5 Be8 25.Kh2 Kh8 26.Bd5 Rc7 27.Re2 Nh6 28.Ng3 Qh4 29.Nf3 Qd8 30.Ng5 Bd7
+31.Qe1 Re8 32.Rxe8+ Qxe8 33.Qxe8+ Bxe8 34.Re1 Bg6 35.Kg2 Nc8 36.Bf3 Re7 37.Rxe7 Nxe7
+38.Bb7 Kg7 39.Kf3 Nf7  1/2-1/2
+
+[Event "World Championship 26th"]
+[Site "Moscow"]
+[Date "1966.??.??"]
+[Round "20"]
+[White "Petrosian, Tigran V"]
+[Black "Spassky, Boris V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E59"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 O-O 5.Bd3 c5 6.Nf3 d5 7.O-O Nc6 8.a3 Bxc3
+9.bxc3 dxc4 10.Bxc4 Qc7 11.Bd3 e5 12.Qc2 Bg4 13.Nxe5 Nxe5 14.dxe5 Qxe5 15.f3 Bd7
+16.a4 Rfe8 17.e4 c4 18.Be2 Be6 19.Be3 Qc7 20.Rab1 Nd7 21.Rb5 b6 22.Rfb1 Qc6
+23.Bd4 f6 24.Qa2 Kh8 25.Bf1 h6 26.h3 Rab8 27.a5 Rb7 28.axb6 axb6 29.Qf2 Ra8
+30.Qb2 Rba7 31.Bxb6 Ra2 32.Qb4 Rc2 33.Bf2 Qc7 34.Qe7 Bxh3 35.gxh3 Rxf2 36.Kxf2 Qh2+
+37.Bg2 Ne5 38.Rb8+ Rxb8 39.Rxb8+ Kh7 40.Rd8 Ng6 41.Qe6  1-0
+
+[Event "JUG-URS"]
+[Site "URS"]
+[Date "1979.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Ivkov, Borislav"]
+[Result "1/2-1/2"]
+[WhiteElo "2610"]
+[BlackElo "2525"]
+[ECO "C89"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 O-O 8.c3 d5
+9.d3 dxe4 10.dxe4 Qxd1 11.Bxd1 Bb7 12.Nbd2 Rfd8 13.Bc2 Nd7 14.Nf1 Nc5 15.Ne3 Nd3
+16.Bxd3 Rxd3 17.Nd5 Bd6 18.Rf1 f5 19.Ne1 fxe4 20.Ne3 Rd8 21.Nxd3 exd3 22.Nf5 e4
+23.Nxd6 Rxd6 24.Bf4 Rd7 25.f3 exf3 26.Rxf3 Ne7 27.Re3 Ng6 28.Bg3 c5 29.Rf1 h5
+30.h4 c4  1/2-1/2
+
+[Event "Bucharest"]
+[Site "Bucharest"]
+[Date "1953.??.??"]
+[Round "16"]
+[White "Sliwa, Bogdan"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E90"]
+
+1.d4 Nf6 2.c4 d6 3.Nc3 e5 4.Nf3 Nbd7 5.e4 g6 6.h3 Bg7 7.Be3 O-O 8.Qd2 exd4
+9.Nxd4 Re8 10.Bd3 c6 11.O-O-O a6 12.g4 Nc5 13.f3 Nfd7 14.Be2 Qa5 15.Kb1 Qc7
+16.Nc2 Be5 17.h4 b5 18.h5 Nb6 19.Rh3 Be6 20.Rdh1 Re7 21.Bg5 Rd7 22.f4 Bxc3
+23.Qxc3 Nxe4 24.Qd4 Nxg5 25.fxg5 c5 26.Qf6 Qd8 27.hxg6 Qxf6 28.gxh7+ Kh8
+29.gxf6 Nxc4 30.Rh5 d5 31.Bd3 Rad8 32.Rg5 Nd2+ 33.Kc1 Ne4 34.Bxe4 dxe4 35.Ne3 Rd6
+36.Rxc5 Bxa2 37.g5 Rd3 38.Rc3 Rxc3+ 39.bxc3 Be6 40.Rh4 Rd3 41.Rxe4 Kxh7 42.Kc2 Rd6
+43.Re5 Kg6 44.Kc1 Kh5 45.Kc2 Rd8 46.Kc1  1/2-1/2
+
+[Event "URS-BRD"]
+[Site "Hamburg"]
+[Date "1960.??.??"]
+[Round "2"]
+[White "Troeger, Paul"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D02"]
+
+1.d4 d5 2.Nf3 Nf6 3.Bf4 g6 4.h3 c5 5.c3 Nbd7 6.Nbd2 Bg7 7.e3 O-O 8.Be2 b6
+9.O-O Bb7 10.Ne5 Ne8 11.Ndf3 Ndf6 12.Bb5 Nd6 13.Ba4 Qc8 14.Bc2 Nfe4 15.Rb1 f6
+16.Nd3 Nc4 17.Qe2 a5 18.Rfd1 Kh8 19.Bh2 Ba6 20.Qe1 g5 21.dxc5 bxc5 22.Nc1 Qe6
+23.Nb3 Qc6 24.Nbd2 Ncd6 25.Bxd6 Nxd6 26.e4 e6 27.e5 Nf7 28.exf6 Bxf6 29.Nf1 Rae8
+30.Ne3 Ne5 31.Nxe5 Bxe5 32.Ng4 Bc7 33.Bd3 Bb7 34.Nh2 e5 35.Be2 d4 36.Bf1 Qd6
+37.Bb5 e4 38.Nf1 e3 39.f3 Ba6 40.Bxa6 Qxa6 41.Ng3 Qd6 42.Nf1 e2  0-1
+
+[Event "EU-chT"]
+[Site "Moscow"]
+[Date "1977.??.??"]
+[Round "1"]
+[White "Jansa, Vlastimil"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2450"]
+[BlackElo "2645"]
+[ECO "C07"]
+
+1.e4 e6 2.d4 d5 3.Nd2 c5 4.Ngf3 cxd4 5.exd5 Qxd5 6.Bc4 Qd6 7.O-O Nf6 8.Nb3 Nc6
+9.Nbxd4 Nxd4 10.Nxd4 a6 11.Bb3 Be7 12.c3 O-O 13.Qf3 Qc7 14.Bg5 Bd7 15.Rfe1 Rfe8
+16.Rad1 Rad8 17.Bf4 Qb6 18.Be5 Bc8 19.Qg3 Bd6 20.Rd3 Bxe5 21.Rxe5 Rd6 22.Rf3 Qd8
+23.Rg5 g6 24.Qf4 Kg7 25.h4 h5 26.Qe5 Rd5 27.Bxd5 exd5 28.Qxf6+ Qxf6 29.Rxf6 Re1+
+30.Kh2 Kxf6 31.Rxd5 Rb1 32.Rd6+ Ke5 33.Rb6  1/2-1/2
+
+[Event "World Championship 25th"]
+[Site "Moscow"]
+[Date "1963.??.??"]
+[Round "2"]
+[White "Botvinnik, Mikhail"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D27"]
+
+1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e3 c5 5.Bxc4 e6 6.O-O a6 7.a4 Nc6 8.Qe2 cxd4
+9.Rd1 Be7 10.exd4 O-O 11.Bg5 Nd5 12.Bxe7 Ncxe7 13.Ne5 Bd7 14.Nd2 Bc6 15.Ne4 Nf4
+16.Qf3 Bxe4 17.Qxe4 Nfd5 18.Ra3 Rc8 19.Rh3 Ng6 20.Bxd5 exd5 21.Qf5 Qd6 22.Rb3 Rc7
+23.g3 b6 24.Re1 Ne7 25.Qf4 Rc2 26.Nd3 Qd8 27.Qg5 Nc8 28.Qxd8 Rxd8 29.a5 bxa5
+30.Rb8 Rf8 31.Ra1 Ne7 32.Rxf8+ Kxf8 33.Rxa5 Rd2 34.Rxa6 Rxd3 35.Ra8+ Nc8  1/2-1/2
+
+[Event "World Championship 26th"]
+[Site "Moscow"]
+[Date "1966.??.??"]
+[Round "15"]
+[White "Spassky, Boris V"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B25"]
+
+1.e4 c5 2.Nc3 Nc6 3.g3 g6 4.Bg2 Bg7 5.d3 d6 6.Nh3 Nf6 7.O-O Bg4 8.f3 Bxh3
+9.Bxh3 O-O 10.Be3 Ne8 11.Qd2 Nc7 12.Rae1 b6 13.Nd1 d5 14.Qe2 e6 15.f4 f5
+16.Bc1 Rf7 17.Bg2 Qd7 18.Nf2 Rd8 19.c3 b5 20.exd5 exd5 21.Bd2 c4 22.Qf3 Ne7
+23.dxc4 bxc4 24.b3 Nc8 25.bxc4 dxc4 26.Bc1 Qa4 27.Rd1 Rdf8 28.Be3 Nb6 29.Bc5 Rc8
+30.Bb4 Na6 31.Bd6 Qa5 32.g4 Qxc3 33.Qe2 Qf6 34.Rfe1 Rd7 35.Be7 Rxe7 36.Qxe7 Qxe7
+37.Rxe7 Nc5 38.gxf5 c3 39.fxg6 hxg6 40.Re2 Rc7 41.Ne4 Ne6 42.Nxc3 Nd4 43.Re5 Bxe5
+44.fxe5 Rxc3 45.Rxd4 Kf7 46.Rd6 Rc5 47.Rf6+ Kg7 48.Be4 Rxe5 49.Rxg6+ Kf7
+50.Bc2 Re1+ 51.Kf2 Ra1 52.Rc6 Rxa2 53.h4 Nd5 54.Kf3 Ra3+ 55.Ke4 Rc3  1/2-1/2
+
+[Event "URS-chT"]
+[Site "URS"]
+[Date "1966.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Keres, Paul"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D41"]
+
+1.c4 Nf6 2.Nf3 e6 3.Nc3 c5 4.g3 d5 5.cxd5 Nxd5 6.Bg2 Nc6 7.O-O Be7 8.Nxd5 exd5
+9.d4 O-O 10.dxc5 Bxc5 11.Bg5 f6 12.Rc1 Bb6 13.Bf4 Be6 14.Ne1 Re8 15.Nd3 Bf7
+16.Re1 Rc8 17.a3 Qe7 18.Bd2 d4 19.Qa4 Qd6 20.Qb5 Red8 21.a4 Be8 22.Qf5 Ne7
+23.Qf4 Qxf4 24.Nxf4 Bxa4 25.Bxb7 Rxc1 26.Rxc1 Kf7 27.Ba6 Bb3 28.Bc4+ Bxc4
+29.Rxc4 Ng6 30.Nd3 Ne5  1/2-1/2
+
+[Event "Tilburg"]
+[Site "Tilburg"]
+[Date "1982.??.??"]
+[Round "?"]
+[White "Larsen, Bent"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2595"]
+[BlackElo "2605"]
+[ECO "D41"]
+
+1.c4 Nf6 2.Nf3 e6 3.Nc3 d5 4.d4 c5 5.cxd5 Nxd5 6.e4 Nxc3 7.bxc3 cxd4 8.cxd4 Nc6
+9.Be2 Bb4+ 10.Bd2 Bxd2+ 11.Qxd2 O-O 12.Rc1 Qd6 13.O-O Bd7 14.d5 exd5 15.Qxd5 Qe7
+16.Bc4 Be6 17.Qh5 Bxc4 18.Rxc4 Rad8 19.h3 Rd7 20.Re1 g6 21.Qh6 Ne5 22.Nxe5 Qxe5
+23.Qe3 b6 24.f4 Qe6 25.Rc2 Rfd8 26.Kh2 b5 27.Qg3 b4 28.f5 Qf6 29.fxg6 hxg6
+30.e5 Qe7 31.e6 Rd3 32.Rc7 Qxe6 33.Rxe6 Rxg3 34.Rf6 Rc3 35.Rxa7 Rf8 36.Rb6 Ra3
+37.Rxa3 bxa3 38.Ra6 Rc8 39.Rxa3 Rc2 40.Kg3 Kg7 41.Kf3 f5 42.Ra4 g5  1/2-1/2
+
+[Event "EU-chT"]
+[Site "Bath"]
+[Date "1973.??.??"]
+[Round "6"]
+[White "Schmid, Lothar"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2550"]
+[BlackElo "2640"]
+[ECO "A17"]
+
+1.c4 Nf6 2.Nc3 e6 3.Nf3 b6 4.g3 Bb7 5.Bg2 Be7 6.O-O O-O 7.b3 d5 8.e3 dxc4
+9.bxc4 c5 10.Qe2 Nc6 11.d3 Qc7 12.Bb2 a6 13.Rfd1 Na5 14.Rab1 Rab8 15.Ba1 Nd7
+16.Nd2 Bxg2 17.Kxg2 b5  1/2-1/2
+
+[Event "URS-ch25"]
+[Site "Riga"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Suetin, Alexey S"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E93"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Be2 O-O 6.Nf3 e5 7.d5 Nbd7 8.Bg5 h6
+9.Bh4 g5 10.Bg3 Nh5 11.O-O a5 12.Ne1 Nf4 13.Nc2 Nc5 14.Ne3 Nxe4 15.Nxe4 Nxe2+
+16.Qxe2 f5 17.f3 f4 18.c5 fxe3 19.Qxe3 Bf5 20.Rac1 Qd7 21.Rc3 dxc5 22.Qxc5 b6
+23.Qe3 Qxd5 24.Rxc7 Qd4 25.Bf2 Qxe3 26.Bxe3 Be6 27.a3 b5 28.Bd2 Rfd8 29.Bc3 a4
+30.Re1 Rac8 31.Rb7 Rd5 32.Rb6 Bf7 33.Nd6 Rd8 34.Nf5 Kh7 35.Rb7 R8d7 36.Rxd7 Rxd7
+37.Nxg7 Kxg7 38.Rxe5 Kg6 39.Rxb5 Rd1+ 40.Kf2 Rc1 41.Rb6+ Kh7 42.g4 Rh1 43.h3 Bd5
+44.Rd6 Rd1 45.Rd7+ Kg8 46.Ke3 Bb3 47.Rg7+ Kf8 48.Rg6 Bc2 49.Rxh6 Rd3+ 50.Ke2 Rd5
+51.h4 gxh4 52.Rxh4 Kf7 53.f4 Bd1+ 54.Ke3 Kg6 55.g5 Bh5 56.Bf6 Rc5 57.Kd4 Rb5
+58.Ke4 Bd1 59.f5+ Kf7 60.Be5 Bc2+ 61.Kf4  1-0
+
+[Event "Budapest"]
+[Site "Budapest"]
+[Date "1952.??.??"]
+[Round "3"]
+[White "Pilnik, Herman"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C77"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.d3 d6 6.c3 g6 7.O-O Bg7 8.Nbd2 O-O
+9.Re1 Nh5 10.Nf1 Kh8 11.Bb3 Nf4 12.Bxf4 exf4 13.d4 g5 14.h3 Qf6 15.N1h2 Qg6
+16.Bc2 h5 17.e5 Qh6 18.exd6 cxd6 19.d5 Ne5 20.Nxe5 dxe5 21.Nf3 f6 22.d6 Bd7
+23.Qd5 Rab8 24.Rad1 h4 25.Nh2 f5 26.Rxe5 Bxe5 27.Qxe5+ Qf6 28.Qxf6+ Rxf6
+29.Nf3 Bc6 30.Ne5 Re8 31.Nxc6 bxc6 32.c4 g4 33.c5 Kg7 34.Ba4 Rc8 35.Re1 Kf8
+36.Bxc6 Kg7 37.d7 Rfxc6 38.dxc8=Q Rxc8 39.b4 Kf6 40.f3 g3 41.Kf1 Rb8 42.a3 a5
+43.Rb1 axb4 44.axb4 Ke5 45.b5 Kd5 46.c6 Kd6 47.Rd1+ Kc7 48.Rd7+ Kb6 49.Rf7 Ka5
+50.Rb7  1-0
+
+[Event "Sarajevo"]
+[Site "Sarajevo"]
+[Date "1972.??.??"]
+[Round "13"]
+[White "Tatai, Stefano"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2460"]
+[BlackElo "2645"]
+[ECO "C01"]
+
+1.e4 e6 2.d4 d5 3.exd5 exd5 4.Bd3 c6 5.Ne2 Bd6 6.Bf4 Ne7 7.c3 Bf5 8.O-O O-O
+9.Bxd6 Qxd6 10.Ng3 Bxd3 11.Qxd3 Nd7 12.Nd2  1/2-1/2
+
+[Event "Palma de Mallorca"]
+[Site "Palma de Mallorca"]
+[Date "1969.??.??"]
+[Round "1"]
+[White "Toran Albero, Roman"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E03"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 d5 4.g3 dxc4 5.Bg2 Nbd7 6.Qa4 a6 7.Qxc4 b5 8.Qc6 Ra7
+9.Qc2 c5 10.O-O Bb7 11.Nbd2 cxd4 12.Nxd4 Bxg2 13.Kxg2 Rc7 14.Qd1 Be7 15.N2f3 Qa8
+16.Kg1 Qe4 17.Bd2 O-O 18.Ba5 Rcc8 19.Rc1 Nc5 20.Qd2 Qd5 21.b4 Nce4 22.Qd3 Rc4
+23.Rxc4 bxc4 24.Qc2 g6 25.Qc1 c3 26.Qc2 Bd8 27.Rd1 Bxa5 28.Nb3 Qf5 29.Nbd4 Qh5
+30.bxa5 Qxa5 31.Rd3 Qc5 32.Re3 Rc8 33.Nb3 Qf5 34.Nbd4 Qd5 35.Rd3 Ng4 36.Nh4 Nexf2  0-1
+
+[Event "Varna olm"]
+[Site "Varna"]
+[Date "1962.??.??"]
+[Round "2"]
+[White "Petrosian, Tigran V"]
+[Black "Stoltz, Goesta"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A29"]
+
+1.c4 e5 2.Nc3 Nf6 3.Nf3 Nc6 4.g3 d5 5.cxd5 Nxd5 6.Bg2 Nb6 7.O-O Be7 8.d3 O-O
+9.a3 Be6 10.b4 Nd4 11.Rb1 Nxf3+ 12.Bxf3 Qc8 13.Ne4 Bd5 14.a4 Qd8 15.Bg2 f5
+16.Nc3 Bxg2 17.Kxg2 Kh8 18.Qb3 c6 19.Bb2 Qd6 20.a5 Nd5 21.b5 Rad8 22.Rfe1 f4
+23.Nxd5 cxd5 24.b6 Qf6 25.f3 fxg3 26.hxg3 Qg5 27.bxa7 e4 28.dxe4 dxe4 29.f4 Qg4
+30.Qe3 Bd6 31.Red1 Qg6 32.Rd5 h6 33.Rbd1 Rxf4 34.Rxd6  1-0
+
+[Event "URS-ch22"]
+[Site "Moscow"]
+[Date "1955.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Flohr, Salo"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A09"]
+
+1.Nf3 d5 2.c4 d4 3.g3 c5 4.d3 Nc6 5.Bf4 e6 6.Bg2 Bd6 7.Bd2 Nf6 8.O-O O-O
+9.Na3 e5 10.Bg5 Be7 11.Nc2 h6 12.Bxf6 Bxf6 13.Rb1 a5 14.a3 a4 15.Nd2 Be6
+16.b4 axb3 17.Rxb3 Qc7 18.e3 Rfb8 19.exd4 Nxd4 20.Nxd4 cxd4 21.Qb1 Be7 22.Qb2 Ra7
+23.Ra1 Bd7 24.Qb1 Ba4 25.Rb2 Bd7 26.Rb3 Ba4 27.Rb2 Bd7  1/2-1/2
+
+[Event "Candidats Tournament"]
+[Site "Curacao"]
+[Date "1962.??.??"]
+[Round "27"]
+[White "Fischer, Robert James"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B47"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 e6 5.Nc3 Qc7 6.g3 a6 7.Bg2 Nf6 8.O-O Be7
+9.b3 O-O 10.Bb2 Nxd4 11.Qxd4 d6 12.Rac1 b5 13.Nd1 Bb7 14.Ne3 Rfd8 15.c4 b4
+16.c5 dxc5 17.Qxb4 Bc6 18.Qc3 Qb7 19.f3 a5 20.Nc4 a4 21.Na5 Qb6 22.Nxc6 Qxc6
+23.b4 Qb6 24.bxc5 Bxc5+ 25.Qxc5 Qxb2 26.Rc2 Qd4+ 27.Qxd4 Rxd4 28.Rfc1 g5
+29.Rc8+ Rxc8 30.Rxc8+ Kg7 31.Rc2 g4 32.Kf2 gxf3 33.Bxf3 Rd3 34.Ke2 Ra3 35.Rd2 h5  1/2-1/2
+
+[Event "Bugojno"]
+[Site "Bugojno"]
+[Date "1982.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Spassky, Boris V"]
+[Result "1/2-1/2"]
+[WhiteElo "2605"]
+[BlackElo "2605"]
+[ECO "E07"]
+
+1.d4 Nf6 2.c4 e6 3.g3 d5 4.Bg2 Be7 5.Nf3 O-O 6.O-O Nbd7 7.b3 b6 8.cxd5 Nxd5
+9.Bb2 Bb7 10.Nc3 c5 11.Nxd5 Bxd5 12.Qd2 Rc8 13.dxc5  1/2-1/2
+
+[Event "Stockholm Interzonal"]
+[Site "Stockholm"]
+[Date "1962.??.??"]
+[Round "22"]
+[White "Petrosian, Tigran V"]
+[Black "German, Eugenio Maciel"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A30"]
+
+1.Nf3 Nf6 2.c4 c5 3.Nc3 e6 4.g3 b6 5.Bg2 Bb7 6.O-O Be7 7.d4 cxd4 8.Qxd4 O-O
+9.Rd1 Qc8 10.Qf4 d5 11.cxd5 Nxd5 12.Nxd5 Bxd5 13.Bd2 Qb7 14.Bc3 Nd7 15.Ne5 Nf6
+16.f3 Qb8 17.Kh1 Qe8 18.Ng4 Nh5 19.Qd2 Rd8 20.Qe1 Qb5 21.e4 Bb7 22.e5 Rxd1
+23.Rxd1 Rd8 24.Rxd8+ Bxd8 25.Qd1 Qd5 26.Qxd5 Bxd5 27.a3 Be7 28.Ne3 Bc6 29.f4 Bxg2+
+30.Kxg2 f5 31.Nc2 g5 32.fxg5 Bxg5 33.Nd4 Ng7 34.Nc6 a6 35.Bd4 b5 36.Nb8 a5
+37.Nc6 Ne8 38.Nxa5 Nc7 39.Kf3 Kf7 40.Nc6 Bc1 41.Nb4 Bd2 42.Bc3 Bh6 43.b3 Ke8
+44.g4 Kd7 45.a4 fxg4+ 46.Kxg4 Ke8 47.Kf3 Bf8 48.Nd3 bxa4 49.bxa4 Nd5 50.Bd4 Kd7
+51.Kg4 Ke8 52.a5 Nc7 53.Bc5 Bh6 54.Bd6 Na6 55.Nc5 Nxc5 56.Bxc5 Kd7 57.a6 Kc6
+58.a7 Kb7 59.Kf3 Bc1 60.Bd4 Bg5 61.Ke4 h5 62.Kd3 Ka8 63.Kc4 h4 64.h3 Be7
+65.Kd3  1-0
+
+[Event "Candidats Tournament"]
+[Site "Curacao"]
+[Date "1962.??.??"]
+[Round "24"]
+[White "Geller, Efim P"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B12"]
+
+1.e4 c6 2.d4 d5 3.e5 Bf5 4.Bd3 Bxd3 5.Qxd3 e6 6.Nf3 Qa5+ 7.Nbd2 Qa6 8.c4 Ne7
+9.O-O Nd7 10.b3 Nf5 11.Bb2 h5 12.a4 Be7 13.Qc3 g5 14.b4 g4 15.Ne1 dxc4 16.Nxc4 Nb6
+17.Nxb6 Qxb6 18.Nc2 O-O-O  1/2-1/2
+
+[Event "URS-ch22"]
+[Site "Moscow"]
+[Date "1955.??.??"]
+[Round "?"]
+[White "Mikenas, Vladas"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D58"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 d5 4.Bg5 Be7 5.e3 O-O 6.Nf3 h6 7.Bh4 b6 8.Rc1 Bb7
+9.cxd5 exd5 10.Bd3 c5 11.O-O Nbd7 12.Bb1 Re8 13.Bg3 Nf8 14.Ne5 a6 15.Qf3 Bd6
+16.Rfd1 b5 17.Nd3 c4 18.Nc5 Bxg3 19.hxg3 Bc8 20.Bf5 b4 21.N3a4 a5 22.Re1  1/2-1/2
+
+[Event "Zagreb"]
+[Site "Zagreb"]
+[Date "1965.??.??"]
+[Round "5"]
+[White "Petrosian, Tigran V"]
+[Black "Bertok, Mario"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A26"]
+
+1.c4 e5 2.Nc3 Nf6 3.g3 d6 4.Bg2 g6 5.e4 Bg7 6.Nge2 O-O 7.O-O Nc6 8.d3 Nd4
+9.Nxd4 exd4 10.Ne2 c5 11.b4 Nd7 12.bxc5 dxc5 13.f4 f6 14.a4 a5 15.g4 Nb8
+16.Ng3 Nc6 17.Rf2 Bd7 18.Bf3 Ra7 19.h4 h6 20.Rb2 Qc7 21.Rg2 b6 22.Kh1 Qc8
+23.Rb1 Nb4 24.Ra1 Bc6 25.Rh2 Qb8 26.Ra3 Re7 27.Kg1 Qc7 28.Qf1 Rff7 29.Rf2 Qd7
+30.Qd1 Qc7 31.Kg2 Re8 32.Kh3 Bf8 33.e5 fxe5 34.f5 Bxf3 35.Qxf3 Bg7 36.h5 g5
+37.Ne4 Bf6 38.Bd2 Kg7 39.Rf1 Rff8 40.Raa1 Rf7 41.Rfc1 Rff8 42.Be1 Nc6 43.Rab1 Nb4
+44.Rb2 Rf7 45.Bg3 Rfe7 46.Re1 Kf7 47.Rbe2 Kg7 48.Kg2 Qc6 49.Ra1 Qc7 50.Kf1 Kf7
+51.Ke1 Kg7 52.Kd1 Kf7 53.Be1 Rb8 54.Bxb4 axb4 55.Rea2 Rb7 56.a5 b3 57.a6 bxa2
+58.axb7 Kg7 59.Qg2 Qxb7 60.Qxa2 b5 61.Qa6  1-0
+
+[Event "URS-ch17"]
+[Site "Moscow"]
+[Date "1949.??.??"]
+[Round "?"]
+[White "Keres, Paul"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E61"]
+
+1.d4 Nf6 2.Nf3 g6 3.c4 Bg7 4.Nc3 d6 5.Bf4 Nh5 6.Bg5 h6 7.Be3 c6 8.g3 Nd7
+9.Bg2 Nhf6 10.h3 O-O 11.O-O Kh7 12.g4 e5 13.Qb3 exd4 14.Nxd4 Ne5 15.Rad1 Qe7
+16.Bf4 h5 17.g5 Nfd7 18.Ne4 Nb6 19.Qg3 Nexc4 20.b3 Ne5 21.Nxd6 Qxd6 22.Nf5 Qa3
+23.Nxg7 Ned7 24.Bd6 Qa5 25.Bxf8 Nxf8 26.Ne8 Be6 27.Nf6+ Kh8 28.Qf4 Nh7 29.Qd4 Nxf6
+30.Qxf6+ Kh7 31.e4 Qxa2 32.f4 Bxb3 33.Rd6 Rg8 34.f5 Rg7 35.Rd8 Qa5 36.Qd6 f6
+37.Qf8 gxf5 38.Qh8+ Kg6 39.Qh6+  1-0
+
+[Event "URS-ch25"]
+[Site "Riga"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Geller, Efim P"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D79"]
+
+1.d4 Nf6 2.c4 g6 3.g3 c6 4.Bg2 d5 5.cxd5 cxd5 6.Nf3 Bg7 7.O-O O-O 8.Nc3 Ne4
+9.Nxe4 dxe4 10.Ng5 Qxd4 11.Nxe4 Nc6 12.Qb3 Bf5 13.Nc3 Qb6 14.Qxb6 axb6 15.Be3 Ra6
+16.Rac1 Be6 17.a3 Rd8 18.Rfd1 Rxd1+ 19.Rxd1  1/2-1/2
+
+[Event "Yerevan"]
+[Site "Yerevan"]
+[Date "1965.??.??"]
+[Round "6"]
+[White "Petrosian, Tigran V"]
+[Black "Fuchs, Reinhart"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D43"]
+
+1.d4 d5 2.c4 c6 3.Nc3 Nf6 4.Nf3 e6 5.Qb3 Be7 6.Bf4 O-O 7.e3 Nbd7 8.cxd5 exd5
+9.Bd3 Re8 10.O-O Nf8 11.a4 a5 12.Qc2 Ng6 13.Bg3 Bd6 14.Bxd6 Qxd6 15.Rfe1 Bd7
+16.Rab1 Re7 17.Na2 Rae8 18.b4 axb4 19.Rxb4 Bg4 20.Nd2 Ne4 21.Nf1 Nh4 22.Ng3 Qh6  1/2-1/2
+
+[Event "World Championship 26th"]
+[Site "Moscow"]
+[Date "1966.??.??"]
+[Round "7"]
+[White "Spassky, Boris V"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D03"]
+
+1.d4 Nf6 2.Nf3 e6 3.Bg5 d5 4.Nbd2 Be7 5.e3 Nbd7 6.Bd3 c5 7.c3 b6 8.O-O Bb7
+9.Ne5 Nxe5 10.dxe5 Nd7 11.Bf4 Qc7 12.Nf3 h6 13.b4 g5 14.Bg3 h5 15.h4 gxh4
+16.Bf4 O-O-O 17.a4 c4 18.Be2 a6 19.Kh1 Rdg8 20.Rg1 Rg4 21.Qd2 Rhg8 22.a5 b5
+23.Rad1 Bf8 24.Nh2 Nxe5 25.Nxg4 hxg4 26.e4 Bd6 27.Qe3 Nd7 28.Bxd6 Qxd6 29.Rd4 e5
+30.Rd2 f5 31.exd5 f4 32.Qe4 Nf6 33.Qf5+ Kb8 34.f3 Bc8 35.Qb1 g3 36.Re1 h3
+37.Bf1 Rh8 38.gxh3 Bxh3 39.Kg1 Bxf1 40.Kxf1 e4 41.Qd1 Ng4 42.fxg4 f3 43.Rg2 fxg2+  0-1
+
+[Event "URS-ch sf"]
+[Site "Kiev"]
+[Date "1957.??.??"]
+[Round "17"]
+[White "Bastrikov, Georgy Vladimirovic"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C17"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.Bd2 Ne7 6.a3 Bxc3 7.Bxc3 cxd4 8.Qxd4 Nf5
+9.Bb5+ Bd7 10.Bxd7+ Nxd7 11.Qf4 Rc8 12.Ne2 Rc4 13.Qd2 O-O 14.Ng3 Nxg3 15.hxg3 Qc7
+16.O-O-O Rc8 17.Kb1 Nxe5 18.Rh5 Ng6 19.Rdh1 d4 20.Bb4 e5 21.Rxh7 Rxc2 22.Qd1 Qc4
+23.Bc3 Rxf2 24.Be1 Qc2+ 25.Qxc2 Rfxc2  0-1
+
+[Event "Tallinn"]
+[Site "Tallinn"]
+[Date "1979.??.??"]
+[Round "10"]
+[White "Ivanovic, Bozidar"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo "2460"]
+[BlackElo "2610"]
+[ECO "C45"]
+
+1.e4 e5 2.Nf3 Nc6 3.d4 exd4 4.Nxd4 Bc5 5.Nb3 Bb4+ 6.c3 Be7 7.c4 Nf6 8.Nc3 O-O
+9.Be2 Re8 10.f3 a5 11.a4 d6 12.O-O Nd7 13.Be3 Bf6 14.Qd2 b6 15.Nd5 Nc5 16.Ra3 Bd7
+17.Nc1 Nb4 18.Bd1 Nxd5 19.cxd5 c6 20.dxc6 Bxc6 21.Nd3 d5 22.Nxc5 d4 23.Bf2 bxc5
+24.Be2 Rb8 25.Bc4 Rb4 26.b3 Be5 27.Qd3 Rb7 28.Ra2 Bd7 29.Bd5 Rb8 30.Rc2 Be6
+31.Rxc5 Bxh2+ 32.Kh1 Bd6 33.Rc4 Qg5 34.Bxe6 Rxe6 35.Rfc1 Rf8 36.Rc8 Ree8
+37.R8c6 Re6 38.Rc8 Rg6 39.Rxf8+ Bxf8 40.Qf1 d3 41.g3 d2 42.Rd1 Rc6 43.Kg2 Rc1
+44.Bb6 Bd6 45.Bf2 h5 46.Qe2 Bxg3  0-1
+
+[Event "URS-ch25"]
+[Site "Riga"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Gurgenidze, Bukhuti"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B52"]
+
+1.e4 c5 2.Nf3 d6 3.Bb5+ Bd7 4.a4 g6 5.O-O Bg7 6.c3 Nf6 7.e5 dxe5 8.Nxe5 O-O
+9.Nxd7 Nfxd7 10.Re1 Nc6 11.Bf1 Nde5 12.d3 Qd5 13.f4 Nd7 14.Na3 Rfd8 15.Nc4 Nb6
+16.Ne3 Qd7 17.a5 Nd5 18.Nxd5 Qxd5 19.Qa4 e6 20.Be3 Rac8 21.Be2 Ne7 22.Qa3 Qd6
+23.g3 Qc6 24.Bf2 Rd7 25.Rad1 h5 26.Bf1 Nf5 27.Qb3 Qd5 28.Qa3 Qc6 29.Qb3 Qd5
+30.Qa3  1/2-1/2
+
+[Event "URS-ch37"]
+[Site "URS"]
+[Date "1969.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Tal, Mihail"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D40"]
+
+1.c4 Nf6 2.Nc3 e6 3.Nf3 d5 4.d4 c5 5.e3 Nc6 6.a3 a6 7.cxd5 exd5 8.Be2 cxd4
+9.Nxd4 Bd6 10.Bf3 O-O 11.O-O Qc7 12.h3 Be6 13.Nce2 Bh2+ 14.Kh1 Be5 15.Bd2 Nxd4  1/2-1/2
+
+[Event "Moscow-ch"]
+[Site "Moscow"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Panov, Vasily N"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E62"]
+
+1.d4 Nf6 2.c4 d6 3.Nf3 g6 4.g3 Bg7 5.Bg2 O-O 6.O-O Nc6 7.Nc3 e5 8.d5 Ne7
+9.e4 b6 10.Rb1 a5 11.a3 Bd7 12.b4 axb4 13.axb4 Qc8 14.c5 bxc5 15.bxc5 Bh3
+16.c6 h6 17.Rb7 Ne8 18.Nd2 Bxg2 19.Kxg2 f5 20.f3 Qd8 21.Nc4 Nc8 22.Be3 f4
+23.Bf2 fxg3 24.hxg3 h5 25.Be3 Qf6 26.Qd2 Qf7 27.Nb5 Ra4 28.Qc2 Ra8 29.Bb6 h4
+30.Bxc7 Qf6 31.Ba5 hxg3 32.Qe2 g5 33.Bd2 Ne7 34.Nb6 Ra2 35.Nc3 Rxd2 36.Qxd2 g4
+37.Rxe7 Qh4 38.Kg1 Bh6 39.f4 Qxe7 40.Nd7 Bxf4 41.Rxf4 Rxf4 42.Qg2 Rf3 43.Ne2 Qg5
+44.Nb6 Qe3+  0-1
+
+[Event "URS-ch21"]
+[Site "Kiev"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Suetin, Alexey S"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C08"]
+
+1.e4 e6 2.d4 d5 3.Nd2 a6 4.Ngf3 c5 5.exd5 exd5 6.b3 Bf5 7.Bb2 Nf6 8.Be2 Nbd7
+9.O-O Be7 10.dxc5 Nxc5 11.Nd4 Bg6 12.N2f3 O-O 13.c4 Qb6 14.Nh4 Rfd8 15.Nxg6 hxg6
+16.Qc2 Nce4 17.Rad1 Bc5 18.Bf3 Ng5 19.h4 Nxf3+ 20.Nxf3 dxc4 21.Rxd8+ Rxd8
+22.Qxc4 Qb5 23.Rc1 Qxc4 24.Rxc4 Bb6 25.Kf1 Nd5 26.g3 f6 27.Bd4 Bxd4 28.Rxd4  1/2-1/2
+
+[Event "Biel Interzonal"]
+[Site "Biel"]
+[Date "1976.??.??"]
+[Round "18"]
+[White "Huebner, Robert"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo "2585"]
+[BlackElo "2635"]
+[ECO "B06"]
+
+1.Nf3 g6 2.e4 Bg7 3.d4 d6 4.Bc4 e6 5.Bb3 Ne7 6.O-O O-O 7.c3 b6 8.Nbd2 Nbc6
+9.Re1 Na5 10.Bc2 c5 11.Nf1 Nac6 12.Be3 Qc7 13.Rc1 e5 14.h3 Nd8 15.N3h2 Bb7
+16.Ng3 exd4 17.cxd4 Ne6 18.Bb3 d5 19.e5 Nc6 20.Ng4 Rfd8 21.dxc5 bxc5 22.Bxc5 Nxc5
+23.Rxc5 Qe7 24.Qc1 Rac8 25.Nf6+ Kh8 26.Nxd5 Qf8 27.Qe3 Nxe5 28.Rxc8 Rxc8
+29.Qxa7 Bxd5 30.Bxd5 Qb4 31.Re2 f5 32.Qb7 Rc1+ 33.Kh2 Qf8 34.f4 Nd3 35.Qb5 Bd4
+36.Nh1 Qd6 37.g3 Nxf4 38.Qe8+ Kg7 39.Re7+ Kh6 40.Nf2 Bxf2 41.Rxh7+ Kg5  0-1
+
+[Event "Candidats sf2"]
+[Site "Odessa"]
+[Date "1974.??.??"]
+[Round "4"]
+[White "Petrosian, Tigran V"]
+[Black "Kortschnoj, Viktor"]
+[Result "1-0"]
+[WhiteElo "2640"]
+[BlackElo "2670"]
+[ECO "D79"]
+
+1.Nf3 Nf6 2.g3 g6 3.Bg2 Bg7 4.O-O O-O 5.c4 c6 6.d4 d5 7.cxd5 cxd5 8.Ne5 Bf5
+9.Nc3 Ne4 10.Bf4 Nc6 11.Nxc6 bxc6 12.Na4 Qa5 13.Rc1 Qb4 14.e3 Rac8 15.f3 Nd6
+16.a3 Qa5 17.Rc5 Qd8 18.Kh1 Re8 19.Re1 Bd7 20.Rc1 Nc4 21.e4 e6 22.b3 Nxa3
+23.e5 Rb8 24.Ra1 Nb5 25.Qd2 Bf8 26.Nc5 Bc8 27.Ra4 Qb6 28.b4 Nc7 29.Rea1 a5
+30.bxa5 Qb2 31.Qxb2 Rxb2 32.Bc1 Rc2 33.Ba3 Na6 34.Bf1 Bxc5 35.Bxc5 Kg7 36.Bd6 Rd8
+37.R4a2 Rxa2 38.Rxa2 Rd7 39.Rb2 Ra7  1-0
+
+[Event "Las Palmas"]
+[Site "Las Palmas"]
+[Date "1973.??.??"]
+[Round "12"]
+[White "Calvo Minguez, Ricardo"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo "2330"]
+[BlackElo "2645"]
+[ECO "C16"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 Ne7 5.Qg4 Nf5 6.Bd3 h5 7.Qf4 Nc6 8.a3 Be7
+9.Bxf5 g5 10.Qd2 exf5 11.h4 gxh4 12.Nce2 Be6 13.b3 Rg8 14.Nf4 Qd7 15.Ngh3 O-O-O
+16.Bb2 Rg7 17.O-O-O Rh8 18.Kb1 Bd8 19.Qe2 Rg4 20.f3 Rg7 21.Nd3 Ne7 22.Nc5 Qc6
+23.Nf4 Ng6 24.Nfd3 a5 25.c4 dxc4 26.bxc4 Bxc4 27.Rc1 Nf4 28.Qd2 Nxd3 29.Rxc4 Nxc5
+30.Rxc5 Qb6 31.Rxa5 Kb8 32.Rc5 Be7 33.Rc3 Rhg8 34.Rh2 f6 35.Ka2 fxe5 36.Rb3 Qd6
+37.d5 Rd8 38.f4 Qxd5 39.Qxd5 Rxd5 40.fxe5 Rd2 41.Rf3 Rg3 42.Rxg3 hxg3 43.Rxh5 Rxg2
+44.Kb3 Rh2 45.Rxf5 Rxb2+  0-1
+
+[Event "Tashkent m"]
+[Site "Tashkent"]
+[Date "1951.??.??"]
+[Round "7"]
+[White "Mukhitdinov, Mamadzhan"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B40"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e6 6.Nxc6 bxc6 7.Bd3 d5 8.O-O Be7
+9.e5 Nd7 10.Re1 O-O 11.f4 f5 12.Na4 Nb6 13.c3 c5 14.Be3 Qc7 15.Nxb6 axb6
+16.Qc2 Bd7 17.Be2 g5 18.fxg5 Qxe5 19.Bf3 Qd6 20.g3 e5 21.c4 d4 22.Bxa8 Rxa8  0-1
+
+[Event "Las Palmas"]
+[Site "Las Palmas"]
+[Date "1973.??.??"]
+[Round "14"]
+[White "Stein, Leonid"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2620"]
+[BlackElo "2645"]
+[ECO "B83"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 d6 5.Nc3 e6 6.Be3 Nf6 7.Be2 Be7 8.O-O Bd7
+9.Nb3 a6 10.f4 b5 11.a3 O-O 12.Bf3 Rb8 13.Qd2 Qc7 14.g4 Be8 15.g5 Nd7 16.Qg2 Nb6
+17.Rae1 Nc4 18.Bc1 a5 19.Kh1 b4 20.axb4 Rxb4 21.f5 a4 22.Nd2 N4e5 23.Bd1 Nd4
+24.f6 Bd8 25.Re3 Bc6 26.Rh3 Ng6 27.Qg4 Re8 28.Qh5 Nf8 29.fxg7 Kxg7 30.Nf3 Nb5
+31.Nxb5 Bxb5 32.Re1 Bc6 33.Nd2 Rb5 34.Nb1 Kg8 35.Nc3 Rc5 36.Kg1 Qb7 37.Rf1 Bb6
+38.Be3 Rxc3 39.bxc3 Bxe4 40.Qh4 a3 41.Bh5 Bf5 42.Rhf3 Bxe3+ 43.Rxe3 a2 44.Qd4  1/2-1/2
+
+[Event "URS-ch28"]
+[Site "Moscow"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Tarasov, Vitaly Georgievich"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D26"]
+
+1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e3 e6 5.Bxc4 c5 6.dxc5 Qxd1+ 7.Kxd1 Bxc5 8.Ke2 a6
+9.Bd3 Nc6 10.Nc3 Bd7 11.Rd1 Ke7 12.a3 Bd6  1/2-1/2
+
+[Event "Vilnius"]
+[Site "Vilnius"]
+[Date "1978.??.??"]
+[Round "10"]
+[White "Reshevsky, Samuel Herman"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2490"]
+[BlackElo "2620"]
+[ECO "E61"]
+
+1.d4 Nf6 2.Nf3 d6 3.c4 Bg4 4.Nc3 g6 5.e3 Bg7 6.Be2 O-O 7.O-O c6 8.h3 Bxf3
+9.Bxf3 Re8 10.e4 e5 11.d5 c5 12.Bg5 Nbd7 13.Qd2 a6 14.Be2 Rb8 15.a3 Qc7 16.a4 Nf8
+17.g3 h5 18.Bd3 N8h7 19.Be3 Qe7 20.Rab1 Nd7 21.h4  1/2-1/2
+
+[Event "World Championship 27th"]
+[Site "Moscow"]
+[Date "1969.??.??"]
+[Round "18"]
+[White "Petrosian, Tigran V"]
+[Black "Spassky, Boris V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D34"]
+
+1.c4 e6 2.d4 d5 3.Nc3 c5 4.cxd5 exd5 5.Nf3 Nc6 6.g3 Nf6 7.Bg2 Be7 8.O-O O-O
+9.Bg5 cxd4 10.Nxd4 h6 11.Be3 Re8 12.Rc1 Bf8 13.Nb3 Be6 14.Nb5 Bg4 15.h3 Bf5
+16.N5d4 Nxd4 17.Nxd4 Bd7 18.Qb3 Qa5 19.a3 Bd6 20.Qd3 Qd8 21.Rfd1 Qe7 22.Bd2 Ne4
+23.Be1 Be5 24.Qb3 Bxd4 25.Rxd4 Bc6 26.h4 Qe5 27.Qe3 Qf6 28.Bxe4 Rxe4 29.Rxe4 dxe4
+30.Bc3 Qf5 31.Rd1 Re8 32.Rd6 f6 33.Rd4 a6 34.Kh2 Qg4 35.a4 Kf7 36.Kg1 Re5
+37.Rd6 Rf5 38.b3 Qh3 39.Be1 Qg4 40.Bc3 Qh3 41.Bd4 h5 42.Bc3 Kg8 43.Rd8+ Kh7
+44.Rd6 Qg4 45.a5 Qg6 46.b4 Qf7 47.Bd4 Qc4 48.Bc5 Re5 49.Bd4 Rf5 50.Bc5 Qc2
+51.Qd2 Qb3 52.Qd1 Qb2 53.Qd2 Qa1+ 54.Qd1 Qe5 55.Qd4 Qe8 56.Qc4 Bb5 57.Qe6 Qxe6
+58.Rxe6 Rd5 59.Rd6  1/2-1/2
+
+[Event "URS-ch44"]
+[Site "Moscow"]
+[Date "1976.??.??"]
+[Round "?"]
+[White "Tseshkovsky, Vitaly"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo "2550"]
+[BlackElo "2635"]
+[ECO "C16"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 b6 5.Bd2 Ne7 6.Qg4 Nf5 7.Nf3 Ba6 8.Bxa6 Nxa6
+9.Qf4 c5 10.dxc5 bxc5 11.g4 Ne7 12.h4 O-O 13.h5 f5 14.exf6 Rxf6 15.Qg3 Nc6
+16.O-O-O Qc7 17.Ng5 Qxg3 18.fxg3 Nd4 19.Bf4 Bxc3 20.bxc3 Ne2+ 21.Kd2 Nxf4
+22.gxf4 Nc7 23.Nh3 Rb8 24.Rb1 Rff8 25.a4 h6 26.Rhg1 Kf7 27.g5 hxg5 28.fxg5 Rxb1
+29.Rxb1 Ke7 30.Kd3 e5  0-1
+
+[Event "Rovinj/Zagreb"]
+[Site "Zagreb"]
+[Date "1970.??.??"]
+[Round "3"]
+[White "Petrosian, Tigran V"]
+[Black "Uhlmann, Wolfgang"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E89"]
+
+1.c4 g6 2.e4 Bg7 3.d4 d6 4.Nc3 Nf6 5.f3 O-O 6.Nge2 Nbd7 7.Be3 e5 8.Qd2 c6
+9.d5 cxd5 10.cxd5 Ne8 11.O-O-O f5 12.Kb1 a6  1/2-1/2
+
+[Event "URS-ch sf"]
+[Site "Kiev"]
+[Date "1957.??.??"]
+[Round "19"]
+[White "Bonch Osmolovsky, Mikhail"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C48"]
+
+1.e4 e5 2.Nf3 Nc6 3.Nc3 Nf6 4.Bb5 Nd4 5.Nxd4 exd4 6.e5 dxc3 7.exf6 Qxf6 8.dxc3 c6
+9.Bd3 d5 10.O-O Be6 11.Be3 Bd6 12.Qh5 g6 13.Qh6 Bf8 14.Bd4 Qxd4 15.Qxf8+ Rxf8
+16.cxd4  1/2-1/2
+
+[Event "JUG-URS"]
+[Site "Skopje"]
+[Date "1969.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Matanovic, Aleksandar"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A46"]
+
+1.d4 Nf6 2.Nf3 e6 3.Bg5 h6 4.Bxf6 Qxf6 5.e4 b6 6.Nbd2 Bb7 7.c3 Qd8 8.Bc4 d6
+9.d5 e5 10.Qa4+ Nd7 11.Ba6 Bxa6 12.Qxa6 g6 13.b4 Bg7 14.Qd3 O-O 15.O-O f5
+16.g3 h5 17.a4 a5  1/2-1/2
+
+[Event "Moscow-ch"]
+[Site "Moscow"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Golovko, Nikolay Grigorievic"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E72"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 O-O 5.g3 d6 6.Bg2 e5 7.d5 Nbd7 8.Nge2 a5
+9.O-O Nc5 10.f3 Ne8 11.Be3 f5 12.Qd2 Bd7 13.Rab1 b6 14.b3 Qc8 15.a3 fxe4
+16.Nxe4 Nxe4 17.fxe4 Nf6 18.Bg5 Bg4 19.Nc3 Qd7 20.Rf2 Nh5 21.Rbf1 Rxf2 22.Rxf2 Rf8
+23.Nb5 Bf6 24.Be3 Be7 25.Rxf8+ Bxf8 26.Qf2 Qc8 27.Bf3 Bd7 28.Bxh5 gxh5 29.Qf6 Bxb5
+30.Qg5+ Kh8 31.cxb5 Qe8 32.Qf6+ Bg7 33.Qe6 Qf8 34.Kg2 h4 35.Bg5 hxg3 36.hxg3 h6
+37.Bh4 a4 38.bxa4 Qa8 39.Bf6 Qxa4 40.Qc8+ Kh7 41.Qf5+ Kh8 42.Qg6 Bxf6 43.Qxf6+ Kh7
+44.Qf7+ Kh8 45.Qg6 Qxb5 46.Kh3 Qd7+ 47.Kh4 c5 48.dxc6 Qxc6 49.Kh5 Qd7 50.Qxh6+ Kg8
+51.Kg5 d5 52.Qg6+ Kf8 53.Qf6+ Kg8 54.Qxe5 d4 55.Kf4 d3 56.Qg5+ Kf8  1/2-1/2
+
+[Event "Tallinn"]
+[Site "Tallinn"]
+[Date "1979.??.??"]
+[Round "17"]
+[White "Petrosian, Tigran V"]
+[Black "Sax, Gyula"]
+[Result "1-0"]
+[WhiteElo "2610"]
+[BlackElo "2590"]
+[ECO "B08"]
+
+1.Nf3 g6 2.e4 Bg7 3.d4 d6 4.Nc3 Nf6 5.Be2 O-O 6.O-O Bg4 7.Be3 Nc6 8.Qd2 e5
+9.dxe5 dxe5 10.Rad1 Qc8 11.Qc1 Rd8 12.Rxd8+ Qxd8 13.Rd1 Qf8 14.h3 Bxf3 15.Bxf3 a6
+16.Nb1 Rd8 17.Rxd8 Qxd8 18.c3 Qd3 19.Nd2 Bf8 20.Qb1 Qb5 21.Qc2 Nd8 22.Qb3 Qd3
+23.Qc4 Qd6 24.Qe2 Qe6 25.Qd3 Nc6 26.a3 Qe7 27.b4 Nd8 28.Nc4 Nd7 29.Bg4 Ne6
+30.Na5 b5 31.Nc6 Qe8 32.c4 Nf6 33.cxb5 axb5 34.Qxb5 Nxe4 35.Qc4 Nd6 36.Qd5 h5
+37.Bxe6 fxe6 38.Qc5 Nf5 39.Qc2 Bg7 40.b5 Nd4 41.Qc4 Qd7 42.a4 Nf5 43.Qe2  1-0
+
+[Event "Varna olm"]
+[Site "Varna"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Diez del Corral, Jesus"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B90"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 Nbd7 6.Be3 a6 7.Bc4 g6 8.f3 b5
+9.Bb3 Bb7 10.Qd2 Nc5 11.O-O-O e6 12.a3 Be7 13.Ba2 Qc8 14.g4 h5 15.h3 h4 16.Rhe1 Nfd7
+17.b4 Na4 18.Nxa4 bxa4 19.Nxe6 fxe6 20.Bxe6 Qc7 21.Qd4 Rf8 22.Bxd7+ Kxd7
+23.e5 Rac8 24.Rd2 Qc3 25.Qxc3 Rxc3 26.exd6 Bd8 27.Bc5 Rxc5 28.bxc5 Rxf3 29.Rde2 Rxa3
+30.Re7+ Kc6 31.Rxb7 Kxb7 32.Re8 Bg5+ 33.Kb2 Rxh3 34.Rf8 a3+ 35.Kb1 Rc3 36.Rf7+ Kc6
+37.Rc7+ Kd5 38.Rg7 Rxc5 39.Rxg6 Kc6  0-1
+
+[Event "Clarin"]
+[Site "Buenos Aires"]
+[Date "1979.??.??"]
+[Round "1"]
+[White "Petrosian, Tigran V"]
+[Black "Miles, Anthony J"]
+[Result "1/2-1/2"]
+[WhiteElo "2610"]
+[BlackElo "2560"]
+[ECO "A36"]
+
+1.c4 c5 2.g3 Nc6 3.Bg2 g6 4.Nc3 Bg7 5.d3 Nf6 6.Bg5 b6 7.e4 O-O 8.Nge2 Bb7
+9.Qd2 a6 10.O-O Rb8 11.h3 Ne8 12.Nd5 Ba8 13.f4 b5 14.cxb5 Rxb5 15.Nec3 Rb8
+16.f5 Nf6 17.Rae1 d6 18.b3 Ne5 19.fxg6 fxg6  1/2-1/2
+
+[Event "Moscow-ch"]
+[Site "Moscow"]
+[Date "1968.??.??"]
+[Round "?"]
+[White "Zaitsev, Igor A"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B19"]
+
+1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Bf5 5.Ng3 Bg6 6.h4 h6 7.Nf3 Nd7 8.h5 Bh7
+9.Bd3 Bxd3 10.Qxd3 e6 11.Bd2 Qc7 12.O-O-O O-O-O 13.Ne4 Ngf6 14.g3 Nc5 15.Nxc5 Bxc5
+16.Kb1 Bd6 17.c4 c5 18.Rc1 b6 19.Qe2 Qb7 20.Rh4 Rd7  1/2-1/2
+
+[Event "URS Spartakiad"]
+[Site "Moscow"]
+[Date "1964.??.??"]
+[Round "?"]
+[White "Livshin, Iosif M"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A07"]
+
+1.Nf3 d5 2.g3 c6 3.Bg2 Bg4 4.Ne5 Bh5 5.g4 Bg6 6.h4 f6 7.Nxg6 hxg6 8.d4 e6
+9.Qd3 f5 10.gxf5 gxf5 11.Qg3 Nf6 12.Nd2 Qe7 13.Nf3 Nbd7 14.Qg6+ Qf7 15.Qxf7+ Kxf7
+16.Ng5+ Ke7 17.b3 Nh7 18.c4 Nxg5 19.hxg5 Rxh1+ 20.Bxh1 Kf7 21.f4 Bb4+ 22.Bd2 a5
+23.a3 Bxd2+ 24.Kxd2 Ke7 25.Bf3 a4 26.Rb1 axb3 27.Rxb3 b6 28.Rc3 Kd6 29.e3 Rh8
+30.cxd5 exd5 31.Bd1 Rh2+ 32.Kc1 g6 33.Ba4 b5 34.Bb3 Nb6 35.Kb1 Nc4 36.Bxc4 dxc4
+37.Kc1 Kd5 38.Kd1 Ke4 39.Ke1 Rb2 40.Kd1 Rb3  0-1
+
+[Event "World Championship 27th"]
+[Site "Moscow"]
+[Date "1969.??.??"]
+[Round "6"]
+[White "Petrosian, Tigran V"]
+[Black "Spassky, Boris V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D56"]
+
+1.c4 e6 2.d4 d5 3.Nc3 Be7 4.Nf3 Nf6 5.Bg5 h6 6.Bh4 O-O 7.Rc1 Ne4 8.Bxe7 Qxe7
+9.e3 c6 10.Qc2 Nxc3 11.Qxc3 Nd7 12.a3 dxc4 13.Bxc4 b6 14.O-O Bb7 15.Rfd1 Rfd8
+16.Be2 Rac8 17.b4 Rc7 18.Rc2 Ra8 19.Nd2 a5 20.Bf3 Ra7 21.Rb1 axb4 22.axb4 Qf8
+23.h3 Qe7 24.Rcc1 Ba6 25.Qb3 Bb5 26.Ne4 Nf6 27.Nxf6+ Qxf6 28.Qb2 Qe7 29.Ra1 Rxa1
+30.Rxa1 Ra7 31.Rxa7 Qxa7 32.Be4 Qe7 33.Qa3 g5 34.Qc3 Qd6 35.Bf3 Kf8 36.e4 Kg7
+37.e5 Qe7 38.Be4 Qd8 39.Qa1 Qe7 40.Qa3 Qd8 41.Qa1 Qe7 42.Qc3 Qa7 43.Kh2 Qa2
+44.Qf3 Qd2 45.Qf6+ Kg8 46.Qd8+ Kg7 47.Qf6+ Kg8  1/2-1/2
+
+[Event "Moscow-4teams"]
+[Site "Moscow"]
+[Date "1981.??.??"]
+[Round "?"]
+[White "Vasiukov, Evgeni"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2545"]
+[BlackElo "2585"]
+[ECO "C00"]
+
+1.e4 e6 2.d3 d5 3.Qe2 Ne7 4.Nf3 c5 5.g3 Nbc6 6.Bg2 g6 7.O-O Bg7 8.Re1 b6
+9.e5 h6 10.h4 Nf5 11.c3 Ba6 12.Bf4 Qd7 13.Nbd2 O-O 14.Rad1 Kh7 15.g4 Nfe7
+16.Nf1 Rh8 17.Ng3 Kg8 18.Qd2 Rd8 19.d4 c4 20.Bh3 Kf8 21.Kh2 Qc7 22.Rg1 Ke8
+23.h5 g5 24.Nxg5 hxg5 25.Bxg5 Kd7 26.f4 Kc8 27.Rdf1 Rdf8 28.Bf6 Bxf6 29.exf6 Kb8
+30.g5 Ng8 31.Qe3 Bc8 32.Rf3 Re8 33.Rh1 Qd8 34.Kg1 b5 35.a3 a5 36.Bf1 b4 37.axb4 axb4
+38.Rh2 Kb7 39.Kh1 b3 40.Kg1 Bd7 41.Nh1 Nxf6 42.gxf6  1/2-1/2
+
+[Event "World Championship 26th"]
+[Site "Moscow"]
+[Date "1966.??.??"]
+[Round "23"]
+[White "Spassky, Boris V"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C11"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Nf6 4.Bg5 dxe4 5.Nxe4 Be7 6.Bxf6 Bxf6 7.Nf3 Bd7 8.Qd2 Bc6
+9.Nxf6+ Qxf6 10.Ne5 O-O 11.O-O-O Nd7 12.Nxc6 bxc6 13.h4 Rab8 14.Rh3 c5 15.Qg5 cxd4
+16.Qxf6 Nxf6 17.Rxd4 Rb7 18.Rb3 Rxb3 19.axb3 Ra8 20.Rc4 Ne8 21.Ra4 Nd6 22.g3 Kf8
+23.Bg2 Rc8 24.Rxa7 Ke7 25.Kd2 h6 26.c4 g5 27.hxg5 hxg5 28.Kc3 Kd7 29.b4 Rh8
+30.b5 Rh2 31.Bc6+ Kd8  1-0
+
+[Event "EU-chT Kapfenberg"]
+[Site "Kapfenberg"]
+[Date "1970.??.??"]
+[Round "3"]
+[White "Bobotsov, Milko G"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E94"]
+
+1.d4 g6 2.c4 Bg7 3.Nc3 d6 4.e4 e5 5.Nf3 Nd7 6.Be2 Ngf6 7.d5 Nc5 8.Nd2 a5
+9.Qc2 Bh6 10.O-O O-O 11.Nb3 Bxc1 12.Raxc1 Nfd7 13.Bg4 Nxb3 14.axb3 f5 15.exf5 Nc5
+16.Na4 Na6 17.Qd2 gxf5 18.Be2 b6 19.f4 Bd7 20.fxe5 Bxa4 21.bxa4 dxe5 22.Rc3 Nc5
+23.Rg3+ Kh8 24.Rgf3 f4 25.Bd3 Qf6 26.Bc2 Rf7 27.Kh1 Rg8 28.g3 Rg4 29.b3 Kg8
+30.gxf4 Rxf4 31.Rxf4 exf4 32.Qg2+ Kf8 33.Qh3 Ke8  1/2-1/2
+
+[Event "URS-ch24"]
+[Site "Moscow"]
+[Date "1957.??.??"]
+[Round "8"]
+[White "Petrosian, Tigran V"]
+[Black "Gurgenidze, Bukhuti"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E80"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.f3 e5 6.Nge2 Nc6 7.d5 Ne7 8.Be3 c5 9.Qd2 a6
+10.g4 Bd7 11.h4 h5 12.g5 Nh7 13.Nc1 f6 14.Be2 fxg5 15.hxg5 O-O 16.a4 Qa5
+17.Ra3 Rae8 18.Nb3 Qd8 19.a5 Rf7 20.Nc1 Nc8 21.Nd3 Bf8 22.Kd1 Be7 23.Rg1 Ref8
+24.Kc2 Rxf3 25.Bxf3 Rxf3 26.Nf2 b5 27.axb6 Nxb6 28.b3 a5 29.Ncd1 a4 30.Nb2 axb3+
+31.Rxb3 Na4 32.Nbd3 Nb6 33.Nb2 Na4 34.Nbd3 Nb6  1/2-1/2
+
+[Event "Santa Monica"]
+[Site "Santa Monica"]
+[Date "1966.??.??"]
+[Round "2"]
+[White "Petrosian, Tigran V"]
+[Black "Reshevsky, Samuel Herman"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E12"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 b6 4.a3 Bb7 5.Nc3 d5 6.cxd5 Nxd5 7.e3 Be7 8.Bb5+ c6
+9.Bd3 O-O 10.Bd2 Nd7 11.Nxd5 cxd5 12.O-O Bd6 13.Qa4 a6 14.Bb4 Qe7 15.Bxd6 Qxd6
+16.Rac1 Rfc8 17.Nd2 b5 18.Rxc8+ Rxc8 19.Qd1 Nb6 20.Nb3 Nc4 21.Qe2 Bc6 22.Nc5 a5
+23.h4 a4 24.h5 h6 25.f4 f5 26.Rf2 Rf8 27.g3 Qe7 28.Rg2 Be8 29.Kf2 Rf6 30.Rh2 Rf8
+31.Ke1 Rf6 32.Bb1 Rf8 33.Nd3 Qc7 34.Kf2 Rf6 35.Rh1 Rf8 36.Qe1 Qd6 37.Qc3 Rf7
+38.Ba2 Rc7 39.Nc5 Re7 40.Bb1 Rc7 41.Qb4 Qe7  1/2-1/2
+
+[Event "Hoogovens"]
+[Site "Beverwijk"]
+[Date "1960.??.??"]
+[Round "?"]
+[White "Flohr, Salo"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E21"]
+
+1.c4 e6 2.d4 Nf6 3.Nc3 Bb4 4.Bd2 O-O 5.e3 b6 6.Nf3 Bb7 7.Be2 d6 8.O-O Nbd7
+9.a3 Bxc3 10.Bxc3 Ne4 11.Qc2 Qe7 12.b4 Nxc3 13.Qxc3 e5 14.dxe5 Nxe5 15.Nxe5 Qxe5
+16.Qxe5 dxe5  1/2-1/2
+
+[Event "URS-ch19"]
+[Site "Moscow"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Geller, Efim P"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E92"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Nf3 O-O 6.Be2 e5 7.d5 Nh5 8.g3 Nd7 9.Bg5 Ndf6
+10.h3 c5 11.Qd2 a6 12.a4 Bd7 13.g4 Nf4 14.Bxf4 exf4 15.Qxf4 b5 16.O-O b4
+17.Nd1 Qe7 18.Bd3 Rae8 19.Re1 h5 20.Nh2 Nh7 21.Nf3 Nf6 22.Nh2 Nh7 23.Nf3  1/2-1/2
+
+[Event "Piatigorsky Cup"]
+[Site "Los Angeles"]
+[Date "1963.??.??"]
+[Round "14"]
+[White "Reshevsky, Samuel Herman"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A37"]
+
+1.c4 c5 2.g3 g6 3.Bg2 Bg7 4.Nc3 Nc6 5.a3 a6 6.Rb1 Rb8 7.b4 cxb4 8.axb4 b5
+9.cxb5 axb5 10.Nf3 e5 11.e4 Nge7 12.O-O O-O 13.Re1 d6 14.h3 h6 15.d3 Be6
+16.Nh4 d5 17.exd5 Nxd5 18.Ne4 Ndxb4 19.Ba3 Qa5 20.Ra1 Qd8 21.Qd2 Nd5 22.Bxf8 Qxf8
+23.Rec1 Nd4 24.Nc5 Qe7 25.Kh2 b4 26.Ra6 Nc3 27.Nxe6 Nxe6 28.Rca1 Nc7 29.Rc6 N7b5
+30.Re1 Rd8 31.Rc4 Na3 32.Rxc3 bxc3 33.Qxc3 Qd6 34.Qa5 Nc2 35.Rb1 Nd4 36.Rb6  1/2-1/2
+
+[Event "URS-ch50"]
+[Site "Moscow"]
+[Date "1983.??.??"]
+[Round "?"]
+[White "Tal, Mihail"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2620"]
+[BlackElo "2605"]
+[ECO "C18"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+ 6.bxc3 Ne7 7.Qg4 Nf5 8.Bd3 h5
+9.Qf4 Qh4 10.Ne2 Qxf4 11.Nxf4 Ne7 12.Be2 h4 13.Nh5 Kf8 14.Bg5 cxd4 15.cxd4 b6
+16.O-O-O Ba6 17.Bxa6 Nxa6 18.g4 Ng6 19.f4 Rc8 20.Rhg1 Nc7 21.Rd3 Ne8 22.Rf1 Ne7
+23.f5 exf5 24.Rdf3 g6 25.Nf4 fxg4 26.Ne6+ Kg8 27.Rxf7 Nf5 28.Rf8+ Kh7  1/2-1/2
+
+[Event "Candidats qf4"]
+[Site "Velden"]
+[Date "1980.??.??"]
+[Round "8"]
+[White "Petrosian, Tigran V"]
+[Black "Kortschnoj, Viktor"]
+[Result "1/2-1/2"]
+[WhiteElo "2615"]
+[BlackElo "2695"]
+[ECO "E12"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 b6 4.a3 Bb7 5.Nc3 d5 6.cxd5 exd5 7.g3 Bd6 8.Bg2 O-O
+9.O-O Re8 10.Bg5 Nbd7 11.Nb5 Ba6 12.Nxd6 cxd6 13.Re1 h6 14.Bxf6 Nxf6 15.Nd2 Qd7
+16.e3 Rac8 17.Nb1 Qf5 18.Nc3 Ne4 19.Nxe4 dxe4 20.Qd2  1/2-1/2
+
+[Event "Milan sf2"]
+[Site "Milan"]
+[Date "1975.??.??"]
+[Round "3"]
+[White "Karpov, Anatoly"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2705"]
+[BlackElo "2645"]
+[ECO "A30"]
+
+1.c4 Nf6 2.Nc3 e6 3.Nf3 b6 4.g3 Bb7 5.Bg2 Be7 6.O-O c5 7.d4 cxd4 8.Qxd4 O-O
+9.Rd1 Nc6 10.Qf4 Qb8 11.e4 Qxf4 12.Bxf4 Rfd8 13.e5 Ne8 14.Nd4 Na5 15.b3 Bxg2
+16.Kxg2 d6 17.exd6 Bxd6 18.Bxd6 Nxd6 19.Rd2 Kf8 20.Rad1 Ke7 21.f4 Rac8 22.Kf3 Nc6
+23.Nxc6+ Rxc6 24.Ne4 Nb7 25.Rxd8 Nxd8 26.Ke3 Nb7 27.Rd4 h6 28.b4 f6  1/2-1/2
+
+[Event "URS-ch sf"]
+[Site "Moscow"]
+[Date "1947.??.??"]
+[Round "10"]
+[White "Abramov, Lev Yakovlevich"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C05"]
+
+1.e4 e6 2.d4 d5 3.Nd2 Nf6 4.e5 Nfd7 5.Ngf3 c5 6.c3 Nc6 7.Bd3 Qb6 8.O-O cxd4
+9.cxd4 Nxd4 10.Nxd4 Qxd4 11.Nf3 Qb6 12.Be3 Qd8 13.Qa4 Be7 14.Qg4 Kf8 15.Rac1 b6
+16.b4 h5 17.Qd4 a5 18.bxa5 Rxa5 19.Qf4 Kg8 20.Nd4 g5 21.Qg3 h4 22.Qh3 Nxe5
+23.Bd2 Ra3 24.Rc3 Rxa2 25.Qe3 Bf6 26.Rfc1 Bd7 27.Be2 Kg7 28.h3 b5 29.Rc5 Ng6
+30.Bxb5 Bxb5 31.Rxb5 Nf4 32.Bc3 Qd7 33.Rb2 Rxb2 34.Bxb2 e5 35.Nf3 d4 36.Qe4 Qd5
+37.Qxd5 Nxd5 38.Re1 Rb8 39.Ba3 d3 40.Bd6 Rd8 41.Bxe5 Nc3 42.Bxf6+ Kxf6 43.Nd2 Kg6
+44.g3 f5 45.Kg2 Ne4 46.Rd1 hxg3 47.fxg3 Kf6 48.Kf3 Ke5 49.Ke3 Nxg3 50.Nf3+ Kf6
+51.Nd4 d2 52.Nf3 Ne4 53.Nd4 Rh8 54.Rf1 Rxh3+  0-1
+
+[Event "URS-chT"]
+[Site "URS"]
+[Date "1967.??.??"]
+[Round "?"]
+[White "Kudriashov, Anatoli"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C07"]
+
+1.e4 e6 2.d4 d5 3.Nd2 c5 4.exd5 Qxd5 5.dxc5 Bxc5 6.Ngf3 Nf6 7.Bc4 Qc6 8.Qe2 O-O
+9.O-O a6 10.Ne5 Qc7 11.Ndf3 b5 12.Bd3 Bb7 13.a4 b4 14.Bg5 Nbd7 15.Rad1 Nxe5
+16.Nxe5 Nd5 17.Bc1 Bd6 18.Rfe1 Rfe8 19.h3 Rad8 20.Nf3 a5 21.Qe4 Nf6 22.Qh4 Bxf3
+23.gxf3 Be5 24.Kh1 Kf8 25.Qc4 Qb7 26.Kg2 Bd4 27.c3 bxc3 28.bxc3 Bb6 29.Bg5 h6
+30.Bxf6 gxf6 31.Be4 Qa7 32.Rxd8 Rxd8 33.Re2 f5 34.Bc2 Kg7 35.Qf4 Rg8 36.Rd2 Bc7
+37.Qe3 Qa6 38.Rd1 Kh7+ 39.Kh1 Rg7 40.Bd3 Qd6 41.Bxf5+  1-0
+
+[Event "Herceg Novi blitz"]
+[Site "Herceg Novi"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Ivkov, Borislav"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C15"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.a3 Bxc3+ 5.bxc3 Ne7 6.Qg4 Ng6 7.e5 Nc6 8.Bd3 Qh4
+9.h3 Bd7 10.Nf3 Qxg4 11.hxg4 Na5 12.Ng5 h6 13.Nh3 Nc4 14.Nf4 Nxf4 15.Bxf4 Ke7
+16.Ke2 Nb2 17.Rab1 Nxd3 18.cxd3 b6 19.g5 hxg5 20.Bxg5+ f6 21.Bf4 f5 22.Kd2 Kf7
+23.Bg5 Rac8 24.Ke3 Ba4 25.Rbc1 Rxh1 26.Rxh1 c5 27.dxc5 Rxc5 28.Rh8 Be8 29.Rh1 Rxc3
+30.Kd4 Rxa3 31.Rc1 Bb5 32.Rc3 Ra4+  0-1
+
+[Event "URS-ch50"]
+[Site "Moscow"]
+[Date "1983.??.??"]
+[Round "?"]
+[White "Geller, Efim P"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2575"]
+[BlackElo "2605"]
+[ECO "C08"]
+
+1.e4 e6 2.d4 d5 3.Nd2 c5 4.exd5 exd5 5.Ngf3 Nf6 6.Bb5+ Bd7 7.Bxd7+ Nbxd7
+8.O-O Be7 9.dxc5 Nxc5 10.Nd4 Qd7 11.N2f3 Bd6 12.Bg5 Nfe4 13.Be3 O-O 14.Qe2 a6
+15.Rad1 Rfe8 16.c3  1/2-1/2
+
+[Event "Lugano ol (Men)"]
+[Site "Lugano"]
+[Date "1968.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Kottnauer, Cenek"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E92"]
+
+1.c4 Nf6 2.Nf3 g6 3.Nc3 Bg7 4.e4 d6 5.d4 O-O 6.Be2 e5 7.d5 a5 8.Bg5 h6 9.Bh4 Na6
+10.O-O Qe8 11.Nd2 Nh7 12.a3 h5 13.f3 Bh6 14.b4 Bd7 15.Rb1 Be3+ 16.Kh1 f5
+17.exf5 gxf5 18.Qe1 Qg6 19.Bf2 Qh6 20.Bxe3 Qxe3 21.Nb5 axb4 22.Rb3 Qh6 23.axb4 Rae8
+24.Nc3 Nf6 25.c5 dxc5 26.Bxa6 bxa6 27.bxc5 Bb5 28.Nxb5 axb5 29.d6 cxd6 30.cxd6 Rb8
+31.Re3 Nd7 32.f4 e4 33.Rg3+ Kh8 34.Rg5 Nf6 35.Rxf5 Qh7 36.Re5 Rfe8 37.Qa1 Rxe5
+38.fxe5 Ng4 39.e6+ Qg7 40.Nxe4 b4 41.e7  1-0
+
+[Event "Lone Pine op"]
+[Site "Lone Pine"]
+[Date "1978.??.??"]
+[Round "3"]
+[White "Petrosian, Tigran V"]
+[Black "Bisguier, Arthur Bernard"]
+[Result "1/2-1/2"]
+[WhiteElo "2620"]
+[BlackElo "2435"]
+[ECO "E44"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 b6 5.Ne2 Ne4 6.Bd2 Nxd2 7.Qxd2 Ba6 8.a3 Bxc3
+9.Qxc3 O-O 10.d5 exd5 11.cxd5 c5 12.dxc6 Nxc6 13.Nf4 Bxf1 14.Kxf1 Rc8 15.Rd1 Re8
+16.h4 Re5 17.Qd2  1/2-1/2
+
+[Event "Moscow-3teams"]
+[Site "Moscow"]
+[Date "1973.??.??"]
+[Round "1"]
+[White "Vasiukov, Evgeni"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B36"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 d6 5.c4 Nf6 6.Nc3 Nxd4 7.Qxd4 g6 8.Be3 Bg7
+9.f3 O-O 10.Qd2 Be6 11.Rc1 Qa5 12.Be2 Rfc8 13.b3 a6 14.Na4 Qxd2+ 15.Kxd2 Nd7
+16.Rhd1 Kf8 17.g4 Rc6 18.Ke1 Rb8 19.c5 Nxc5 20.Nxc5 dxc5 21.f4 Ke8 22.Rxc5 Rxc5
+23.Bxc5 Rc8 24.Bd4 Bxd4 25.Rxd4 Rc1+ 26.Rd1 Rc3 27.f5 Bd7 28.Rd3 Rc1+ 29.Kd2 Ra1
+30.a4 Bc6 31.fxg6 hxg6 32.e5 g5 33.Rh3 Bd5 34.Bd1 Kd7 35.Bc2 Rf1 36.Rh5  1/2-1/2
+
+[Event "Hoogovens"]
+[Site "Wijk aan Zee"]
+[Date "1971.??.??"]
+[Round "6"]
+[White "Petrosian, Tigran V"]
+[Black "Mecking, Henrique"]
+[Result "1-0"]
+[WhiteElo "2640"]
+[BlackElo "2550"]
+[ECO "D03"]
+
+1.d4 Nf6 2.Nf3 e6 3.Bg5 c5 4.e3 d5 5.c3 Nc6 6.Nbd2 cxd4 7.exd4 Be7 8.Bd3 h6
+9.Bf4 Nh5 10.Be3 Nf6 11.Ne5 Nxe5 12.dxe5 Nd7 13.Bd4 Nc5 14.Bc2 a5 15.Qg4 g6
+16.O-O Bd7 17.Rfe1 Qc7 18.a4 Na6 19.Qe2 Kf8 20.Nf3 Kg7 21.Be3 Nc5 22.Nd4 Ra6
+23.Bc1 Raa8 24.g3 b6 25.h4 h5 26.Qf3 Qd8 27.Bd2 Qe8 28.Bg5 Qd8 29.Qf4 Rc8
+30.Re3 Bxg5 31.hxg5 Ra8 32.Qf6+ Qxf6 33.exf6+ Kh7 34.Kg2 Rae8 35.f4 Rb8 36.Ree1 Nb7
+37.Rh1 Kg8 38.Nf3 Nd6 39.Ne5 Be8 40.Bd3 Rc8 41.Kf3 Bc6 42.Rh2 Be8 43.Ke3 Rc7
+44.Kd4 Nb7 45.b4 Nd8 46.Rh4 Nb7 47.Ra2 Nd6 48.Rh1 Nb7 49.b5 Nc5 50.Bc2 Nd7
+51.Ra3 Nc5 52.c4 Nd7 53.Rc3 Nxe5 54.Kxe5 dxc4 55.Be4 Rc8 56.Kd6 Rc5 57.Rhc1 h4  1-0
+
+[Event "URS-ch21"]
+[Site "Kiev"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Kortschnoj, Viktor"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E60"]
+
+1.c4 Nf6 2.g3 g6 3.Bg2 Bg7 4.d4 O-O 5.Nf3 d6 6.O-O Nc6 7.d5 Na5 8.Nbd2 c5
+9.e4 a6 10.Rb1 b5 11.b3 Rb8 12.cxb5 axb5 13.b4 cxb4 14.Rxb4 e5 15.Re1 Bd7
+16.Bf1 Ne8 17.Nb3 Nxb3 18.Rxb3 Qe7 19.a4 Nc7 20.axb5 Nxb5 21.Bg5 f6 22.Be3 Nc7
+23.Qb1 Rxb3 24.Qxb3 f5 25.Ra1 f4 26.Bb6 Rb8 27.Ra7 Na8 28.Bh3 Nxb6 29.Bxd7 Kh8
+30.Qb5 fxg3 31.hxg3 Qf6 32.Kg2 Rf8 33.Bg4 Nc8 34.Ra8 Ne7 35.Rxf8+ Bxf8 36.Be6 Ng8
+37.Qb8 Kg7 38.Nd2 Qe7 39.Nc4 Nf6 40.Kf3 h5  1/2-1/2
+
+[Event "URS-training"]
+[Site "Garga"]
+[Date "1953.??.??"]
+[Round "8"]
+[White "Boleslavsky, Isaak"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B51"]
+
+1.e4 c5 2.Nf3 d6 3.Bb5+ Nc6 4.O-O Bg4 5.c3 Nf6 6.h3 Bh5 7.d4 a6 8.Bxc6+ bxc6
+9.Qa4 Qb6 10.dxc5 Qb5 11.Qxb5 axb5 12.cxd6 exd6 13.Re1 Bxf3 14.gxf3 Be7 15.Na3 Nd7
+16.Nc2 Ne5 17.Kg2 Kd7 18.Rd1 f5 19.exf5 d5 20.Bf4 Nc4 21.b3 Nd6 22.Bxd6 Kxd6
+23.a4 bxa4 24.bxa4 Bf6 25.Ra3 Ra5 26.c4 Rc5 27.Ne3 d4 28.Rad3 Ra8 29.Ng4 Rxa4
+30.Nxf6 gxf6 31.Rxd4+ Ke5 32.Re4+ Kxf5 33.Rdd4 h5 34.Rd6 Raxc4 35.Ree6 Kg5
+36.Rxf6 Rc1 37.f4+ Kh4 38.Rd3 R5c3 39.Rg3 Rc5 40.Rh6  1-0
+
+[Event "URS-ch44"]
+[Site "Moscow"]
+[Date "1976.??.??"]
+[Round "?"]
+[White "Taimanov, Mark E"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2540"]
+[BlackElo "2635"]
+[ECO "E18"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 b6 4.g3 Bb7 5.Bg2 Be7 6.O-O O-O 7.Nc3 Ne4 8.Nxe4 Bxe4
+9.Ne1 d5 10.cxd5 Bxg2 11.Nxg2 Qxd5 12.Bf4 Qb7 13.Rc1 Na6 14.Qc2 Rac8 15.a3 c5
+16.dxc5 Rxc5  1/2-1/2
+
+[Event "Zagreb"]
+[Site "Zagreb"]
+[Date "1965.??.??"]
+[Round "12"]
+[White "Damjanovic, Mato"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A17"]
+
+1.c4 Nf6 2.Nc3 e6 3.Nf3 Bb4 4.a3 Bxc3 5.bxc3 d6 6.g3 e5 7.Bg2 Qe7 8.a4 a5
+9.O-O O-O 10.d3 e4 11.Nd4 h6 12.f3 exd3 13.exd3 Qd8 14.Re1 Na6 15.g4 Nh7
+16.h3 Nc5 17.Nb3 Nxb3 18.Qxb3 Qh4 19.Re2 Ng5 20.Bxg5 Qxg5 21.d4 Rb8 22.Qb5 c6
+23.Qxg5 hxg5 24.Rb2 Be6 25.Bf1 Rfd8 26.Rab1 Bc8 27.Rb6 Ra8 28.Bd3 g6 29.Kf2 Kg7
+30.Re1 Kf6 31.Kg3 Ra7 32.h4 gxh4+ 33.Kxh4 g5+ 34.Kg3 Be6 35.Rb2 Rh8 36.Reb1 Rh4
+37.Rxb7 Rxb7 38.Rxb7 Rh1 39.Rc7 Rc1 40.Rxc6 Rxc3 41.Bf1 Ke7 42.Be2 Rc2 43.Kf2 f5
+44.gxf5 Bxf5 45.Ke3 Rc3+ 46.Kd2 Rc2+ 47.Kd1 Ra2 48.c5 dxc5 49.Rxc5 Bd7 50.Rxa5 Rxa4
+51.Rxg5 Rxd4+ 52.Ke1 Kf6 53.Rc5 Bf5 54.Kf2 Bd3 55.Bd1 Bc4 56.Ba4 Be6 57.Ra5 Rd2+
+58.Ke3 Ra2 59.Ra6 Ra1  1/2-1/2
+
+[Event "Gothenburg Interzonal"]
+[Site "Gothenburg"]
+[Date "1955.??.??"]
+[Round "8"]
+[White "Petrosian, Tigran V"]
+[Black "Rabar, Braslav"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A19"]
+
+1.c4 Nf6 2.Nc3 e6 3.e4 c5 4.e5 Ng8 5.d4 cxd4 6.Qxd4 Nc6 7.Qe4 d6 8.Nf3 Nxe5
+9.Nxe5 Nf6 10.Qe2 dxe5 11.Qxe5 Bd6 12.Qb5+ Qd7 13.Be3 O-O 14.Be2 Qc7 15.Qb3 Bd7
+16.Bf3 Bc6 17.Nb5 Qb8 18.Bxc6 bxc6 19.Nxd6 Qxd6 20.f3 Qe5  1/2-1/2
+
+[Event "HUN-URS"]
+[Site "Budapest"]
+[Date "1955.??.??"]
+[Round "2"]
+[White "Szabo, Laszlo"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D15"]
+
+1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.e4 b5 6.e5 Nd5 7.a4 e6 8.axb5 Nxc3
+9.bxc3 cxb5 10.Ng5 Bb7 11.Qh5 g6 12.Qg4 Be7 13.Be2 Nd7 14.Bf3 Qc8 15.Ba3 Bxf3
+16.Nxf3 Qa6 17.O-O Bxa3 18.Ra2 b4 19.cxb4 c3 20.Qe4 Rc8 21.Rfa1 c2 22.Rxc2 O-O
+23.Ne1 Nb6 24.Rc5 Rxc5 25.dxc5 Qc4 26.Qb1 Bxb4 27.cxb6 a5 28.Qd1 Qb5 29.Nf3 Qxb6
+30.h4 Rd8 31.Qc1 h5 32.Qf4 Be7 33.Ng5 Bxg5 34.Qxg5 Rd5 35.Ra4 Rd1+ 36.Kh2 Qxf2
+37.Ra3 Qg1+ 38.Kh3 Qh1+ 39.Kg3 Rd4  0-1
+
+[Event "URS-ch sf"]
+[Site "Tbilisi"]
+[Date "1956.??.??"]
+[Round "?"]
+[White "Polugaevsky, Lev"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E63"]
+
+1.d4 Nf6 2.Nf3 g6 3.c4 Bg7 4.g3 O-O 5.Bg2 d6 6.O-O a6 7.Nc3 Nc6 8.h3 Rb8
+9.a4 a5 10.e4 e5 11.Be3 Nd7 12.Nd5 Re8 13.dxe5 dxe5 14.Ra3 Nb4 15.Qd2 Nf6
+16.Bg5 Be6 17.Rd1 Nxe4 18.Bxd8 Nxd2 19.Bxc7 Nxc4 20.Bxb8 Bxd5 21.Ba7 e4 22.Ng5 h6
+23.Rb3 Bc6 24.Nxe4 Bxa4 25.Rxb4 axb4 26.b3 Bxb3 27.Rb1 Nb2 28.Nd6 Re7 29.Bc5 Bc2
+30.Ra1 Na4 31.Rxa4 Bxa4 32.Bxb4 Bc6 33.Bf1 Rd7 34.Nc4 Bb5 35.Nb6 Rd1  0-1
+
+[Event "Candidats Tournament"]
+[Site "Amsterdam"]
+[Date "1956.??.??"]
+[Round "4"]
+[White "Petrosian, Tigran V"]
+[Black "Spassky, Boris V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A16"]
+
+1.Nf3 Nf6 2.c4 g6 3.g3 Bg7 4.Bg2 O-O 5.O-O d6 6.Nc3 Nc6 7.d3 a6 8.Nd2 Rb8
+9.a3 Ne8 10.e3 Bd7 11.Qc2 f5 12.b4 e5 13.Bb2 g5 14.Nd5 Ne7 15.Nxe7+ Qxe7
+16.f4 Nf6 17.Rae1 h6 18.Nf3 Nh7 19.Bc3 Rbe8 20.Qb2 Bf6 21.b5 axb5 22.cxb5 Qg7
+23.fxe5 dxe5 24.d4 e4 25.Ne5 Bxe5 26.dxe5 Be6 27.g4 Qg6 28.Qb1 Bd5 29.gxf5 Rxf5
+30.Rxf5 Qxf5 31.Qd1 Qe6 32.Qh5 Re7 33.Bh3 g4 34.Bxg4 Rg7 35.h3 Qe7 36.Bb4 Qd7
+37.Kh1 Be6 38.Rd1 Bxg4 39.Qxg4 Qxg4 40.hxg4 Ng5 41.Kg2 Ne6 42.Kh3 Rf7 43.g5 hxg5
+44.Kg4 b6 45.a4 Kg7 46.Kh5 g4 47.Kxg4 Kg6 48.a5 bxa5 49.Bxa5 Rf2 50.Bxc7 Nxc7
+51.Rd6+ Kg7 52.b6 Ne8 53.Rd8 Rb2 54.Rxe8 Rxb6 55.Kf5 Kf7 56.Ra8 Ke7 57.Ra7+ Ke8
+58.Kxe4 Rb4+ 59.Kf5 Rb6 60.Rg7 Rb3 61.e4 Kf8 62.Ra7 Rb6 63.Rd7 Ke8 64.Rd6 Rb4
+65.Rh6 Ra4 66.Rb6 Ke7 67.Rb7+ Ke8 68.Kf6 Rxe4 69.Ke6 Kf8 70.Rb8+ Kg7 71.Kd6 Kf7  1/2-1/2
+
+[Event "Candidats Tournament"]
+[Site "Zuerich"]
+[Date "1953.??.??"]
+[Round "11"]
+[White "Stahlberg, Gideon"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E68"]
+
+1.d4 Nf6 2.c4 g6 3.g3 Bg7 4.Bg2 O-O 5.Nc3 d6 6.Nf3 Nbd7 7.O-O e5 8.e4 Re8
+9.d5 a5 10.Ne1 Nc5 11.Bg5 h6 12.Bxf6 Qxf6 13.a3 a4 14.Rb1 Bd7 15.h4 h5 16.Kh2 Rf8
+17.Bh3 Bxh3 18.Kxh3 Nxe4 19.Nxe4 Qf5+ 20.Kh2 Qxe4 21.Rc1 b6 22.Ng2 Qf5 23.Rc2 Qd7
+24.Qd3 Rfe8 25.Re1 Rab8 26.Rce2 f5 27.f3 Kh7 28.Qc2 Ra8 29.Qd3 Bh6 30.Qc2 Qf7
+31.Kh3 f4 32.gxf4 Bxf4 33.Nxf4 Qxf4 34.Rg1 Rg8 35.Qc3 Raf8 36.Rg3 Rf6 37.Re4 Qh6
+38.c5 bxc5 39.Rxa4 Qg7 40.Rc4 Qf7 41.Qd3 Rc8 42.b4 cxb4 43.axb4 Rg8 44.Rc3 Rf4
+45.Rg5 Rxh4+ 46.Kxh4 Qf4+ 47.Kh3 Qxg5 48.Rxc7+ Kh6 49.Rc2 Rf8 50.Rg2 Qf6
+51.Qe3+ Qf4 52.Re2 g5 53.Qxf4 Rxf4 54.Rc2 Rxf3+ 55.Kg2 Rb3 56.Rc6 g4 57.Rxd6+ Kg5
+58.Re6 Rxb4 59.Rxe5+ Kh4 60.Kf2 g3+ 61.Kf3 Rb3+ 62.Ke2 Rb2+ 63.Kf1 Rf2+ 64.Kg1 Rd2  0-1
+
+[Event "URS-ch17"]
+[Site "Moscow"]
+[Date "1949.??.??"]
+[Round "?"]
+[White "Levenfish, Grigory"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E68"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.g3 O-O 5.Bg2 d6 6.Nf3 Nbd7 7.O-O e5 8.e4 Re8
+9.Re1 a5 10.h3 exd4 11.Nxd4 Nc5 12.Qc2 Ng4 13.Ncb5 Ne5 14.Rd1 c6 15.Na3 Qc7
+16.Be3 Ned7 17.Nb1 a4 18.Nc3 Ne5 19.Nce2 Qa5 20.Rac1 a3 21.b3 Na6 22.Rd2 Nb4
+23.Qb1 d5 24.cxd5 cxd5 25.exd5 Nxd5 26.b4 Nxb4 27.Nb3 Qb5 28.Ned4 Qa4 29.Nc5 Qa5
+30.Nxb7 Bxb7 31.Bxb7 Rab8 32.Nb3 Qb5 33.Bg2 Nc4 34.Rxc4 Qxc4 35.Bf1 Qc3 36.Bf4 Be5
+37.Bxe5 Rxe5 38.Qd1 Nxa2  0-1
+
+[Event "Trade Union-ch"]
+[Site "Moscow"]
+[Date "1964.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Chistiakov, Alexander Nikolaevi"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D02"]
+
+1.d4 e6 2.Nf3 c5 3.g3 cxd4 4.Nxd4 Nf6 5.Bg2 d5 6.O-O Be7 7.c4 dxc4 8.Nb5 Qb6
+9.a4 Nbd7 10.N1a3 Bxa3 11.Rxa3 O-O 12.Be3 Qa5 13.Qc1 Nd5 14.Bd2 Qb6 15.e4 a6
+16.exd5 axb5 17.dxe6 fxe6 18.Be3 Qc7 19.axb5 Rxa3 20.bxa3 Nf6 21.b6 Qd8 22.Qxc4 Nd5
+23.Bc5 Rf7 24.a4 Bd7 25.a5 Bc6 26.Re1 Qc8 27.Bd4 Qd7 28.h4 Rf8 29.Bb2 Qf7
+30.Qe2 Kh8 31.Bd4 Nf4 32.gxf4 Qg6 33.f3 Rxf4 34.Qxe6 Qxe6 35.Rxe6 Rxd4 36.Rxc6 Rd1+
+37.Bf1 bxc6 38.a6  1-0
+
+[Event "URS-ch19"]
+[Site "Moscow"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Keres, Paul"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E14"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 b6 4.e3 Bb7 5.Bd3 c5 6.O-O Be7 7.Nc3 d5 8.cxd5 exd5
+9.Bb5+ Bc6 10.Qa4 Bxb5 11.Qxb5+ Qd7 12.Ne5 Qxb5 13.Nxb5 Na6 14.Rd1 O-O 15.Nc6 Rfe8
+16.Nbxa7 Bf8 17.Bd2 Re6 18.dxc5 bxc5 19.Bc3 Nb8 20.Nxb8 Rxa7 21.Bxf6 Rxf6
+22.Rxd5 Rd6 23.Rxd6 Bxd6 24.Rd1 Rxa2 25.g3 Rxb2 26.Rxd6 Rxb8 27.Rc6 g6 28.Rxc5 h5
+29.Rc2 Kg7 30.Kg2 Rb5 31.Kf3 Kf6 32.h4 Rf5+ 33.Kg2 Ra5 34.Kh3 Ra4 35.Rd2 Ke5
+36.Rb2 Kf6 37.Rb5 Ra2 38.Kg2 Ra4 39.Kf3 Ra3 40.Kf4 Ra2 41.f3 Re2 42.e4 Re1
+43.Rb6+ Kg7 44.Ra6 Rb1 45.Rc6 Rg1 46.Rc2 Kf6 47.Ra2 Kg7 48.Re2 Kf6 49.Re3 Kg7
+50.e5 Kf8 51.g4 hxg4 52.fxg4 Kg7 53.Kg5 Rf1 54.Re4 Rf3 55.h5 gxh5 56.gxh5 f6+
+57.Kg4 Rf1 58.h6+ Kg6  1/2-1/2
+
+[Event "Manila"]
+[Site "Manila"]
+[Date "1974.??.??"]
+[Round "5"]
+[White "Andersson, Ulf"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2580"]
+[BlackElo "2640"]
+[ECO "A12"]
+
+1.c4 Nf6 2.Nf3 c6 3.b3 d5 4.Bb2 Bg4 5.e3 e6 6.Be2 Be7 7.O-O O-O 8.d3 Re8
+9.Nbd2 Nbd7 10.a3 a5 11.Re1 Bf8 12.Nf1 Qb6 13.Qc2 e5 14.h3 Bf5 15.Ng3 Bg6
+16.Rab1 h6 17.Nh4 Bh7 18.Bf1 Re6 19.e4  1/2-1/2
+
+[Event "EU-chT"]
+[Site "Hamburg"]
+[Date "1965.??.??"]
+[Round "9"]
+[White "Portisch, Lajos"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D94"]
+
+1.d4 d5 2.c4 c6 3.Nc3 Nf6 4.e3 g6 5.Nf3 Bg7 6.Bd3 O-O 7.O-O Bf5 8.Bxf5 gxf5
+9.cxd5 cxd5 10.Qb3 b6 11.Ne5 e6 12.Bd2 Nfd7 13.Nd3  1/2-1/2
+
+[Event "JUG-URS"]
+[Site "Belgrade"]
+[Date "1956.??.??"]
+[Round "?"]
+[White "Trifunovic, Petar"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B20"]
+
+1.e4 c5 2.g3 d5 3.exd5 Qxd5 4.Nf3 Bg4 5.Bg2 Qe6+ 6.Kf1 Nc6 7.d3 Qd7 8.h3 Bf5
+9.Nc3 e5 10.Be3 Rd8 11.g4 Bg6 12.Nh4 b6 13.Qe2 Bd6 14.Nxg6 hxg6 15.h4 Nge7
+16.Nd5 Nxd5 17.Bxd5 Be7 18.Be4 Rxh4 19.Rxh4 Bxh4 20.Qf3 Nd4 21.Bxd4 Qxd4
+22.c3 Qd6 23.Kg2 Qf6 24.Rh1 Ke7 25.Qxf6+ Bxf6 26.Kf3 Bg5 27.Ke2 Ke6 28.c4 Kf6
+29.a4 a5 30.Bd5 Re8 31.Ra1 Ke7 32.Rg1 Bf4 33.Bf3 Kf6 34.Bd5 Kg5 35.Kf3 Rh8
+36.Ke2 Kf6 37.Rh1 Rd8 38.Rh3 Rb8 39.Rh1 Rf8 40.Ra1 Kg5 41.Rg1 f6 42.Rh1 f5
+43.Rg1 Kf6 44.Rh1 Bg5 45.Kf3 Rd8 46.Kg3 Bh6 47.Kf3 Bf4 48.Ke2 Kg5 49.Rg1 Kf6
+50.Rh1 e4 51.dxe4 fxg4 52.Rg1 Kg5 53.b3 Rh8 54.Bc6 Rh4 55.Bd7 Be5 56.Bc8 Bd4
+57.Rg2 Kf4 58.Bd7 Be5 59.Rg1 Kg5 60.Rg2 g3 61.fxg3 Rh1 62.Rf2 Bxg3 63.Rf1 Rh2+
+64.Kf3 Be5 65.Rf2 Rh4 66.Rg2+ Kf6 67.Bg4 Rh1 68.Rd2 Rb1 69.Rd3 Rb2 70.Bc8 Kg5
+71.Bd7 Kh4 72.Be6 g5 73.Bd7 Bd4 74.e5 g4+ 75.Ke4 Re2+ 76.Kd5 Bxe5 77.Bxg4 Kxg4
+78.Kc6 g5 79.Kxb6 Kf5 80.Kxa5 g4 81.Kb5 g3 82.Kxc5 g2 83.Rd1 Bg3  0-1
+
+[Event "Clarin"]
+[Site "Buenos Aires"]
+[Date "1979.??.??"]
+[Round "9"]
+[White "Tempone, Marcelo"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo "2610"]
+[ECO "A13"]
+
+1.Nf3 Nf6 2.c4 e6 3.b3 c5 4.Bb2 Nc6 5.g3 d5 6.cxd5 exd5 7.Bg2 d4 8.O-O Be7
+9.Na3 O-O 10.e3 Bg4 11.h3 Bh5 12.Nc2 d3 13.Nce1 Ne8 14.g4 Bg6 15.Ne5 Nxe5
+16.Bxe5 Qd7 17.f4 f6 18.Bb2 Rd8 19.Qf3 b5 20.Qc6 Nc7 21.Qb7 Nd5 22.Qxd7 Rxd7
+23.f5 Bf7 24.e4 Nb4 25.Nf3 Nc2 26.Rac1 Rd6 27.e5 Ra6 28.e6 Be8 29.a4 bxa4
+30.bxa4 Bxa4 31.Bc3 Rd8 32.Rb1 Rb6 33.Ba5 c4 34.Bxb6 axb6 35.Ne1 Na3 36.Rc1 Bb4
+37.Nf3 Kf8 38.Rfe1 Ke7 39.Re4 Bb5 40.h4 Bc5+ 41.Kh2 h6 42.Kh3 Ba6 43.g5 h5
+44.Rf1 Bb7 45.Ree1 Bd5 46.Ne5 Bxg2+ 47.Kxg2 fxe5 48.Rxe5 Rf8 49.Rd5 Bd6 50.Ra1 b5
+51.Kf3 Rb8 52.Ke4 b4 53.Ra5 b3 54.Ra7+ Kf8 55.f6 g6 56.Kd5 Nb5 57.Rh7 Kg8
+58.Rg7+ Kh8 59.Re1 Bf8 60.Rd7 c3 61.e7 cxd2 62.exf8=Q+ Rxf8 63.Ree7  1-0
+
+[Event "URS-chT Moscow"]
+[Site "Moscow"]
+[Date "1972.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Tal, Mihail"]
+[Result "1-0"]
+[WhiteElo "2645"]
+[BlackElo "2625"]
+[ECO "D41"]
+
+1.Nf3 Nf6 2.c4 e6 3.Nc3 d5 4.d4 c5 5.cxd5 Nxd5 6.e4 Nxc3 7.bxc3 cxd4 8.cxd4 Bb4+
+9.Bd2 Bxd2+ 10.Qxd2 O-O 11.Bc4 Nd7 12.O-O b6 13.a4 Bb7 14.Rfe1 Rc8 15.Bd3 Nb8
+16.a5 Nc6 17.axb6 Nxd4 18.Nxd4 Qxd4 19.bxa7 Rfd8 20.Ra3 Ba8 21.h3 h6 22.Rc1 Qb6
+23.Rxc8 Rxc8 24.Ra2 Rc7 25.Qe3 Qb3 26.Ra1 Rd7 27.Bf1 Qb2 28.Qa3 Qb6 29.Qa5 Qb2
+30.Qa3 Qb6 31.Qa6 Qc5 32.Qb5 Qd4 33.Qa4 Qd6 34.Rb1 Rd8 35.Qa5 Kh7 36.e5 Qd4
+37.Rb8 Rd5 38.Qa3  1-0
+
+[Event "URS-ch21"]
+[Site "Kiev"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Kholmov, Ratmir D"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A71"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 c5 4.d5 exd5 5.cxd5 d6 6.Nc3 g6 7.Bg5 Bg7 8.Nd2 O-O
+9.e4 Nbd7 10.Be2 Qe7 11.O-O h6 12.Bh4 g5 13.Bg3 Ne5 14.f4 Ng6 15.fxg5 hxg5
+16.Kh1 Rd8 17.a4 g4 18.Nc4 Nh5 19.Bxg4 Nxg3+ 20.hxg3 Bxc3 21.bxc3 Qxe4 22.Qf3 Qxf3
+23.gxf3 Bxg4 24.fxg4 Kg7 25.Rae1 Rd7 26.Kg2 Rad8 27.Ne3 Re8  1/2-1/2
+
+[Event "Tallinn"]
+[Site "Tallinn"]
+[Date "1979.??.??"]
+[Round "3"]
+[White "Christiansen, Larry Mark"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2475"]
+[BlackElo "2610"]
+[ECO "D55"]
+
+1.c4 e6 2.Nf3 Nf6 3.Nc3 d5 4.d4 Be7 5.Bg5 O-O 6.e3 b6 7.cxd5 exd5 8.Qc2 Bb7
+9.Be2 Nbd7 10.O-O a6 11.Ne5 Nxe5 12.dxe5 Nd7 13.Bf4 Nc5 14.Rad1 c6 15.Bg3 b5
+16.f4 f5 17.exf6 Bxf6 18.Nxd5 cxd5 19.Qxc5 Rc8 20.Qa7 Qe7 21.Bf3 Rfd8 22.Be1 Ra8
+23.Qb6 Bxb2 24.Bh4 Bf6 25.Bxf6 gxf6 26.Rf2 Rac8 27.Rfd2 Re8 28.e4 dxe4 29.Bh5 Rf8
+30.Rd7 Qc5+ 31.Qxc5 Rxc5 32.Rxb7 Rxh5 33.Rdd7 Re8 34.h3 Rh4 35.Kf2 Rxf4+
+36.Kg3 Rf5 37.Rg7+ Kh8 38.Rxh7+ Kg8  1/2-1/2
+
+[Event "Rovinj/Zagreb"]
+[Site "Zagreb"]
+[Date "1970.??.??"]
+[Round "14"]
+[White "Kurajica, Bojan"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C15"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.Ne2 dxe4 5.a3 Be7 6.Nxe4 Nf6 7.Nxf6+ Bxf6 8.Be3 O-O
+9.Qd2 e5 10.O-O-O Nc6 11.f3 exd4 12.Nxd4 Qd5 13.c4 Nxd4 14.Bxd4 Qxd4 15.Qxd4 Bxd4
+16.Rxd4 c5 17.Rd2 Be6 18.Be2 Rfd8 19.Rhd1 Rxd2 20.Rxd2 b6 21.Kc2 Kf8 22.Kc3 Ke7
+23.f4 Rd8 24.Rxd8 Kxd8 25.b4 Ke7 26.b5 Bc8 27.Bf3 a6 28.a4 a5 29.g4 h6 30.Kd3 f5
+31.g5 hxg5 32.fxg5 Kd6 33.h4 Ke5 34.h5 f4 35.Be4 Bg4 36.h6 gxh6 37.gxh6 Kf6
+38.Kd2 f3 39.Ke3 f2 40.Kxf2 Bd1 41.Ke1 Bxa4 42.Kd2 Bb3 43.Bd3  1/2-1/2
+
+[Event "Portoroz Interzonal"]
+[Site "Portoroz"]
+[Date "1958.??.??"]
+[Round "16"]
+[White "Larsen, Bent"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A03"]
+
+1.f4 Nf6 2.Nf3 d5 3.e3 Bg4 4.Be2 Nbd7 5.Ne5 Bxe2 6.Qxe2 e6 7.O-O Bd6 8.d4 O-O
+9.Nd2 c5 10.c3 Rc8 11.g4 Ne8 12.Ndf3 Ndf6 13.Bd2 Ne4 14.Be1 f6 15.Nd3 Be7
+16.f5 Qd7 17.Nh4 Nc7 18.Bg3 Bd6 19.Bxd6 Qxd6 20.Rad1 Rce8 21.dxc5 Nxc5 22.Nf4 b5
+23.Qg2 Rd8 24.b4 Ne4 25.fxe6 g6 26.Nxd5 Nxd5 27.Qxe4 Nxc3 28.Rxd6 Nxe4 29.Ra6 Rd3
+30.Rxa7 Re8 31.Ng2 g5 32.Rc1 Rd6 33.h4 Rdxe6 34.Rcc7 Nd6 35.Rxh7 Rc8 36.Rhg7+ Kh8
+37.h5 Ne8 38.Rgf7 Nd6 39.Rh7+ Kg8 40.h6 Ne8 41.Rhf7  1-0
+
+[Event "URS-ch27"]
+[Site "Leningrad"]
+[Date "1960.??.??"]
+[Round "5"]
+[White "Sakharov, Yury N"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C50"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bc4 Be7 4.d4 d6 5.dxe5 dxe5 6.Qxd8+ Bxd8 7.Nc3 Be7 8.Bb5 Bd6
+9.Be3 Ne7 10.O-O-O Bg4 11.Be2 a6 12.h3 Bd7 13.Nd2 Na5 14.a3 Be6 15.b4 Nac6
+16.Nc4 Bxc4 17.Bxc4 O-O 18.Kb2 Kh8 19.g4 Ng6 20.h4 Nf4 21.g5 Ng2 22.Bc1 Rab8
+23.h5 b5 24.Bd5 Ne7 25.Bb3 Nf4 26.Rdg1 c5 27.bxc5 Bxc5 28.Bxf4 exf4 29.Ne2 Bd6
+30.Ka2 a5 31.g6 fxg6 32.hxg6 h6 33.Nd4 Rf6 34.Bf7 Be5 35.Nf3 Bc3 36.Rh5 Rc6
+37.Bd5 Rxg6 38.Rxg6 Nxg6 39.Ng5 Ne5  0-1
+
+[Event "Niksic"]
+[Site "Niksic"]
+[Date "1983.??.??"]
+[Round "8"]
+[White "Petrosian, Tigran V"]
+[Black "Ljubojevic, Ljubomir"]
+[Result "1-0"]
+[WhiteElo "2580"]
+[BlackElo "2645"]
+[ECO "E49"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 O-O 5.Bd3 d5 6.Ne2 c5 7.O-O Nc6 8.cxd5 exd5
+9.a3 Bxc3 10.bxc3 Re8 11.f3 Bd7 12.Ng3 Qa5 13.Qd2 Qa4 14.Rb1 Na5 15.Bc2 Qc4
+16.Bd3 Qa4 17.e4 dxe4 18.fxe4 cxd4 19.Rb4 Qc6 20.cxd4 Nxe4 21.Nxe4 Rxe4 22.Qf2 f5
+23.d5 Qxd5 24.Bxe4 fxe4 25.Rd4 Qe6 26.Rxe4 Qg6 27.Re7 Bb5 28.Qf7+  1-0
+
+[Event "Moscow"]
+[Site "Moscow"]
+[Date "1975.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Planinec, Albin"]
+[Result "1/2-1/2"]
+[WhiteElo "2645"]
+[BlackElo "2535"]
+[ECO "A50"]
+
+1.c4 b6 2.Nc3 Bb7 3.d4 Nf6 4.d5 e6 5.a3 Bd6 6.Nf3 O-O 7.e4 exd5 8.exd5 c6
+9.Be2 cxd5 10.cxd5 Na6 11.O-O Re8 12.Bg5 h6 13.Bh4 Rc8 14.Nd4 Nc5 15.Nf5 Bf8
+16.b4 Nce4 17.Nxe4 Rxe4 18.Bd3 Re8 19.Ne3 g5 20.Bg3 Nxd5 21.Nxd5 Bxd5 22.Bh7+ Kxh7
+23.Qxd5 Qe7 24.Rad1 a5 25.bxa5 bxa5 26.Qxa5 Qxa3 27.Qf5+ Kg8 28.Rxd7 Qb3  1/2-1/2
+
+[Event "Niksic"]
+[Site "Niksic"]
+[Date "1983.??.??"]
+[Round "15"]
+[White "Andersson, Ulf"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo "2640"]
+[BlackElo "2580"]
+[ECO "A41"]
+
+1.Nf3 d6 2.d4 Bg4 3.e4 Nf6 4.Nbd2 e6 5.Bd3 Be7 6.c3 c6 7.O-O Nbd7 8.Re1 d5
+9.e5 Ng8 10.Nf1 c5 11.h3 Bxf3 12.Qxf3 cxd4 13.cxd4 Bb4 14.Rd1 Ne7 15.Qg4 g6
+16.a3 Ba5 17.Bh6 Bb6 18.Nh2 Nf5 19.Bg5 f6 20.exf6 Nxf6 21.Bxf5 exf5 22.Qh4 O-O
+23.Nf3 Qd6 24.Re1 Rac8 25.Bf4 Qd8 26.Bh6 Ne4 27.Bxf8 Qxh4 28.Nxh4 Bxd4 29.Re2 Kxf8
+30.Rd1 Bb6 31.Kf1 Kg7 32.Nf3 Rd8 33.g3 Kf6 34.Kg2 Ke6 35.Ne1 Kd6 36.Nd3 d4
+37.Rc1 Nc5 38.Nxc5 Bxc5 39.Kf1 a5 40.Ke1 a4 41.Kd2 Ra8 42.Rce1 Kc6 43.Re5 Kb5
+44.Kd3 b6 45.Re8 Ra7 46.R1e6 Rd7 47.h4 Ka6 48.Ra8+ Kb5 49.Rg8 Rf7 50.f4 Ka6
+51.h5 gxh5 52.Rg5 h4 53.gxh4 Be7 54.Rg8 h5 55.Ra8+ Kb7 56.Rxa4 Bxh4 57.Rb4 Bd8
+58.Rxd4  1-0
+
+[Event "Vilnius"]
+[Site "Vilnius"]
+[Date "1978.??.??"]
+[Round "8"]
+[White "Lechtynsky, Jiri"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2420"]
+[BlackElo "2620"]
+[ECO "B35"]
+
+1.e4 c5 2.Nf3 Nc6 3.Nc3 g6 4.d4 cxd4 5.Nxd4 Bg7 6.Be3 Nf6 7.Bc4 Qa5 8.O-O O-O
+9.Bb3 d6 10.h3 Bd7 11.f4 Nxd4 12.Bxd4 Bc6 13.Qd3  1/2-1/2
+
+[Event "URS-ch18"]
+[Site "Moscow"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Liublinsky, Victor Alexandrovic"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C17"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.Bd2 Ne7 6.Nb5 Bxd2+ 7.Qxd2 O-O 8.f4 Qb6
+9.dxc5 Qxc5 10.Nf3 Nbc6 11.Nbd4 Bd7 12.Bd3 Rac8 13.c3 Nxd4 14.Nxd4 Nc6 15.Nf3 f6
+16.h4 Kh8 17.Bc2 fxe5 18.fxe5 Qc4 19.O-O-O Qf4 20.Rhe1 Qxd2+ 21.Rxd2 Rf4
+22.Re3 Rcf8 23.h5 h6 24.Re1 Be8 25.Rh1 Kg8 26.b3 Kf7 27.Kb2 Ke7 28.Rh3 Rg4
+29.Bd1 Re4 30.Rg3 Bxh5 31.Rxg7+ Rf7 32.Rxf7+ Bxf7 33.Nd4 Rxe5 34.Nxc6+ bxc6
+35.b4 Re1 36.a4 e5 37.Be2 Kd6 38.a5 e4 39.Ba6 Bh5 40.Rc2 e3 41.Rc1 Rd1  0-1
+
+[Event "Tashkent m"]
+[Site "Tashkent"]
+[Date "1951.??.??"]
+[Round "10"]
+[White "Petrosian, Tigran V"]
+[Black "Mukhitdinov, Mamadzhan"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E91"]
+
+1.d4 Nf6 2.Nf3 g6 3.c4 Bg7 4.Nc3 O-O 5.e4 d6 6.Be2 Nfd7 7.Bg5 c5 8.d5 h6
+9.Be3 Nf6 10.h3 Kh8 11.Qd2 Ng8 12.O-O Nd7 13.Nh2 f5 14.exf5 gxf5 15.Nf3 b6
+16.Nh4 Rf6 17.g3 Nf8 18.Bd3 Bd7 19.Ne2 Qe8 20.Nf4 e5 21.dxe6 Bxe6 22.Qc2 Ne7
+23.Rfe1 Qf7 24.Bd2 Nc6 25.Bc3 Nd4 26.Bxd4 cxd4 27.Nf3 Rc8 28.b3 d5 29.Ne5 Qc7
+30.cxd5 Qxc2 31.Bxc2 Bg8 32.Bd3 Rc5 33.Rac1 Rxc1 34.Rxc1 Rd6 35.Nc6 Bxd5
+36.Nxd5 Rxd5 37.Ne7 Rd8 38.Nxf5 Ne6 39.b4 Bf8 40.a3 Ng5 41.Rc7 Nf3+ 42.Kf1 Ne5
+43.Ke2 Re8 44.Bb5  1-0
+
+[Event "Varna olm"]
+[Site "Varna"]
+[Date "1962.??.??"]
+[Round "3"]
+[White "Petrosian, Tigran V"]
+[Black "Suer, Nevzat"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C61"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bb5 Nd4 4.Nxd4 exd4 5.O-O Ne7 6.d3 c6 7.Ba4 d5 8.Nd2 dxe4
+9.Nxe4 Nf5 10.Bb3 Be7 11.Qh5 O-O 12.Ng5 Bxg5 13.Bxg5 Qd7 14.Rfe1 a5 15.a4 Ra6
+16.Re5 c5 17.Rae1 Rg6 18.Rxc5 b6 19.Rce5 Kh8 20.Bf4 f6 21.R5e4 Qb7 22.g3  1-0
+
+[Event "URS-ch37"]
+[Site "URS"]
+[Date "1969.??.??"]
+[Round "?"]
+[White "Kholmov, Ratmir D"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D13"]
+
+1.d4 d5 2.c4 c6 3.Nc3 Nf6 4.cxd5 cxd5 5.Nf3 Nc6 6.Bf4 e6 7.e3 Bd6 8.Bxd6 Qxd6
+9.Bd3 O-O 10.O-O Bd7 11.Rc1 Rfc8 12.Qe2 e5 13.Nb5 Qe7 14.dxe5 Nxe5 15.Nxe5 Bxb5
+16.Nf3 Bxd3 17.Qxd3  1/2-1/2
+
+[Event "World Championship 25th"]
+[Site "Moscow"]
+[Date "1963.??.??"]
+[Round "1"]
+[White "Petrosian, Tigran V"]
+[Black "Botvinnik, Mikhail"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E35"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.Qc2 d5 5.cxd5 exd5 6.Bg5 h6 7.Bxf6 Qxf6 8.a3 Bxc3+
+9.Qxc3 c6 10.e3 O-O 11.Ne2 Re8 12.Ng3 g6 13.f3 h5 14.Be2 Nd7 15.Kf2 h4 16.Nf1 Nf8
+17.Nd2 Re7 18.Rhe1 Bf5 19.h3 Rae8 20.Nf1 Ne6 21.Qd2 Ng7 22.Rad1 Nh5 23.Rc1 Qd6
+24.Rc3 Ng3 25.Kg1 Nh5 26.Bd1 Re6 27.Qf2 Qe7 28.Bb3 g5 29.Bd1 Bg6 30.g4 hxg3
+31.Nxg3 Nf4 32.Qh2 c5 33.Qd2 c4 34.Ba4 b5 35.Bc2 Nxh3+ 36.Kf1 Qf6 37.Kg2 Nf4+
+38.exf4 Rxe1 39.fxg5 Qe6 40.f4 Re2+  0-1
+
+[Event "Palma de Mallorca"]
+[Site "Palma de Mallorca"]
+[Date "1969.??.??"]
+[Round "17"]
+[White "Petrosian, Tigran V"]
+[Black "Pomar Salamanca, Arturo"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D30"]
+
+1.c4 c6 2.d4 d5 3.Nf3 Nf6 4.e3 e6 5.Bd3 Nbd7 6.O-O dxc4 7.Bxc4 b5 8.Bb3 Be7
+9.Re1 Bb7 10.e4 c5 11.Nc3 b4 12.e5 bxc3 13.exf6 Bxf6 14.bxc3  1/2-1/2
+
+[Event "URS-ch27"]
+[Site "Leningrad"]
+[Date "1960.??.??"]
+[Round "18"]
+[White "Bagirov, Vladimir"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B80"]
+
+1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e6 6.Bg5 Be7 7.Qd2 a6 8.O-O-O b5
+9.a3 Bb7 10.Bd3 Nc6 11.Nxc6 Bxc6 12.Rhe1 O-O 13.f4 Rb8 14.e5 dxe5 15.fxe5 Nd5
+16.Bxe7 Qxe7 17.Nxd5 Bxd5 18.Re3 Rfd8 19.Rg3  1/2-1/2
+
+[Event "Vrbas"]
+[Site "Vrbas"]
+[Date "1980.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Ivkov, Borislav"]
+[Result "1/2-1/2"]
+[WhiteElo "2615"]
+[BlackElo "2530"]
+[ECO "D55"]
+
+1.c4 Nf6 2.Nc3 e6 3.Nf3 d5 4.d4 Be7 5.Bg5 h6 6.Bxf6 Bxf6 7.e3 O-O 8.Qd2 b6
+9.cxd5 exd5 10.Rd1 Bb7 11.g3 Qe7 12.Bg2 Rd8 13.Ng1 Na6 14.Nge2 c5 15.O-O Nc7
+16.Rfe1 c4 17.b3 b5 18.bxc4 bxc4 19.Rb1 Bc6 20.Qb2 Qf8 21.Qc2 Rab8 22.h4 Qd6
+23.Nf4 Rb6 24.Rxb6 axb6 25.a4 g5 26.hxg5 Bxg5 27.Nfe2 Qg6 28.Qb1 Rb8 29.Bf3 Qxb1
+30.Rxb1 Kf8 31.Bg2 Ke7 32.f4 Bf6 33.Kf2 Kd6 34.Bf3 Bg7 35.g4 Bf8 36.Ng3 Ke6
+37.f5+ Kd7 38.Nge2 Kd6 39.Nc1 Be7 40.N1a2 Kd7 41.Nb4 Bxb4 42.Rxb4 Kd6 43.e4 dxe4
+44.Nxe4+ Bxe4 45.Bxe4 c3 46.Ke3 b5 47.Kd3 Rc8 48.Bb7  1/2-1/2
+
+[Event "Candidats Tournament"]
+[Site "Bled/Zagreb/Belgrade"]
+[Date "1959.??.??"]
+[Round "14"]
+[White "Petrosian, Tigran V"]
+[Black "Gligoric, Svetozar"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A31"]
+
+1.c4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 d5 6.cxd5 Nxd5 7.Nxc6 bxc6 8.Bd2 e6
+9.g3 Be7 10.Bg2 O-O 11.O-O Ba6 12.Bf3 Rb8 13.Qc1 Qb6 14.Rb1 Rfd8 15.Rd1 Rbc8
+16.Na4 Qb5 17.Nc3 Qb6 18.Na4 Qb5  1/2-1/2
+
+[Event "Lugano ol (Men)"]
+[Site "Lugano"]
+[Date "1968.??.??"]
+[Round "?"]
+[White "Kleopas, George"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A07"]
+
+1.g3 d5 2.Bg2 Nf6 3.d3 c6 4.Nf3 Bg4 5.h3 Bh5 6.Nbd2 e6 7.b3 a5 8.O-O a4 9.a3 axb3
+10.Nxb3 Nbd7 11.Bb2 Be7 12.a4 O-O 13.Ne5 Nxe5 14.Bxe5 Nd7 15.Bb2 e5 16.Qd2 f6
+17.e4 d4 18.Kh1 Bf7 19.f4 Qb6 20.Rfb1 Ra7 21.Bf3 Qb4 22.Qxb4 Bxb4 23.Bg4 Bxb3
+24.cxb3 Nc5 25.Rd1 Kf7 26.Ba3 Bxa3 27.Rxa3 Ke7 28.Be2 Rfa8 29.Rc1 Kd6 30.Rc2 b5
+31.Rb2 exf4 32.gxf4 bxa4 33.b4 Ne6 34.f5 Nc7 35.Bd1 Nb5 36.Ra1 a3 37.Rb3 Nc3
+38.Bc2 a2 39.Rb2 Rb7  0-1
+
+[Event "La Habana olm fin-A"]
+[Site "La Habana"]
+[Date "1966.??.??"]
+[Round "12"]
+[White "Petrosian, Tigran V"]
+[Black "Najdorf, Miguel"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D71"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.g3 d5 5.cxd5 Nxd5 6.Bg2 Nxc3 7.bxc3 O-O 8.Ba3 Nd7
+9.Nf3 Nb6 10.Nd2 c6 11.O-O Be6 12.Nb3 Qc7 13.e4 Rad8 14.Re1 Rfe8 15.Nc5 Bc4
+16.e5 Nd7 17.Qa4 Bb5 18.Qb3 Nxc5 19.Bxc5 b6 20.Ba3 Ba6 21.e6 f5 22.Bc1 c5
+23.Bf4 Qc8 24.Rac1 Bd3 25.Re3 Be4 26.Bxe4 cxd4 27.Ree1 d3 28.Bd5 d2 29.Bxd2 Rxd5
+30.Qxd5 Rd8 31.Qb3 Rxd2 32.Rcd1 Bh6 33.c4 Rxd1 34.Qxd1 Qxc4 35.Qd8+ Bf8 36.Qe8  1-0
+
+[Event "Keres mem"]
+[Site "Tallinn"]
+[Date "1983.??.??"]
+[Round "1"]
+[White "Jansa, Vlastimil"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2440"]
+[BlackElo "2605"]
+[ECO "B12"]
+
+1.e4 c6 2.d4 d5 3.Nd2 g6 4.Ngf3 Bg4 5.c3 Bxf3 6.Qxf3 e6 7.Bd3 Nd7 8.O-O Ne7
+9.Re1 Bg7 10.Nf1 dxe4 11.Bxe4 Nf6 12.Ng3 Ned5 13.Bc2 b5 14.a4 O-O 15.Ne4 Nxe4
+16.Bxe4 a6 17.axb5 axb5 18.Rxa8 Qxa8 19.h4  1/2-1/2
+
+[Event "Tilburg"]
+[Site "Tilburg"]
+[Date "1981.??.??"]
+[Round "?"]
+[White "Kasparov, Gary"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo "2630"]
+[BlackElo "2585"]
+[ECO "D22"]
+
+1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e3 Bg4 5.Bxc4 e6 6.h3 Bh5 7.Nc3 a6 8.g4 Bg6
+9.Ne5 Nbd7 10.Nxg6 hxg6 11.Bf1 c6 12.Bg2 Qc7 13.O-O Be7 14.f4 Nb6 15.g5 Nfd7
+16.Qg4 O-O-O 17.Rb1 Kb8 18.b4 Nd5 19.Na4 f5 20.Qg3 Nxb4 21.Bd2 Nd5 22.Rfc1 Ka7
+23.Qe1 Ba3 24.Rc2 Qd6 25.Rb3 Qe7 26.Qe2 Rb8 27.Qd3 Bd6 28.Nb2 Rhc8 29.Nc4 Bc7
+30.a4 b5 31.axb5 cxb5 32.Ra2 Kb7 33.Bb4 Qe8 34.Bd6 Ra8 35.Qb1 Kc6 36.Rba3 bxc4
+37.Rxa6+ Rxa6 38.Rxa6+ Bb6 39.Bc5 Qd8 40.Qa1 Nxc5 41.dxc5 Kxc5 42.Ra4  0-1
+
+[Event "Tbilisi"]
+[Site "Tbilisi"]
+[Date "1945.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Malashkhia"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D19"]
+
+1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3 e6 7.Bxc4 Bb4 8.O-O O-O
+9.Qe2 Ne4 10.Bd3 Bxc3 11.bxc3 Nxc3 12.Qc2 Bxd3 13.Qxd3 Nd5 14.Ba3 Re8 15.Rab1 b6
+16.Rfc1 Ne7 17.h3 c5 18.Qe4 Nd7 19.dxc5 Nxc5 20.Bxc5 bxc5 21.Rxc5 Rc8 22.Rxc8 Nxc8
+23.Qa8 Kf8 24.Ne5 Qc7 25.Qe4 Kg8 26.Rb7 Qc1+ 27.Kh2 Nd6 28.Qf3 Qc5 29.Nd3 Qc3
+30.Rd7 Qxd3 31.Qc6 Qc4 32.Rxd6 Qxc6 33.Rxc6 Kf8 34.Kg3 Re7  1/2-1/2
+
+[Event "EU-chT"]
+[Site "Moscow"]
+[Date "1977.??.??"]
+[Round "4"]
+[White "Petrosian, Tigran V"]
+[Black "Ribli, Zoltan"]
+[Result "1/2-1/2"]
+[WhiteElo "2645"]
+[BlackElo "2595"]
+[ECO "A34"]
+
+1.c4 c5 2.Nc3 g6 3.b3 Bg7 4.Bb2 Nc6 5.Nf3 e5 6.g3 Nge7 7.Bg2 d6 8.d3 h6 9.O-O Be6
+10.e4 O-O 11.Nh4 Nd4 12.Kh1 Nec6 13.Rb1 a6 14.Qe1 Nc2 15.Qd2 N2d4 16.Nf3 Qa5
+17.Ng1 Rae8 18.Rbd1 b5 19.Ba1 Kh7 20.Nge2 Nxe2 21.Qxe2 Nd4 22.Qd2 Bg4 23.Rb1 Bd7
+24.Rbe1 Bc6 25.Rd1 Ba8  1/2-1/2
+
+[Event "Candidats qf2"]
+[Site "Palma de Mallorca"]
+[Date "1974.??.??"]
+[Round "7"]
+[White "Petrosian, Tigran V"]
+[Black "Portisch, Lajos"]
+[Result "1/2-1/2"]
+[WhiteElo "2640"]
+[BlackElo "2645"]
+[ECO "D59"]
+
+1.Nf3 d5 2.d4 Nf6 3.c4 e6 4.Nc3 Be7 5.Bg5 O-O 6.e3 h6 7.Bh4 b6 8.cxd5 Nxd5
+9.Bxe7 Qxe7 10.Nxd5 exd5 11.Qd2 Be6 12.b4 c6 13.Rb1 Nd7  1/2-1/2
+
+[Event "Hoogovens"]
+[Site "Wijk aan Zee"]
+[Date "1971.??.??"]
+[Round "12"]
+[White "Petrosian, Tigran V"]
+[Black "Ree, Hans"]
+[Result "1-0"]
+[WhiteElo "2640"]
+[BlackElo "2420"]
+[ECO "A29"]
+
+1.c4 e5 2.Nc3 Nf6 3.Nf3 Nc6 4.g3 Bb4 5.Nd5 Nxd5 6.cxd5 e4 7.dxc6 exf3 8.Qb3  1-0
+
+[Event "Vinkovci"]
+[Site "Vinkovci"]
+[Date "1970.??.??"]
+[Round "14"]
+[White "Petrosian, Tigran V"]
+[Black "Tomic, Dragoslav"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D36"]
+
+1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 5.Bg5 Be7 6.e3 c6 7.Qc2 O-O 8.Bd3 Nbd7
+9.Nge2 Re8 10.h3 Nf8 11.O-O-O Ne4 12.Bxe7 Qxe7 13.Bxe4 dxe4 14.g4 f5 15.gxf5 Bxf5
+16.Ng3 Bg6 17.h4 h6 18.Rdg1 Kh8 19.Nge2 Bh7 20.Nf4 Rad8 21.Rg3 Rd7 22.Nce2 Qf7
+23.b3 a5 24.Rhg1 Qf5 25.Kb2 Ra8 26.a3 Rc8 27.Qc3 Rcc7 28.R3g2 Qf6 29.Nh5 Qxh4
+30.Nef4 Ng6 31.Rxg6 Qxf2+ 32.Kc1 Bxg6 33.Rxg6 Rf7 34.a4 b5 35.Rg2 Qf1+ 36.Kb2 bxa4
+37.Qxa5 axb3 38.Qa8+ Kh7 39.Rxg7+ Rxg7 40.Nf6+  1-0
+
+[Event "URS-ch45"]
+[Site "Leningrad"]
+[Date "1977.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Grigorian, Karen Ashotovich"]
+[Result "1-0"]
+[WhiteElo "2645"]
+[BlackElo "2465"]
+[ECO "B14"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 d5 4.Bf4 Bg7 5.e3 O-O 6.Qb3 c5 7.cxd5 cxd4 8.exd4 Nbd7
+9.Be2 Nb6 10.Bf3 e6 11.d6 Nfd5 12.Bxd5 exd5 13.Nge2 Re8 14.O-O Bf5 15.a4 Bd3
+16.Rfe1 Bc4 17.Qb4 Bf8 18.b3 Ba6 19.Nb5 Bxb5 20.Qxb5 a6 21.Qb4 a5 22.Qb5 Bxd6
+23.Bd2 Nd7 24.Qxd5 Nf6 25.Qf3 Ne4 26.Bf4 Bxf4 27.Qxf4 Rc8 28.Rac1 Nd6 29.Ng3 Rxe1+
+30.Rxe1 Rc3 31.h4 h5 32.Re5 f5 33.Re6 Nf7 34.Rxg6+ Kh7 35.Qxf5 Rc1+ 36.Nf1  1-0
+
+[Event "Bucharest"]
+[Site "Bucharest"]
+[Date "1953.??.??"]
+[Round "10"]
+[White "Troianescu, Octavio"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A04"]
+
+1.e4 c5 2.Nf3 d6 3.d3 Nc6 4.Nbd2 g6 5.g3 Bg7 6.Bg2 e6 7.O-O Nge7 8.Re1 O-O
+9.c3 b6 10.Nf1 Ba6 11.d4 cxd4 12.Nxd4 Ne5 13.Bg5 h6 14.Qa4 Bb7 15.Bxe7 Qxe7
+16.Rad1 Rfc8 17.Ne3 Rc5 18.f4 Nc6 19.Nxc6 Bxc6 20.Qc2 Rd8 21.Qe2 Qb7 22.Nc2 b5
+23.Rd2 Rc4 24.a3 a5 25.Ne3 Rxe4 26.Bxe4 Bxe4 27.Nc2 d5 28.Nd4 b4 29.cxb4 axb4
+30.a4 Qa7 31.Qf2 Rc8 32.b3 Bf8 33.Nb5 Qa6 34.Qe2 Qb6+ 35.Kf1 Rc3 36.Nxc3 bxc3
+37.Rc2 Qxb3 38.Rec1 Bb4 39.g4 Bxc2 40.Rxc2 Qxa4 41.f5 exf5 42.gxf5 g5 43.h4 Bc5
+44.hxg5 Qf4+ 45.Ke1 Qg3+ 46.Kd1 Qg1+ 47.Qe1 Qxe1+ 48.Kxe1 hxg5 49.Ke2 Bd4
+50.Ra2 Kg7 51.Kd3 Be5 52.Ra5 Kf6 53.Rxd5 Kxf5 54.Ke3 f6 55.Rc5 Kg4 56.Rc4+ Kg3
+57.Ke4 g4  0-1
+
+[Event "Buenos Aires"]
+[Site "Buenos Aires"]
+[Date "1964.??.??"]
+[Round "14"]
+[White "Wexler, Bernardo"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A41"]
+
+1.c4 g6 2.d4 Bg7 3.Nc3 d6 4.g3 Nc6 5.Nf3 Bg4 6.Bg2 Nf6 7.d5 Bxf3 8.exf3 Nb8
+9.Be3 O-O 10.O-O c5 11.dxc6 Nxc6 12.f4 Nd7 13.Rc1 Qa5 14.Qd2 Nc5 15.Rfd1 Rfe8
+16.b3 Rac8 17.Nd5 Qxd2 18.Rxd2 Kf8 19.Nc3 b6 20.Nb5 a6 21.Nc3 Nb8 22.b4 Bxc3
+23.Rxc3 Ncd7 24.Kf1 Rc7 25.Ke2 Rec8 26.Kd3 a5 27.a3 axb4 28.axb4 b5 29.Rdc2 Na6
+30.Kd2 bxc4 31.b5 Nac5 32.Rxc4 Nb6 33.R4c3 Nba4 34.b6 Nxb6 35.Ke2 Nbd7 36.Ra3 Ne6
+37.Rxc7 Rxc7 38.f5 gxf5 39.Bh3 f4 40.gxf4 Kg7 41.f5 Nec5 42.Ra1 Nf6 43.Rg1+ Kf8
+44.Bh6+ Ke8 45.Ra1 Kd7 46.Ra8 Nce4 47.Be3 Nc3+ 48.Kf3 Ncd5 49.Bf1 Rc3 50.Rf8 Nxe3
+51.Bb5+ Kc7 52.fxe3 Rc5 53.Bd3 Nd7 54.Rh8 Ne5+ 55.Ke2 Nxd3 56.Kxd3 Rxf5 57.Rxh7 Kd7
+58.Ke2 Ke6 59.Rh4 Kf6 60.Rg4 Rg5 61.Rf4+ Kg6 62.Re4 e6 63.h4 Rf5 64.Rd4 d5
+65.Rg4+ Kh5 66.Ra4 Re5 67.Kf3 f5 68.Kf4 Re4+ 69.Rxe4 dxe4  0-1
+
+[Event "URS-ch21"]
+[Site "Kiev"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Borisenko, Georgy K"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E92"]
+
+1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.Nf3 O-O 5.e4 d6 6.Be2 c5 7.d5 e5 8.g3 Nbd7 9.Nh4 Ne8
+10.Qc2 a6 11.a4 Ndf6 12.Bd2 b6 13.a5 bxa5 14.Nd1 Rb8 15.Bxa5 Qe7 16.Bd2 Ng4
+17.h3 Ngf6 18.Kf1 h6 19.Ne3 Nh7 20.Bg4 Qb7 21.Bxc8 Qxc8 22.Kg2 Ng5 23.Nd1 Nf6
+24.f3 Qb7 25.Bc3 Nh5 26.Nf2 Nh7 27.Ng4 Bf6 28.Nxf6+ N7xf6 29.Ra2 Qe7 30.Qf2 Rb6
+31.Rha1 Ra8 32.Kh2 Nd7 33.Ng2 f5 34.g4 fxg4 35.fxg4 Nf4 36.Nxf4 Rf8 37.Rxa6 Rxa6
+38.Rxa6 Rxf4 39.Qg2 Nf6 40.g5 Nxe4 41.Be1 hxg5 42.Ra3 Qf6 43.Re3 Qf5 44.b3 g4
+45.Bg3 Nxg3 46.Qxg3 gxh3 47.Qxh3 Rg4 48.Rf3 Qc2+ 49.Kh1 Qe4  0-1
+
+[Event "URS-ch21"]
+[Site "Kiev"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Livshin, Iosif M"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B52"]
+
+1.e4 c5 2.Nf3 d6 3.Bb5+ Bd7 4.Bxd7+ Qxd7 5.O-O Nc6 6.c4 g6 7.d4 cxd4 8.Nxd4 Bg7
+9.Be3 Nh6 10.f3 f5 11.Nxc6 bxc6 12.Bd4 e5 13.Be3 fxe4 14.fxe4 Ng4 15.Qd2 Nxe3
+16.Qxe3 Rb8 17.b3 Qe7 18.Nc3 Bf6 19.Rf3 O-O 20.Raf1 Bg5 21.Rxf8+ Rxf8 22.Rxf8+ Kxf8
+23.Qd3 Kg7 24.g3 Bc1 25.b4 Bb2 26.b5 Qc7 27.bxc6 Bxc3 28.Qxc3 Qxc6 29.Qd3 Kf6
+30.Kg2 Ke7 31.Kf3 h5 32.h4 Kd7 33.g4 Kc7 34.gxh5 gxh5 35.Qa3 Qb6 36.Qa4 Qd4
+37.Qa5+ Kd7 38.Qb5+ Ke7 39.Qb7+ Kf6 40.Qd5 Qc3+ 41.Ke2 Qa3 42.c5 Qxc5 43.Qxc5 dxc5
+44.Kd3 Ke6 45.Kc4 Kd6 46.Kb5 a6+ 47.Kc4 Kc6 48.a3  1/2-1/2
+
+[Event "URS-ch37 playoff-1pl"]
+[Site "URS"]
+[Date "1969.??.??"]
+[Round "5"]
+[White "Polugaevsky, Lev"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E08"]
+
+1.c4 e6 2.g3 Nf6 3.Bg2 d5 4.Nf3 Be7 5.O-O O-O 6.d4 Nbd7 7.Qc2 c6 8.b3 b6
+9.Bb2 Bb7 10.Nc3 Rc8 11.Rad1 b5 12.c5 b4 13.Nb1 Ba6 14.a3 bxa3 15.Nxa3 Rb8
+16.Ra1 Qc8 17.Nb1 Ne4 18.Nc3 Nxc3 19.Bxc3 Qb7 20.Ra3 Bb5 21.Rfa1 Ra8 22.e4 Nf6
+23.e5 Ne4 24.Be1 f5 25.exf6 Bxf6 26.Ne5 Bxe5 27.dxe5 Ng5 28.f4 Nf7 29.Bf2 Nh6
+30.Qd2 Qf7 31.h3 a6 32.Rd1 Rad8 33.Ra2 Nf5 34.Qc3 h5 35.Qf3 Nh6 36.Rd4 g5
+37.fxg5 Qxf3  1/2-1/2
+
+[Event "Vinkovci"]
+[Site "Vinkovci"]
+[Date "1970.??.??"]
+[Round "15"]
+[White "Maric, Rudolf"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B08"]
+
+1.e4 d6 2.d4 Nf6 3.Nc3 c6 4.Nf3 g6 5.Be2 Bg7 6.O-O O-O 7.h3 Nbd7 8.Be3 e5
+9.dxe5 dxe5 10.Qd6 Re8 11.Bc4 Qe7 12.Qxe7 Rxe7 13.a4 b6 14.Rfd1 Bb7 15.Rd6 a6
+16.Rad1 b5 17.Bb3 h6 18.g4 Rc8 19.g5 hxg5 20.Nxg5 Rc7 21.a5 Kf8 22.Bxf7 Rxf7
+23.Ne6+ Kg8 24.Nxc7 Bf8 25.Ne8 Kh7 26.Rxd7  1-0
+
+[Event "Vinkovci"]
+[Site "Vinkovci"]
+[Date "1970.??.??"]
+[Round "4"]
+[White "Gligoric, Svetozar"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E45"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 b6 5.Ne2 Ba6 6.Ng3 Bxc3+ 7.bxc3 d5 8.Ba3 dxc4
+9.e4 Qd7 10.Be2 Nc6 11.O-O O-O-O  1/2-1/2
+
+[Event "URS-ch44"]
+[Site "Moscow"]
+[Date "1976.??.??"]
+[Round "?"]
+[White "Zakharov, Alexander V"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2435"]
+[BlackElo "2635"]
+[ECO "C07"]
+
+1.e4 e6 2.d4 d5 3.Nd2 c5 4.Ngf3 cxd4 5.Nxd4 Nc6 6.Bb5 Bd7 7.Nxc6 bxc6 8.Bd3 Qc7
+9.Qe2 Ne7 10.O-O Ng6 11.Nf3 Bd6 12.Re1 Nf4 13.Bxf4 Bxf4 14.c4 O-O 15.g3 Bh6
+16.exd5 cxd5 17.Qc2 g6 18.cxd5 Qxc2 19.Bxc2 exd5 20.Bb3 Be6 21.Nd4 Rfe8  1/2-1/2
+
+[Event "Saltsjobaden Interzonal"]
+[Site "Saltsjobaden"]
+[Date "1952.??.??"]
+[Round "6"]
+[White "Pilnik, Herman"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B34"]
+
+1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 g6 5.Nc3 Bg7 6.Be3 Nf6 7.Be2 O-O 8.O-O d5
+9.Nxc6 bxc6 10.exd5 cxd5 11.Bd4 e6 12.a4 a5 13.Nb5 Ba6 14.c3 Ne4 15.Be3 Re8
+16.Re1 Qb8 17.Bd3 Nd6 18.Qe2 e5 19.Qf1 e4 20.Be2 Nf5 21.Bc5 Rc8 22.Ba3 h5
+23.Rad1 Bb7 24.g4 hxg4 25.Bxg4 Ra6 26.Qh3 Rf6 27.b3 Qf4 28.Bc1 Qe5 29.Nd4 Rc7
+30.Bg5 Nxd4 31.Bxf6 Nf3+ 32.Qxf3 Bxf6 33.Qg3 Rxc3 34.Re3 Rc7 35.f4 Qe7 36.f5 g5
+37.Re2 Qe5 38.Qg2 d4 39.h4 e3 40.Bf3 Bxf3 41.Qxf3 Qf4 42.Qa8+ Kh7 43.hxg5 Rc2
+44.Qh1+ Kg8 45.Qa8+ Kh7  1/2-1/2
+
+[Event "Saltsjobaden Interzonal"]
+[Site "Saltsjobaden"]
+[Date "1952.??.??"]
+[Round "17"]
+[White "Taimanov, Mark E"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "B19"]
+
+1.d4 d5 2.Nc3 c6 3.e4 dxe4 4.Nxe4 Bf5 5.Ng3 Bg6 6.Nf3 Nd7 7.h4 h6 8.Bd3 Bxd3
+9.Qxd3 Qc7 10.Bd2 e6 11.O-O-O O-O-O 12.Rhe1 Ngf6 13.Kb1 Bd6 14.Ne4 Nxe4 15.Qxe4 Nf6
+16.Qe2 c5 17.dxc5 Bxc5 18.Be3 Bxe3 19.Qxe3  1/2-1/2
+
+[Event "URS-ch37"]
+[Site "URS"]
+[Date "1969.??.??"]
+[Round "?"]
+[White "Zaitsev, Alexander N"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E16"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 Bb4+ 4.Bd2 Qe7 5.Nc3 b6 6.g3 Bb7 7.Bg2 O-O 8.O-O d6
+9.a3 Bxc3 10.Bxc3 Be4 11.b4 Nbd7 12.Qb3 a6 13.Ne1 Bxg2 14.Nxg2 Ne4 15.f3 Nxc3
+16.Qxc3 c5 17.e4 b5 18.Rfd1 cxd4 19.Rxd4 Ne5 20.cxb5 Rfc8 21.Qe3 axb5 22.Ne1 Ra6
+23.Kg2 Qa7 24.f4 Nc4 25.Qd3 h6 26.Ra2 Rac6 27.Kh3 Ra6 28.Nc2 Qd7 29.Kg2 Rca8
+30.Qf3 Qb7 31.Rd3 Ra4 32.h4 h5 33.Kh3 g6 34.Kh2 Kg7 35.Qe2  1/2-1/2
+
+[Event "URS-ch45"]
+[Site "Leningrad"]
+[Date "1977.??.??"]
+[Round "?"]
+[White "Dorfman, Josif D"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2455"]
+[BlackElo "2645"]
+[ECO "E11"]
+
+1.c4 Nf6 2.d4 e6 3.Nf3 Bb4+ 4.Nbd2 b6 5.a3 Bxd2+ 6.Bxd2 Bb7 7.Bg5 d6 8.e3 Nbd7
+9.Be2 h6 10.Bh4 Qe7 11.Nd2 O-O 12.O-O c5 13.Bf3 Bxf3 14.Qxf3 d5 15.cxd5 exd5
+16.dxc5 bxc5 17.Rac1 Rab8 18.Rc2 Qe6 19.Bg3 Rb7 20.Rfc1 a5 21.h3 a4 22.Nb1 Ne4
+23.Nc3 Nxc3 24.Rxc3 Rb5 25.Qd1 Ra8 26.Qc2 Ra7 27.Kh2 Qc6 28.Rd3 Qe6 29.Rc3 Qb6
+30.Qd1 Qe6  1/2-1/2
+
+[Event "Saltsjobaden Interzonal"]
+[Site "Saltsjobaden"]
+[Date "1952.??.??"]
+[Round "7"]
+[White "Petrosian, Tigran V"]
+[Black "Averbakh, Yuri L"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E35"]
+
+1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.Qc2 d5 5.cxd5 exd5 6.Bg5 h6 7.Bxf6 Qxf6 8.a3 Bxc3+
+9.Qxc3 O-O 10.e3 c6 11.Nf3 Re8 12.Bd3 Bf5 13.Bxf5 Qxf5 14.O-O Nd7 15.Rac1 Nf6
+16.Qc2 Qxc2 17.Rxc2 Ne4 18.Nd2 Nd6 19.g3 a5 20.a4 Ra6 21.b3 f5  1/2-1/2
+
+[Event "EU-chT"]
+[Site "Moscow"]
+[Date "1977.??.??"]
+[Round "3"]
+[White "Ciocaltea, Victor"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2465"]
+[BlackElo "2645"]
+[ECO "C42"]
+
+1.e4 e5 2.Nf3 Nf6 3.Nxe5 d6 4.Nf3 Nxe4 5.Qe2 Qe7 6.d3 Nf6 7.Bg5 Qxe2+ 8.Bxe2 Be7
+9.Nc3 c6 10.O-O-O Na6 11.Rde1 Nc7 12.Nd4 Ne6  1/2-1/2
+
+[Event "URS-chT"]
+[Site "Moscow"]
+[Date "1959.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Aronin, Lev Solomonovich"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D34"]
+
+1.d4 d5 2.Nf3 c5 3.c4 e6 4.cxd5 exd5 5.g3 Nc6 6.Bg2 Nf6 7.O-O Be7 8.Nc3 O-O
+9.Bf4 c4 10.Ne5 Be6 11.Bg5 Qa5 12.Qd2 Rad8 13.Kh1 Nxe5 14.dxe5 d4 15.exf6 dxc3
+16.Qxc3 Qxg5 17.fxe7 Qxe7 18.b3 b5 19.bxc4 Bxc4 20.Rfe1 Qf6 21.Qxf6 gxf6
+22.a3 Rd2 23.Bf3 Rfd8 24.Kg2 Rb2 25.Rab1 Rdd2 26.Rxb2 Rxb2 27.Rc1 Ra2 28.Rc3 a5
+29.Be4 Rxe2 30.Bd3 Bd5+ 31.Kf1 Rb2 32.Rc5 Bf3 33.Ke1 Rb3 34.Kd2 Rxa3 35.Rxb5 Kg7
+36.Bc4 Bg4 37.Rb7 Bh5 38.Ra7 Bg6 39.f4 h5 40.Be6 Kh6 41.Bc4 Kg7 42.Be6 Kh6
+43.Bc4 Ra1 44.Ra6 Kg7 45.Ra7 a4 46.Ra8 a3 47.h4  1/2-1/2
+
+[Event "Moscow-4teams"]
+[Site "Moscow"]
+[Date "1981.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Vasiukov, Evgeni"]
+[Result "1/2-1/2"]
+[WhiteElo "2585"]
+[BlackElo "2545"]
+[ECO "A11"]
+
+1.c4 Nf6 2.g3 c6 3.Nf3 d5 4.Qc2 g6 5.b3 Bg7 6.Bb2 O-O 7.Bg2 Re8 8.d3 Nbd7
+9.O-O e5 10.cxd5 cxd5 11.Nc3 a6 12.Rac1 b5 13.Nb1 Bh6 14.e3 Rb8 15.Nbd2 Bb7
+16.Qb1 Qb6 17.b4 Qd6 18.a3 d4 19.e4 Nb6 20.Rc2 Na4 21.Bh3 a5 22.bxa5 Qd8
+23.Nb3 b4 24.axb4 Ba6 25.Nc5 Nxc5 26.Rxc5 Rxb4 27.Qc2 Qb8 28.Bc1 Bxc1 29.Rxc1 Rb2
+30.Qd1 Kg7 31.Ne1 Qb4 32.Qf3 Bb5 33.a6 Ra2 34.Bc8 h5 35.h3 Re7 36.h4 Ng8
+37.Kg2 Bxa6 38.Bxa6 Rxa6 39.R5c4 Qb3 40.Qe2 Ra2 41.R4c2 Rea7 42.Nf3 R7a5
+43.Qd1 Nh6 44.Rxa2 Qxa2 45.Nd2 Ng4 46.Rc2 Qe6 47.Nc4 Ra4 48.Rb2 Qa6 49.Qb3 Ra1
+50.Qc2 Re1 51.Rb1 Rxb1 52.Qxb1 Qa4 53.Kf1 f6  1/2-1/2
+
+[Event "Vrsac"]
+[Site "Vrsac"]
+[Date "1981.??.??"]
+[Round "12"]
+[White "Petrosian, Tigran V"]
+[Black "Velimirovic, Dragoljub"]
+[Result "1-0"]
+[WhiteElo "2585"]
+[BlackElo "2520"]
+[ECO "A17"]
+
+1.c4 e6 2.Nf3 Nf6 3.Nc3 Bb4 4.Qc2 c5 5.e3 Nc6 6.b3 O-O 7.Bb2 Re8 8.Be2 Bxc3
+9.Qxc3 e5 10.O-O d5 11.cxd5 Nxd5 12.Qxc5 Bf5 13.Bc4 Be4 14.Bxd5 Bxd5 15.Ne1 Rc8
+16.Qb5 a6 17.Qe2 Qh4 18.f3 f5 19.Nd3 Rcd8 20.Rae1 a5 21.Bc3 Rd6 22.e4 fxe4
+23.fxe4 Bxe4 24.Nxe5 Bd5 25.Qb5 Red8 26.Nxc6 bxc6 27.Qe2 h6 28.Qe7 Qg4 29.Rf2 Kh7
+30.h3 Qg6 31.Kh2 R6d7 32.Qh4 Rf8 33.Ree2 Rdf7 34.Qg3 Qh5 35.Rxf7 Rxf7 36.Re8 Qf5
+37.Re2 a4 38.bxa4 Bxa2 39.Qe5 Qg6 40.Qe4 Bd5 41.Qxg6+ Kxg6 42.a5 Ra7 43.Re5 Kf7
+44.g4 g6 45.h4 Rd7 46.Kg3 Bc4 47.Re4 Rd3+ 48.Kf4 Bb5 49.Re3 Rd5 50.Rf3 h5
+51.Ke4+ Ke7 52.g5 Be2 53.Rf6 Bd3+ 54.Kf4 Kd7 55.Ke3 Bf5 56.Rf7+ Ke6 57.Rf6+ Kd7
+58.Kf4 Bd3 59.Be5 Ke7 60.Bc7 Bb5 61.Bb6 Rxd2 62.Rxg6 Rg2 63.Bc5+ Kf7 64.Rf6+ Kg8
+65.Rd6 Rc2 66.Be3 Kf7 67.Kf5 Ke7 68.Rd2 Rc3 69.Bd4 Rf3+ 70.Kg6 Ke6 71.Kxh5 Rf4
+72.Bb2 c5 73.g6 Bc6 74.Kg5  1-0
+
+[Event "Vrsac"]
+[Site "Vrsac"]
+[Date "1981.??.??"]
+[Round "7"]
+[White "Petrosian, Tigran V"]
+[Black "Chandler, Murray G"]
+[Result "1/2-1/2"]
+[WhiteElo "2585"]
+[BlackElo "2530"]
+[ECO "B14"]
+
+1.c4 c5 2.Nc3 Nf6 3.Nf3 e6 4.e3 d5 5.cxd5 Nxd5 6.d4 cxd4 7.exd4 Bb4 8.Bd2 Nc6
+9.Bd3 Be7 10.Rc1 O-O 11.h4 h6 12.Bb1 f5 13.Be3 Qd6 14.Nxd5  1/2-1/2
+
+[Event "Buenos Aires"]
+[Site "Buenos Aires"]
+[Date "1964.??.??"]
+[Round "7"]
+[White "Petrosian, Tigran V"]
+[Black "Pilnik, Herman"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E90"]
+
+1.c4 e5 2.Nc3 d6 3.Nf3 g6 4.d4 Nd7 5.e4 c6 6.Be2 Bg7 7.O-O Ngf6 8.d5 c5 9.Bg5 a6
+10.a3 Qc7 11.Nd2 h5 12.Qa4 Kf8 13.b4 Bh6 14.Bxh6+ Rxh6 15.Rab1 Kg7 16.Rb2 Rh8
+17.Rfb1 Ne8 18.Qc2 Qd8 19.Nb3 b6 20.Bd3 h4 21.Qd2 Qf6 22.Qe3 Qf4 23.bxc5 dxc5
+24.Nd2 Nd6 25.Qe2 Qg5 26.h3 Qd8 27.Qe3 Rb8 28.Bc2 Nf6 29.Na4 Nd7 30.Bd3 Rb7
+31.Nc3 Re8 32.Nf3 Rh8 33.Qc1 f6 34.Rb3 b5 35.Nd2 Qc7 36.R3b2 b4 37.axb4 cxb4
+38.Na4 Nc5 39.Nxc5 Qxc5 40.Nb3 Qa7 41.c5 Nb5 42.c6 Rb8 43.Qc5 Qc7 44.Qxb4 Nd6
+45.Qc5 f5 46.Nd2 Rxb2 47.Rxb2 fxe4 48.Nxe4 Rd8 49.Nxd6 Rxd6 50.Be4 Kf6 51.Rb3  1-0
+
+[Event "URS-ch25"]
+[Site "Riga"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Petrosian, Tigran V"]
+[Black "Gipslis, Aivars"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D32"]
+
+1.c4 Nf6 2.Nf3 e6 3.Nc3 c5 4.e3 d5 5.d4 Be7 6.cxd5 exd5 7.dxc5 Bxc5 8.Be2 O-O
+9.O-O Nc6 10.b3 Be6 11.Bb2 Qe7 12.Nb5 a6 13.Nbd4 Nxd4 14.Nxd4 Ba3 15.Qc1 Bxb2
+16.Qxb2 Rac8 17.Rac1 h6 18.Bd3 Qd6 19.h3 Nd7 20.Nf5 Bxf5 21.Bxf5 g6 22.Bg4 h5
+23.Bf3 Ne5 24.Be2 Rxc1 25.Rxc1 Rd8 26.Rd1 Qf6 27.Qd4 Qe7 28.Qb6 Rd7 29.b4 Nc6
+30.Bxa6 Nxb4 31.Bb5 Rc7 32.a3 Nc2 33.Rxd5 Nxa3 34.Qd4 Rc8 35.Bd3 b5 36.Bxg6 fxg6
+37.Rd7 Qf8 38.Qd5+ Kh8 39.Qe5+ Kg8 40.Qe6+ Kh8  1-0
+
+[Event "Varna olm"]
+[Site "Varna"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Dunkelblum, Arthur"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D40"]
+
+1.Nf3 d5 2.d4 Nf6 3.c4 e6 4.Nc3 c5 5.e3 a6 6.dxc5 Bxc5 7.a3 dxc4 8.Qxd8+ Kxd8
+9.Bxc4 b5 10.Bd3 Bb7 11.Ke2 Nbd7 12.Rd1 Ke7 13.Bd2 Rac8 14.e4 Bd6 15.b4 Nb6
+16.Kf1 Ng4 17.h3 Ne5 18.Nxe5 Bxe5 19.Rac1 Rhd8 20.Ke2 Nc4 21.Bxc4 Rxc4 22.f3 Rdc8
+23.Nb1 Rxc1 24.Rxc1 Rxc1 25.Bxc1 f5 26.Kd3 Kf6 27.Nd2 fxe4+ 28.Nxe4+ Bxe4+
+29.Kxe4 Ba1 30.h4 h5 31.Be3 e5 32.Kd5 Bb2 33.Kc6 Ke6 34.Kb7 Kd5 35.Kxa6 Kc4
+36.Ka5 Bxa3 37.Bc5 g6 38.Bd6 Bb2 39.Ka6 Bc3 40.Ka5 Bd2 41.Bf8 Be1 42.Be7 Bg3
+43.Kb6  1/2-1/2
+
+[Event "IBM"]
+[Site "Amsterdam"]
+[Date "1973.??.??"]
+[Round "9"]
+[White "Petrosian, Tigran V"]
+[Black "Andersson, Ulf"]
+[Result "1/2-1/2"]
+[WhiteElo "2640"]
+[BlackElo "2555"]
+[ECO "D03"]
+
+1.d4 Nf6 2.Nf3 e6 3.Bg5 Be7 4.Nbd2 d5 5.e3 Nbd7 6.c3 O-O 7.Bd3 b6 8.b4 Bb7
+9.Qb1 h6 10.Bh4 Nh5 11.Bg3 Qc8 12.Be5 Nhf6 13.O-O c5 14.Rc1 Nxe5 15.Nxe5 Qc7
+16.a4 a5 17.b5 Rac8  1/2-1/2
+
+[Event "URS-chT"]
+[Site "URS"]
+[Date "1966.??.??"]
+[Round "?"]
+[White "Tal, Mihail"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D41"]
+
+1.e4 c6 2.d4 d5 3.exd5 cxd5 4.c4 Nf6 5.Nc3 e6 6.Nf3 Be7 7.cxd5 Nxd5 8.Bc4 Nc6
+9.O-O O-O 10.Re1 Bf6 11.Ne4 b6 12.a3 Bb7 13.Qd3 Rc8 14.Nfg5 Bxg5 15.Bxg5 f6
+16.Bd2 Qd7 17.Rad1 Nce7 18.Ba2 Rfe8 19.Bb1 Ng6 20.Qg3 f5 21.Qd6 Rcd8 22.Qxd7 Rxd7
+23.Ng5 Rde7 24.Ba2 h6 25.Nf3 Rc7 26.Rc1 Rxc1 27.Rxc1 Rc8 28.Rxc8+ Bxc8 29.h4 Bb7  1/2-1/2
+
+[Event "EU-chT Kapfenberg"]
+[Site "Kapfenberg"]
+[Date "1970.??.??"]
+[Round "2"]
+[White "Petrosian, Tigran V"]
+[Black "Portisch, Lajos"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "D59"]
+
+1.c4 Nf6 2.d4 e6 3.Nf3 d5 4.Nc3 Be7 5.Bg5 O-O 6.e3 h6 7.Bh4 b6 8.cxd5 Nxd5
+9.Bxe7 Qxe7 10.Rc1 Bb7 11.Nxd5 Bxd5 12.Bc4 Bxf3 13.gxf3 Nd7 14.Be2  1/2-1/2
+
+[Event "Moscow"]
+[Site "Moscow"]
+[Date "1971.??.??"]
+[Round "?"]
+[White "Byrne, Robert E"]
+[Black "Petrosian, Tigran V"]
+[Result "1/2-1/2"]
+[WhiteElo "2510"]
+[BlackElo "2640"]
+[ECO "B15"]
+
+1.e4 c6 2.d4 d5 3.Nc3 g6 4.h3 dxe4 5.Nxe4 Bg7 6.Nf3 Nd7 7.Bc4 Ngf6 8.Nxf6+ Nxf6
+9.O-O O-O 10.Re1 Bf5 11.c3 Qc7 12.Qe2 Rae8 13.Ne5 Nd5 14.Bb3  1/2-1/2
+
+[Event "World Championship 26th"]
+[Site "Moscow"]
+[Date "1966.??.??"]
+[Round "19"]
+[White "Spassky, Boris V"]
+[Black "Petrosian, Tigran V"]
+[Result "1-0"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C11"]
+
+1.e4 e6 2.d4 d5 3.Nc3 Nf6 4.e5 Nfd7 5.Nf3 c5 6.dxc5 Nc6 7.Bf4 Bxc5 8.Bd3 f6
+9.exf6 Nxf6 10.O-O O-O 11.Ne5 Bd7 12.Nxc6 Bxc6 13.Qe2 Qe7 14.Rae1 Rae8 15.Bg3 a6
+16.a3 Qf7 17.b4 Bd4 18.Be5 Bxe5 19.Qxe5 Nd7 20.Qg3 e5 21.f3 Qf4 22.Qxf4 Rxf4
+23.Rf2 g6 24.Rd2 Nb6 25.Rde2 Nd7 26.Nd1 b5 27.c3 Rf7 28.Bc2 Kg7 29.Bb3 h5
+30.Ne3 Nb6 31.Nc2 Nd7 32.Re3 h4 33.h3 Rf6 34.Nd4 Bb7 35.a4 Rd8 36.Ne2 bxa4
+37.Bxa4 Nb6 38.Bb3 e4 39.Nd4 Kh6 40.Rd1 Rc8 41.fxe4 dxe4 42.Ne6 Nc4 43.Bxc4 Rxc4
+44.Nc5 Rf7 45.Ra1 Kg5 46.Ra5 Kf4 47.Kf2 Bd5 48.Nb3 Ke5+ 49.Ke2 Rc6 50.Nd2 Ke6
+51.Nxe4 Bc4+ 52.Kd2 Rd7+ 53.Kc2 Kf7 54.Re5 Kg7 55.Nd2 Bb5 56.Nf3 Ba4+ 57.Kb2 Rd1
+58.R5e4 Rf1 59.Re1 Rxe1 60.Rxe1 Rf6 61.Re4 g5 62.Nxg5 Rf2+ 63.Ka3 Bc6 64.Rxh4 Bxg2
+65.Ne4 Re2 66.Nc5 Bf1 67.Rf4 Re1 68.h4  1-0
+
+[Event "URS-ch sf"]
+[Site "Moscow"]
+[Date "1947.??.??"]
+[Round "14"]
+[White "Kasparian, Genrikh"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C09"]
+
+1.e4 e6 2.d4 d5 3.Nd2 c5 4.exd5 exd5 5.Ngf3 Nc6 6.dxc5 Bxc5 7.Nb3 Bd6 8.Bg5 Nge7
+9.Qd2 O-O 10.Be2 Bf5 11.c3 Be4 12.Rd1 Qc7 13.Bd3 Bxf3 14.gxf3 Rae8 15.Kf1 Ne5
+16.Nd4 N7c6 17.Be2 Bc5 18.Rg1 Qd7 19.Rg3 f6 20.Be3 Nc4 21.Bxc4 dxc4 22.Qe2 Nxd4
+23.cxd4 Bd6 24.Qxc4+ Kh8 25.Qd5 Qa4 26.Rc1 Bxg3 27.hxg3 Re7 28.Kg2 Rd7 29.Qf5 g6
+30.Qe6 Rdf7 31.Bh6 Qe8 32.Qc4 Rg8 33.Be3 Rd7 34.d5 a6 35.Bb6 Qe5 36.Rd1 Qd6
+37.Be3 Rgd8 38.a4 g5 39.a5 Rc7  0-1
+
+[Event "Gothenburg Interzonal"]
+[Site "Gothenburg"]
+[Date "1955.??.??"]
+[Round "6"]
+[White "Petrosian, Tigran V"]
+[Black "Bronstein, David I"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A54"]
+
+1.c4 Nf6 2.Nc3 e5 3.Nf3 d6 4.d4 Nbd7 5.Bg5 Be7 6.e3 c6 7.Qc2 Qa5 8.Bd3 h6
+9.Bh4 O-O 10.O-O Re8 11.dxe5 Nxe5 12.Nxe5 dxe5 13.a3 Be6 14.b4 Qc7 15.c5 a5
+16.Rfd1 Nd5 17.Nxd5 Bxd5 18.Bg3 Bf8 19.e4 Be6  1/2-1/2
+
+[Event "Candidats Tournament"]
+[Site "Bled/Zagreb/Belgrade"]
+[Date "1959.??.??"]
+[Round "13"]
+[White "Benko, Pal C"]
+[Black "Petrosian, Tigran V"]
+[Result "0-1"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "A11"]
+
+1.Nf3 Nf6 2.g3 d5 3.Bg2 c6 4.c4 dxc4 5.Na3 b5 6.d3 cxd3 7.Ne5 a6 8.O-O Bb7
+9.Qb3 e6 10.Rd1 Qc7 11.Qxd3 Nbd7 12.Nxd7 Qxd7 13.Qc2 Qc7 14.Be3 c5 15.Bxb7 Qxb7
+16.Bxc5 Rc8 17.b4 Ne4 18.Qb2 Bxc5 19.bxc5 O-O 20.Nc4 Rxc5 21.Nd6 Qc6 22.Nxe4 Qxe4
+23.Rd4 Rc2 24.Rxe4 Rxb2 25.a4 Rb8 26.axb5 axb5 27.Ra7 g5 28.h4 b4 29.Re5 b3
+30.Rxg5+ Kf8 31.Rh5 h6 32.Rxh6 Kg7 33.Rxe6 Ra2 34.Rc7 b2  0-1
+
+[Event "World Championship 25th"]
+[Site "Moscow"]
+[Date "1963.??.??"]
+[Round "13"]
+[White "Petrosian, Tigran V"]
+[Black "Botvinnik, Mikhail"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "E18"]
+
+1.d4 Nf6 2.c4 e6 3.Nf3 b6 4.g3 Bb7 5.Bg2 Be7 6.O-O O-O 7.Nc3 Ne4 8.Nxe4 Bxe4
+9.d5 Bf6 10.Ne1 Bxg2 11.Nxg2 exd5 12.cxd5 c5 13.dxc6 dxc6 14.Qc2 c5 15.Rd1 Qe8
+16.Bf4 Nc6 17.Bd6 Be7 18.e3 Rd8 19.Bxe7 Qxe7 20.Nf4 g6 21.Qa4 Ne5 22.Rxd8 Rxd8
+23.Rd1 c4 24.e4 b5 25.Rxd8+ Qxd8 26.Qxb5 Qd1+ 27.Kg2 Qf3+ 28.Kg1 Qd1+ 29.Kg2 Qf3+
+30.Kg1 Qxe4 31.Qd5 Qxd5 32.Nxd5 Nd3 33.b4 cxb3 34.axb3 f5 35.b4 Kf7 36.b5 Ne5
+37.b6 a5 38.Kf1 Ke6 39.b7 Nc6 40.Nc7+ Kd6 41.Na6 a4 42.Ke2 a3 43.Nb4 Nb8
+44.Kd3 Kc7 45.Kc2 Kxb7 46.Kb3 Kb6 47.Kxa3 Kc5 48.Kb3 Kd4 49.Kc2 Ke4 50.Kd2 Kf3
+51.Ke1 Kg2 52.h4 Kf3 53.Nd3 Nd7 54.Kf1  1/2-1/2
+
+[Event "Belgrade"]
+[Site "Belgrade"]
+[Date "1954.??.??"]
+[Round "18"]
+[White "Petrosian, Tigran V"]
+[Black "Trifunovic, Petar"]
+[Result "1/2-1/2"]
+[WhiteElo ""]
+[BlackElo ""]
+[ECO "C45"]
+
+1.e4 e5 2.Nf3 Nc6 3.d4 exd4 4.Nxd4 Bc5 5.Nb3 Bb4+ 6.Bd2 Bxd2+ 7.Qxd2 Nf6
+8.Nc3 O-O 9.O-O-O d6 10.f3 Be6 11.Nd4 Nxd4 12.Qxd4 Nd7 13.f4 Nb6 14.Be2 Bd7
+15.h4 Bc6 16.g4 Qe7 17.h5 f6 18.Bd3 Rae8 19.Rhg1 Kh8 20.Rdf1 Bd7  1/2-1/2

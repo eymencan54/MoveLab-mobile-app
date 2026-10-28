@@ -41,3 +41,20 @@ lib/firebase_options.dart
 debug-info/
 android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
+
+# Güvenlik, Anahtarlar ve Sertifikalar
+*.jks
+*.keystore
+*.properties
+*.token
+*.key
+*.env
+*.private
+*.real
+*.bak
+
+# Geçici çalışma, log ve taslak dosyaları
+/*.txt
+!CMakeLists.txt
+scratch_board.dart
+test_chess.dart

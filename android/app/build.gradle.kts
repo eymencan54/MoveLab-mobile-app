@@ -3,6 +3,7 @@ import java.util.Properties
 
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
     // START: FlutterFire Configuration
     id("com.google.gms.google-services")
     // END: FlutterFire Configuration
@@ -58,4 +59,12 @@ kotlin {
 
 flutter {
     source = "../.."
+}
+
+configurations.all {
+    resolutionStrategy {
+        // Removed force("androidx.browser:browser:1.8.0") as it breaks flutter_web_auth_2's AuthTabIntent
+        force("androidx.core:core:1.15.0")
+        force("androidx.core:core-ktx:1.15.0")
+    }
 }
