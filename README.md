@@ -283,4 +283,4 @@ this software under the terms of the Apache 2.0 license.
 
 Developed by **Eymen Can Orman**
 
-[GitHub: @eymencanorman](https://github.com/eymenca54)
+[GitHub: @eymencanorman](https://github.com/eymencan54)
