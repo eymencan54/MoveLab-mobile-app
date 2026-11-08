@@ -279,6 +279,16 @@ this software under the terms of the Apache 2.0 license.
 
 ---
 
+# 📝 Engineering Articles & Case Study
+
+Read the full technical deep-dive by **Eymen Can Orman** on the architecture and engineering challenges solved while building MoveLab:
+
+* **Medium:** [Building MoveLab: 7 Real-World Engineering Challenges I Solved While Creating a Mobile Chess Analysis Engine in Flutter](https://medium.com/@eymencanorman09/building-movelab-7-real-world-engineering-challenges-i-solved-while-creating-a-mobile-chess-3a50d44b6032)
+* **DEV Community (Dev.to):** [Building MoveLab: 7 Real-World Engineering Challenges I Solved While Creating a Mobile Chess Analysis Engine in Flutter](https://dev.to/eymencan54/building-movelab-7-real-world-engineering-challenges-i-solved-while-creating-a-mobile-chess-2imi)
+* **Hashnode:** [Building MoveLab: 7 Real-World Engineering Challenges I Solved While Creating a Mobile Chess Analysis Engine in Flutter](https://movelab.hashnode.dev/building-movelab-7-real-world-engineering-challenges-i-solved-while-creating-a-mobile-chess-analysis-engine-in-flutter?utm_source=hashnode&utm_medium=feed)
+
+---
+
 # 👨‍💻 Developer
 
 Developed by **Eymen Can Orman**
