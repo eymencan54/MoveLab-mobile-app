@@ -8596,7 +8596,7 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(
           color: const Color(0xFF151B2B).withValues(alpha: 0.92),
           borderRadius: borderRadius,
-          border: Border.all(color: color.withValues(alpha: 0.85), width: 1.2),
+          border: Border.all(color: color.withValues(alpha: 0.58), width: 1.15),
           image: DecorationImage(
             image: const AssetImage('assets/button_texture.jpg'),
             fit: BoxFit.cover,
@@ -8715,7 +8715,7 @@ class _HomePageState extends State<HomePage> {
           child: _buildTexturedButton(
             label: LanguageService.get('library_saved_matches'),
             icon: Icons.library_books,
-            color: const Color(0xFFE57373),
+            color: const Color(0xFFD97777), // Balanced soft coral red
             expandToFill: true,
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const LibraryPage())),
@@ -8726,7 +8726,7 @@ class _HomePageState extends State<HomePage> {
           child: _buildTexturedButton(
             label: LanguageService.get('puzzles'),
             icon: Icons.extension,
-            color: Colors.orangeAccent,
+            color: const Color(0xFFDBA060), // Balanced warm amber-orange
             expandToFill: true,
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const PuzzlesPage())),
@@ -8741,7 +8741,7 @@ class _HomePageState extends State<HomePage> {
           child: _buildTexturedButton(
             label: LanguageService.get('master_archive'),
             icon: Icons.workspace_premium,
-            color: Colors.amberAccent,
+            color: const Color(0xFFCBB168), // Muted antique gold (eye-friendly)
             expandToFill: true,
             onPressed: () => Navigator.push(
                 context,
@@ -8754,7 +8754,7 @@ class _HomePageState extends State<HomePage> {
           child: _buildTexturedButton(
             label: LanguageService.get('opening_trainer'),
             icon: Icons.menu_book,
-            color: const Color(0xFF81C784),
+            color: const Color(0xFF7CB884), // Balanced sage green
             expandToFill: true,
             onPressed: () => Navigator.push(
                 context,
@@ -8771,7 +8771,7 @@ class _HomePageState extends State<HomePage> {
           child: _buildTexturedButton(
             label: LanguageService.get('play_vs_bot'),
             icon: Icons.smart_toy,
-            color: Colors.blueAccent,
+            color: const Color(0xFF729BE0), // Balanced slate blue
             expandToFill: true,
             onPressed: () => Navigator.push(
                 context,
@@ -8784,7 +8784,7 @@ class _HomePageState extends State<HomePage> {
           child: _buildTexturedButton(
             label: LanguageService.get('free_analyze'),
             icon: Icons.analytics,
-            color: Colors.purpleAccent,
+            color: const Color(0xFFA982D9), // Balanced soft lavender purple
             expandToFill: true,
             onPressed: () => Navigator.push(
                 context,

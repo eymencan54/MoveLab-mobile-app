@@ -84,7 +84,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 0.0,
       baseAngle: -0.14,
       metallicStops: _goldRelief,
-      opacity: 0.11,
+      opacity: 0.060,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.queen,
@@ -96,7 +96,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 1.3,
       baseAngle: 0.12,
       metallicStops: _silverRelief,
-      opacity: 0.09,
+      opacity: 0.048,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.rook,
@@ -108,7 +108,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 2.5,
       baseAngle: 0.08,
       metallicStops: _bronzeRelief,
-      opacity: 0.09,
+      opacity: 0.050,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.bishop,
@@ -120,7 +120,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 3.4,
       baseAngle: -0.10,
       metallicStops: _silverRelief,
-      opacity: 0.085,
+      opacity: 0.045,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.king,
@@ -132,7 +132,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 4.5,
       baseAngle: 0.09,
       metallicStops: _goldRelief,
-      opacity: 0.11,
+      opacity: 0.060,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.pawn,
@@ -144,7 +144,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 0.8,
       baseAngle: -0.08,
       metallicStops: _bronzeRelief,
-      opacity: 0.09,
+      opacity: 0.050,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.knight,
@@ -156,7 +156,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 2.1,
       baseAngle: 0.15,
       metallicStops: _silverRelief,
-      opacity: 0.09,
+      opacity: 0.048,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.rook,
@@ -168,7 +168,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 5.2,
       baseAngle: -0.11,
       metallicStops: _goldRelief,
-      opacity: 0.10,
+      opacity: 0.055,
     ),
   ];
 
@@ -177,7 +177,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 26),
+      duration: const Duration(seconds: 54),
     )..repeat();
   }
 
