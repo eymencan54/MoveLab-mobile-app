@@ -56,21 +56,21 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
   static const Color _antiqueGold = Color(0xFFD4AF37);
 
   static const List<Color> _goldRelief = [
-    Color(0xFFEBD28E),
-    Color(0xFFA98642),
-    Color(0xFF564220),
+    Color(0xFFC8AF70),
+    Color(0xFF8C6E36),
+    Color(0xFF453418),
   ];
 
   static const List<Color> _silverRelief = [
-    Color(0xFFDCE3EC),
-    Color(0xFF8C99AD),
-    Color(0xFF434C5C),
+    Color(0xFF9AA5B6),
+    Color(0xFF667387),
+    Color(0xFF333B4A),
   ];
 
   static const List<Color> _bronzeRelief = [
-    Color(0xFFD9B282),
-    Color(0xFF946C42),
-    Color(0xFF4A331E),
+    Color(0xFFB89468),
+    Color(0xFF7B5935),
+    Color(0xFF3D2917),
   ];
 
   static const List<_FloatingImperialPiece> _pieces = [
@@ -84,7 +84,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 0.0,
       baseAngle: -0.14,
       metallicStops: _goldRelief,
-      opacity: 0.24,
+      opacity: 0.11,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.queen,
@@ -96,7 +96,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 1.3,
       baseAngle: 0.12,
       metallicStops: _silverRelief,
-      opacity: 0.21,
+      opacity: 0.09,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.rook,
@@ -108,7 +108,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 2.5,
       baseAngle: 0.08,
       metallicStops: _bronzeRelief,
-      opacity: 0.18,
+      opacity: 0.09,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.bishop,
@@ -120,7 +120,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 3.4,
       baseAngle: -0.10,
       metallicStops: _silverRelief,
-      opacity: 0.20,
+      opacity: 0.085,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.king,
@@ -132,7 +132,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 4.5,
       baseAngle: 0.09,
       metallicStops: _goldRelief,
-      opacity: 0.24,
+      opacity: 0.11,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.pawn,
@@ -144,7 +144,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 0.8,
       baseAngle: -0.08,
       metallicStops: _bronzeRelief,
-      opacity: 0.19,
+      opacity: 0.09,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.knight,
@@ -156,7 +156,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 2.1,
       baseAngle: 0.15,
       metallicStops: _silverRelief,
-      opacity: 0.21,
+      opacity: 0.09,
     ),
     _FloatingImperialPiece(
       piece: _StauntonPiece.rook,
@@ -168,7 +168,7 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
       phase: 5.2,
       baseAngle: -0.11,
       metallicStops: _goldRelief,
-      opacity: 0.22,
+      opacity: 0.10,
     ),
   ];
 
@@ -283,16 +283,16 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
 
               // Seamless engraved Ottoman-Roman-Chess relief tile
               final Widget engravedTile = Opacity(
-                opacity: 0.16,
+                opacity: 0.25,
                 child: Image.asset(
                   'assets/button_texture.jpg',
                   width: width,
                   height: height,
                   fit: BoxFit.cover,
                   color: Color.lerp(
-                    const Color(0xFF9E8A63),
+                    const Color(0xFFA89268),
                     widget.accentColor,
-                    0.25,
+                    0.22,
                   ),
                   colorBlendMode: BlendMode.modulate,
                 ),
@@ -369,10 +369,10 @@ class _ChessSilhouetteBackgroundState extends State<ChessSilhouetteBackground>
                         decoration: BoxDecoration(
                           gradient: RadialGradient(
                             center: Alignment.center,
-                            radius: 1.05,
+                            radius: 1.08,
                             colors: [
-                              Color(0x660B0F19),
-                              Color(0xCC0B0F19),
+                              Color(0x440B0F19),
+                              Color(0xB30B0F19),
                             ],
                           ),
                         ),

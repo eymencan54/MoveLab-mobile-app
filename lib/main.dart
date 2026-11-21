@@ -25,6 +25,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'iap_service.dart';
 import 'widgets/chess_silhouette_background.dart';
+import 'widgets/flip_player_style_card.dart';
 // =====================================================================
 // 0. SES SİSTEMİ VE AYARLAR
 // =====================================================================
@@ -8918,9 +8919,10 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Positioned.fill(
-            child: ChessSilhouetteBackground(accentColor: themeColor),
-          ),
+          if (_playerProfile == null)
+            Positioned.fill(
+              child: ChessSilhouetteBackground(accentColor: themeColor),
+            ),
           SafeArea(
             child: LayoutBuilder(
               builder: (context, constraints) {
@@ -9225,7 +9227,15 @@ class _HomePageState extends State<HomePage> {
                           ),
                           const SizedBox(height: 20),
                           if (_playerStyleProfile != null)
-                            _buildPlayerStyleWidget(_playerStyleProfile!),
+                            FlipPlayerStyleCard(
+                              frontCard:
+                                  _buildPlayerStyleWidget(_playerStyleProfile!),
+                              accentColor: themeColor,
+                              playerName:
+                                  (_playerProfile!['username'] ?? 'Player')
+                                      .toString(),
+                              isEnglish: LanguageService.currentLang == 'en',
+                            ),
                           const SizedBox(height: 25),
                           Align(
                               alignment: Alignment.centerLeft,
