@@ -2,7 +2,7 @@ name: "MoveLab"
 description: Kapsamlı bir satranç analiz ve istatistik uygulaması.
 publish_to: 'none'
 
-version: 1.0.17+33
+version: 1.0.18+34
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

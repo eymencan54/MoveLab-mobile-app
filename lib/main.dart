@@ -8706,7 +8706,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildHomeActionGrid({
     required double gap,
-    required bool expandRows,
+    required double rowHeight,
   }) {
     final row1 = Row(
       children: [
@@ -8715,7 +8715,7 @@ class _HomePageState extends State<HomePage> {
             label: LanguageService.get('library_saved_matches'),
             icon: Icons.library_books,
             color: const Color(0xFFE57373),
-            expandToFill: expandRows,
+            expandToFill: true,
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const LibraryPage())),
           ),
@@ -8726,7 +8726,7 @@ class _HomePageState extends State<HomePage> {
             label: LanguageService.get('puzzles'),
             icon: Icons.extension,
             color: Colors.orangeAccent,
-            expandToFill: expandRows,
+            expandToFill: true,
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const PuzzlesPage())),
           ),
@@ -8741,7 +8741,7 @@ class _HomePageState extends State<HomePage> {
             label: LanguageService.get('master_archive'),
             icon: Icons.workspace_premium,
             color: Colors.amberAccent,
-            expandToFill: expandRows,
+            expandToFill: true,
             onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -8754,7 +8754,7 @@ class _HomePageState extends State<HomePage> {
             label: LanguageService.get('opening_trainer'),
             icon: Icons.menu_book,
             color: const Color(0xFF81C784),
-            expandToFill: expandRows,
+            expandToFill: true,
             onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -8771,7 +8771,7 @@ class _HomePageState extends State<HomePage> {
             label: LanguageService.get('play_vs_bot'),
             icon: Icons.smart_toy,
             color: Colors.blueAccent,
-            expandToFill: expandRows,
+            expandToFill: true,
             onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -8784,7 +8784,7 @@ class _HomePageState extends State<HomePage> {
             label: LanguageService.get('free_analyze'),
             icon: Icons.analytics,
             color: Colors.purpleAccent,
-            expandToFill: expandRows,
+            expandToFill: true,
             onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -8794,25 +8794,13 @@ class _HomePageState extends State<HomePage> {
       ],
     );
 
-    if (expandRows) {
-      return Column(
-        children: [
-          Expanded(child: row1),
-          SizedBox(height: gap),
-          Expanded(child: row2),
-          SizedBox(height: gap),
-          Expanded(child: row3),
-        ],
-      );
-    }
-
     return Column(
       children: [
-        IntrinsicHeight(child: row1),
+        SizedBox(height: rowHeight, child: row1),
         SizedBox(height: gap),
-        IntrinsicHeight(child: row2),
+        SizedBox(height: rowHeight, child: row2),
         SizedBox(height: gap),
-        IntrinsicHeight(child: row3),
+        SizedBox(height: rowHeight, child: row3),
       ],
     );
   }
@@ -8889,8 +8877,6 @@ class _HomePageState extends State<HomePage> {
           .any((h) => h.toLowerCase() == name.toLowerCase()))
     ];
 
-    final keyboardOpen = MediaQuery.of(context).viewInsets.bottom > 0;
-
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) {
@@ -8938,20 +8924,17 @@ class _HomePageState extends State<HomePage> {
           SafeArea(
             child: LayoutBuilder(
               builder: (context, constraints) {
-                final viewportHeight = constraints.maxHeight;
+                final mq = MediaQuery.of(context);
+                final safeScreenHeight =
+                    (mq.size.height - mq.padding.vertical).clamp(480.0, 1200.0);
                 final viewportWidth = constraints.maxWidth;
                 final hPad = viewportWidth * 0.05;
-                final gap = (viewportHeight * 0.013).clamp(6.0, 14.0);
+                final gap = (safeScreenHeight * 0.013).clamp(6.0, 13.0);
                 final primaryBtnVPad =
-                    (viewportHeight * 0.018).clamp(10.0, 16.0);
-
-                final bool fitSingleScreen = _isHeaderVisible &&
-                    _playerProfile == null &&
-                    !_isLoading &&
-                    _errorMessage.isEmpty &&
-                    !_showSearchHistory &&
-                    !keyboardOpen &&
-                    viewportHeight >= 460;
+                    (safeScreenHeight * 0.017).clamp(10.0, 15.0);
+                final logoHeight = (safeScreenHeight * 0.21).clamp(105.0, 175.0);
+                final gridRowHeight =
+                    (safeScreenHeight * 0.125).clamp(56.0, 90.0);
 
                 final Widget topBar = Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -9025,7 +9008,7 @@ class _HomePageState extends State<HomePage> {
                   decoration: InputDecoration(
                     isDense: true,
                     contentPadding: EdgeInsets.symmetric(
-                      vertical: (viewportHeight * 0.017).clamp(10.0, 16.0),
+                      vertical: (safeScreenHeight * 0.016).clamp(10.0, 15.0),
                       horizontal: viewportWidth * 0.035,
                     ),
                     hintText:
@@ -9042,94 +9025,38 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
 
-                if (fitSingleScreen) {
-                  return SizedBox(
-                    height: viewportHeight,
-                    width: viewportWidth,
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(
-                        hPad,
-                        viewportHeight * 0.008,
-                        hPad,
-                        viewportHeight * 0.018,
-                      ),
-                      child: Column(
-                        children: [
-                          topBar,
-                          Flexible(
-                            flex: 24,
-                            child: Center(
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: viewportHeight * 0.006),
-                                child: Image.asset(
-                                  'assets/logoyazili.png',
-                                  fit: BoxFit.contain,
-                                  errorBuilder: (context, error, stackTrace) =>
-                                      FittedBox(
-                                    child: Icon(Icons.psychology,
-                                        color: themeColor),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          platformChips,
-                          SizedBox(height: gap),
-                          searchField,
-                          SizedBox(height: gap),
-                          _buildPrimaryActionRow(
-                            themeColor: themeColor,
-                            gap: gap,
-                            vPad: primaryBtnVPad,
-                          ),
-                          SizedBox(height: gap),
-                          Expanded(
-                            flex: 48,
-                            child: _buildHomeActionGrid(
-                              gap: gap,
-                              expandRows: true,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                }
-
                 return SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       hPad,
-                      viewportHeight * 0.008,
+                      safeScreenHeight * 0.008,
                       hPad,
-                      viewportHeight * 0.025,
+                      safeScreenHeight * 0.02,
                     ),
                     child: Column(
                       children: [
                         topBar,
                         AnimatedSize(
-                          duration: const Duration(milliseconds: 500),
+                          duration: const Duration(milliseconds: 450),
                           curve: Curves.easeInOutCubic,
                           alignment: Alignment.topCenter,
                           child: _isHeaderVisible
                               ? Column(
                                   children: [
-                                    ConstrainedBox(
-                                      constraints: BoxConstraints(
-                                        maxHeight: viewportHeight * 0.22,
-                                      ),
+                                    SizedBox(
+                                      height: logoHeight,
                                       child: Image.asset(
                                         'assets/logoyazili.png',
                                         fit: BoxFit.contain,
                                         errorBuilder:
                                             (context, error, stackTrace) =>
                                                 Icon(Icons.psychology,
-                                                    size: viewportHeight * 0.1,
+                                                    size: logoHeight * 0.55,
                                                     color: themeColor),
                                       ),
                                     ),
-                                    SizedBox(height: gap * 0.5),
+                                    SizedBox(height: gap * 0.4),
                                     platformChips,
                                     SizedBox(height: gap),
                                   ],
@@ -9155,7 +9082,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   child: ConstrainedBox(
                                     constraints: BoxConstraints(
-                                        maxHeight: viewportHeight * 0.30),
+                                        maxHeight: safeScreenHeight * 0.28),
                                     child: ListView.separated(
                                       padding: const EdgeInsets.all(8),
                                       shrinkWrap: true,
@@ -9202,7 +9129,7 @@ class _HomePageState extends State<HomePage> {
                               : const SizedBox.shrink(),
                         ),
                         AnimatedSize(
-                          duration: const Duration(milliseconds: 600),
+                          duration: const Duration(milliseconds: 500),
                           curve: Curves.easeOutCubic,
                           alignment: Alignment.topCenter,
                           child: _isHeaderVisible
@@ -9217,7 +9144,7 @@ class _HomePageState extends State<HomePage> {
                                     SizedBox(height: gap),
                                     _buildHomeActionGrid(
                                       gap: gap,
-                                      expandRows: false,
+                                      rowHeight: gridRowHeight,
                                     ),
                                     SizedBox(height: gap),
                                   ],
@@ -9228,7 +9155,7 @@ class _HomePageState extends State<HomePage> {
                         if (_isLoading)
                           Padding(
                               padding:
-                                  EdgeInsets.only(top: viewportHeight * 0.05),
+                                  EdgeInsets.only(top: safeScreenHeight * 0.05),
                               child: CircularProgressIndicator(
                                   color: themeColor)),
                         if (_errorMessage.isNotEmpty)
