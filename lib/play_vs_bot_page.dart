@@ -45,8 +45,8 @@ const List<BotPersonality> kBotPersonalities = [
     titleEn: 'Curious Beginner',
     descTr: 'Satrançta yeniyim! Bazen taş uyuturum ama değişik hamleler denemeyi çok seviyorum.',
     descEn: 'I am new to chess! I sometimes blunder pieces but I love trying creative moves.',
-    avatarIcon: Icons.child_care,
-    badgeColor: Colors.greenAccent,
+    avatarIcon: Icons.school_rounded,
+    badgeColor: Color(0xFF66BB6A),
     playStyle: 'random',
   ),
   BotPersonality(
@@ -58,8 +58,8 @@ const List<BotPersonality> kBotPersonalities = [
     titleEn: 'Solid Fortress',
     descTr: 'Sürekli taş takası ararım, risk almam ve sağlam bir savunma kalesi örerim.',
     descEn: 'I look for piece trades, avoid risks, and build a solid defensive fortress.',
-    avatarIcon: Icons.shield,
-    badgeColor: Colors.blueAccent,
+    avatarIcon: Icons.shield_rounded,
+    badgeColor: Color(0xFF5C6BC0),
     playStyle: 'defensive',
   ),
   BotPersonality(
@@ -71,8 +71,8 @@ const List<BotPersonality> kBotPersonalities = [
     titleEn: 'Aggressive Attacker',
     descTr: 'Saldırı en iyi savunmadır! Feda yapmaya ve şahına saldırmaya bayılırım!',
     descEn: 'Attack is the best defense! I love sacrifices and targeting your king directly!',
-    avatarIcon: Icons.flash_on,
-    badgeColor: Colors.orangeAccent,
+    avatarIcon: Icons.bolt_rounded,
+    badgeColor: Color(0xFFFFB74D),
     playStyle: 'aggressive',
   ),
   BotPersonality(
@@ -84,8 +84,8 @@ const List<BotPersonality> kBotPersonalities = [
     titleEn: 'Positional Genius',
     descTr: 'Her hamlem 10 adım sonrasını planlar. Konumsal üstünlüğü ve merkez kontrolünü severim.',
     descEn: 'Every move plans 10 steps ahead. I value positional dominance and center control.',
-    avatarIcon: Icons.psychology,
-    badgeColor: Colors.purpleAccent,
+    avatarIcon: Icons.psychology_rounded,
+    badgeColor: Color(0xFF9575CD),
     playStyle: 'positional',
   ),
   BotPersonality(
@@ -97,8 +97,8 @@ const List<BotPersonality> kBotPersonalities = [
     titleEn: 'Invincible Legend',
     descTr: 'Kusursuz satranç. En küçük hatanı affetmem ve oyunu acımasızca bitiririm.',
     descEn: 'Flawless chess. I will punish your slightest mistake and crush your position.',
-    avatarIcon: Icons.military_tech,
-    badgeColor: Colors.amberAccent,
+    avatarIcon: Icons.military_tech_rounded,
+    badgeColor: Color(0xFFD4AF37),
     playStyle: 'master',
   ),
 ];
@@ -119,46 +119,51 @@ class _BotSelectionPageState extends State<BotSelectionPage> {
     final isEn = LanguageService.currentLang == 'en';
 
     return Scaffold(
-      backgroundColor: const Color(0xFF0F1523),
+      backgroundColor: const Color(0xFF0B101E),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF151C2C),
+        backgroundColor: const Color(0xFF151B2B),
         elevation: 0,
-        centerTitle: true,
         title: Text(
           LanguageService.get('play_vs_bot'),
           style: const TextStyle(
-            fontWeight: FontWeight.w800,
+            fontWeight: FontWeight.bold,
             fontSize: 18,
-            letterSpacing: 1.0,
             color: Colors.white,
           ),
         ),
       ),
       body: Column(
         children: [
-          // Renk Seçim Çubuğu
+          // Renk Seçim Çubuğu (MoveLab Indigo Segmented Control)
           Container(
-            margin: const EdgeInsets.all(16),
+            margin: const EdgeInsets.fromLTRB(16, 14, 16, 10),
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             decoration: BoxDecoration(
-              color: const Color(0xFF1E2738),
+              color: const Color(0xFF151B2B),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  isEn ? "Your Color:" : "Taş Rengin:",
-                  style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.bold, fontSize: 14),
+                  isEn ? "Your Color" : "Taş Rengin",
+                  style: const TextStyle(
+                    color: Colors.white70,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 13.5,
+                  ),
                 ),
                 Row(
                   children: [
-                    _buildColorButton('white', isEn ? "White" : "Beyaz", Icons.circle, Colors.white),
+                    _buildColorButton(
+                        'white', isEn ? "White" : "Beyaz", Icons.circle, Colors.white),
                     const SizedBox(width: 6),
-                    _buildColorButton('black', isEn ? "Black" : "Siyah", Icons.circle, Colors.black),
+                    _buildColorButton('black', isEn ? "Black" : "Siyah",
+                        Icons.circle, const Color(0xFF2D3548)),
                     const SizedBox(width: 6),
-                    _buildColorButton('random', isEn ? "Random" : "Rastgele", Icons.shuffle, Colors.amberAccent),
+                    _buildColorButton('random', isEn ? "Random" : "Rastgele",
+                        Icons.shuffle_rounded, Colors.white70),
                   ],
                 ),
               ],
@@ -168,7 +173,7 @@ class _BotSelectionPageState extends State<BotSelectionPage> {
           // Bot Listesi
           Expanded(
             child: ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
               itemCount: kBotPersonalities.length,
               itemBuilder: (context, index) {
                 final bot = kBotPersonalities[index];
@@ -181,7 +186,8 @@ class _BotSelectionPageState extends State<BotSelectionPage> {
     );
   }
 
-  Widget _buildColorButton(String colorKey, String label, IconData icon, Color iconColor) {
+  Widget _buildColorButton(
+      String colorKey, String label, IconData icon, Color iconColor) {
     final isSelected = _selectedColor == colorKey;
     return InkWell(
       onTap: () {
@@ -193,21 +199,38 @@ class _BotSelectionPageState extends State<BotSelectionPage> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
         decoration: BoxDecoration(
-          color: isSelected ? Colors.purpleAccent.withValues(alpha: 0.2) : Colors.transparent,
+          color: isSelected
+              ? const Color(0xFF5C6BC0).withValues(alpha: 0.22)
+              : Colors.transparent,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: isSelected ? Colors.purpleAccent : Colors.white.withValues(alpha: 0.15),
+            color: isSelected
+                ? const Color(0xFF5C6BC0)
+                : Colors.white.withValues(alpha: 0.10),
           ),
         ),
         child: Row(
           children: [
-            Icon(icon, size: 14, color: icon == Icons.circle && iconColor == Colors.black ? Colors.grey[400] : iconColor),
-            const SizedBox(width: 4),
+            if (icon == Icons.circle)
+              Container(
+                width: 11,
+                height: 11,
+                decoration: BoxDecoration(
+                  color: iconColor,
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white54, width: 1),
+                ),
+              )
+            else
+              Icon(icon,
+                  size: 14,
+                  color: isSelected ? Colors.white : Colors.white60),
+            const SizedBox(width: 5),
             Text(
               label,
               style: TextStyle(
-                color: isSelected ? Colors.purpleAccent : Colors.white70,
-                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                color: isSelected ? Colors.white : Colors.white60,
+                fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                 fontSize: 12,
               ),
             ),
@@ -219,118 +242,127 @@ class _BotSelectionPageState extends State<BotSelectionPage> {
 
   Widget _buildBotCard(BotPersonality bot, bool isEn) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 14),
+      margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
-        color: const Color(0xFF151C2C),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: bot.badgeColor.withValues(alpha: 0.5), width: 1.5),
-        boxShadow: [
-          BoxShadow(color: bot.badgeColor.withValues(alpha: 0.1), blurRadius: 10, offset: const Offset(0, 4)),
-        ],
+        color: const Color(0xFF151B2B),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          color: Colors.white.withValues(alpha: 0.08),
+          width: 1,
+        ),
       ),
       child: Material(
         color: Colors.transparent,
+        borderRadius: BorderRadius.circular(14),
         child: InkWell(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(14),
+          splashColor: bot.badgeColor.withValues(alpha: 0.12),
           onTap: () {
             PlayerColor playerColor;
             if (_selectedColor == 'random') {
-              playerColor = Random().nextBool() ? PlayerColor.white : PlayerColor.black;
+              playerColor =
+                  Random().nextBool() ? PlayerColor.white : PlayerColor.black;
             } else {
-              playerColor = _selectedColor == 'white' ? PlayerColor.white : PlayerColor.black;
+              playerColor = _selectedColor == 'white'
+                  ? PlayerColor.white
+                  : PlayerColor.black;
             }
 
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => PlayVsBotGamePage(bot: bot, playerColor: playerColor),
+                builder: (context) =>
+                    PlayVsBotGamePage(bot: bot, playerColor: playerColor),
               ),
             );
           },
           child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            padding: const EdgeInsets.all(14),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  children: [
-                    Container(
-                      width: 52,
-                      height: 52,
-                      decoration: BoxDecoration(
-                        color: bot.badgeColor.withValues(alpha: 0.15),
-                        shape: BoxShape.circle,
-                        border: Border.all(color: bot.badgeColor, width: 2),
-                      ),
-                      child: Icon(bot.avatarIcon, color: bot.badgeColor, size: 28),
+                Container(
+                  width: 46,
+                  height: 46,
+                  decoration: BoxDecoration(
+                    color: bot.badgeColor.withValues(alpha: 0.14),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: bot.badgeColor.withValues(alpha: 0.35),
+                      width: 1,
                     ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                isEn ? bot.nameEn : bot.nameTr,
-                                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 17),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                                decoration: BoxDecoration(
-                                  color: bot.badgeColor.withValues(alpha: 0.2),
-                                  borderRadius: BorderRadius.circular(6),
-                                  border: Border.all(color: bot.badgeColor),
-                                ),
-                                child: Text(
-                                  "${bot.elo} ELO",
-                                  style: TextStyle(color: bot.badgeColor, fontWeight: FontWeight.bold, fontSize: 12),
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            isEn ? bot.titleEn : bot.titleTr,
-                            style: TextStyle(color: bot.badgeColor.withValues(alpha: 0.9), fontSize: 13, fontStyle: FontStyle.italic),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                  ),
+                  child: Icon(bot.avatarIcon, color: bot.badgeColor, size: 24),
                 ),
-                const SizedBox(height: 12),
-                Text(
-                  isEn ? bot.descEn : bot.descTr,
-                  style: const TextStyle(color: Colors.white70, fontSize: 13.5, height: 1.3),
-                ),
-                const SizedBox(height: 14),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [bot.badgeColor.withValues(alpha: 0.8), bot.badgeColor]),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
                         children: [
-                          Icon(Icons.play_arrow, color: bot.elo > 2000 ? Colors.black : Colors.white, size: 18),
-                          const SizedBox(width: 4),
-                          Text(
-                            isEn ? "Play vs. Bot" : "Meydan Oku",
-                            style: TextStyle(
-                              color: bot.elo > 2000 ? Colors.black : Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13,
+                          Expanded(
+                            child: Text(
+                              isEn ? bot.nameEn : bot.nameTr,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 15.5,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF0E1422),
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(
+                                color: bot.badgeColor.withValues(alpha: 0.4),
+                              ),
+                            ),
+                            child: Text(
+                              "${bot.elo} ELO",
+                              style: TextStyle(
+                                color: bot.badgeColor,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 11.5,
+                              ),
                             ),
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 3),
+                      Text(
+                        isEn ? bot.titleEn : bot.titleTr,
+                        style: const TextStyle(
+                          color: Colors.white54,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        isEn ? bot.descEn : bot.descTr,
+                        style: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 12.5,
+                          height: 1.35,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 8),
+                const Icon(
+                  Icons.chevron_right_rounded,
+                  color: Colors.white38,
+                  size: 22,
                 ),
               ],
             ),
@@ -797,63 +829,72 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
   Widget build(BuildContext context) {
     final isEn = LanguageService.currentLang == 'en';
     final bot = widget.bot;
+    final isWhiteTurn = _engineChess.turn == chess_engine.Color.WHITE;
+    final isPlayerTurn =
+        (isWhiteTurn && widget.playerColor == PlayerColor.white) ||
+            (!isWhiteTurn && widget.playerColor == PlayerColor.black);
 
     return Scaffold(
-      backgroundColor: const Color(0xFF0F1523),
+      backgroundColor: const Color(0xFF0B101E),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF151C2C),
+        backgroundColor: const Color(0xFF151B2B),
         elevation: 0,
-        title: Row(
-          children: [
-            Icon(bot.avatarIcon, color: bot.badgeColor, size: 22),
-            const SizedBox(width: 8),
-            Expanded(
-              child: Text(
-                isEn ? "vs. ${bot.nameEn}" : "vs. ${bot.nameTr}",
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.white),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ],
+        title: Text(
+          isEn ? "vs. ${bot.nameEn}" : "vs. ${bot.nameTr}",
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+            color: Colors.white,
+          ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.swap_vert, color: Colors.white70),
+            icon: const Icon(Icons.swap_vert_rounded, color: Colors.white70),
+            tooltip: isEn ? "Flip Board" : "Tahtayı Çevir",
             onPressed: () {
               setState(() {
-                _boardOrientation = _boardOrientation == PlayerColor.white ? PlayerColor.black : PlayerColor.white;
+                _boardOrientation = _boardOrientation == PlayerColor.white
+                    ? PlayerColor.black
+                    : PlayerColor.white;
               });
             },
           ),
           IconButton(
-            icon: const Icon(Icons.refresh, color: Colors.amberAccent),
+            icon: const Icon(Icons.refresh_rounded, color: Colors.white70),
+            tooltip: isEn ? "Restart" : "Yeniden Başlat",
             onPressed: _restartGame,
           ),
         ],
       ),
       body: Column(
         children: [
-          // 1. BOT KARTI & CANLI REPLİK BALONU
+          // 1. BOT KARTI & CANLI DURUM
           Container(
-            margin: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+            margin: const EdgeInsets.fromLTRB(14, 10, 14, 8),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF151C2C),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: bot.badgeColor.withValues(alpha: 0.4)),
+              color: const Color(0xFF151B2B),
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(
+                color: Colors.white.withValues(alpha: 0.08),
+              ),
             ),
             child: Row(
               children: [
                 Container(
-                  width: 46,
-                  height: 46,
+                  width: 44,
+                  height: 44,
                   decoration: BoxDecoration(
-                    color: bot.badgeColor.withValues(alpha: 0.15),
-                    shape: BoxShape.circle,
-                    border: Border.all(color: bot.badgeColor, width: 2),
+                    color: bot.badgeColor.withValues(alpha: 0.14),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: bot.badgeColor.withValues(alpha: 0.38),
+                      width: 1,
+                    ),
                   ),
-                  child: Icon(bot.avatarIcon, color: bot.badgeColor, size: 24),
+                  child: Icon(bot.avatarIcon, color: bot.badgeColor, size: 22),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -861,40 +902,70 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            isEn ? bot.nameEn : bot.nameTr,
-                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),
+                          Expanded(
+                            child: Text(
+                              isEn ? bot.nameEn : bot.nameTr,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 15,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
-                          Text(
-                            "${bot.elo} ELO",
-                            style: TextStyle(color: bot.badgeColor, fontWeight: FontWeight.bold, fontSize: 12),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 7, vertical: 2),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF0E1422),
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(
+                                color: bot.badgeColor.withValues(alpha: 0.38),
+                              ),
+                            ),
+                            child: Text(
+                              "${bot.elo} ELO",
+                              style: TextStyle(
+                                color: bot.badgeColor,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 11,
+                              ),
+                            ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 4),
-                      // Replik Balonu
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF1E2738),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Row(
-                          children: [
-                            const Icon(Icons.chat_bubble_outline, color: Colors.white54, size: 14),
-                            const SizedBox(width: 6),
-                            Expanded(
-                              child: Text(
-                                _currentSpeech,
-                                style: const TextStyle(color: Colors.amberAccent, fontSize: 12.5, fontStyle: FontStyle.italic),
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
+                      const SizedBox(height: 5),
+                      Row(
+                        children: [
+                          if (_isBotThinking)
+                            const Padding(
+                              padding: EdgeInsets.only(right: 6),
+                              child: SizedBox(
+                                width: 11,
+                                height: 11,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 1.8,
+                                  color: Color(0xFF7986CB),
+                                ),
                               ),
                             ),
-                          ],
-                        ),
+                          Expanded(
+                            child: Text(
+                              _isBotThinking
+                                  ? (isEn ? "Thinking..." : "Düşünüyor...")
+                                  : _currentSpeech,
+                              style: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 12.5,
+                                height: 1.25,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -905,53 +976,85 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
 
           // 2. HAMLE GEÇMİŞİ ŞERİDİ
           Container(
-            height: 32,
-            margin: const EdgeInsets.symmetric(horizontal: 16),
+            height: 36,
+            margin: const EdgeInsets.symmetric(horizontal: 14),
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: const Color(0xFF1E2738),
-              borderRadius: BorderRadius.circular(8),
+              color: const Color(0xFF151B2B),
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.06)),
             ),
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: _moveHistory.length,
-              itemBuilder: (context, index) {
-                final move = _moveHistory[index];
-                final isWhiteMove = index % 2 == 0;
-                return Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 12),
+            child: _moveHistory.isEmpty
+                ? Align(
+                    alignment: Alignment.centerLeft,
                     child: Text(
-                      isWhiteMove ? "${(index ~/ 2) + 1}. $move" : move,
-                      style: TextStyle(
-                        color: isWhiteMove ? Colors.white : Colors.amberAccent,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 13,
+                      isEn ? "Game moves will appear here" : "Oynanan hamleler burada görünür",
+                      style: const TextStyle(
+                        color: Colors.white38,
+                        fontSize: 12,
                       ),
                     ),
+                  )
+                : ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: _moveHistory.length,
+                    itemBuilder: (context, index) {
+                      final move = _moveHistory[index];
+                      final isWhiteMove = index % 2 == 0;
+                      final isLatest = index == _moveHistory.length - 1;
+                      return Center(
+                        child: Container(
+                          margin: const EdgeInsets.only(right: 6),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 6, vertical: 3),
+                          decoration: BoxDecoration(
+                            color: isLatest
+                                ? const Color(0xFF5C6BC0)
+                                    .withValues(alpha: 0.25)
+                                : Colors.transparent,
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Text(
+                            isWhiteMove ? "${(index ~/ 2) + 1}. $move" : move,
+                            style: TextStyle(
+                              color: isLatest
+                                  ? Colors.white
+                                  : (isWhiteMove
+                                      ? Colors.white.withValues(alpha: 0.88)
+                                      : const Color(0xFF9FA8DA)),
+                              fontWeight: isLatest
+                                  ? FontWeight.w800
+                                  : FontWeight.w600,
+                              fontSize: 12.5,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
-            ),
           ),
-          const SizedBox(height: 8),
 
           // 3. SATRANÇ TAHTASI
           Expanded(
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 child: AspectRatio(
                   aspectRatio: 1.0,
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(10),
                       boxShadow: [
-                        BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 12, offset: const Offset(0, 6)),
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.45),
+                          blurRadius: 12,
+                          offset: const Offset(0, 6),
+                        ),
                       ],
                     ),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(10),
                       child: Stack(
                         clipBehavior: Clip.hardEdge,
                         children: [
@@ -970,11 +1073,17 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
                                   child: Row(
                                     children: List.generate(8, (col) {
                                       final index = row * 8 + col;
-                                      final square = _indexToSquare(index, _boardOrientation == PlayerColor.white);
-                                      final isSelected = square == selectedSquare;
-                                      final isLegalMove = legalDestinations.contains(square);
+                                      final square = _indexToSquare(
+                                          index,
+                                          _boardOrientation ==
+                                              PlayerColor.white);
+                                      final isSelected =
+                                          square == selectedSquare;
+                                      final isLegalMove =
+                                          legalDestinations.contains(square);
                                       final piece = controller.game.get(square);
-                                      final isCapture = isLegalMove && piece != null;
+                                      final isCapture =
+                                          isLegalMove && piece != null;
 
                                       Widget? highlightWidget;
                                       if (isCapture) {
@@ -984,7 +1093,10 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
                                             height: 32,
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
-                                              border: Border.all(color: Colors.redAccent.withValues(alpha: 0.8), width: 3.5),
+                                              border: Border.all(
+                                                  color: Colors.redAccent
+                                                      .withValues(alpha: 0.8),
+                                                  width: 3.5),
                                             ),
                                           ),
                                         );
@@ -994,15 +1106,20 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
                                             width: 14,
                                             height: 14,
                                             decoration: BoxDecoration(
-                                              color: Colors.black.withValues(alpha: 0.35),
+                                              color: Colors.black
+                                                  .withValues(alpha: 0.35),
                                               shape: BoxShape.circle,
                                             ),
                                           ),
                                         );
                                       } else if (isSelected) {
-                                        highlightWidget = Container(color: Colors.amber.withValues(alpha: 0.45));
+                                        highlightWidget = Container(
+                                            color: Colors.amber
+                                                .withValues(alpha: 0.45));
                                       }
-                                      return Expanded(child: highlightWidget ?? const SizedBox.shrink());
+                                      return Expanded(
+                                          child: highlightWidget ??
+                                              const SizedBox.shrink());
                                     }),
                                   ),
                                 );
@@ -1016,7 +1133,9 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
                                 child: Row(
                                   children: List.generate(8, (col) {
                                     final index = row * 8 + col;
-                                    final square = _indexToSquare(index, _boardOrientation == PlayerColor.white);
+                                    final square = _indexToSquare(
+                                        index,
+                                        _boardOrientation == PlayerColor.white);
                                     return Expanded(
                                       child: GestureDetector(
                                         behavior: HitTestBehavior.translucent,
@@ -1038,62 +1157,159 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
             ),
           ),
 
-          // 4. KONTROL BUTONLARI
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: const Color(0xFF151C2C),
-              borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-              boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.4), blurRadius: 10, offset: const Offset(0, -4))],
-            ),
+          // 4. OYUNCU SIRA GÖSTERGESİ
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _buildActionButton(
-                  icon: Icons.undo,
-                  label: isEn ? "Undo" : "Geri Al",
-                  color: Colors.orangeAccent,
-                  onTap: _undoMove,
-                ),
-                _buildActionButton(
-                  icon: Icons.refresh,
-                  label: isEn ? "Restart" : "Yeniden",
-                  color: Colors.cyanAccent,
-                  onTap: _restartGame,
-                ),
-                _buildActionButton(
-                  icon: Icons.flag,
-                  label: isEn ? "Resign" : "Pes Et",
-                  color: Colors.redAccent,
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (ctx) => AlertDialog(
-                        backgroundColor: const Color(0xFF1E2738),
-                        title: Text(isEn ? "Resign?" : "Pes mi Ediyorsun?", style: const TextStyle(color: Colors.white)),
-                        content: Text(
-                          isEn ? "Do you want to surrender this match?" : "Bu maçı bırakıp ana menüye dönmek istiyor musun?",
-                          style: const TextStyle(color: Colors.white70),
-                        ),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.pop(ctx),
-                            child: Text(isEn ? "Cancel" : "İptal", style: const TextStyle(color: Colors.white54)),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
-                            onPressed: () {
-                              Navigator.pop(ctx);
-                              Navigator.pop(context);
-                            },
-                            child: Text(isEn ? "Yes, Resign" : "Evet, Pes Et", style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-                          ),
-                        ],
+                Row(
+                  children: [
+                    Container(
+                      width: 10,
+                      height: 10,
+                      decoration: BoxDecoration(
+                        color: widget.playerColor == PlayerColor.white
+                            ? Colors.white
+                            : const Color(0xFF2D3548),
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.white54, width: 1.2),
                       ),
-                    );
-                  },
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      isEn ? "You" : "Sen",
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 13.5,
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: isPlayerTurn && !_isGameOver
+                        ? const Color(0xFF5C6BC0).withValues(alpha: 0.2)
+                        : const Color(0xFF151B2B),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: isPlayerTurn && !_isGameOver
+                          ? const Color(0xFF5C6BC0).withValues(alpha: 0.6)
+                          : Colors.white.withValues(alpha: 0.08),
+                    ),
+                  ),
+                  child: Text(
+                    _isGameOver
+                        ? (isEn ? "Game Over" : "Oyun Bitti")
+                        : (isPlayerTurn
+                            ? (isEn ? "Your Turn" : "Sıra Sende")
+                            : (isEn ? "Bot's Turn" : "Botun Sırası")),
+                    style: TextStyle(
+                      color: isPlayerTurn && !_isGameOver
+                          ? Colors.white
+                          : Colors.white54,
+                      fontSize: 11.5,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
               ],
+            ),
+          ),
+
+          // 5. KONTROL BUTONLARI (Sade, Tutarlı MoveLab Dock)
+          Container(
+            padding: const EdgeInsets.fromLTRB(14, 12, 14, 16),
+            decoration: BoxDecoration(
+              color: const Color(0xFF151B2B),
+              border: Border(
+                top: BorderSide(color: Colors.white.withValues(alpha: 0.08)),
+              ),
+            ),
+            child: SafeArea(
+              top: false,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: _buildActionButton(
+                      icon: Icons.undo_rounded,
+                      label: isEn ? "Undo" : "Geri Al",
+                      onTap: _undoMove,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: _buildActionButton(
+                      icon: Icons.refresh_rounded,
+                      label: isEn ? "Restart" : "Yeniden",
+                      onTap: _restartGame,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: _buildActionButton(
+                      icon: Icons.flag_outlined,
+                      label: isEn ? "Resign" : "Pes Et",
+                      isDestructive: true,
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (ctx) => AlertDialog(
+                            backgroundColor: const Color(0xFF151B2B),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                              side: BorderSide(
+                                  color: Colors.white.withValues(alpha: 0.1)),
+                            ),
+                            title: Text(
+                              isEn ? "Resign?" : "Pes mi Ediyorsun?",
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            content: Text(
+                              isEn
+                                  ? "Do you want to surrender this match?"
+                                  : "Bu maçı bırakıp geri dönmek istiyor musun?",
+                              style: const TextStyle(color: Colors.white70),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(ctx),
+                                child: Text(isEn ? "Cancel" : "İptal",
+                                    style:
+                                        const TextStyle(color: Colors.white54)),
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFFEF5350),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.pop(ctx);
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  isEn ? "Resign" : "Pes Et",
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
@@ -1101,23 +1317,51 @@ class _PlayVsBotGamePageState extends State<PlayVsBotGamePage> {
     );
   }
 
-  Widget _buildActionButton({required IconData icon, required String label, required Color color, required VoidCallback onTap}) {
-    return InkWell(
-      onTap: onTap,
+  Widget _buildActionButton({
+    required IconData icon,
+    required String label,
+    required VoidCallback onTap,
+    bool isDestructive = false,
+  }) {
+    final fgColor = isDestructive ? const Color(0xFFEF5350) : Colors.white;
+    final bgColor = isDestructive
+        ? const Color(0xFFEF5350).withValues(alpha: 0.10)
+        : const Color(0xFF1E263A);
+    final borderColor = isDestructive
+        ? const Color(0xFFEF5350).withValues(alpha: 0.35)
+        : Colors.white.withValues(alpha: 0.08);
+
+    return Material(
+      color: bgColor,
       borderRadius: BorderRadius.circular(12),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        decoration: BoxDecoration(
-          color: color.withValues(alpha: 0.15),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: color.withValues(alpha: 0.5)),
-        ),
-        child: Row(
-          children: [
-            Icon(icon, color: color, size: 20),
-            const SizedBox(width: 6),
-            Text(label, style: TextStyle(color: color, fontWeight: FontWeight.bold, fontSize: 13)),
-          ],
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(12),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 11, horizontal: 8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: borderColor),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, color: fgColor, size: 18),
+              const SizedBox(width: 6),
+              Flexible(
+                child: Text(
+                  label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: fgColor,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 13,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

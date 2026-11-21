@@ -62,6 +62,7 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
   int _mistakes = 0;
   bool _isCompleted = false;
   bool _showQuizHint = false;
+  bool _showExplorerPanel = false;
   String? _feedbackMsg;
   Color _feedbackColor = Colors.greenAccent;
 
@@ -192,10 +193,12 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
       _playUciOnBoard(expectedUci);
       _currentMoveIndex++;
       SoundService.playMoveSound(false);
-      setState(() {});
-
       if (_currentMoveIndex >= currentRepertoire.moves.length) {
         _finishTraining();
+      } else {
+        setState(() {
+          _feedbackMsg = null;
+        });
       }
     });
   }
@@ -217,9 +220,9 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
     setState(() {
       _isCompleted = true;
       _feedbackMsg = LanguageService.currentLang == 'en'
-          ? "🎉 Congratulations! You completed the repertoire!"
-          : "🎉 Tebrikler! Bu açılış varyantını başarıyla tamamladınız!";
-      _feedbackColor = Colors.amberAccent;
+          ? "Repertoire completed!"
+          : "Bu açılış varyantını başarıyla tamamladınız!";
+      _feedbackColor = const Color(0xFF66BB6A);
     });
     _showCelebrationDialog();
   }
@@ -299,10 +302,10 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
       final expectedSan = _getExpectedSan();
       setState(() {
         _feedbackMsg = LanguageService.currentLang == 'en'
-            ? "❌ Incorrect move! Expected: $expectedSan"
-            : "❌ Yanlış hamle! Doğrusu: $expectedSan";
-        _feedbackColor = Colors.redAccent;
-        
+            ? "Incorrect move — expected $expectedSan"
+            : "Yanlış hamle — doğrusu: $expectedSan";
+        _feedbackColor = const Color(0xFFEF5350);
+
         selectedSquare = null;
         legalDestinations.clear();
       });
@@ -365,8 +368,10 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
     SoundService.playMoveSound(false);
     _engineChess.load(tempValidation.fen);
     _currentMoveIndex++;
-    _feedbackMsg = LanguageService.currentLang == 'en' ? "✨ Excellent move!" : "✨ Harika hamle!";
-    _feedbackColor = Colors.greenAccent;
+    _feedbackMsg = LanguageService.currentLang == 'en'
+        ? "Correct move"
+        : "Doğru hamle";
+    _feedbackColor = const Color(0xFF66BB6A);
     _showQuizHint = false;
     setState(() {});
 
@@ -522,58 +527,55 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
     final currentFen = controller.game.fen;
     final rep = currentRepertoire;
 
+    final totalMoves = rep.moves.length;
+    final progressRatio =
+        totalMoves > 0 ? (_currentMoveIndex / totalMoves).clamp(0.0, 1.0) : 0.0;
+
     return Scaffold(
-      backgroundColor: const Color(0xFF0F1523),
+      backgroundColor: const Color(0xFF0B101E),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF151C2C),
+        backgroundColor: const Color(0xFF151B2B),
         elevation: 0,
-        title: Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(6),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(colors: [Colors.amber, Colors.orangeAccent]),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Icon(Icons.menu_book, color: Colors.black, size: 18),
-            ),
-            const SizedBox(width: 8),
-            Expanded(
-              child: FittedBox(
-                fit: BoxFit.scaleDown,
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  LanguageService.get('opening_trainer'),
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white),
-                ),
-              ),
-            ),
-          ],
+        title: Text(
+          LanguageService.get('opening_trainer'),
+          style: const TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.explore, color: LichessWidgets.showOpeningExplorer ? Colors.blueAccent : Colors.white38),
+            icon: Icon(Icons.explore_outlined,
+                color: _showExplorerPanel
+                    ? const Color(0xFF7986CB)
+                    : Colors.white38),
             tooltip: isEn ? "Toggle Live Explorer" : "Canlı Ağaç Değiştir",
-            onPressed: () => setState(() { LichessWidgets.showOpeningExplorer = !LichessWidgets.showOpeningExplorer; }),
+            onPressed: () => setState(() {
+              _showExplorerPanel = !_showExplorerPanel;
+              if (_showExplorerPanel) {
+                LichessWidgets.showOpeningExplorer = true;
+              }
+            }),
           ),
           IconButton(
-            icon: const Icon(Icons.swap_vert, color: Colors.white70),
+            icon: const Icon(Icons.swap_vert_rounded, color: Colors.white70),
             tooltip: isEn ? "Rotate Board" : "Tahtayı Çevir",
             onPressed: () {
               setState(() {
-                _boardOrientation = _boardOrientation == PlayerColor.white ? PlayerColor.black : PlayerColor.white;
+                _boardOrientation = _boardOrientation == PlayerColor.white
+                    ? PlayerColor.black
+                    : PlayerColor.white;
               });
             },
           ),
           IconButton(
-            icon: const Icon(Icons.refresh, color: Colors.amberAccent),
+            icon: const Icon(Icons.refresh_rounded, color: Colors.white70),
             tooltip: isEn ? "Reset Repertoire" : "Yeniden Başlat",
             onPressed: () => setState(() => _initRepertoire()),
           ),
           IconButton(
             icon: const Icon(Icons.settings, color: Colors.white70),
             tooltip: isEn ? "Settings" : "Ayarlar",
-            onPressed: () => showSettingsSheet(context, onChanged: () => setState(() {})),
+            onPressed: () =>
+                showSettingsSheet(context, onChanged: () => setState(() {})),
           ),
         ],
       ),
@@ -582,32 +584,33 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
           children: [
             // 1. ÜST MOD SEÇİM BAR (Segmented Control)
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              margin: const EdgeInsets.fromLTRB(16, 12, 16, 10),
               padding: const EdgeInsets.all(4),
               decoration: BoxDecoration(
-                color: const Color(0xFF1E2738),
+                color: const Color(0xFF151B2B),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
+                border:
+                    Border.all(color: Colors.white.withValues(alpha: 0.08)),
               ),
               child: Row(
                 children: [
                   _buildModeButton(
                     mode: TrainingMode.guided,
-                    icon: Icons.school,
-                    label: isEn ? "Guided Study" : "Rehberli Pratik",
-                    color: Colors.amberAccent,
+                    icon: Icons.school_outlined,
+                    label: isEn ? "Guided" : "Rehberli",
+                    color: const Color(0xFF5C6BC0),
                   ),
                   _buildModeButton(
                     mode: TrainingMode.quiz,
-                    icon: Icons.psychology,
-                    label: isEn ? "Memory Quiz" : "Hafıza Testi",
-                    color: Colors.cyanAccent,
+                    icon: Icons.psychology_outlined,
+                    label: isEn ? "Quiz" : "Hafıza",
+                    color: const Color(0xFF5C6BC0),
                   ),
                   _buildModeButton(
                     mode: TrainingMode.explorer,
-                    icon: Icons.explore,
-                    label: isEn ? "Live Explorer" : "Serbest Keşif",
-                    color: Colors.greenAccent,
+                    icon: Icons.explore_outlined,
+                    label: isEn ? "Explorer" : "Keşif",
+                    color: const Color(0xFF5C6BC0),
                   ),
                 ],
               ),
@@ -618,42 +621,86 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
                 child: Column(
                   children: [
                     if (_mode != TrainingMode.explorer)
-              // 2. AÇILIŞ REPERTUVARI SEÇİCİ
-              GestureDetector(
-                onTap: () => _showOpeningSelector(context, isEn),
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 8, left: 16, right: 16),
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(colors: [Color(0xFFE6A800), Color(0xFFFFCC33)]),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-                        decoration: BoxDecoration(
-                          color: Colors.black.withValues(alpha: 0.2),
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: Text(
-                          kOpeningLibrary[_selectedRepertoireIndex].eco,
-                          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
+                      // 2. AÇILIŞ REPERTUVARI SEÇİCİ (MoveLab Koyu Tema)
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                        child: Material(
+                          color: const Color(0xFF151B2B),
+                          borderRadius: BorderRadius.circular(12),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(12),
+                            onTap: () => _showOpeningSelector(context, isEn),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 14, vertical: 12),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: Colors.white.withValues(alpha: 0.10),
+                                ),
+                              ),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8, vertical: 4),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF5C6BC0)
+                                          .withValues(alpha: 0.22),
+                                      borderRadius: BorderRadius.circular(6),
+                                      border: Border.all(
+                                        color: const Color(0xFF5C6BC0)
+                                            .withValues(alpha: 0.5),
+                                      ),
+                                    ),
+                                    child: Text(
+                                      rep.eco,
+                                      style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w800,
+                                        color: Color(0xFF9FA8DA),
+                                        letterSpacing: 0.5,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          isEn ? rep.titleEn : rep.titleTr,
+                                          style: const TextStyle(
+                                            fontSize: 14.5,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white,
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        const SizedBox(height: 2),
+                                        Text(
+                                          '${rep.category} • ${rep.isWhite ? (isEn ? "White" : "Beyaz") : (isEn ? "Black" : "Siyah")}',
+                                          style: const TextStyle(
+                                            fontSize: 11.5,
+                                            color: Colors.white54,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Icon(Icons.unfold_more_rounded,
+                                      color: Colors.white54, size: 20),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          isEn ? kOpeningLibrary[_selectedRepertoireIndex].titleEn : kOpeningLibrary[_selectedRepertoireIndex].titleTr,
-                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black),
-                          maxLines: 1, overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                      const Icon(Icons.arrow_drop_down_circle, color: Colors.black87),
-                    ],
-                  ),
-                ),
-              ),
             
             if (_mode == TrainingMode.explorer)
               Container(
@@ -880,102 +927,196 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
             const SizedBox(height: 12),
           ],
 
-          // 4. ALT BİLGİ VE KONTROL KARTLARI
+          // 4. ALT BİLGİ VE KONTROL PANELİ
           if (_mode != TrainingMode.explorer)
-            Container(
-                padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: const Color(0xFF151C2C),
-                borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.4), blurRadius: 10, offset: const Offset(0, -4))],
-              ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Durum / İpucu / Bildirim Satırı
-                  if (_mode != TrainingMode.explorer)
-                    SizedBox(
-                      height: 32,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                        Expanded(
-                          child: _feedbackMsg != null
-                              ? Text(_feedbackMsg!, style: TextStyle(color: _feedbackColor, fontWeight: FontWeight.bold, fontSize: 13.5))
-                              : _mode == TrainingMode.guided
-                                  ? Row(
-                                      children: [
-                                        const Icon(Icons.lightbulb, color: Colors.amberAccent, size: 18),
-                                        const SizedBox(width: 6),
-                                        Expanded(
-                                          child: Text(
-                                            isEn
-                                                ? "Target Move: ${_getExpectedSan()} (Turn: ${rep.isWhite ? 'White' : 'Black'})"
-                                                : "Hedef Hamle: ${_getExpectedSan()} (Sıra: ${rep.isWhite ? 'Beyaz' : 'Siyah'})",
-                                            style: const TextStyle(color: Colors.amberAccent, fontWeight: FontWeight.bold, fontSize: 13.5),
-                                            maxLines: 1,
-                                            overflow: TextOverflow.ellipsis,
-                                          ),
-                                        ),
-                                      ],
+                  Container(
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF151B2B),
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(
+                        color: _feedbackMsg != null
+                            ? _feedbackColor.withValues(alpha: 0.45)
+                            : Colors.white.withValues(alpha: 0.08),
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              _feedbackMsg != null
+                                  ? (_isCompleted
+                                      ? Icons.check_circle_rounded
+                                      : (_feedbackColor ==
+                                              const Color(0xFFEF5350)
+                                          ? Icons.error_outline_rounded
+                                          : Icons.check_circle_outline_rounded))
+                                  : (_mode == TrainingMode.guided
+                                      ? Icons.flag_rounded
+                                      : Icons.psychology_outlined),
+                              color: _feedbackMsg != null
+                                  ? _feedbackColor
+                                  : const Color(0xFF7986CB),
+                              size: 18,
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: _feedbackMsg != null
+                                  ? Text(
+                                      _feedbackMsg!,
+                                      style: TextStyle(
+                                        color: _feedbackColor,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 13.5,
+                                      ),
                                     )
-                                  : Row(
-                                      children: [
-                                        const Icon(Icons.quiz, color: Colors.cyanAccent, size: 18),
-                                        const SizedBox(width: 6),
-                                        Text(
-                                          isEn ? "Test your memory! Mistakes: $_mistakes" : "Hafızanı sına! Hata Sayısı: $_mistakes",
-                                          style: const TextStyle(color: Colors.cyanAccent, fontWeight: FontWeight.bold, fontSize: 13.5),
-                                        ),
-                                        const Spacer(),
-                                        if (!_isCompleted)
-                                          InkWell(
-                                            onTap: () => setState(() => _showQuizHint = !_showQuizHint),
-                                            child: Container(
-                                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                              decoration: BoxDecoration(color: Colors.cyanAccent.withValues(alpha: 0.2), borderRadius: BorderRadius.circular(6)),
-                                              child: Text(isEn ? (_showQuizHint ? "Hide Hint" : "Show Hint") : (_showQuizHint ? "İpucu Gizle" : "İpucu Göster"), style: const TextStyle(color: Colors.cyanAccent, fontSize: 11, fontWeight: FontWeight.bold)),
+                                  : _mode == TrainingMode.guided
+                                      ? Row(
+                                          children: [
+                                            Text(
+                                              isEn
+                                                  ? "Target Move:"
+                                                  : "Hedef Hamle:",
+                                              style: const TextStyle(
+                                                color: Colors.white70,
+                                                fontSize: 13,
+                                                fontWeight: FontWeight.w600,
+                                              ),
                                             ),
+                                            const SizedBox(width: 8),
+                                            Container(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 8,
+                                                      vertical: 3),
+                                              decoration: BoxDecoration(
+                                                color: const Color(0xFF5C6BC0)
+                                                    .withValues(alpha: 0.25),
+                                                borderRadius:
+                                                    BorderRadius.circular(6),
+                                                border: Border.all(
+                                                  color: const Color(0xFF5C6BC0)
+                                                      .withValues(alpha: 0.6),
+                                                ),
+                                              ),
+                                              child: Text(
+                                                _getExpectedSan(),
+                                                style: const TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w800,
+                                                  fontSize: 13,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      : Text(
+                                          isEn
+                                              ? "Memory Quiz • Mistakes: $_mistakes"
+                                              : "Hafıza Testi • Hata: $_mistakes",
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 13,
                                           ),
-                                      ],
-                                    ),
+                                        ),
+                            ),
+                            if (_mode == TrainingMode.quiz && !_isCompleted)
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  foregroundColor: const Color(0xFF9FA8DA),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 4),
+                                  minimumSize: Size.zero,
+                                  tapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                ),
+                                onPressed: () => setState(
+                                    () => _showQuizHint = !_showQuizHint),
+                                child: Text(
+                                  isEn
+                                      ? (_showQuizHint ? "Hide" : "Hint")
+                                      : (_showQuizHint ? "Gizle" : "İpucu"),
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              )
+                            else
+                              Text(
+                                "$_currentMoveIndex / $totalMoves",
+                                style: const TextStyle(
+                                  color: Colors.white54,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                          ],
                         ),
+                        const SizedBox(height: 10),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: LinearProgressIndicator(
+                            value: progressRatio,
+                            minHeight: 4,
+                            backgroundColor: Colors.white10,
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              _isCompleted
+                                  ? const Color(0xFF66BB6A)
+                                  : const Color(0xFF5C6BC0),
+                            ),
+                          ),
+                        ),
+                        if (_mode == TrainingMode.quiz &&
+                            _showQuizHint &&
+                            !_isCompleted) ...[
+                          const SizedBox(height: 10),
+                          Row(
+                            children: [
+                              const Icon(Icons.lightbulb_outline_rounded,
+                                  color: Colors.amberAccent, size: 15),
+                              const SizedBox(width: 6),
+                              Text(
+                                isEn
+                                    ? "Hint: Try ${_getExpectedSan()}"
+                                    : "İpucu: ${_getExpectedSan()} hamlesini dene",
+                                style: const TextStyle(
+                                  color: Colors.amberAccent,
+                                  fontSize: 12.5,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                        if (rep.desc.trim().isNotEmpty) ...[
+                          const SizedBox(height: 10),
+                          Text(
+                            rep.desc,
+                            style: const TextStyle(
+                              color: Colors.white70,
+                              fontSize: 12.5,
+                              height: 1.4,
+                            ),
+                          ),
+                        ],
                       ],
                     ),
-                    ),
-                  if (_mode == TrainingMode.quiz && _showQuizHint && !_isCompleted) ...[
-                    const SizedBox(height: 6),
-                    Text(
-                      isEn ? "💡 Hint: Try playing ${_getExpectedSan()}" : "💡 İpucu: ${_getExpectedSan()} hamlesini oynamayı dene.",
-                      style: const TextStyle(color: Colors.amberAccent, fontSize: 12, fontStyle: FontStyle.italic),
-                    ),
+                  ),
+                  if (_showExplorerPanel) ...[
+                    const SizedBox(height: 8),
+                    // Lichess Canlı Açılış Ağacı (Sadece pusula açıldığında gösterilir)
+                    LichessWidgets.buildOpeningExplorerPanel(
+                        currentFen, _onExplorerMoveTap),
                   ],
-                  if (_mode != TrainingMode.explorer) ...[
-                    const SizedBox(height: 10),
-                    // Açıklama / Stratejik Rehber
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF1E2738),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(rep.category, style: const TextStyle(color: Colors.white54, fontSize: 11, fontWeight: FontWeight.w600)),
-                          const SizedBox(height: 4),
-                          Text(rep.desc, style: const TextStyle(color: Colors.white, fontSize: 12.5, height: 1.3)),
-                        ],
-                      ),
-                    ),
-                  ],
-                  const SizedBox(height: 10),
-                  // Lichess Canlı Açılış Ağacı
-                  LichessWidgets.buildOpeningExplorerPanel(currentFen, _onExplorerMoveTap),
                 ],
               ),
             ),
@@ -1129,22 +1270,26 @@ class _OpeningTrainerPageState extends State<OpeningTrainerPage> {
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: BoxDecoration(
-            color: isSelected ? color.withValues(alpha: 0.18) : Colors.transparent,
+            color: isSelected ? const Color(0xFF232D45) : Colors.transparent,
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: isSelected ? color : Colors.transparent),
+            border: Border.all(
+                color: isSelected
+                    ? color.withValues(alpha: 0.7)
+                    : Colors.transparent),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(icon, color: isSelected ? color : Colors.white54, size: 16),
-              const SizedBox(width: 5),
+              Icon(icon,
+                  color: isSelected ? Colors.white : Colors.white54, size: 15),
+              const SizedBox(width: 6),
               Flexible(
                 child: Text(
                   label,
                   style: TextStyle(
-                    color: isSelected ? color : Colors.white54,
-                    fontSize: 12,
-                    fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                    color: isSelected ? Colors.white : Colors.white54,
+                    fontSize: 12.5,
+                    fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                   ),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,

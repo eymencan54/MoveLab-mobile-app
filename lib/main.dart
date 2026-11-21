@@ -24,6 +24,7 @@ import 'package:crypto/crypto.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'iap_service.dart';
+import 'widgets/chess_silhouette_background.dart';
 // =====================================================================
 // 0. SES SİSTEMİ VE AYARLAR
 // =====================================================================
@@ -312,6 +313,54 @@ class LanguageService {
     },
     'get_hint': {'tr': 'İPUCU AL', 'en': 'GET HINT'},
     'puzzle_score_points': {'tr': 'Puan', 'en': 'Points'},
+    'puzzle_find_best_white': {
+      'tr': 'Beyaz için en iyi hamleyi bul',
+      'en': 'Find the best move for White'
+    },
+    'puzzle_find_best_black': {
+      'tr': 'Siyah için en iyi hamleyi bul',
+      'en': 'Find the best move for Black'
+    },
+    'puzzle_next': {'tr': 'Sonraki Bulmaca', 'en': 'Next Puzzle'},
+    'puzzle_skip': {'tr': 'Atla', 'en': 'Skip'},
+    'puzzle_step': {'tr': 'Hamle', 'en': 'Move'},
+    'puzzle_current_score': {'tr': 'Mevcut Puan', 'en': 'Current Score'},
+    'puzzle_reward': {'tr': 'Ödül', 'en': 'Reward'},
+    'puzzle_tactical_drill': {
+      'tr': 'Taktik Çalışması',
+      'en': 'Tactical Drill'
+    },
+    'puzzle_reviewing': {
+      'tr': 'Geçmiş hamle inceleniyor',
+      'en': 'Reviewing move history'
+    },
+    'library_sort_filter': {
+      'tr': 'Sırala ve Filtrele',
+      'en': 'Sort & Filter'
+    },
+    'library_newest_first': {
+      'tr': 'Son eklenenden ilk eklenene',
+      'en': 'Newest to Oldest'
+    },
+    'library_oldest_first': {
+      'tr': 'İlk eklenenden son eklenene',
+      'en': 'Oldest to Newest'
+    },
+    'library_only_chesscom': {
+      'tr': 'Sadece Chess.com',
+      'en': 'Chess.com Only'
+    },
+    'library_only_lichess': {'tr': 'Sadece Lichess', 'en': 'Lichess Only'},
+    'library_pgn_matches': {'tr': 'PGN Maçları', 'en': 'PGN Matches'},
+    'library_search_player': {'tr': 'Oyuncu Ara', 'en': 'Search Player'},
+    'library_search_hint': {
+      'tr': 'Oyuncu adı veya platform ara...',
+      'en': 'Search player name or platform...'
+    },
+    'library_no_filter_match': {
+      'tr': 'Seçilen kritere veya aramaya uygun maç bulunamadı.',
+      'en': 'No matches found for the selected filter or search.'
+    },
     'login_title': {'tr': 'Bulmacalara Giriş', 'en': 'Puzzle Login'},
     'login_lichess_desc': {
       'tr': 'Lichess hesabınıza güvenli bir şekilde şifrenizle giriş yapın:',
@@ -1317,7 +1366,7 @@ class OpeningExplorerService {
 }
 
 class LichessWidgets {
-  static bool showOpeningExplorer = true;
+  static bool showOpeningExplorer = false;
   static bool isOpeningExplorerExpanded = true;
 
   static Widget buildSyzygyPanel(String fen, Function(String) onMoveTap) {
@@ -5442,24 +5491,87 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
     });
   }
 
-  // 2. SINIRSIZ KENDİ BULMACA HAVUZUMUZ (İstediğin kadar kopyala yapıştır ile ekle)
+  // 2. ZORLUK SEVİYESİNE GÖRE AYRILMIŞ YEREL BULMACA HAVUZU
   final List<Map<String, dynamic>> localPuzzlePool = [
+    // --- EASY ---
     {
       "id": "arka_yatay_basit",
+      "difficulty": "easy",
       "fen": "6k1/1p3ppp/8/8/8/8/1q3PPP/2R3K1 w - - 0 1",
       "solution": ["c1c8"] // Beyaz tek hamlede arka yataydan mat eder
     },
     {
+      "id": "aptal_mati",
+      "difficulty": "easy",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/6P1/5P2/PPPPP2P/RNBQKBNR b KQkq - 0 2",
+      "solution": ["d8h4"] // Aptal Matı
+    },
+    {
+      "id": "coban_mati",
+      "difficulty": "easy",
+      "fen":
+          "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR w KQkq - 0 1",
+      "solution": ["f3f7"] // Çoban Matı
+    },
+    {
+      "id": "hizli_mat_siyah",
+      "difficulty": "easy",
+      "fen": "r1b1k2r/pppp1ppp/8/4P3/1nB1n2q/8/PPPP1PPP/RNBQK2R b KQkq - 1 8",
+      "solution": ["h4f2"] // Siyah atın korumasıyla f2'den tek hamlede mat eder
+    },
+    {
+      "id": "katal_taktigi_siyah",
+      "difficulty": "easy",
+      "fen": "6k1/5p1p/8/8/8/2n5/4QPPP/5RK1 b - - 0 1",
+      "solution": ["c3e2"] // Siyah at ile şah çekerek veziri kazanır
+    },
+    {
+      "id": "apolet_mati",
+      "difficulty": "easy",
+      "fen": "k7/p1R3p1/8/8/8/8/8/1Q5K w - - 0 1",
+      "solution": ["b1b7"] // Apolet Matı
+    },
+    {
+      "id": "merdiven_mati_basit",
+      "difficulty": "easy",
+      "fen": "k7/8/1K6/8/8/8/8/1R6 w - - 0 1",
+      "solution": ["b1a1"] // Kale ve Şah yardımıyla temel mat
+    },
+    // --- MEDIUM ---
+    {
       "id": "vezir_fedasi_arka_yatay",
-      "fen": "1r4k1/p4ppp/8/3Q4/8/8/PPP2PPP/4R1K1 w - - 0 1",
+      "difficulty": "medium",
+      "fen": "1r4k1/p4ppp/8/3Q4/8/8/PPP2PPP/3R2K1 w - - 0 1",
       "solution": [
         "d5d8",
         "b8d8",
-        "e1d8"
+        "d1d8"
       ] // Vezir fedası ile zorunlu arka yatay matı
     },
     {
+      "id": "vezir_saptirma_mati",
+      "difficulty": "medium",
+      "fen": "2r3k1/p4ppp/8/8/4Q3/8/1q3PPP/4R1K1 w - - 0 1",
+      "solution": [
+        "e4e8",
+        "c8e8",
+        "e1e8"
+      ] // Kaleyi saptırmak için vezir fedası ve mat
+    },
+    // --- HARD & ELITE ---
+    {
+      "id": "opera_mati_hard",
+      "difficulty": "hard",
+      "fen": "4kb1r/p2n1ppp/4q3/4p1B1/4P3/1Q6/PPP2PPP/2KR4 w k - 1 16",
+      "solution": [
+        "b3b8",
+        "d7b8",
+        "d1d8"
+      ] // Paul Morphy Opera Matı: Vezir fedası ve kale matı
+    },
+    {
       "id": "anastasia_mati",
+      "difficulty": "hard",
       "fen": "r4r1k/pp2Nppp/8/7Q/8/R7/PPP2PP1/6K1 w - - 0 1",
       "solution": [
         "h5h7",
@@ -5468,52 +5580,27 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
       ] // Klasik Anastasia Matı: Zorunlu vezir fedası ve kale matı
     },
     {
-      "id": "aptal_mati",
-      "fen": "rnbqkbnr/pppp1ppp/8/4p3/6P1/5P2/PPPPP2P/RNBQKBNR b KQkq - 0 2",
+      "id": "smothered_short_hard",
+      "difficulty": "hard",
+      "fen": "r4r1k/6pp/7N/8/8/1Q6/6PP/6K1 w - - 0 1",
       "solution": [
-        "d8h4"
-      ] // Satrançtaki en hızlı mat: Aptal Matı (Siyah tek hamlede mat eder)
+        "b3g8",
+        "f8g8",
+        "h6f7"
+      ] // Boğmaca Matı (Vezir fedalı)
     },
     {
-      "id": "coban_mati",
-      "fen":
-          "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR w KQkq - 0 1",
-      "solution": ["f3f7"] // Meşhur Çoban Matı
-    },
-    {
-      "id": "hizli_mat_siyah",
-      "fen": "r1b1k2r/pppp1ppp/8/4P3/1nB1n2q/8/PPPP1PPP/RNBQK2R b KQkq - 1 8",
-      "solution": ["h4f2"] // Siyah atın korumasıyla f2'den tek hamlede mat eder
-    },
-    {
-      "id": "vezir_saptirma_mati",
-      "fen": "2r3k1/p4ppp/8/8/4Q3/8/1q3PPP/2R1Q1K1 w - - 0 1",
+      "id": "bogmaca_mati_elite",
+      "difficulty": "elite",
+      "fen": "r4rk1/5Npp/8/8/8/1Q6/6PP/6K1 w - - 0 1",
       "solution": [
-        "e4e8",
-        "c8e8",
-        "c1e8"
-      ] // Kaleyi saptırmak için vezir fedası ve mat
+        "f7h6",
+        "g8h8",
+        "b3g8",
+        "f8g8",
+        "h6f7"
+      ] // 3 hamlelik klasik Philidor Boğmaca Matı (Çifte şah + Vezir fedası)
     },
-    {
-      "id": "katal_taktigi_siyah",
-      "fen": "6k1/5p1p/8/8/8/2n5/4QPPP/5RK1 b - - 0 1",
-      "solution": [
-        "c3e2",
-        "g1h1"
-      ] // Siyah at ile şah-vezir çatalı atar (Rakibin tek yasal hamlesi g1h1'dir)
-    },
-    {
-      "id": "apolet_mati",
-      "fen": "k7/p1R3p1/1p6/8/8/8/8/1Q5K w - - 0 1",
-      "solution": [
-        "b1b7"
-      ] // Şahın kendi taşları tarafından sıkıştırıldığı Apolet Matı
-    },
-    {
-      "id": "merdiven_mati_basit",
-      "fen": "k7/8/1K6/8/8/8/8/1R6 w - - 0 1",
-      "solution": ["b1a1"] // Kale ve Şah yardımıyla temel mat
-    }
   ];
 
   @override
@@ -5661,38 +5748,111 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
     }
   }
 
+  static final Set<String> _seenPuzzleIds = {};
+
+  static String _lichessDifficultyParam(PuzzleDifficulty diff) {
+    switch (diff) {
+      case PuzzleDifficulty.easy:
+        return 'easier';
+      case PuzzleDifficulty.medium:
+        return 'normal';
+      case PuzzleDifficulty.hard:
+        return 'harder';
+      case PuzzleDifficulty.elite:
+        return 'hardest';
+    }
+  }
+
+  static Future<Map<String, dynamic>?> _fetchSingleLichessPuzzle(
+      PuzzleDifficulty diff) async {
+    final param = _lichessDifficultyParam(diff);
+    final url = 'https://lichess.org/api/puzzle/next?difficulty=$param';
+    final response = await http.get(
+      Uri.parse(url),
+      headers: const {
+        'Accept': 'application/json',
+        'User-Agent': 'MoveLabChessApp/1.0',
+      },
+    ).timeout(const Duration(seconds: 4));
+
+    if (response.statusCode != 200) return null;
+    final Map<String, dynamic> data = jsonDecode(response.body);
+    final puzzle = data['puzzle'] as Map<String, dynamic>?;
+    if (puzzle == null) return null;
+
+    final String id = (puzzle['id'] ?? '').toString();
+    final List<dynamic> rawSol = (puzzle['solution'] as List<dynamic>?) ?? [];
+    final List<String> solution = rawSol.map((e) => e.toString()).toList();
+    final String fen = (puzzle['fen'] ?? '').toString();
+    if (id.isEmpty || fen.isEmpty || solution.isEmpty) return null;
+
+    final List<dynamic> rawThemes = (puzzle['themes'] as List<dynamic>?) ?? [];
+    final String? lastMove = puzzle['lastMove']?.toString();
+    final String? pgn = data['game']?['pgn']?.toString();
+
+    // Opsiyonel: rakibin son hamlesini animasyonlu gösterebilmek için bir önceki FEN'i hesapla
+    String? preFen;
+    if (pgn != null &&
+        pgn.trim().isNotEmpty &&
+        lastMove != null &&
+        lastMove.length >= 4) {
+      try {
+        final tokens = pgn
+            .trim()
+            .split(RegExp(r'\s+'))
+            .where((t) => t.isNotEmpty)
+            .toList();
+        if (tokens.isNotEmpty) {
+          final replay = chess_engine.Chess();
+          for (int i = 0; i < tokens.length - 1; i++) {
+            replay.move(tokens[i]);
+          }
+          final candidatePreFen = replay.fen;
+          final verifyMove = <String, dynamic>{
+            'from': lastMove.substring(0, 2),
+            'to': lastMove.substring(2, 4),
+          };
+          if (lastMove.length > 4) {
+            verifyMove['promotion'] = lastMove.substring(4, 5);
+          }
+          if (replay.move(verifyMove)) {
+            if (replay.fen.split(' ').take(2).join(' ') ==
+                fen.split(' ').take(2).join(' ')) {
+              preFen = candidatePreFen;
+            }
+          }
+        }
+      } catch (_) {
+        preFen = null;
+      }
+    }
+
+    return {
+      'PuzzleId': id,
+      'Rating': puzzle['rating'] as int?,
+      'Themes': rawThemes.map((e) => e.toString()).join(' '),
+      'FEN': fen,
+      'PreFEN': preFen,
+      'LastMove': lastMove,
+      'Solution': solution,
+    };
+  }
+
   static Future<void> _fetchAndCachePuzzlesInBackground(
       PuzzleDifficulty diff) async {
     if (_isFetchingBackground) return;
     _isFetchingBackground = true;
     try {
-      final themes = [
-        'mateIn2',
-        'mateIn3',
-        'endgame',
-        'middlegame',
-        'pin',
-        'fork',
-        'skewer',
-        'discoveredAttack',
-        'sacrifice',
-        'deflection',
-        'attraction',
-        'crushing',
-        'advantage'
-      ];
-      final random = Random();
-      final randomTheme = themes[random.nextInt(themes.length)];
-      final url =
-          'https://chess-puzzles-api.vercel.app/puzzles?limit=50&min_rating=${diff.minRating}&max_rating=${diff.maxRating}&themes=$randomTheme';
-      final response =
-          await http.get(Uri.parse(url)).timeout(const Duration(seconds: 8));
-      if (response.statusCode == 200) {
-        final List<dynamic> data = jsonDecode(response.body);
-        if (data.isNotEmpty) {
-          data.shuffle();
-          _cachedApiPuzzles[diff]!.addAll(data);
+      for (int i = 0; i < 4; i++) {
+        if ((_cachedApiPuzzles[diff]?.length ?? 0) >= 8) break;
+        final p = await _fetchSingleLichessPuzzle(diff);
+        if (p != null) {
+          final id = p['PuzzleId'].toString();
+          if (!_seenPuzzleIds.contains(id)) {
+            _cachedApiPuzzles[diff]!.add(p);
+          }
         }
+        await Future.delayed(const Duration(milliseconds: 250));
       }
     } catch (_) {
       // Arka plan indirme hatası sessizce yoksayılır
@@ -5702,56 +5862,78 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
   }
 
   void _setupApiPuzzle(dynamic puzzle) {
-    puzzleId = puzzle['PuzzleId'];
-    puzzleRating = puzzle['Rating'];
-    puzzleThemes = puzzle['Themes'];
+    puzzleId = puzzle['PuzzleId'].toString();
+    _seenPuzzleIds.add(puzzleId);
+    puzzleRating = puzzle['Rating'] as int?;
+    puzzleThemes = puzzle['Themes']?.toString();
 
-    String apiFen = puzzle['FEN'];
-    List<String> apiMoves = (puzzle['Moves'] as String).split(' ');
-    String opponentFirstMove = apiMoves.removeAt(0); // Rakibin hatalı hamlesi
+    final String targetFen = puzzle['FEN'].toString();
+    final String? preFen = puzzle['PreFEN']?.toString();
+    final String? lastMove = puzzle['LastMove']?.toString();
+    final List<String> apiMoves = puzzle['Solution'] is List
+        ? List<String>.from(puzzle['Solution'])
+        : (puzzle['Moves']?.toString() ?? '')
+            .split(' ')
+            .where((m) => m.isNotEmpty)
+            .toList();
 
     _validationChess.reset();
-    _validationChess.load(apiFen);
+    _validationChess.load(targetFen);
 
-    String from = opponentFirstMove.substring(0, 2);
-    String to = opponentFirstMove.substring(2, 4);
-    bool isCapture = _validationChess.get(to) != null;
-
-    Map<String, dynamic> moveObj = {"from": from, "to": to};
-    if (opponentFirstMove.length > 4)
-      moveObj["promotion"] = opponentFirstMove.substring(4, 5);
-    _validationChess.move(moveObj);
-
-    solutionMoves = apiMoves; // Kalan hamleler çözüm yolumuz
+    solutionMoves = apiMoves;
     currentMoveIndex = 0;
 
-    bool isWhiteTurn = _validationChess.turn == chess_engine.Color.WHITE;
+    final bool isWhiteTurn = _validationChess.turn == chess_engine.Color.WHITE;
 
-    setState(() {
-      isWhiteToMove = isWhiteTurn;
-      _boardOrientation = isWhiteTurn ? PlayerColor.white : PlayerColor.black;
-      _isOpponentMoving = true;
-      _playedFens = [apiFen];
-      _viewIndex = 0;
-      controller.loadFen(apiFen);
-      isLoading = false;
-    });
+    if (preFen != null && lastMove != null && lastMove.length >= 4) {
+      final from = lastMove.substring(0, 2);
+      final to = lastMove.substring(2, 4);
+      final preCheck = chess_engine.Chess();
+      preCheck.load(preFen);
+      final bool isCapture = preCheck.get(to) != null;
 
-    // Animate opponent move after a short delay
-    Future.delayed(const Duration(milliseconds: 600), () {
-      if (mounted) {
-        controller.makeMove(from: from, to: to);
-        _playedFens.add(controller.game.fen);
+      setState(() {
+        isWhiteToMove = isWhiteTurn;
+        _boardOrientation = isWhiteTurn ? PlayerColor.white : PlayerColor.black;
+        _isOpponentMoving = true;
+        _playedFens = [preFen];
+        _viewIndex = 0;
+        controller.loadFen(preFen);
+        isLoading = false;
+      });
+
+      Future.delayed(const Duration(milliseconds: 550), () {
+        if (!mounted) return;
+        if (lastMove.length > 4) {
+          controller.makeMoveWithPromotion(
+            from: from,
+            to: to,
+            pieceToPromoteTo: lastMove.substring(4, 5),
+          );
+        } else {
+          controller.makeMove(from: from, to: to);
+        }
+        _playedFens.add(targetFen);
         _viewIndex = 1;
         SoundService.playMoveSound(isCapture);
         setState(() {
           _isOpponentMoving = false;
         });
-      }
-    });
+      });
+    } else {
+      setState(() {
+        isWhiteToMove = isWhiteTurn;
+        _boardOrientation = isWhiteTurn ? PlayerColor.white : PlayerColor.black;
+        _isOpponentMoving = false;
+        _playedFens = [targetFen];
+        _viewIndex = 0;
+        controller.loadFen(targetFen);
+        isLoading = false;
+      });
+    }
   }
 
-  // 2. Lichess'ten günlük bulmacayı çekme
+  // 2. Resmi Lichess Bulmaca API'sinden zorluk seviyesine uygun sınırsız bulmaca çekme
   Future<void> _loadRandomPuzzle() async {
     setState(() => isLoading = true);
 
@@ -5760,70 +5942,67 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
         _cachedApiPuzzles[currentDifficulty]!.isNotEmpty) {
       final puzzle = _cachedApiPuzzles[currentDifficulty]!.removeLast();
       _setupApiPuzzle(puzzle);
-      if (_cachedApiPuzzles[currentDifficulty]!.length < 5) {
+      if (_cachedApiPuzzles[currentDifficulty]!.length < 3) {
         _fetchAndCachePuzzlesInBackground(currentDifficulty);
       }
       return;
     }
 
-    // 2. Önbellek boşsa API'den çekmeyi dene (Maksimum 1.8 saniye timeout ile)
+    // 2. Önbellek boşsa doğrudan resmi Lichess API'sinden çek
     try {
-      final themes = [
-        'mateIn2',
-        'mateIn3',
-        'endgame',
-        'middlegame',
-        'pin',
-        'fork',
-        'skewer',
-        'discoveredAttack',
-        'sacrifice',
-        'deflection',
-        'attraction',
-        'crushing',
-        'advantage'
-      ];
-      final random = Random();
-      final randomTheme = themes[random.nextInt(themes.length)];
-      final url =
-          'https://chess-puzzles-api.vercel.app/puzzles?limit=50&min_rating=${currentDifficulty.minRating}&max_rating=${currentDifficulty.maxRating}&themes=$randomTheme';
-
-      final response = await http
-          .get(Uri.parse(url))
-          .timeout(const Duration(milliseconds: 1800));
-      if (response.statusCode == 200) {
-        final List<dynamic> data = jsonDecode(response.body);
-        if (data.isNotEmpty) {
-          data.shuffle();
-          _cachedApiPuzzles[currentDifficulty]!.addAll(data);
-          final puzzle = _cachedApiPuzzles[currentDifficulty]!.removeLast();
-          _setupApiPuzzle(puzzle);
-          if (_cachedApiPuzzles[currentDifficulty]!.length < 5) {
-            _fetchAndCachePuzzlesInBackground(currentDifficulty);
-          }
-          return;
-        }
+      final puzzle = await _fetchSingleLichessPuzzle(currentDifficulty);
+      if (puzzle != null) {
+        _setupApiPuzzle(puzzle);
+        _fetchAndCachePuzzlesInBackground(currentDifficulty);
+        return;
       }
     } catch (e) {
-      debugPrint("API Hatası veya Timeout (Yerel Havuza Düşülüyor): $e");
-      // Arka planda indirmeyi başlat ki bir sonraki açılışta hazır olsun
+      debugPrint("Lichess Bulmaca API Hatası (Yerel Havuza Düşülüyor): $e");
       _fetchAndCachePuzzlesInBackground(currentDifficulty);
     }
 
-    // 3. API başarısız veya timeout olursa yerel havuza geri düş (Fallback)
+    // 3. API başarısız veya timeout olursa seçili zorluğa uygun yerel havuza düş (Fallback)
     try {
       puzzleRating = null;
       puzzleThemes = null;
       final random = Random();
-      int randomIndex;
 
+      List<Map<String, dynamic>> filteredPool;
+      switch (currentDifficulty) {
+        case PuzzleDifficulty.easy:
+          filteredPool = localPuzzlePool
+              .where((p) => p['difficulty'] == 'easy')
+              .toList();
+          break;
+        case PuzzleDifficulty.medium:
+          filteredPool = localPuzzlePool
+              .where((p) =>
+                  p['difficulty'] == 'medium' || p['difficulty'] == 'hard')
+              .toList();
+          break;
+        case PuzzleDifficulty.hard:
+          filteredPool = localPuzzlePool
+              .where((p) =>
+                  p['difficulty'] == 'hard' || p['difficulty'] == 'elite')
+              .toList();
+          break;
+        case PuzzleDifficulty.elite:
+          filteredPool = localPuzzlePool
+              .where((p) =>
+                  p['difficulty'] == 'elite' || p['difficulty'] == 'hard')
+              .toList();
+          break;
+      }
+      if (filteredPool.isEmpty) filteredPool = localPuzzlePool;
+
+      int randomIndex;
       // AYNI BULMACANIN ÜST ÜSTE 2 KERE GELMESİNİ ENGELLEYEN DÖNGÜ
       do {
-        randomIndex = random.nextInt(localPuzzlePool.length);
-      } while (randomIndex == _lastPuzzleIndex && localPuzzlePool.length > 1);
+        randomIndex = random.nextInt(filteredPool.length);
+      } while (randomIndex == _lastPuzzleIndex && filteredPool.length > 1);
 
       _lastPuzzleIndex = randomIndex;
-      final selectedPuzzle = localPuzzlePool[randomIndex];
+      final selectedPuzzle = filteredPool[randomIndex];
 
       puzzleId =
           "${selectedPuzzle['id']}_${DateTime.now().millisecondsSinceEpoch}";
@@ -5913,14 +6092,21 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
         await _rewardUser();
         _showSuccessDialog();
       } else {
-        Future.delayed(const Duration(milliseconds: 600), () {
+        Future.delayed(const Duration(milliseconds: 600), () async {
+          if (!mounted) return;
           _makeEngineMove(solutionMoves[currentMoveIndex]);
           controller.loadFen(_validationChess.fen);
           _playedFens.add(_validationChess.fen);
           _viewIndex = _playedFens.length - 1;
           currentMoveIndex++;
           SoundService.playMoveSound(false);
-          setState(() {});
+          if (currentMoveIndex >= solutionMoves.length) {
+            setState(() => isSolved = true);
+            await _rewardUser();
+            if (mounted) _showSuccessDialog();
+          } else {
+            setState(() {});
+          }
         });
       }
     } else {
@@ -5947,87 +6133,84 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
     final overlay = Overlay.of(context);
     late OverlayEntry overlayEntry;
     final size = MediaQuery.of(context).size;
+    final bool isScoreDelta = text.startsWith('-') || text == '0';
+    final Color semanticColor =
+        isScoreDelta ? const Color(0xFFEF5350) : const Color(0xFFFFB74D);
 
     overlayEntry = OverlayEntry(
       builder: (context) {
         return Positioned(
-          top: size.height / 2 - 80,
-          left: 0,
-          right: 0,
-          child: TweenAnimationBuilder<double>(
-            tween: Tween<double>(begin: 0.0, end: 1.0),
-            duration:
-                const Duration(milliseconds: 2500), // Daha uzun süre kalır
-            curve: Curves.easeOutCubic,
-            onEnd: () {
-              overlayEntry.remove();
-            },
-            builder: (context, value, child) {
-              // İlk %70'lık kısımda tam görünür, sonra yavaşça silinir
-              double opacity = value < 0.7
-                  ? 1.0
-                  : (1.0 - ((value - 0.7) / 0.3)).clamp(0.0, 1.0);
-              return Transform.translate(
-                offset: Offset(0, -60 * value), // Yavaşça yukarı süzülme
-                child: Transform.scale(
-                  scale: 1.0 + (value * 0.15), // Hafif büyüme
+          top: size.height * 0.42,
+          left: 24,
+          right: 24,
+          child: IgnorePointer(
+            child: TweenAnimationBuilder<double>(
+              tween: Tween<double>(begin: 0.0, end: 1.0),
+              duration: const Duration(milliseconds: 1450),
+              curve: Curves.easeOutCubic,
+              onEnd: () {
+                overlayEntry.remove();
+              },
+              builder: (context, value, child) {
+                final double opacity = value < 0.65
+                    ? 1.0
+                    : (1.0 - ((value - 0.65) / 0.35)).clamp(0.0, 1.0);
+                return Transform.translate(
+                  offset: Offset(0, -24 * value),
                   child: Opacity(
                     opacity: opacity,
                     child: Center(
                       child: Container(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 32, vertical: 16),
+                            horizontal: 18, vertical: 10),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF1E1E2C)
-                              .withValues(alpha: 0.9), // Koyu modern arka plan
-                          borderRadius: BorderRadius.circular(20),
+                          color: const Color(0xFF151B2B).withValues(alpha: 0.96),
+                          borderRadius: BorderRadius.circular(14),
                           border: Border.all(
-                              color: color.withValues(alpha: 0.8),
-                              width: 2), // Neon sınır çizgisi
+                            color: semanticColor.withValues(alpha: 0.45),
+                            width: 1.1,
+                          ),
                           boxShadow: [
                             BoxShadow(
-                              color: color.withValues(alpha: 0.4),
-                              blurRadius: 20,
-                              spreadRadius: 4,
-                            ),
-                            BoxShadow(
-                              color: Colors.black.withValues(alpha: 0.6),
-                              blurRadius: 10,
-                              offset: const Offset(0, 5),
+                              color: Colors.black.withValues(alpha: 0.45),
+                              blurRadius: 14,
+                              offset: const Offset(0, 6),
                             ),
                           ],
                         ),
                         child: Material(
                           color: Colors.transparent,
-                          child: Text(
-                            text,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: text.length > 5
-                                    ? 24
-                                    : 48, // Metin kutuya sığsın diye biraz küçültüldü
-                                fontWeight: FontWeight.w900,
-                                fontStyle: FontStyle
-                                    .italic, // Daha şık ve dinamik bir görünüm
-                                color: Colors.white,
-                                letterSpacing: 2.0,
-                                decoration: TextDecoration
-                                    .none, // Sarı alt çizgiyi kesin olarak kaldırır
-                                shadows: [
-                                  Shadow(
-                                      color: color,
-                                      blurRadius: 10,
-                                      offset:
-                                          const Offset(0, 0)) // Metin parlaması
-                                ]),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                isScoreDelta
+                                    ? Icons.trending_down_rounded
+                                    : Icons.close_rounded,
+                                color: semanticColor,
+                                size: isScoreDelta ? 20 : 18,
+                              ),
+                              const SizedBox(width: 8),
+                              Text(
+                                text,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: isScoreDelta ? 22 : 14.5,
+                                  fontWeight: FontWeight.w800,
+                                  color: Colors.white,
+                                  letterSpacing: isScoreDelta ? 0.6 : 0.2,
+                                  decoration: TextDecoration.none,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              );
-            },
+                );
+              },
+            ),
           ),
         );
       },
@@ -6045,17 +6228,154 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
     String from = expectedUci.substring(0, 2);
     String to = expectedUci.substring(2, 4);
 
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(
-        LanguageService.currentLang == 'en'
-            ? '💡 ${LanguageService.get('puzzle_hint')} Move the piece on $from to $to!'
-            : '💡 ${LanguageService.get('puzzle_hint')} $from karesindeki taşı $to karesine oyna!',
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+    // İpucu istenen taşı tahta üzerinde de vurgula
+    setState(() {
+      selectedSquare = from;
+      final moves = controller.game.moves({"square": from, "verbose": true});
+      legalDestinations = moves.map((m) => m["to"] as String).toList();
+    });
+
+    final bool isEn = LanguageService.currentLang == 'en';
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+        padding: EdgeInsets.zero,
+        duration: const Duration(seconds: 4),
+        content: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [Color(0xFF1A2236), Color(0xFF121827)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: Colors.amberAccent.withValues(alpha: 0.65),
+              width: 1.3,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.45),
+                blurRadius: 16,
+                offset: const Offset(0, 6),
+              ),
+              BoxShadow(
+                color: Colors.amberAccent.withValues(alpha: 0.14),
+                blurRadius: 14,
+                offset: const Offset(0, 2),
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(9),
+                decoration: BoxDecoration(
+                  color: Colors.amberAccent.withValues(alpha: 0.16),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: Colors.amberAccent.withValues(alpha: 0.35),
+                  ),
+                ),
+                child: const Icon(
+                  Icons.lightbulb_rounded,
+                  color: Colors.amberAccent,
+                  size: 20,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      isEn ? 'TACTICAL HINT' : 'TAKTİK İPUCU',
+                      style: const TextStyle(
+                        color: Colors.amberAccent,
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 1.2,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      isEn
+                          ? 'Play the highlighted move'
+                          : 'Vurgulanan hamleyi oyna',
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 12.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF25304D),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: Colors.white.withValues(alpha: 0.15),
+                      ),
+                    ),
+                    child: Text(
+                      from.toUpperCase(),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 0.8,
+                      ),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    child: Icon(
+                      Icons.arrow_forward_rounded,
+                      color: Colors.amberAccent,
+                      size: 16,
+                    ),
+                  ),
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.amberAccent.withValues(alpha: 0.18),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: Colors.amberAccent.withValues(alpha: 0.65),
+                      ),
+                    ),
+                    child: Text(
+                      to.toUpperCase(),
+                      style: const TextStyle(
+                        color: Colors.amberAccent,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.8,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
-      backgroundColor: Colors.blueAccent,
-      behavior: SnackBarBehavior.floating,
-      duration: const Duration(seconds: 4),
-    ));
+    );
   }
 
   // 4. Puanı Firebase'e Yazma
@@ -6275,42 +6595,7 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 12),
-                  if (puzzleRating != null)
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 4.0, top: 0.0),
-                      child: GestureDetector(
-                        onTap: _showDifficultySelector,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Icon(Icons.tune,
-                                color: Colors.cyanAccent, size: 16),
-                            const SizedBox(width: 6),
-                            Text(
-                              '${LanguageService.get('puzzle_difficulty')}: $puzzleRating ELO (${LanguageService.get(currentDifficulty.labelKey)})',
-                              style: TextStyle(
-                                color: Colors.cyanAccent,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w900,
-                                letterSpacing: 1.5,
-                                shadows: [
-                                  Shadow(
-                                    color: Colors.cyanAccent
-                                        .withValues(alpha: 0.8),
-                                    blurRadius: 12,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 4),
-                            const Icon(Icons.arrow_drop_down,
-                                color: Colors.cyanAccent, size: 20),
-                          ],
-                        ),
-                      ),
-                    ),
+                  const SizedBox(height: 6),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Row(
@@ -6578,123 +6863,478 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 10),
-                          // ALT PANEL (Oklar ve İpucu Butonu)
-                          SizedBox(
-                            height: 48,
-                            child: Stack(
-                              alignment: Alignment.center,
+                          const SizedBox(height: 12),
+                          // ALT KONTROL VE BİLGİ PANELİ
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                // YÖN OKLARI (Merkezde)
-                                if (_playedFens.isNotEmpty)
-                                  Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      IconButton(
-                                        icon: const Icon(Icons.arrow_back_ios,
-                                            size: 22),
-                                        color: _viewIndex > 0
-                                            ? Colors.white
-                                            : Colors.white30,
-                                        onPressed: _viewIndex > 0
-                                            ? () {
-                                                SoundService.playMoveSound(
-                                                    false);
-                                                setState(() {
-                                                  _viewIndex--;
-                                                  controller.loadFen(
-                                                      _playedFens[_viewIndex]);
-                                                });
-                                              }
-                                            : null,
-                                      ),
-                                      const SizedBox(width: 30),
-                                      IconButton(
-                                        icon: const Icon(
-                                            Icons.arrow_forward_ios,
-                                            size: 22),
-                                        color:
-                                            _viewIndex < _playedFens.length - 1
-                                                ? Colors.white
-                                                : Colors.white30,
-                                        onPressed: _viewIndex <
-                                                _playedFens.length - 1
-                                            ? () {
-                                                SoundService.playMoveSound(
-                                                    false);
-                                                setState(() {
-                                                  _viewIndex++;
-                                                  controller.loadFen(
-                                                      _playedFens[_viewIndex]);
-                                                });
-                                              }
-                                            : null,
-                                      ),
-                                    ],
+                                // 1. NAVİGASYON VE DURUM ÇUBUĞU
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 8),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF151B2B),
+                                    borderRadius: BorderRadius.circular(14),
+                                    border: Border.all(
+                                        color: Colors.white
+                                            .withValues(alpha: 0.08)),
                                   ),
-
-                                // İPUCU BUTONU (Sağda)
-                                if (!isSolved && _hasFailedCurrentPuzzle)
-                                  Positioned(
-                                    right: 0,
-                                    child: GestureDetector(
-                                      onTap: _showHint,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10, vertical: 7),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFF101A2B)
-                                              .withValues(alpha: 0.92),
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          border: Border.all(
-                                            color: Colors.yellowAccent
-                                                .withValues(alpha: 0.65),
-                                            width: 1.1,
-                                          ),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.yellowAccent
-                                                  .withValues(alpha: 0.18),
-                                              blurRadius: 10,
-                                              spreadRadius: 1,
-                                            )
-                                          ],
-                                        ),
+                                  child: Row(
+                                    children: [
+                                      // Sol: Adım / Durum göstergesi
+                                      Expanded(
                                         child: Row(
-                                          mainAxisSize: MainAxisSize.min,
                                           children: [
-                                            const Icon(
-                                              Icons.lightbulb_outline,
-                                              color: Colors.yellowAccent,
-                                              size: 15,
-                                              shadows: [
-                                                Shadow(
-                                                    color: Colors.yellowAccent,
-                                                    blurRadius: 10)
-                                              ],
+                                            Icon(
+                                              isSolved
+                                                  ? Icons.check_circle_rounded
+                                                  : (isReviewing
+                                                      ? Icons.history_rounded
+                                                      : Icons.bolt_rounded),
+                                              size: 18,
+                                              color: isSolved
+                                                  ? Colors.greenAccent
+                                                  : (isReviewing
+                                                      ? Colors.amberAccent
+                                                      : Colors.cyanAccent),
                                             ),
-                                            const SizedBox(width: 5),
-                                            Text(
-                                              LanguageService.get('get_hint'),
-                                              style: const TextStyle(
-                                                color: Colors.yellowAccent,
-                                                fontWeight: FontWeight.w800,
-                                                fontSize: 10.5,
-                                                letterSpacing: 1.0,
-                                                shadows: [
-                                                  Shadow(
-                                                      color:
-                                                          Colors.yellowAccent,
-                                                      blurRadius: 10)
-                                                ],
+                                            const SizedBox(width: 6),
+                                            Flexible(
+                                              child: Text(
+                                                isSolved
+                                                    ? LanguageService.get(
+                                                        'puzzle_solved')
+                                                    : (isReviewing
+                                                        ? LanguageService.get(
+                                                            'puzzle_reviewing')
+                                                        : '${LanguageService.get('puzzle_step')} ${((currentMoveIndex ~/ 2) + 1)} / ${((solutionMoves.length + 1) ~/ 2).clamp(1, 99)}'),
+                                                overflow: TextOverflow.ellipsis,
+                                                style: TextStyle(
+                                                  color: isSolved
+                                                      ? Colors.greenAccent
+                                                      : Colors.white
+                                                          .withValues(
+                                                              alpha: 0.9),
+                                                  fontSize: 12.5,
+                                                  fontWeight: FontWeight.w700,
+                                                ),
                                               ),
                                             ),
                                           ],
                                         ),
                                       ),
+
+                                      // Orta: İleri / Geri Oklar
+                                      if (_playedFens.isNotEmpty)
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF0E1422),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              IconButton(
+                                                visualDensity:
+                                                    VisualDensity.compact,
+                                                icon: const Icon(
+                                                    Icons.chevron_left_rounded,
+                                                    size: 24),
+                                                color: _viewIndex > 0
+                                                    ? Colors.white
+                                                    : Colors.white24,
+                                                onPressed: _viewIndex > 0
+                                                    ? () {
+                                                        SoundService
+                                                            .playMoveSound(
+                                                                false);
+                                                        setState(() {
+                                                          _viewIndex--;
+                                                          controller.loadFen(
+                                                              _playedFens[
+                                                                  _viewIndex]);
+                                                        });
+                                                      }
+                                                    : null,
+                                              ),
+                                              Container(
+                                                width: 1,
+                                                height: 18,
+                                                color: Colors.white12,
+                                              ),
+                                              IconButton(
+                                                visualDensity:
+                                                    VisualDensity.compact,
+                                                icon: const Icon(
+                                                    Icons.chevron_right_rounded,
+                                                    size: 24),
+                                                color: _viewIndex <
+                                                        _playedFens.length - 1
+                                                    ? Colors.white
+                                                    : Colors.white24,
+                                                onPressed: _viewIndex <
+                                                        _playedFens.length - 1
+                                                    ? () {
+                                                        SoundService
+                                                            .playMoveSound(
+                                                                false);
+                                                        setState(() {
+                                                          _viewIndex++;
+                                                          controller.loadFen(
+                                                              _playedFens[
+                                                                  _viewIndex]);
+                                                        });
+                                                      }
+                                                    : null,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+
+                                      const SizedBox(width: 8),
+
+                                      // Sağ: Atla / Sonraki Bulmaca kısayolu
+                                      InkWell(
+                                        onTap: _loadNextPuzzle,
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10, vertical: 7),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF1F2A44),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              Text(
+                                                isSolved
+                                                    ? LanguageService.get(
+                                                        'puzzle_next')
+                                                    : LanguageService.get(
+                                                        'puzzle_skip'),
+                                                style: const TextStyle(
+                                                  color: Colors.white70,
+                                                  fontSize: 11.5,
+                                                  fontWeight: FontWeight.w700,
+                                                ),
+                                              ),
+                                              const SizedBox(width: 3),
+                                              const Icon(
+                                                  Icons.skip_next_rounded,
+                                                  size: 16,
+                                                  color: Colors.white70),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+
+                                const SizedBox(height: 12),
+
+                                // 2. SKOR & ZORLUK KARTI
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: [
+                                      if (username.isNotEmpty &&
+                                          username != 'Misafir')
+                                        Expanded(
+                                          child: Container(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 14, vertical: 12),
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFF151B2B),
+                                              borderRadius:
+                                                  BorderRadius.circular(14),
+                                              border: Border.all(
+                                                color: const Color(0xFF5C6BC0)
+                                                    .withValues(alpha: 0.35),
+                                              ),
+                                            ),
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  padding:
+                                                      const EdgeInsets.all(8),
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        const Color(0xFF5C6BC0)
+                                                            .withValues(
+                                                                alpha: 0.18),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                  child: const Icon(
+                                                      Icons.stars_rounded,
+                                                      color: Color(0xFF7986CB),
+                                                      size: 20),
+                                                ),
+                                                const SizedBox(width: 10),
+                                                Expanded(
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        LanguageService.get(
+                                                            'puzzle_current_score'),
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        style: const TextStyle(
+                                                          color: Colors.white54,
+                                                          fontSize: 11,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                      ),
+                                                      const SizedBox(height: 2),
+                                                      Text(
+                                                        '$_currentScore',
+                                                        style: const TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      if (username.isNotEmpty &&
+                                          username != 'Misafir')
+                                        const SizedBox(width: 10),
+                                      Expanded(
+                                        child: InkWell(
+                                          onTap: _showDifficultySelector,
+                                          borderRadius:
+                                              BorderRadius.circular(14),
+                                          child: Container(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 14, vertical: 12),
+                                            decoration: BoxDecoration(
+                                              color: const Color(0xFF151B2B),
+                                              borderRadius:
+                                                  BorderRadius.circular(14),
+                                              border: Border.all(
+                                                color: Colors.cyanAccent
+                                                    .withValues(alpha: 0.28),
+                                              ),
+                                            ),
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  padding:
+                                                      const EdgeInsets.all(8),
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.cyanAccent
+                                                        .withValues(
+                                                            alpha: 0.12),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                  child: const Icon(
+                                                      Icons.tune_rounded,
+                                                      color: Colors.cyanAccent,
+                                                      size: 20),
+                                                ),
+                                                const SizedBox(width: 10),
+                                                Expanded(
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        LanguageService.get(
+                                                            'puzzle_difficulty'),
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        style: const TextStyle(
+                                                          color: Colors.white54,
+                                                          fontSize: 11,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                      ),
+                                                      const SizedBox(height: 2),
+                                                      Text(
+                                                        '${LanguageService.get(currentDifficulty.labelKey)} (+${currentDifficulty.points})',
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                        style: const TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 15,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+
+                                const SizedBox(height: 12),
+
+                                // 3. BAĞLAMSAL YÖNLENDİRME / İPUCU / SONRAKİ BULMACA KARTI
+                                if (isSolved)
+                                  SizedBox(
+                                    width: double.infinity,
+                                    child: ElevatedButton.icon(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor:
+                                            const Color(0xFF32804A),
+                                        foregroundColor: Colors.white,
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 14),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(14),
+                                        ),
+                                      ),
+                                      onPressed: _loadNextPuzzle,
+                                      icon: const Icon(
+                                          Icons.arrow_forward_rounded),
+                                      label: Text(
+                                        LanguageService.get('puzzle_next'),
+                                        style: const TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                else if (_hasFailedCurrentPuzzle)
+                                  SizedBox(
+                                    width: double.infinity,
+                                    child: OutlinedButton.icon(
+                                      style: OutlinedButton.styleFrom(
+                                        backgroundColor: const Color(0xFF1F1C10),
+                                        foregroundColor: Colors.amberAccent,
+                                        side: BorderSide(
+                                          color: Colors.amberAccent
+                                              .withValues(alpha: 0.7),
+                                          width: 1.3,
+                                        ),
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 13),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(14),
+                                        ),
+                                      ),
+                                      onPressed: _showHint,
+                                      icon: const Icon(
+                                          Icons.lightbulb_outline_rounded,
+                                          size: 20),
+                                      label: Text(
+                                        LanguageService.get('get_hint'),
+                                        style: const TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w800,
+                                          letterSpacing: 0.8,
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                else
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 14, vertical: 12),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF131929),
+                                      borderRadius: BorderRadius.circular(14),
+                                      border: Border.all(
+                                        color: Colors.white
+                                            .withValues(alpha: 0.06),
+                                      ),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 12,
+                                          height: 12,
+                                          decoration: BoxDecoration(
+                                            color: isWhiteToMove
+                                                ? Colors.white
+                                                : const Color(0xFF262D3D),
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                              color: Colors.white54,
+                                              width: 1.5,
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 10),
+                                        Expanded(
+                                          child: Text(
+                                            isWhiteToMove
+                                                ? LanguageService.get(
+                                                    'puzzle_find_best_white')
+                                                : LanguageService.get(
+                                                    'puzzle_find_best_black'),
+                                            style: const TextStyle(
+                                              color: Colors.white70,
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 8, vertical: 4),
+                                          decoration: BoxDecoration(
+                                            color: Colors.white
+                                                .withValues(alpha: 0.06),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Text(
+                                            puzzleRating != null
+                                                ? '$puzzleRating ELO'
+                                                : LanguageService.get(
+                                                    'puzzle_tactical_drill'),
+                                            style: const TextStyle(
+                                              color: Colors.white60,
+                                              fontSize: 11,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
+                                const SizedBox(height: 16),
                               ],
                             ),
                           ),
@@ -6702,62 +7342,6 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
-
-                  // MEVCUT PUAN GÖSTERİMİ
-                  if (username.isNotEmpty && username != 'Misafir')
-                    Container(
-                      margin: const EdgeInsets.only(bottom: 15),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 12),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF101A2B).withValues(alpha: 0.8),
-                        borderRadius: BorderRadius.circular(15),
-                        border: Border.all(
-                            color: Colors.blueAccent.withValues(alpha: 0.3),
-                            width: 1.5),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.blueAccent.withValues(alpha: 0.1),
-                              blurRadius: 15,
-                              spreadRadius: 2)
-                        ],
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(Icons.stars_rounded,
-                              color: Colors.blueAccent, size: 28),
-                          const SizedBox(width: 10),
-                          Text(
-                            LanguageService.currentLang == 'en'
-                                ? "Current Score: "
-                                : "Mevcut Puan: ",
-                            style: TextStyle(
-                                color: Colors.white.withValues(alpha: 0.9),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          Text(
-                            "$_currentScore",
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 1.2,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-// Satranç tahtası Container'ı burada bitiyor...
-                  if (isSolved)
-                    Text(LanguageService.get('puzzle_solved'),
-                        style: const TextStyle(
-                            color: Colors.greenAccent,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold))
                 ],
               ),
             ),
@@ -6876,7 +7460,7 @@ class _LibraryPageState extends State<LibraryPage> {
         actions: [
           PopupMenuButton<String>(
             icon: const Icon(Icons.filter_list, color: Colors.greenAccent),
-            tooltip: 'Sırala ve Filtrele',
+            tooltip: LanguageService.get('library_sort_filter'),
             color: const Color(0xFF1E2536),
             onSelected: (val) {
               setState(() {
@@ -6902,8 +7486,8 @@ class _LibraryPageState extends State<LibraryPage> {
                             : Colors.white70,
                         size: 18),
                     const SizedBox(width: 10),
-                    const Text('Son eklenenden ilk eklenene',
-                        style: TextStyle(color: Colors.white, fontSize: 13)),
+                    Text(LanguageService.get('library_newest_first'),
+                        style: const TextStyle(color: Colors.white, fontSize: 13)),
                   ],
                 ),
               ),
@@ -6920,8 +7504,8 @@ class _LibraryPageState extends State<LibraryPage> {
                             : Colors.white70,
                         size: 18),
                     const SizedBox(width: 10),
-                    const Text('İlk eklenenden son eklenene',
-                        style: TextStyle(color: Colors.white, fontSize: 13)),
+                    Text(LanguageService.get('library_oldest_first'),
+                        style: const TextStyle(color: Colors.white, fontSize: 13)),
                   ],
                 ),
               ),
@@ -6939,8 +7523,8 @@ class _LibraryPageState extends State<LibraryPage> {
                             : Colors.white70,
                         size: 18),
                     const SizedBox(width: 10),
-                    const Text('Sadece Chess.com',
-                        style: TextStyle(color: Colors.white, fontSize: 13)),
+                    Text(LanguageService.get('library_only_chesscom'),
+                        style: const TextStyle(color: Colors.white, fontSize: 13)),
                   ],
                 ),
               ),
@@ -6957,8 +7541,8 @@ class _LibraryPageState extends State<LibraryPage> {
                             : Colors.white70,
                         size: 18),
                     const SizedBox(width: 10),
-                    const Text('Sadece Lichess',
-                        style: TextStyle(color: Colors.white, fontSize: 13)),
+                    Text(LanguageService.get('library_only_lichess'),
+                        style: const TextStyle(color: Colors.white, fontSize: 13)),
                   ],
                 ),
               ),
@@ -6975,8 +7559,8 @@ class _LibraryPageState extends State<LibraryPage> {
                             : Colors.white70,
                         size: 18),
                     const SizedBox(width: 10),
-                    const Text('PGN Maçları',
-                        style: TextStyle(color: Colors.white, fontSize: 13)),
+                    Text(LanguageService.get('library_pgn_matches'),
+                        style: const TextStyle(color: Colors.white, fontSize: 13)),
                   ],
                 ),
               ),
@@ -6990,8 +7574,8 @@ class _LibraryPageState extends State<LibraryPage> {
                             _showSearch ? Colors.greenAccent : Colors.white70,
                         size: 18),
                     const SizedBox(width: 10),
-                    const Text('Oyuncu Ara',
-                        style: TextStyle(color: Colors.white, fontSize: 13)),
+                    Text(LanguageService.get('library_search_player'),
+                        style: const TextStyle(color: Colors.white, fontSize: 13)),
                   ],
                 ),
               ),
@@ -7012,7 +7596,7 @@ class _LibraryPageState extends State<LibraryPage> {
                       controller: _searchController,
                       style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                        hintText: 'Oyuncu adı veya platform ara...',
+                        hintText: LanguageService.get('library_search_hint'),
                         hintStyle: const TextStyle(color: Colors.white38),
                         prefixIcon:
                             const Icon(Icons.search, color: Colors.greenAccent),
@@ -7051,7 +7635,7 @@ class _LibraryPageState extends State<LibraryPage> {
                     child: Text(
                       GlobalLibrary.matches.isEmpty
                           ? LanguageService.get('no_library_matches')
-                          : 'Seçilen kritere veya aramaya uygun maç bulunamadı.',
+                          : LanguageService.get('library_no_filter_match'),
                       style:
                           const TextStyle(color: Colors.white54, fontSize: 16),
                       textAlign: TextAlign.center,
@@ -7196,6 +7780,7 @@ class _HomePageState extends State<HomePage> {
   int _loadedGamesCount = 30;
   Timer? _debounce;
   List<String> _liveSuggestions = [];
+  DateTime? _lastBackPressTime;
 
   final GlobalKey _styleAnalysisCardKey = GlobalKey();
 
@@ -8014,12 +8599,82 @@ class _HomePageState extends State<HomePage> {
     required Color color,
     required VoidCallback onPressed,
     bool isElevated = false,
+    bool expandToFill = false,
+    double verticalPadding = 12,
   }) {
+    final borderRadius = BorderRadius.circular(12);
+
+    if (expandToFill) {
+      return Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          color: const Color(0xFF151B2B).withValues(alpha: 0.92),
+          borderRadius: borderRadius,
+          border: Border.all(color: color.withValues(alpha: 0.85), width: 1.2),
+          image: DecorationImage(
+            image: const AssetImage('assets/button_texture.jpg'),
+            fit: BoxFit.cover,
+            opacity: 0.42,
+            colorFilter: ColorFilter.mode(
+              color,
+              BlendMode.modulate,
+            ),
+          ),
+        ),
+        child: Material(
+          color: Colors.transparent,
+          borderRadius: borderRadius,
+          child: InkWell(
+            borderRadius: borderRadius,
+            splashColor: color.withValues(alpha: 0.2),
+            highlightColor: color.withValues(alpha: 0.1),
+            onTap: onPressed,
+            child: LayoutBuilder(
+              builder: (context, btnConstraints) {
+                final iconSize = (btnConstraints.maxHeight * 0.34).clamp(18.0, 26.0);
+                final fontSize = (btnConstraints.maxHeight * 0.20).clamp(12.0, 14.5);
+                return Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: btnConstraints.maxWidth * 0.06,
+                    vertical: btnConstraints.maxHeight * 0.08,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (icon != null)
+                        Icon(icon, color: color, size: iconSize),
+                      if (icon != null)
+                        SizedBox(height: btnConstraints.maxHeight * 0.06),
+                      Flexible(
+                        child: Text(
+                          label,
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: fontSize,
+                            fontWeight: FontWeight.bold,
+                            color: color,
+                            height: 1.15,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+        ),
+      );
+    }
+
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: const Color(0xFF151B2B),
-        borderRadius: BorderRadius.circular(12),
+        color: const Color(0xFF151B2B).withValues(alpha: 0.92),
+        borderRadius: borderRadius,
         image: DecorationImage(
           image: const AssetImage('assets/button_texture.jpg'),
           fit: BoxFit.cover,
@@ -8036,9 +8691,8 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent,
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 14),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
+                padding: EdgeInsets.symmetric(vertical: verticalPadding),
+                shape: RoundedRectangleBorder(borderRadius: borderRadius),
               ),
               icon: icon != null
                   ? Icon(icon, color: Colors.white)
@@ -8054,9 +8708,8 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent,
                 side: BorderSide(color: color),
-                padding: const EdgeInsets.symmetric(vertical: 14),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
+                padding: EdgeInsets.symmetric(vertical: verticalPadding),
+                shape: RoundedRectangleBorder(borderRadius: borderRadius),
               ),
               icon: icon != null ? Icon(icon, color: color) : const SizedBox.shrink(),
               label: Text(label,
@@ -8064,6 +8717,177 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 15, fontWeight: FontWeight.bold, color: color)),
               onPressed: onPressed,
             ),
+    );
+  }
+
+  Widget _buildHomeActionGrid({
+    required double gap,
+    required bool expandRows,
+  }) {
+    final row1 = Row(
+      children: [
+        Expanded(
+          child: _buildTexturedButton(
+            label: LanguageService.get('library_saved_matches'),
+            icon: Icons.library_books,
+            color: const Color(0xFFE57373),
+            expandToFill: expandRows,
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const LibraryPage())),
+          ),
+        ),
+        SizedBox(width: gap),
+        Expanded(
+          child: _buildTexturedButton(
+            label: LanguageService.get('puzzles'),
+            icon: Icons.extension,
+            color: Colors.orangeAccent,
+            expandToFill: expandRows,
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const PuzzlesPage())),
+          ),
+        ),
+      ],
+    );
+
+    final row2 = Row(
+      children: [
+        Expanded(
+          child: _buildTexturedButton(
+            label: LanguageService.get('master_archive'),
+            icon: Icons.workspace_premium,
+            color: Colors.amberAccent,
+            expandToFill: expandRows,
+            onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MastersListPage())),
+          ),
+        ),
+        SizedBox(width: gap),
+        Expanded(
+          child: _buildTexturedButton(
+            label: LanguageService.get('opening_trainer'),
+            icon: Icons.menu_book,
+            color: const Color(0xFF81C784),
+            expandToFill: expandRows,
+            onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const OpeningTrainerPage())),
+          ),
+        ),
+      ],
+    );
+
+    final row3 = Row(
+      children: [
+        Expanded(
+          child: _buildTexturedButton(
+            label: LanguageService.get('play_vs_bot'),
+            icon: Icons.smart_toy,
+            color: Colors.blueAccent,
+            expandToFill: expandRows,
+            onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const BotSelectionPage())),
+          ),
+        ),
+        SizedBox(width: gap),
+        Expanded(
+          child: _buildTexturedButton(
+            label: LanguageService.get('free_analyze'),
+            icon: Icons.analytics,
+            color: Colors.purpleAccent,
+            expandToFill: expandRows,
+            onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const FreeAnalysisPage())),
+          ),
+        ),
+      ],
+    );
+
+    if (expandRows) {
+      return Column(
+        children: [
+          Expanded(child: row1),
+          SizedBox(height: gap),
+          Expanded(child: row2),
+          SizedBox(height: gap),
+          Expanded(child: row3),
+        ],
+      );
+    }
+
+    return Column(
+      children: [
+        IntrinsicHeight(child: row1),
+        SizedBox(height: gap),
+        IntrinsicHeight(child: row2),
+        SizedBox(height: gap),
+        IntrinsicHeight(child: row3),
+      ],
+    );
+  }
+
+  Widget _buildPrimaryActionRow({
+    required Color themeColor,
+    required double gap,
+    required double vPad,
+  }) {
+    return Row(
+      children: [
+        Expanded(
+          flex: 3,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: themeColor,
+              foregroundColor: Colors.white,
+              padding: EdgeInsets.symmetric(vertical: vPad, horizontal: gap),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
+            ),
+            onPressed: fetchPlayerStats,
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                LanguageService.get('find_player'),
+                style:
+                    const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(width: gap),
+        Expanded(
+          flex: 2,
+          child: OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              foregroundColor: themeColor,
+              backgroundColor: const Color(0xFF151B2B).withValues(alpha: 0.92),
+              side: BorderSide(color: themeColor),
+              padding: EdgeInsets.symmetric(vertical: vPad, horizontal: gap),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
+            ),
+            onPressed: _showPgnInputDialog,
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                LanguageService.get('analyze_with_pgn'),
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: themeColor,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -8081,117 +8905,145 @@ class _HomePageState extends State<HomePage> {
           .any((h) => h.toLowerCase() == name.toLowerCase()))
     ];
 
-    return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 20.0),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _isHeaderVisible
-                      ? const SizedBox(
-                          width:
-                              48) // Boşluk (Settings butonuyla dengeli olsun diye)
-                      : IconButton(
-                          icon: const Icon(Icons.arrow_back,
-                              color: Colors.white70),
-                          tooltip: LanguageService.get('back_home'),
-                          onPressed: _resetHome,
-                        ),
-                  IconButton(
-                    icon: const Icon(Icons.settings, color: Colors.white70),
-                    tooltip: LanguageService.get('settings'),
-                    onPressed: () => showSettingsSheet(context,
-                        onChanged: () => setState(() {})),
-                  ),
-                ],
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 500),
-                curve: Curves.easeInOutCubic,
-                alignment: Alignment.topCenter,
-                child: _isHeaderVisible
-                    ? Column(
-                        children: [
-                          Stack(
-                            alignment: Alignment.center,
-                            clipBehavior: Clip.none,
-                            children: [
-                              Container(
-                                width: 100,
-                                height: 100,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(24),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: themeColor.withValues(alpha: 0.15),
-                                      blurRadius: 25,
-                                      offset: const Offset(0, 8),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Image.asset(
-                                'assets/logoyazili.png',
-                                height: 180,
-                                fit: BoxFit.contain,
-                                errorBuilder: (context, error, stackTrace) =>
-                                    Icon(Icons.psychology,
-                                        size: 70, color: themeColor),
-                              ),
-                            ],
+    final keyboardOpen = MediaQuery.of(context).viewInsets.bottom > 0;
+
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        // Eğer profil/maç ekranındaysa veya arama geçmişi açıksa önce ana menüye dön
+        if (!_isHeaderVisible ||
+            _playerProfile != null ||
+            _isLoading ||
+            _showSearchHistory ||
+            _searchFocusNode.hasFocus) {
+          _resetHome();
+          return;
+        }
+        // Ana ekrandaysa 2 saniye içinde ikinci geri basışında çık
+        final now = DateTime.now();
+        if (_lastBackPressTime != null &&
+            now.difference(_lastBackPressTime!) < const Duration(seconds: 2)) {
+          SystemNavigator.pop();
+          return;
+        }
+        _lastBackPressTime = now;
+        ScaffoldMessenger.of(context).clearSnackBars();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              LanguageService.currentLang == 'en'
+                  ? 'Press back again to exit'
+                  : 'Çıkmak için tekrar geri tuşuna basın',
+              style: const TextStyle(
+                  color: Colors.white, fontWeight: FontWeight.w600),
+            ),
+            backgroundColor: const Color(0xFF1E263A),
+            behavior: SnackBarBehavior.floating,
+            duration: const Duration(seconds: 2),
+          ),
+        );
+      },
+      child: Scaffold(
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Positioned.fill(
+            child: ChessSilhouetteBackground(accentColor: themeColor),
+          ),
+          SafeArea(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final viewportHeight = constraints.maxHeight;
+                final viewportWidth = constraints.maxWidth;
+                final hPad = viewportWidth * 0.05;
+                final gap = (viewportHeight * 0.013).clamp(6.0, 14.0);
+                final primaryBtnVPad =
+                    (viewportHeight * 0.018).clamp(10.0, 16.0);
+
+                final bool fitSingleScreen = _isHeaderVisible &&
+                    _playerProfile == null &&
+                    !_isLoading &&
+                    _errorMessage.isEmpty &&
+                    !_showSearchHistory &&
+                    !keyboardOpen &&
+                    viewportHeight >= 460;
+
+                final Widget topBar = Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _isHeaderVisible
+                        ? const SizedBox(width: 48)
+                        : IconButton(
+                            icon: const Icon(Icons.arrow_back,
+                                color: Colors.white70),
+                            tooltip: LanguageService.get('back_home'),
+                            onPressed: _resetHome,
                           ),
-                          const SizedBox(height: 4),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                ChoiceChip(
-                                    label: const Text('Lichess'),
-                                    selected: _selectedPlatform == 'Lichess',
-                                    onSelected: (s) {
-                                      setState(() {
-                                        _selectedPlatform = 'Lichess';
-                                        _liveSuggestions = [];
-                                      });
-                                    },
-                                    selectedColor: const Color(0xFF5C6BC0),
-                                    backgroundColor: const Color(0xFF151B2B)),
-                                const SizedBox(width: 15),
-                                ChoiceChip(
-                                    label: const Text('Chess.com'),
-                                    selected: _selectedPlatform == 'Chess.com',
-                                    onSelected: (s) {
-                                      setState(() {
-                                        _selectedPlatform = 'Chess.com';
-                                        _liveSuggestions = [];
-                                      });
-                                    },
-                                    selectedColor: const Color(0xFF32804A),
-                                    backgroundColor: const Color(0xFF151B2B)),
-                              ]),
-                          const SizedBox(height: 12),
-                        ],
-                      )
-                    : const SizedBox(width: double.infinity, height: 0),
-              ),
-              TextField(
-                focusNode: _searchFocusNode,
-                controller: _usernameController,
-                style: const TextStyle(color: Colors.white),
-                onTap: () {
-                  setState(() {
-                    _isHeaderVisible = true;
-                    _showSearchHistory =
-                        _usernameController.text.trim().isNotEmpty ||
-                            GlobalLibrary.searchHistory.isNotEmpty;
-                  });
-                },
-                onChanged: _onSearchChanged,
-                onSubmitted: (_) => fetchPlayerStats(),
-                decoration: InputDecoration(
+                    IconButton(
+                      icon: const Icon(Icons.settings, color: Colors.white70),
+                      tooltip: LanguageService.get('settings'),
+                      onPressed: () => showSettingsSheet(context,
+                          onChanged: () => setState(() {})),
+                    ),
+                  ],
+                );
+
+                final Widget platformChips = Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ChoiceChip(
+                      visualDensity: VisualDensity.compact,
+                      label: const Text('Lichess'),
+                      selected: _selectedPlatform == 'Lichess',
+                      onSelected: (s) {
+                        setState(() {
+                          _selectedPlatform = 'Lichess';
+                          _liveSuggestions = [];
+                        });
+                      },
+                      selectedColor: const Color(0xFF5C6BC0),
+                      backgroundColor:
+                          const Color(0xFF151B2B).withValues(alpha: 0.92),
+                    ),
+                    SizedBox(width: viewportWidth * 0.04),
+                    ChoiceChip(
+                      visualDensity: VisualDensity.compact,
+                      label: const Text('Chess.com'),
+                      selected: _selectedPlatform == 'Chess.com',
+                      onSelected: (s) {
+                        setState(() {
+                          _selectedPlatform = 'Chess.com';
+                          _liveSuggestions = [];
+                        });
+                      },
+                      selectedColor: const Color(0xFF32804A),
+                      backgroundColor:
+                          const Color(0xFF151B2B).withValues(alpha: 0.92),
+                    ),
+                  ],
+                );
+
+                final Widget searchField = TextField(
+                  focusNode: _searchFocusNode,
+                  controller: _usernameController,
+                  style: const TextStyle(color: Colors.white),
+                  onTap: () {
+                    setState(() {
+                      _isHeaderVisible = true;
+                      _showSearchHistory =
+                          _usernameController.text.trim().isNotEmpty ||
+                              GlobalLibrary.searchHistory.isNotEmpty;
+                    });
+                  },
+                  onChanged: _onSearchChanged,
+                  onSubmitted: (_) => fetchPlayerStats(),
+                  decoration: InputDecoration(
+                    isDense: true,
+                    contentPadding: EdgeInsets.symmetric(
+                      vertical: (viewportHeight * 0.017).clamp(10.0, 16.0),
+                      horizontal: viewportWidth * 0.035,
+                    ),
                     hintText:
                         '$_selectedPlatform ${LanguageService.get('player_search_placeholder')}',
                     border: OutlineInputBorder(
@@ -8201,328 +9053,417 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(color: themeColor, width: 2)),
                     filled: true,
-                    fillColor: const Color(0xFF151B2B),
-                    prefixIcon: Icon(Icons.search, color: themeColor)),
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 280),
-                curve: Curves.easeInOut,
-                alignment: Alignment.topCenter,
-                child: _showSearchHistory && combinedSuggestions.isNotEmpty
-                    ? Container(
-                        margin: const EdgeInsets.only(top: 8),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF101A2B),
-                          borderRadius: BorderRadius.circular(14),
-                          border: Border.all(color: const Color(0xFF24314D)),
-                        ),
-                        child: ConstrainedBox(
-                          constraints: const BoxConstraints(maxHeight: 220),
-                          child: ListView.separated(
-                            padding: const EdgeInsets.all(8),
-                            shrinkWrap: true,
-                            itemCount: combinedSuggestions.length,
-                            separatorBuilder: (_, __) =>
-                                const Divider(height: 1, color: Colors.white10),
-                            itemBuilder: (context, index) {
-                              final option = combinedSuggestions[index];
-                              bool isHistory = GlobalLibrary.searchHistory.any(
-                                  (h) =>
-                                      h.toLowerCase() == option.toLowerCase());
+                    fillColor: const Color(0xFF151B2B).withValues(alpha: 0.92),
+                    prefixIcon: Icon(Icons.search, color: themeColor),
+                  ),
+                );
 
-                              return ListTile(
-                                dense: true,
-                                leading: Icon(
-                                    isHistory
-                                        ? Icons.history
-                                        : Icons.person_search,
-                                    color:
-                                        isHistory ? Colors.white54 : themeColor,
-                                    size: 18),
-                                title: Text(option,
-                                    style: TextStyle(
-                                        color: isHistory
-                                            ? Colors.white
-                                            : Colors.white,
-                                        fontWeight: isHistory
-                                            ? FontWeight.w500
-                                            : FontWeight.bold)),
-                                onTap: () {
-                                  _usernameController.text = option;
-                                  setState(() => _showSearchHistory = false);
-                                  fetchPlayerStats();
-                                },
-                              );
-                            },
-                          ),
-                        ),
-                      )
-                    : const SizedBox.shrink(),
-              ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 600),
-                curve: Curves.easeOutCubic,
-                alignment: Alignment.topCenter,
-                child: _isHeaderVisible
-                    ? Column(
+                if (fitSingleScreen) {
+                  return SizedBox(
+                    height: viewportHeight,
+                    width: viewportWidth,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(
+                        hPad,
+                        viewportHeight * 0.008,
+                        hPad,
+                        viewportHeight * 0.018,
+                      ),
+                      child: Column(
                         children: [
-                          const SizedBox(height: 8),
-                          SizedBox(
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: themeColor,
-                                      foregroundColor: Colors.white,
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(12))),
-                                  onPressed: fetchPlayerStats,
-                                  child: Text(
-                                      LanguageService.get('find_player'),
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold)))),
-                          const SizedBox(height: 8),
-                          SizedBox(
-                              width: double.infinity,
-                              child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                      foregroundColor: themeColor,
-                                      backgroundColor: const Color(0xFF151B2B),
-                                      side: BorderSide(color: themeColor),
-                                      padding: const EdgeInsets.symmetric(vertical: 14),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(12))),
-                                  onPressed: _showPgnInputDialog,
-                                  child: Text(
-                                      LanguageService.get('analyze_with_pgn'),
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
-                                          color: themeColor)))),
-                          const SizedBox(height: 8),
-                          _buildTexturedButton(
-                            label: LanguageService.get('library_saved_matches'),
-                            icon: Icons.library_books,
-                            color: const Color(0xFFE57373), // Softer red (Colors.red[300])
-                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LibraryPage())),
+                          topBar,
+                          Flexible(
+                            flex: 24,
+                            child: Center(
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: viewportHeight * 0.006),
+                                child: Image.asset(
+                                  'assets/logoyazili.png',
+                                  fit: BoxFit.contain,
+                                  errorBuilder: (context, error, stackTrace) =>
+                                      FittedBox(
+                                    child: Icon(Icons.psychology,
+                                        color: themeColor),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
-                          const SizedBox(height: 8),
-                          _buildTexturedButton(
-                            label: LanguageService.get('puzzles'),
-                            icon: Icons.extension,
-                            color: Colors.orangeAccent,
-                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const PuzzlesPage())),
+                          platformChips,
+                          SizedBox(height: gap),
+                          searchField,
+                          SizedBox(height: gap),
+                          _buildPrimaryActionRow(
+                            themeColor: themeColor,
+                            gap: gap,
+                            vPad: primaryBtnVPad,
                           ),
-                          const SizedBox(height: 8),
-                          _buildTexturedButton(
-                            label: LanguageService.get('master_archive'),
-                            icon: Icons.workspace_premium,
-                            color: Colors.amberAccent,
-                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const MastersListPage())),
+                          SizedBox(height: gap),
+                          Expanded(
+                            flex: 48,
+                            child: _buildHomeActionGrid(
+                              gap: gap,
+                              expandRows: true,
+                            ),
                           ),
-                          const SizedBox(height: 8),
-                          _buildTexturedButton(
-                            label: LanguageService.get('opening_trainer'),
-                            icon: Icons.menu_book,
-                            color: const Color(0xFF81C784), // Softer green (Colors.green[300])
-                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const OpeningTrainerPage())),
-                          ),
-                          const SizedBox(height: 8),
-                          _buildTexturedButton(
-                            label: LanguageService.get('play_vs_bot'),
-                            icon: Icons.smart_toy,
-                            color: Colors.blueAccent,
-                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const BotSelectionPage())),
-                          ),
-                          const SizedBox(height: 8),
-                          _buildTexturedButton(
-                            label: LanguageService.get('free_analyze'),
-                            icon: Icons.analytics,
-                            color: Colors.purpleAccent,
-                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const FreeAnalysisPage())),
-                          ),
-                          const SizedBox(height: 8),
                         ],
-                      )
-                    : const SizedBox(width: double.infinity, height: 0),
-              ),
-              if (_isLoading)
-                Padding(
-                    padding: const EdgeInsets.only(top: 40.0),
-                    child: CircularProgressIndicator(color: themeColor)),
-              if (_errorMessage.isNotEmpty)
-                Text(_errorMessage,
-                    style: const TextStyle(
-                        color: Colors.redAccent, fontWeight: FontWeight.bold)),
-              if (_playerProfile != null) ...[
-                Card(
-                  elevation: 8,
-                  color: const Color(0xFF151B2B),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
+                      ),
+                    ),
+                  );
+                }
+
+                return SingleChildScrollView(
                   child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Column(children: [
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.person, size: 36, color: themeColor),
-                            const SizedBox(width: 10),
-                            // EĞER kişinin unvanı varsa VEYA kişi bağışçıysa etiketi çiz
-                            buildUserTags(
-                                (_playerProfile!['title'] ?? '').toString(),
-                                _isUserDonor),
-                            Flexible(
-                                child: Text(
-                                    _playerProfile!['username'] ?? 'Bilinmeyen',
-                                    overflow: TextOverflow.ellipsis,
-                                    style: const TextStyle(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold))),
-                          ]),
-                      const Divider(
-                          height: 30, thickness: 1, color: Color(0xFF2A3650)),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            _buildEloColumn('Rapid', _playerProfile!['rapid'],
-                                'rapid', themeColor),
-                            _buildEloColumn('Blitz', _playerProfile!['blitz'],
-                                'blitz', themeColor),
-                            _buildEloColumn('Bullet', _playerProfile!['bullet'],
-                                'bullet', themeColor)
-                          ]),
-                    ]),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                if (_playerStyleProfile != null)
-                  _buildPlayerStyleWidget(_playerStyleProfile!),
-                const SizedBox(height: 25),
-                Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                        _selectedTempo == 'all'
-                            ? LanguageService.get('recent_matches')
-                            : '${LanguageService.tempoLabel(_selectedTempo)} - ${LanguageService.get('recent_matches')}',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: themeColor))),
-                const SizedBox(height: 15),
-                if (_recentMatches.isEmpty && !_isMatchesLoading)
-                  Text(LanguageService.get('no_match_data'),
-                      style: const TextStyle(color: Colors.white54))
-                else
-                  ListView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: _recentMatches.length,
-                    itemBuilder: (context, index) {
-                      var match = _recentMatches[index];
-                      String sUser =
-                          _playerProfile!['username'].toString().toLowerCase();
-                      String w = match['white'].toString().toLowerCase();
-                      String b = match['black'].toString().toLowerCase();
-                      bool uWon = (match['winner'] == 'white' && w == sUser) ||
-                          (match['winner'] == 'black' && b == sUser);
-                      bool uLost = (match['winner'] == 'white' && b == sUser) ||
-                          (match['winner'] == 'black' && w == sUser);
-                      Color rColor = const Color(0xFF151B2B);
-                      Color aColor = Colors.grey;
-                      if (uWon) {
-                        rColor =
-                            const Color(0xFF66BB6A).withValues(alpha: 0.12);
-                        aColor = const Color(0xFF66BB6A);
-                      } else if (uLost) {
-                        rColor =
-                            const Color(0xFFEF5350).withValues(alpha: 0.12);
-                        aColor = const Color(0xFFEF5350);
-                      }
-                      return Card(
-                        color: rColor,
-                        margin: const EdgeInsets.only(bottom: 12),
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                                color: aColor.withValues(alpha: 0.2),
-                                width: 1)),
-                        child: ListTile(
-                          leading: Container(
-                              padding: const EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                  color: aColor.withValues(alpha: 0.35),
-                                  borderRadius: BorderRadius.circular(8)),
-                              child: const Icon(Icons.sports_esports,
-                                  color: Colors.white)),
-                          title: Wrap(
-                            crossAxisAlignment: WrapCrossAlignment.center,
-                            children: [
-                              if ((match['whiteTitle'] ?? '')
-                                  .toString()
-                                  .isNotEmpty)
-                                buildTitleTag(match['whiteTitle']),
-                              Text(match['white'],
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white)),
-                              const Text(' vs ',
-                                  style: TextStyle(color: Colors.white54)),
-                              if ((match['blackTitle'] ?? '')
-                                  .toString()
-                                  .isNotEmpty)
-                                buildTitleTag(match['blackTitle']),
-                              Text(match['black'],
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white)),
-                            ],
-                          ),
-                          subtitle: Text(
-                              '${LanguageService.get('mode')}: ${match['speed']}',
-                              style: TextStyle(
-                                  color: aColor, fontWeight: FontWeight.bold)),
-                          trailing: Icon(Icons.arrow_forward_ios,
-                              size: 16, color: aColor.withValues(alpha: 0.8)),
-                          onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => AnalysisPage(
-                                      matchData: match,
-                                      boardOrientation: w == sUser
-                                          ? PlayerColor.white
-                                          : PlayerColor.black,
-                                      apiHeaders: _apiHeaders))),
+                    padding: EdgeInsets.fromLTRB(
+                      hPad,
+                      viewportHeight * 0.008,
+                      hPad,
+                      viewportHeight * 0.025,
+                    ),
+                    child: Column(
+                      children: [
+                        topBar,
+                        AnimatedSize(
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeInOutCubic,
+                          alignment: Alignment.topCenter,
+                          child: _isHeaderVisible
+                              ? Column(
+                                  children: [
+                                    ConstrainedBox(
+                                      constraints: BoxConstraints(
+                                        maxHeight: viewportHeight * 0.22,
+                                      ),
+                                      child: Image.asset(
+                                        'assets/logoyazili.png',
+                                        fit: BoxFit.contain,
+                                        errorBuilder:
+                                            (context, error, stackTrace) =>
+                                                Icon(Icons.psychology,
+                                                    size: viewportHeight * 0.1,
+                                                    color: themeColor),
+                                      ),
+                                    ),
+                                    SizedBox(height: gap * 0.5),
+                                    platformChips,
+                                    SizedBox(height: gap),
+                                  ],
+                                )
+                              : const SizedBox(
+                                  width: double.infinity, height: 0),
                         ),
-                      );
-                    },
-                  ),
-                if (_recentMatches.isNotEmpty && !_isMatchesLoading)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 2.0, bottom: 12.0),
-                    child: OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.white,
-                          side: BorderSide(
-                              color: themeColor.withValues(alpha: 0.5)),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10))),
-                      onPressed: () => fetchPlayerStats(loadMore: true),
-                      child: Text(LanguageService.get('load_more_games')),
+                        searchField,
+                        AnimatedSize(
+                          duration: const Duration(milliseconds: 280),
+                          curve: Curves.easeInOut,
+                          alignment: Alignment.topCenter,
+                          child: _showSearchHistory &&
+                                  combinedSuggestions.isNotEmpty
+                              ? Container(
+                                  margin: EdgeInsets.only(top: gap * 0.7),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF101A2B)
+                                        .withValues(alpha: 0.96),
+                                    borderRadius: BorderRadius.circular(14),
+                                    border: Border.all(
+                                        color: const Color(0xFF24314D)),
+                                  ),
+                                  child: ConstrainedBox(
+                                    constraints: BoxConstraints(
+                                        maxHeight: viewportHeight * 0.30),
+                                    child: ListView.separated(
+                                      padding: const EdgeInsets.all(8),
+                                      shrinkWrap: true,
+                                      itemCount: combinedSuggestions.length,
+                                      separatorBuilder: (_, __) =>
+                                          const Divider(
+                                              height: 1, color: Colors.white10),
+                                      itemBuilder: (context, index) {
+                                        final option =
+                                            combinedSuggestions[index];
+                                        bool isHistory = GlobalLibrary
+                                            .searchHistory
+                                            .any((h) =>
+                                                h.toLowerCase() ==
+                                                option.toLowerCase());
+
+                                        return ListTile(
+                                          dense: true,
+                                          leading: Icon(
+                                              isHistory
+                                                  ? Icons.history
+                                                  : Icons.person_search,
+                                              color: isHistory
+                                                  ? Colors.white54
+                                                  : themeColor,
+                                              size: 18),
+                                          title: Text(option,
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: isHistory
+                                                      ? FontWeight.w500
+                                                      : FontWeight.bold)),
+                                          onTap: () {
+                                            _usernameController.text = option;
+                                            setState(() =>
+                                                _showSearchHistory = false);
+                                            fetchPlayerStats();
+                                          },
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                )
+                              : const SizedBox.shrink(),
+                        ),
+                        AnimatedSize(
+                          duration: const Duration(milliseconds: 600),
+                          curve: Curves.easeOutCubic,
+                          alignment: Alignment.topCenter,
+                          child: _isHeaderVisible
+                              ? Column(
+                                  children: [
+                                    SizedBox(height: gap),
+                                    _buildPrimaryActionRow(
+                                      themeColor: themeColor,
+                                      gap: gap,
+                                      vPad: primaryBtnVPad,
+                                    ),
+                                    SizedBox(height: gap),
+                                    _buildHomeActionGrid(
+                                      gap: gap,
+                                      expandRows: false,
+                                    ),
+                                    SizedBox(height: gap),
+                                  ],
+                                )
+                              : const SizedBox(
+                                  width: double.infinity, height: 0),
+                        ),
+                        if (_isLoading)
+                          Padding(
+                              padding:
+                                  EdgeInsets.only(top: viewportHeight * 0.05),
+                              child: CircularProgressIndicator(
+                                  color: themeColor)),
+                        if (_errorMessage.isNotEmpty)
+                          Padding(
+                            padding: EdgeInsets.only(top: gap),
+                            child: Text(_errorMessage,
+                                style: const TextStyle(
+                                    color: Colors.redAccent,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        if (_playerProfile != null) ...[
+                          Card(
+                            elevation: 8,
+                            color:
+                                const Color(0xFF151B2B).withValues(alpha: 0.95),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(20.0),
+                              child: Column(children: [
+                                Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(Icons.person,
+                                          size: 36, color: themeColor),
+                                      const SizedBox(width: 10),
+                                      buildUserTags(
+                                          (_playerProfile!['title'] ?? '')
+                                              .toString(),
+                                          _isUserDonor),
+                                      Flexible(
+                                          child: Text(
+                                              _playerProfile!['username'] ??
+                                                  'Bilinmeyen',
+                                              overflow: TextOverflow.ellipsis,
+                                              style: const TextStyle(
+                                                  fontSize: 24,
+                                                  fontWeight:
+                                                      FontWeight.bold))),
+                                    ]),
+                                const Divider(
+                                    height: 30,
+                                    thickness: 1,
+                                    color: Color(0xFF2A3650)),
+                                Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      _buildEloColumn(
+                                          'Rapid',
+                                          _playerProfile!['rapid'],
+                                          'rapid',
+                                          themeColor),
+                                      _buildEloColumn(
+                                          'Blitz',
+                                          _playerProfile!['blitz'],
+                                          'blitz',
+                                          themeColor),
+                                      _buildEloColumn(
+                                          'Bullet',
+                                          _playerProfile!['bullet'],
+                                          'bullet',
+                                          themeColor)
+                                    ]),
+                              ]),
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          if (_playerStyleProfile != null)
+                            _buildPlayerStyleWidget(_playerStyleProfile!),
+                          const SizedBox(height: 25),
+                          Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                  _selectedTempo == 'all'
+                                      ? LanguageService.get('recent_matches')
+                                      : '${LanguageService.tempoLabel(_selectedTempo)} - ${LanguageService.get('recent_matches')}',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: themeColor))),
+                          const SizedBox(height: 15),
+                          if (_recentMatches.isEmpty && !_isMatchesLoading)
+                            Text(LanguageService.get('no_match_data'),
+                                style: const TextStyle(color: Colors.white54))
+                          else
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemCount: _recentMatches.length,
+                              itemBuilder: (context, index) {
+                                var match = _recentMatches[index];
+                                String sUser = _playerProfile!['username']
+                                    .toString()
+                                    .toLowerCase();
+                                String w =
+                                    match['white'].toString().toLowerCase();
+                                String b =
+                                    match['black'].toString().toLowerCase();
+                                bool uWon =
+                                    (match['winner'] == 'white' && w == sUser) ||
+                                        (match['winner'] == 'black' &&
+                                            b == sUser);
+                                bool uLost =
+                                    (match['winner'] == 'white' && b == sUser) ||
+                                        (match['winner'] == 'black' &&
+                                            w == sUser);
+                                Color rColor = const Color(0xFF151B2B);
+                                Color aColor = Colors.grey;
+                                if (uWon) {
+                                  rColor = const Color(0xFF66BB6A)
+                                      .withValues(alpha: 0.12);
+                                  aColor = const Color(0xFF66BB6A);
+                                } else if (uLost) {
+                                  rColor = const Color(0xFFEF5350)
+                                      .withValues(alpha: 0.12);
+                                  aColor = const Color(0xFFEF5350);
+                                }
+                                return Card(
+                                  color: rColor,
+                                  margin: const EdgeInsets.only(bottom: 12),
+                                  elevation: 0,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      side: BorderSide(
+                                          color: aColor.withValues(alpha: 0.2),
+                                          width: 1)),
+                                  child: ListTile(
+                                    leading: Container(
+                                        padding: const EdgeInsets.all(8),
+                                        decoration: BoxDecoration(
+                                            color:
+                                                aColor.withValues(alpha: 0.35),
+                                            borderRadius:
+                                                BorderRadius.circular(8)),
+                                        child: const Icon(Icons.sports_esports,
+                                            color: Colors.white)),
+                                    title: Wrap(
+                                      crossAxisAlignment:
+                                          WrapCrossAlignment.center,
+                                      children: [
+                                        if ((match['whiteTitle'] ?? '')
+                                            .toString()
+                                            .isNotEmpty)
+                                          buildTitleTag(match['whiteTitle']),
+                                        Text(match['white'],
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white)),
+                                        const Text(' vs ',
+                                            style: TextStyle(
+                                                color: Colors.white54)),
+                                        if ((match['blackTitle'] ?? '')
+                                            .toString()
+                                            .isNotEmpty)
+                                          buildTitleTag(match['blackTitle']),
+                                        Text(match['black'],
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white)),
+                                      ],
+                                    ),
+                                    subtitle: Text(
+                                        '${LanguageService.get('mode')}: ${match['speed']}',
+                                        style: TextStyle(
+                                            color: aColor,
+                                            fontWeight: FontWeight.bold)),
+                                    trailing: Icon(Icons.arrow_forward_ios,
+                                        size: 16,
+                                        color: aColor.withValues(alpha: 0.8)),
+                                    onTap: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => AnalysisPage(
+                                                matchData: match,
+                                                boardOrientation: w == sUser
+                                                    ? PlayerColor.white
+                                                    : PlayerColor.black,
+                                                apiHeaders: _apiHeaders))),
+                                  ),
+                                );
+                              },
+                            ),
+                          if (_recentMatches.isNotEmpty && !_isMatchesLoading)
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 2.0, bottom: 12.0),
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                    foregroundColor: Colors.white,
+                                    side: BorderSide(
+                                        color:
+                                            themeColor.withValues(alpha: 0.5)),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(10))),
+                                onPressed: () =>
+                                    fetchPlayerStats(loadMore: true),
+                                child: Text(
+                                    LanguageService.get('load_more_games')),
+                              ),
+                            ),
+                          if (_isMatchesLoading)
+                            Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: CircularProgressIndicator(
+                                    color: themeColor))
+                        ],
+                      ],
                     ),
                   ),
-                if (_isMatchesLoading)
-                  Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: CircularProgressIndicator(color: themeColor))
-              ],
-            ],
+                );
+              },
+            ),
           ),
-        ),
+        ],
       ),
-    ));
+    ),
+    );
   }
 }
 
@@ -8718,17 +9659,72 @@ class MultiArrowPainter extends CustomPainter {
   }
 }
 
-class LeaderboardPage extends StatelessWidget {
+class LeaderboardPage extends StatefulWidget {
   const LeaderboardPage({super.key});
 
   @override
+  State<LeaderboardPage> createState() => _LeaderboardPageState();
+}
+
+class _LeaderboardPageState extends State<LeaderboardPage> {
+  final TextEditingController _searchController = TextEditingController();
+  String _searchQuery = '';
+  String _myUsername = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadMyUsername();
+  }
+
+  Future<void> _loadMyUsername() async {
+    final prefs = await SharedPreferences.getInstance();
+    final saved = prefs.getString('puzzle_username') ?? '';
+    if (mounted) {
+      setState(() => _myUsername = saved.trim());
+    }
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final bool isEn = LanguageService.currentLang == 'en';
+    final bool hasMyUser = _myUsername.isNotEmpty &&
+        _myUsername.toLowerCase() != 'misafir' &&
+        _myUsername.toLowerCase() != 'guest';
+
     return Scaffold(
       appBar: AppBar(
         title: Text(LanguageService.get('puzzle_username_title'),
             style: const TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFF151B2B),
         actions: [
+          if (hasMyUser)
+            IconButton(
+              icon: Icon(
+                Icons.person_search_rounded,
+                color: _searchQuery.toLowerCase() == _myUsername.toLowerCase()
+                    ? Colors.cyanAccent
+                    : Colors.white70,
+              ),
+              tooltip: isEn ? 'Find My Rank' : 'Sıramı Bul',
+              onPressed: () {
+                setState(() {
+                  if (_searchQuery.toLowerCase() == _myUsername.toLowerCase()) {
+                    _searchController.clear();
+                    _searchQuery = '';
+                  } else {
+                    _searchController.text = _myUsername;
+                    _searchQuery = _myUsername;
+                  }
+                });
+              },
+            ),
           IconButton(
             icon: const Icon(Icons.settings, color: Colors.white70),
             tooltip: LanguageService.get('settings'),
@@ -8736,107 +9732,202 @@ class LeaderboardPage extends StatelessWidget {
           ),
         ],
       ),
-      body: StreamBuilder<QuerySnapshot>(
-        // Firestore'dan verileri score'a göre azalan şekilde çek (Tüm liste)
-        stream: FirebaseFirestore.instance
-            .collection('users')
-            .orderBy('score', descending: true)
-            .snapshots(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(
-                child: CircularProgressIndicator(color: Colors.orangeAccent));
-          }
-          if (snapshot.hasError) {
-            return Center(
-                child: Text('Veri çekilemedi: ${snapshot.error}',
-                    style: const TextStyle(color: Colors.redAccent)));
-          }
-
-          final users = snapshot.data?.docs ?? [];
-          if (users.isEmpty) {
-            return Center(
-                child: Text(LanguageService.get('puzzle_no_solvers'),
-                    style: const TextStyle(color: Colors.white54)));
-          }
-
-          return ListView.builder(
-            padding: const EdgeInsets.all(12),
-            itemCount: users.length,
-            itemBuilder: (context, index) {
-              var data = users[index].data() as Map<String, dynamic>;
-              String name = data['username'] ?? users[index].id;
-              String? title = data['title']; // Lichess title
-
-              // Patron verisi eskiden string, yeni olarak bool kaydedildiği için güvenli kontrol:
-              var pData = data['patron'];
-              bool isPatron = false;
-              if (pData is bool) {
-                isPatron = pData;
-              } else if (pData is String) isPatron = pData == 'true';
-
-              int score = data['score'] ?? 0;
-
-              // Termo_x için garanti easter egg
-              if (name.toLowerCase() == 'termo_x') {
-                title = 'TermoGM';
-              }
-
-              // İlk 3'e özel renkler
-              Color rankColor = Colors.white54;
-              if (index == 0) {
-                rankColor = const Color(0xFFFFD700); // Altın
-              } else if (index == 1)
-                rankColor = const Color(0xFFC0C0C0); // Gümüş
-              else if (index == 2) rankColor = const Color(0xFFCD7F32); // Bronz
-
-              return Card(
-                color: const Color(0xFF151B2B),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  side: BorderSide(color: rankColor.withValues(alpha: 0.3)),
+      body: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.fromLTRB(12, 10, 12, 8),
+            color: const Color(0xFF151B2B),
+            child: TextField(
+              controller: _searchController,
+              style: const TextStyle(color: Colors.white, fontSize: 14),
+              onChanged: (val) => setState(() => _searchQuery = val.trim()),
+              decoration: InputDecoration(
+                isDense: true,
+                hintText: isEn
+                    ? 'Search username in ranking...'
+                    : 'Sıralamada kullanıcı adı ara...',
+                hintStyle: const TextStyle(color: Colors.white38),
+                prefixIcon:
+                    const Icon(Icons.search, color: Colors.orangeAccent),
+                suffixIcon: _searchQuery.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear,
+                            color: Colors.white54, size: 18),
+                        onPressed: () {
+                          _searchController.clear();
+                          setState(() => _searchQuery = '');
+                        },
+                      )
+                    : null,
+                filled: true,
+                fillColor: const Color(0xFF0E1422),
+                contentPadding:
+                    const EdgeInsets.symmetric(vertical: 11, horizontal: 12),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none,
                 ),
-                child: ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: rankColor.withValues(alpha: 0.2),
-                    child: Text('#${index + 1}',
-                        style: TextStyle(
-                            color: rankColor, fontWeight: FontWeight.bold)),
-                  ),
-                  title: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      buildUserTags(title ?? '', isPatron),
-                      Flexible(
-                          child: Text(name,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                  color: isPatron
-                                      ? Colors.orangeAccent
-                                      : Colors.white,
-                                  fontWeight: FontWeight.bold))),
-                    ],
-                  ),
-                  trailing: Text(
-                      '$score ${LanguageService.get('puzzle_score_points')}',
-                      style: const TextStyle(
-                          color: Colors.orangeAccent,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16)),
-                  onTap: () {
-                    if (name.toLowerCase() == 'misafir') return;
-                    Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                HomePage(initialUsername: name)),
-                        (route) => false);
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: const BorderSide(
+                      color: Colors.orangeAccent, width: 1.4),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: StreamBuilder<QuerySnapshot>(
+              // Firestore'dan verileri score'a göre azalan şekilde çek (Tüm liste)
+              stream: FirebaseFirestore.instance
+                  .collection('users')
+                  .orderBy('score', descending: true)
+                  .snapshots(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(
+                      child: CircularProgressIndicator(
+                          color: Colors.orangeAccent));
+                }
+                if (snapshot.hasError) {
+                  return Center(
+                      child: Text('Veri çekilemedi: ${snapshot.error}',
+                          style: const TextStyle(color: Colors.redAccent)));
+                }
+
+                final users = snapshot.data?.docs ?? [];
+                if (users.isEmpty) {
+                  return Center(
+                      child: Text(LanguageService.get('puzzle_no_solvers'),
+                          style: const TextStyle(color: Colors.white54)));
+                }
+
+                final List<Map<String, dynamic>> indexedUsers = [];
+                final q = _searchQuery.toLowerCase();
+                for (int i = 0; i < users.length; i++) {
+                  final data = users[i].data() as Map<String, dynamic>;
+                  final String name = (data['username'] ?? users[i].id).toString();
+                  if (q.isEmpty || name.toLowerCase().contains(q)) {
+                    indexedUsers.add({
+                      'rank': i + 1,
+                      'data': data,
+                      'name': name,
+                    });
+                  }
+                }
+
+                if (indexedUsers.isEmpty) {
+                  return Center(
+                    child: Text(
+                      isEn
+                          ? 'No player found matching "$_searchQuery".'
+                          : '"$_searchQuery" ile eşleşen oyuncu bulunamadı.',
+                      style:
+                          const TextStyle(color: Colors.white54, fontSize: 15),
+                      textAlign: TextAlign.center,
+                    ),
+                  );
+                }
+
+                return ListView.builder(
+                  padding: const EdgeInsets.all(12),
+                  itemCount: indexedUsers.length,
+                  itemBuilder: (context, idx) {
+                    final entry = indexedUsers[idx];
+                    final int rank = entry['rank'] as int;
+                    final data = entry['data'] as Map<String, dynamic>;
+                    final String name = entry['name'] as String;
+                    String? title = data['title']; // Lichess title
+
+                    var pData = data['patron'];
+                    bool isPatron = false;
+                    if (pData is bool) {
+                      isPatron = pData;
+                    } else if (pData is String) {
+                      isPatron = pData == 'true';
+                    }
+
+                    int score = data['score'] ?? 0;
+
+                    if (name.toLowerCase() == 'termo_x') {
+                      title = 'TermoGM';
+                    }
+
+                    final bool isMe = hasMyUser &&
+                        name.toLowerCase() == _myUsername.toLowerCase();
+
+                    Color rankColor = Colors.white54;
+                    if (rank == 1) {
+                      rankColor = const Color(0xFFFFD700); // Altın
+                    } else if (rank == 2) {
+                      rankColor = const Color(0xFFC0C0C0); // Gümüş
+                    } else if (rank == 3) {
+                      rankColor = const Color(0xFFCD7F32); // Bronz
+                    }
+
+                    return Card(
+                      color: isMe
+                          ? const Color(0xFF1B2540)
+                          : const Color(0xFF151B2B),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        side: BorderSide(
+                          color: isMe
+                              ? Colors.cyanAccent.withValues(alpha: 0.7)
+                              : rankColor.withValues(alpha: 0.3),
+                          width: isMe ? 1.5 : 1.0,
+                        ),
+                      ),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: rankColor.withValues(alpha: 0.2),
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Text('#$rank',
+                                  style: TextStyle(
+                                      color: rankColor,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                        ),
+                        title: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            buildUserTags(title ?? '', isPatron),
+                            Flexible(
+                                child: Text(name,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                        color: isPatron
+                                            ? Colors.orangeAccent
+                                            : Colors.white,
+                                        fontWeight: FontWeight.bold))),
+                          ],
+                        ),
+                        trailing: Text(
+                            '$score ${LanguageService.get('puzzle_score_points')}',
+                            style: const TextStyle(
+                                color: Colors.orangeAccent,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16)),
+                        onTap: () {
+                          if (name.toLowerCase() == 'misafir') return;
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      HomePage(initialUsername: name)),
+                              (route) => false);
+                        },
+                      ),
+                    );
                   },
-                ),
-              );
-            },
-          );
-        },
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
