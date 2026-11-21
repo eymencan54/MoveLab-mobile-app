@@ -5750,92 +5750,84 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
 
   static final Set<String> _seenPuzzleIds = {};
 
-  static String _lichessDifficultyParam(PuzzleDifficulty diff) {
-    switch (diff) {
-      case PuzzleDifficulty.easy:
-        return 'easier';
-      case PuzzleDifficulty.medium:
-        return 'normal';
-      case PuzzleDifficulty.hard:
-        return 'harder';
-      case PuzzleDifficulty.elite:
-        return 'hardest';
-    }
+  static PuzzleDifficulty _difficultyForRating(int rating) {
+    if (rating < 1250) return PuzzleDifficulty.easy;
+    if (rating < 1750) return PuzzleDifficulty.medium;
+    if (rating < 2150) return PuzzleDifficulty.hard;
+    return PuzzleDifficulty.elite;
   }
 
-  static Future<Map<String, dynamic>?> _fetchSingleLichessPuzzle(
-      PuzzleDifficulty diff) async {
-    final param = _lichessDifficultyParam(diff);
-    final url = 'https://lichess.org/api/puzzle/next?difficulty=$param';
+  /// HuggingFace üzerindeki resmi Lichess 4M+ bulmaca veri setinden
+  /// tek istekte 100 gerçek, Stockfish onaylı bulmaca çeker ve
+  /// ELO derecesine göre tüm zorluk havuzlarına dağıtır.
+  static Future<bool> _fetchLichessDatasetBatch() async {
+    final offset = Random().nextInt(3800000);
+    final url =
+        'https://datasets-server.huggingface.co/rows?dataset=Lichess/chess-puzzles&config=default&split=train&offset=$offset&length=100';
+
     final response = await http.get(
       Uri.parse(url),
       headers: const {
         'Accept': 'application/json',
         'User-Agent': 'MoveLabChessApp/1.0',
       },
-    ).timeout(const Duration(seconds: 4));
+    ).timeout(const Duration(seconds: 6));
 
-    if (response.statusCode != 200) return null;
+    if (response.statusCode != 200) return false;
+
     final Map<String, dynamic> data = jsonDecode(response.body);
-    final puzzle = data['puzzle'] as Map<String, dynamic>?;
-    if (puzzle == null) return null;
+    final List<dynamic> rows = (data['rows'] as List<dynamic>?) ?? [];
+    if (rows.isEmpty) return false;
 
-    final String id = (puzzle['id'] ?? '').toString();
-    final List<dynamic> rawSol = (puzzle['solution'] as List<dynamic>?) ?? [];
-    final List<String> solution = rawSol.map((e) => e.toString()).toList();
-    final String fen = (puzzle['fen'] ?? '').toString();
-    if (id.isEmpty || fen.isEmpty || solution.isEmpty) return null;
+    int addedCount = 0;
+    for (final item in rows) {
+      final row = (item as Map<String, dynamic>)['row'] as Map<String, dynamic>?;
+      if (row == null) continue;
 
-    final List<dynamic> rawThemes = (puzzle['themes'] as List<dynamic>?) ?? [];
-    final String? lastMove = puzzle['lastMove']?.toString();
-    final String? pgn = data['game']?['pgn']?.toString();
+      final String id = (row['PuzzleId'] ?? '').toString();
+      final String fen = (row['FEN'] ?? '').toString();
+      final String movesStr = (row['Moves'] ?? '').toString().trim();
+      final int? rating = row['Rating'] is int
+          ? row['Rating'] as int
+          : int.tryParse((row['Rating'] ?? '').toString());
 
-    // Opsiyonel: rakibin son hamlesini animasyonlu gösterebilmek için bir önceki FEN'i hesapla
-    String? preFen;
-    if (pgn != null &&
-        pgn.trim().isNotEmpty &&
-        lastMove != null &&
-        lastMove.length >= 4) {
-      try {
-        final tokens = pgn
-            .trim()
-            .split(RegExp(r'\s+'))
-            .where((t) => t.isNotEmpty)
-            .toList();
-        if (tokens.isNotEmpty) {
-          final replay = chess_engine.Chess();
-          for (int i = 0; i < tokens.length - 1; i++) {
-            replay.move(tokens[i]);
-          }
-          final candidatePreFen = replay.fen;
-          final verifyMove = <String, dynamic>{
-            'from': lastMove.substring(0, 2),
-            'to': lastMove.substring(2, 4),
-          };
-          if (lastMove.length > 4) {
-            verifyMove['promotion'] = lastMove.substring(4, 5);
-          }
-          if (replay.move(verifyMove)) {
-            if (replay.fen.split(' ').take(2).join(' ') ==
-                fen.split(' ').take(2).join(' ')) {
-              preFen = candidatePreFen;
-            }
-          }
-        }
-      } catch (_) {
-        preFen = null;
+      if (id.isEmpty ||
+          fen.isEmpty ||
+          movesStr.isEmpty ||
+          rating == null ||
+          _seenPuzzleIds.contains(id)) {
+        continue;
+      }
+
+      final moveTokens =
+          movesStr.split(RegExp(r'\s+')).where((m) => m.isNotEmpty).toList();
+      if (moveTokens.length < 2) continue;
+
+      final diff = _difficultyForRating(rating);
+      final rawThemes = row['Themes'];
+      final String themesStr = rawThemes is List
+          ? rawThemes.map((e) => e.toString()).join(' ')
+          : (rawThemes ?? '').toString();
+
+      final bucket = _cachedApiPuzzles[diff]!;
+      if (bucket.length < 60 &&
+          !bucket.any((p) => p['PuzzleId']?.toString() == id)) {
+        bucket.add({
+          'PuzzleId': id,
+          'Rating': rating,
+          'Themes': themesStr,
+          'FEN': fen,
+          'Moves': movesStr,
+        });
+        addedCount++;
       }
     }
 
-    return {
-      'PuzzleId': id,
-      'Rating': puzzle['rating'] as int?,
-      'Themes': rawThemes.map((e) => e.toString()).join(' '),
-      'FEN': fen,
-      'PreFEN': preFen,
-      'LastMove': lastMove,
-      'Solution': solution,
-    };
+    for (final bucket in _cachedApiPuzzles.values) {
+      bucket.shuffle();
+    }
+
+    return addedCount > 0;
   }
 
   static Future<void> _fetchAndCachePuzzlesInBackground(
@@ -5843,17 +5835,7 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
     if (_isFetchingBackground) return;
     _isFetchingBackground = true;
     try {
-      for (int i = 0; i < 4; i++) {
-        if ((_cachedApiPuzzles[diff]?.length ?? 0) >= 8) break;
-        final p = await _fetchSingleLichessPuzzle(diff);
-        if (p != null) {
-          final id = p['PuzzleId'].toString();
-          if (!_seenPuzzleIds.contains(id)) {
-            _cachedApiPuzzles[diff]!.add(p);
-          }
-        }
-        await Future.delayed(const Duration(milliseconds: 250));
-      }
+      await _fetchLichessDatasetBatch();
     } catch (_) {
       // Arka plan indirme hatası sessizce yoksayılır
     } finally {
@@ -5867,73 +5849,69 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
     puzzleRating = puzzle['Rating'] as int?;
     puzzleThemes = puzzle['Themes']?.toString();
 
-    final String targetFen = puzzle['FEN'].toString();
-    final String? preFen = puzzle['PreFEN']?.toString();
-    final String? lastMove = puzzle['LastMove']?.toString();
-    final List<String> apiMoves = puzzle['Solution'] is List
-        ? List<String>.from(puzzle['Solution'])
-        : (puzzle['Moves']?.toString() ?? '')
-            .split(' ')
-            .where((m) => m.isNotEmpty)
-            .toList();
+    final String apiFen = puzzle['FEN'].toString();
+    final List<String> apiMoves = (puzzle['Moves']?.toString() ?? '')
+        .trim()
+        .split(RegExp(r'\s+'))
+        .where((m) => m.isNotEmpty)
+        .toList();
 
+    if (apiMoves.length < 2) {
+      _loadRandomPuzzle();
+      return;
+    }
+
+    final String opponentFirstMove = apiMoves.removeAt(0); // Rakibin hatalı hamlesi
     _validationChess.reset();
-    _validationChess.load(targetFen);
+    _validationChess.load(apiFen);
+
+    final String from = opponentFirstMove.substring(0, 2);
+    final String to = opponentFirstMove.substring(2, 4);
+    final bool isCapture = _validationChess.get(to) != null;
+
+    final Map<String, dynamic> moveObj = {'from': from, 'to': to};
+    if (opponentFirstMove.length > 4) {
+      moveObj['promotion'] = opponentFirstMove.substring(4, 5);
+    }
+    _validationChess.move(moveObj);
+    final String afterOpponentFen = _validationChess.fen;
 
     solutionMoves = apiMoves;
     currentMoveIndex = 0;
 
     final bool isWhiteTurn = _validationChess.turn == chess_engine.Color.WHITE;
 
-    if (preFen != null && lastMove != null && lastMove.length >= 4) {
-      final from = lastMove.substring(0, 2);
-      final to = lastMove.substring(2, 4);
-      final preCheck = chess_engine.Chess();
-      preCheck.load(preFen);
-      final bool isCapture = preCheck.get(to) != null;
+    setState(() {
+      isWhiteToMove = isWhiteTurn;
+      _boardOrientation = isWhiteTurn ? PlayerColor.white : PlayerColor.black;
+      _isOpponentMoving = true;
+      _playedFens = [apiFen];
+      _viewIndex = 0;
+      controller.loadFen(apiFen);
+      isLoading = false;
+    });
 
+    Future.delayed(const Duration(milliseconds: 550), () {
+      if (!mounted) return;
+      if (opponentFirstMove.length > 4) {
+        controller.makeMoveWithPromotion(
+          from: from,
+          to: to,
+          pieceToPromoteTo: opponentFirstMove.substring(4, 5),
+        );
+      } else {
+        controller.makeMove(from: from, to: to);
+      }
+      _playedFens.add(afterOpponentFen);
+      _viewIndex = 1;
+      SoundService.playMoveSound(isCapture);
       setState(() {
-        isWhiteToMove = isWhiteTurn;
-        _boardOrientation = isWhiteTurn ? PlayerColor.white : PlayerColor.black;
-        _isOpponentMoving = true;
-        _playedFens = [preFen];
-        _viewIndex = 0;
-        controller.loadFen(preFen);
-        isLoading = false;
-      });
-
-      Future.delayed(const Duration(milliseconds: 550), () {
-        if (!mounted) return;
-        if (lastMove.length > 4) {
-          controller.makeMoveWithPromotion(
-            from: from,
-            to: to,
-            pieceToPromoteTo: lastMove.substring(4, 5),
-          );
-        } else {
-          controller.makeMove(from: from, to: to);
-        }
-        _playedFens.add(targetFen);
-        _viewIndex = 1;
-        SoundService.playMoveSound(isCapture);
-        setState(() {
-          _isOpponentMoving = false;
-        });
-      });
-    } else {
-      setState(() {
-        isWhiteToMove = isWhiteTurn;
-        _boardOrientation = isWhiteTurn ? PlayerColor.white : PlayerColor.black;
         _isOpponentMoving = false;
-        _playedFens = [targetFen];
-        _viewIndex = 0;
-        controller.loadFen(targetFen);
-        isLoading = false;
       });
-    }
+    });
   }
 
-  // 2. Resmi Lichess Bulmaca API'sinden zorluk seviyesine uygun sınırsız bulmaca çekme
+  // 2. 4M+ Resmi Lichess Bulmaca Havuzundan zorluk seviyesine uygun sınırsız bulmaca çekme
   Future<void> _loadRandomPuzzle() async {
     setState(() => isLoading = true);
 
@@ -5942,22 +5920,28 @@ class _PuzzlesPageState extends State<PuzzlesPage> {
         _cachedApiPuzzles[currentDifficulty]!.isNotEmpty) {
       final puzzle = _cachedApiPuzzles[currentDifficulty]!.removeLast();
       _setupApiPuzzle(puzzle);
-      if (_cachedApiPuzzles[currentDifficulty]!.length < 3) {
+      if (_cachedApiPuzzles[currentDifficulty]!.length < 6) {
         _fetchAndCachePuzzlesInBackground(currentDifficulty);
       }
       return;
     }
 
-    // 2. Önbellek boşsa doğrudan resmi Lichess API'sinden çek
+    // 2. Önbellek boşsa HuggingFace Lichess veri setinden 100'lük paket çek (maks 2 deneme)
     try {
-      final puzzle = await _fetchSingleLichessPuzzle(currentDifficulty);
-      if (puzzle != null) {
-        _setupApiPuzzle(puzzle);
-        _fetchAndCachePuzzlesInBackground(currentDifficulty);
-        return;
+      for (int attempt = 0; attempt < 2; attempt++) {
+        await _fetchLichessDatasetBatch();
+        if (_cachedApiPuzzles[currentDifficulty] != null &&
+            _cachedApiPuzzles[currentDifficulty]!.isNotEmpty) {
+          final puzzle = _cachedApiPuzzles[currentDifficulty]!.removeLast();
+          _setupApiPuzzle(puzzle);
+          if (_cachedApiPuzzles[currentDifficulty]!.length < 6) {
+            _fetchAndCachePuzzlesInBackground(currentDifficulty);
+          }
+          return;
+        }
       }
     } catch (e) {
-      debugPrint("Lichess Bulmaca API Hatası (Yerel Havuza Düşülüyor): $e");
+      debugPrint("Lichess Veri Seti Hatası (Çevrimdışı Havuza Düşülüyor): $e");
       _fetchAndCachePuzzlesInBackground(currentDifficulty);
     }
 
