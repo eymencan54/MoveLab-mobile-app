@@ -179,7 +179,7 @@ Follow these steps to build and run the project locally.
 ### Setup
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/eymencanorman/MoveLab-mobile-app.git
+   git clone https://github.com/eymencan54/MoveLab-mobile-app.git
    ```
 2. **Navigate to the project directory:**
    ```bash
